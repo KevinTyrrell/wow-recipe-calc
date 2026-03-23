@@ -1,0 +1,4 @@
+working/
+*.pkl
+*.env
+__pycache__/
