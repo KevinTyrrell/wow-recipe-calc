@@ -14,74 +14,206 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from __future__ import annotations 
-from typing import TypeVar, Generic, Hashable
+from typing import TypeVar, Generic, Hashable, Optional, Callable, Iterator, Protocol, Iterable
 from collections import deque
 from collections.abc import Mapping
-from types import MappingProxyType as ReadOnlyMap
 
 _T = TypeVar("_T", bound=Hashable)
 
 
-class _Node[Generic[_T]]:
+class _Node(Generic[_T]):
     def __init__(self, payload: _T) -> None:
         """
         :param payload: Data coupled with the node
         """
-        self.__payload: _T = payload
-        self.__requires: set[_Node[_T]] = set()
-        self.__dependents: set[_Node[_T]] = set()
+        self.payload: _T = payload
+        self.requirements: set[_Node[_T]] = set()
+        self.dependents: set[_Node[_T]] = set()
     
-    def requires(self, node: _Node) -> None:
+    def requires(self, node: _Node[_T]) -> None:
         """
         :param node: associates A as a requirement of B (A<-B)
         """
-        # Sentinel value allows O(1) read-only via keys()
-        self.__requires[node] = _SENTINEL_VALUE
-        node.__dependents[self] = _SENTINEL_VALUE
-    
-    @property
-    def payload(self) -> Any: return self.__payload
-    @property
-    def requirements(self) -> Mapping[_Node, bool]:
-        return self.__requires_ro
-    @property
-    def dependents(self) -> Mapping[_Node, bool]:
-        return self.__dependents_ro
+        self.requirements.add(node)
+        node.dependents.add(self)
 
 
-class Graph:
-    def __init__(self) -> None:
-        self.__data_map: dict[JJJJJJJJJJJJJJJJJ
-        self.__nodes: dict[_Node, bool] = dict()
-        self.__nodes_ro: Mapping[_Node, bool] = ReadOnlyMap(self.__nodes)
-    
-    def topological_sort(self) -> list[_Node]:
+class Frontier(Protocol[_T]):
+    def push(self, element: _T) -> None:
         """
-        Topological sort using Kahn's algorithm
+        :param item: Element to be pushed to the frontier
+        """
+        ...
+    def pop(self) -> _T:
+        """
+        :return: Element popped from the frontier
+        """
+        ...
         
-        :return: List of nodes, sorted in topological order
+    def __bool__(self) -> bool:
         """
-        topo_sorted: list[_Node] = list()
-        degrees: dict[_Node, int] = { node: 0 for node in self.__nodes }
-        for node in self.__nodes:
-            for edge in node.dependents:
-                degrees[edge] += 1
-        queue: deque[_Node] = deque(k for k, v in degrees.items() if v <= 0)
-        while len(queue) > 0:
-            leaf: _Node = queue.popleft()
-            topo_sorted.append(leaf)
-            for node in leaf.dependents:
-                degree: int = degrees[node]
-                if degree <= 1: queue.append(node)
-                else: degrees[node] = degree - 1
-        if len(topo_sorted) < len(self.__nodes):
-            raise RuntimeError("topological sort cannot continue as graph contains cycles")
-        return topo_sorted
+        :return: True if the frontier is not empty
+        """
+        ...
 
-    def add(self, node: _Node) -> None:
-        self.__nodes[node] = _SENTINEL_VALUE
-    def remove(self, node: _Node) -> None:
-        del self.__nodes[node]
+
+class FIFOFrontier(Frontier[_T]):
+    def __init__(self, elements: Iterable[_T]) -> None:
+        self.__queue: deque[_T] = deque(elements)
+    def push(self, element: _T) -> None:
+        self.__queue.append(element)
+    def pop(self) -> _T:
+        return self.__queue.popleft()
+    def __bool__(self) -> bool:
+        return bool(self.__queue)
+
+
+class Graph(Generic[_T]):
+    def __init__(self, nodes: Optional[set[_T]] = None,
+                edges: Optional[Mapping[_T, _T]] = None
+                frontier_factory: Optional[Callable[[Iterable[_T]], Frontier[_T]]] = None) -> None:
+        """
+        Constructs a graph instance
+        
+        For any edge(a, b) in which either a or b doesn't exist,
+        a or b is then created and said edge is assigned as normal.
+        
+        Frontier objects, used for topological sort, must take in elements,
+        and feed back those which are next to be topologically processed.
+        By default, uses a FIFO double-sided queue (deque) data structure.
+        
+        :param nodes: (Optional) Initial set of leaf nodes
+        :param edges: (Optional) Matrix of edges connections
+        :param frontier_factory: (Optional) Frontier factory for topological sort
+        """
+        self.__nodes: dict[_T, _Node[_T]] = dict()
+        self.__frontier_factory: Callable[[Iterable[_T]], Frontier[_T]] = 
+            frontier_factory or (lambda: FIFOFrontier(()))
+        self.__topo: Optional[Graph._TopoView] = None
+        self.__topo_strategy: Callable[[], Graph._TopoView[_T]] = self._build_topo
+        if nodes is not None:
+            for key in nodes: self.__nodes[key] = _Node(key)
+        if edges is not None:
+            for a, b in edges.items(): self.requires(a, b)
+    
+    def add(self, node: _T) -> None:
+        """
+        Adds an orphan node to the graph
+        """
+        if node not in self.__nodes:
+            self.__nodes[node] = _Node(node)
+            self._invalidate()
+    
+    def remove(self, node: _T) -> bool:
+        """
+        :return: True if the node existed and was removed from the graph
+        """
+        removed: Optional[_Node[_T]] = self.__nodes.pop(node, None)
+        if removed is not None:
+            self._invalidate()
+            return True
+        return False
+        
+    def requires(self, dependent: _T, requirement: _T) -> None:
+        a: _Node[_T] = self._retrieve(dependent)
+        b: _Node[_T] = self._retrieve(requirement)
+        a.requires(b)
+        self._invalidate()
+    
+    def topological_sort(self, frontier_factory: Optional[Callable[[Iterable[_T]], Frontier[_T]]] = None) -> list[_T]:
+        """
+        Topologically sorts the nodes using Kahn's algorithm
+        
+        A runtime error will be raised if cycles are detected in the graph.
+        Topological sorts are automatically cached while using the 'topo' property.
+        Override this method to swap the topological sort used for caching.
+        If no factory is provided, the frontier factory given during construction
+        will be used instead to generate the container for next-node selection.
+        
+        :param frontier_factory: (Optional) Override for the object's frontier factory
+        :return: Topologically sorted list of elements (leaves first)
+        """
+        factory: Callable[[Iterable[_T]], Frontier[_T]] = frontier_factory or self.__frontier_factory
+        topo_sorted: list[_T] = list()
+        degrees: dict[_T, int] = { element: 0 for element in self.__nodes }
+        for node in self.__nodes.values():
+            for edge in node.dependents:
+                degrees[edge.payload] += 1
+        frontier: Frontier[_T] = factory(k for k, v in degrees.items() if v == 0)
+        while frontier:  # At least one element 
+            leaf: _T = frontier.pop()
+            topo_sorted.append(leaf)
+            requirement: _Node[_T] = self.__nodes[leaf]
+            for node in requirement.dependents:
+                element: _T = node.payload
+                degree: int = degrees[element]
+                if degree <= 1: frontier.push(element)
+                else: degrees[element] = degree - 1  # Kahn's
+        cycle: int = len(self.__nodes) - len(topo_sorted)
+        if cycle > 0:
+            raise RuntimeError(f"topological cycle(s) detected in the graph, cylce(s) size: {cycle}")
+        return topo_sorted
+    
     @property
-    def nodes(self) -> Mapping[_Node, bool]:
-        return self.__nodes_ro
+    def nodes(self) -> set[_T]:
+        """
+        :return: Set of all elements the graph
+        """
+        return self.__nodes.keys()
+        
+    @property
+    def topo(self) -> Graph._TopoView[_T]:
+        """
+        :return: Cached topologically-sorted view of the graph
+        """
+        return self.__topo_strategy()
+        
+    def _retrieve(self, key: _T) -> _Node[_T]:
+        node: Optional[_Node[_T]] = self.__nodes.get(key)
+        if node is None:
+            node: _Node[_T] = _Node(key)
+            self.__nodes[key] = node
+            self._invalidate()
+        return node
+        
+    def _get_topo(self) -> Graph._TopoView[_T]:
+        if self.__topo is None:
+            raise RuntimeError("topological order has not yet been cached")
+        return self.__topo
+    
+    def _build_topo(self) -> Graph._TopoView[_T]:
+        self.__topo = Graph._TopoView(self)
+        self.__topo_strategy = self._get_topo  # Validate
+        return self.__topo
+    
+    def _invalidate(self) -> None:
+        self.__topo = None  # Garbage collect
+        self.__topo_strategy = self._build_topo  # Validate
+        
+    def __iter__(self) -> Iterator[_T]:
+        return iter(self.__nodes)
+    
+    class _TopoView(Generic[_T]):
+        def __init__(self, graph: Graph[_T]):
+            self.__graph: Graph[_T] = graph
+            self.__order: list[_T] = graph.topological_sort()
+            self.__indexes: dict[_T, int] = { e: i for i, e in enumerate(self.__order) }
+            
+        def index(self, element: _T) -> int:
+            """
+            :param element: Element to retrieve topological index
+            """
+            return self.__indexes[element]
+            
+        def cmp(self, a: _T, b: _T) -> int:
+            """
+            :param a: Element to be topologically compared by
+            :param b: Element to be topologically compared to
+            :return: -1 if a < b, 1 if a > b, 0 if a == b
+            """
+            i_a: int = self.__indexes(a)
+            i_b: int = self.__indexes(b)
+            return (i_a > i_b) - (i_a < i_b)
+
+        def __iter__(self) -> Iterator[_T]:
+            return iter(self.__order)

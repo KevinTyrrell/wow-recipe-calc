@@ -13,11 +13,30 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+from src.util.graph import Graph, Frontier
+from src.util.heap import Heap
 
-class _RecipeGraph(Graph):
-    def __init__(self, recipes: Optional[Iterable[Recipe]]=None) -> None:
-        super().__init__()
-        self.__nodes_by_id: dict[int, Node] = dict()
+
+class PriorityQueue(Frontier[Recipe]):
+    def __init__(self) -> None:
+        self.__heap: Heap = Heap(True)
+    
+    def push(self, element: Recipe) -> None:
+        ...
+    def pop(self) -> Recipe:
+        ...
+    def __bool__(self) -> bool:
+        ...
+
+
+class RecipeGraph(Graph[Recipe]):
+    def __init__(self, item_db: ItemDB, recipes: Optional[Iterable[Recipe]]=None,
+                frontier_factory: Optional[Callable[[Iterable[_T]], Frontier[_T]]] = None) -> None:
+        super().__init__(frontier_factory = frontier_factory)
+        
+        
+        
+        
         if recipes is not None:
             for recipe in recipes:
                 self.integrate(recipe)

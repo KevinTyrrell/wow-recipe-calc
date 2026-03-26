@@ -36,5 +36,4 @@ class CraftSkiller:
             raise ValueError(f"skiller starting skill exceeds bound:
                              f"{self.__skill} [1, {self.__bound}]")
     
-    def craft(self, recipe: Recipe) -> None:
-        if 
+    #def craft(self, recipe: Recipe) -> None:

@@ -35,29 +35,6 @@ class CraftPlan:
     craft_mats: tuple[int, int]
 
 
-class _RecipeGraph(Graph):
-    def __init__(self, recipes: Optional[Iterable[Recipe]]=None) -> None:
-        super().__init__()
-        self.__nodes_by_id: dict[int, Node] = dict()
-        if recipes is not None:
-            for recipe in recipes:
-                self.integrate(recipe)
-    
-    def integrate(self, recipe: Recipe) -> None:
-        vertex: Node = self._get_node(recipe.product)
-        for reagent in recipe.reagents:
-            edge: Node = self._get_node(reagent)
-            vertex.requires(edge)
-    
-    def _get_node(self, item_id: int) -> Node:
-        node: Optional[Node] = self.__nodes_by_id.get(item_id)
-        if node is None:
-            node = Node(item_id)
-            self.add(node)
-            self.__nodes_by_id[item_id] = node
-        return node
-
-
 class CraftPlanner:
     def __init__(self, item_db: ItemDB, prices: PriceManager) -> None:
         """
@@ -123,6 +100,8 @@ class CraftPlanner:
             print(f"({t[0]}, {t[1]},): {[e.name for e in t[2]]}")
         # MAKE GRAPH OF RECIPES
         # MAKE RECIPE GRAPH CLASS EXTEND GRAPH
+        
+        
         
         
         
