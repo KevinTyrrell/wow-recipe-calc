@@ -19,17 +19,16 @@ from dataclasses import dataclass
 from heapq import heapify, heappush, heappop, heappushpop, heapreplace
 from heapq import heapify_max, heappush_max, heappop_max, heappushpop_max, heapreplace_max
 
-
 _T = TypeVar("_T")
 
 
 @dataclass(frozen=True)
-class _HeapType:
+class _HeapType(Generic[_T]):
     heapify: Callable[[MutableSequence[_T]], None]
     push: Callable[[MutableSequence[_T], _T], None]
     pop: Callable[[MutableSequence[_T]], _T]
     push_pop: Callable[[MutableSequence[_T], _T], _T]
-    replace: Callable[[MutableSequence, _T], _T]
+    replace: Callable[[MutableSequence[_T], _T], _T]
 
 _min_heap: _HeapType = _HeapType(heapify, heappush, heappop, heappushpop, heapreplace)
 _max_heap: _HeapType = _HeapType(
@@ -103,3 +102,4 @@ class Heap(Generic[_T]):
     def __iter__(self) -> Iterator[_T]:
         return (e.value for e in sorted(self.__heap))
     def __str__(self) -> str: return str(list(self))
+    def __bool__(self) -> bool: return bool(self.__heap)

@@ -13,44 +13,65 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+from typing import Optional, Iterable, Callable, TypeVar
+
 from src.util.graph import Graph, Frontier
 from src.util.heap import Heap
+from src.crafts.recipe import Recipe
+from src.crafts.item_db import ItemDB, RecipeEntry
+
+_T = TypeVar("_T")
+
+def _cmp_recipe(a: Recipe, b: Recipe) -> int:
+    a_grey: int = a.levels[-1]
+    b_grey: int = b.levels[-1]
+    if a_grey < b_grey: return -1
+    if a_grey > b_grey: return 1
+    return 0
 
 
-class PriorityQueue(Frontier[Recipe]):
-    def __init__(self) -> None:
-        self.__heap: Heap = Heap(True)
-    
+class _GrayRecipeQueue(Frontier[Recipe]):
+    def __init__(self, recipes: Iterable[Recipe]) -> None:
+        # shouldn't this be a max heap? since we're outputting in reverse order
+        self.__heap: Heap[Recipe] = Heap(True, recipes, _cmp_recipe) 
     def push(self, element: Recipe) -> None:
-        ...
+        self.__heap.push(element)
     def pop(self) -> Recipe:
-        ...
+        return self.__heap.pop()
     def __bool__(self) -> bool:
-        ...
+        return bool(self.__heap)
 
 
 class RecipeGraph(Graph[Recipe]):
     def __init__(self, item_db: ItemDB, recipes: Optional[Iterable[Recipe]]=None,
                 frontier_factory: Optional[Callable[[Iterable[_T]], Frontier[_T]]] = None) -> None:
+        """
+        :param item_db: Item database used for recipe lookups
+        :param recipes: (Optional) Initial set of recipes
+        :param frontier_factory: (Optional) Frontier factory for topological sort
+        """
         super().__init__(frontier_factory = frontier_factory)
-        
-        
-        
-        
+        self.__db: ItemDB = item_db
         if recipes is not None:
-            for recipe in recipes:
-                self.integrate(recipe)
-    
-    def integrate(self, recipe: Recipe) -> None:
-        vertex: Node = self._get_node(recipe.product)
-        for reagent in recipe.reagents:
-            edge: Node = self._get_node(reagent)
-            vertex.requires(edge)
-    
-    def _get_node(self, item_id: int) -> Node:
-        node: Optional[Node] = self.__nodes_by_id.get(item_id)
-        if node is None:
-            node = Node(item_id)
-            self.add(node)
-            self.__nodes_by_id[item_id] = node
-        return node
+            self.integrate(recipes)
+                
+    def integrate(self, recipes: Iterable[Recipe]) -> None:
+        """
+        :param recipes: Recipe to be added, along with nested recipes
+        """
+        evaluated: set[Recipe] = set()  # Trim explored paths
+        for recipe in recipes: self._integrate(recipe, evaluated)
+                
+    def _integrate(self, recipe: Recipe, evaluated: set[Recipe]) -> None:
+        self.add(recipe)
+        evaluated.add(recipe)
+        for requirement in (entry.recipe for req_id in recipe.reagents
+                            if isinstance(entry := self.__db.by_id[req_id], RecipeEntry)):
+            self.requires(recipe, requirement)
+            if requirement not in evaluated:
+                self._integrate(requirement, evaluated)   
+
+
+class GrayPriortyRecipeGraph(RecipeGraph):
+    def __init__(self, item_db: ItemDB, recipes: Optional[Iterable[Recipe]]=None):
+        super().__init__(item_db, recipes, lambda elements: _GrayRecipeQueue(elements))

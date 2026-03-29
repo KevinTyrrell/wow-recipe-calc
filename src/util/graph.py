@@ -16,7 +16,7 @@
 from __future__ import annotations 
 from typing import TypeVar, Generic, Hashable, Optional, Callable, Iterator, Protocol, Iterable
 from collections import deque
-from collections.abc import Mapping
+from collections.abc import Mapping, KeysView
 
 _T = TypeVar("_T", bound=Hashable)
 
@@ -41,20 +41,21 @@ class _Node(Generic[_T]):
 class Frontier(Protocol[_T]):
     def push(self, element: _T) -> None:
         """
-        :param item: Element to be pushed to the frontier
+        :param element: Element to be pushed to the frontier
         """
-        ...
+        pass
+        
     def pop(self) -> _T:
         """
         :return: Element popped from the frontier
         """
-        ...
+        pass
         
     def __bool__(self) -> bool:
         """
         :return: True if the frontier is not empty
         """
-        ...
+        pass
 
 
 class FIFOFrontier(Frontier[_T]):
@@ -70,7 +71,7 @@ class FIFOFrontier(Frontier[_T]):
 
 class Graph(Generic[_T]):
     def __init__(self, nodes: Optional[set[_T]] = None,
-                edges: Optional[Mapping[_T, _T]] = None
+                edges: Optional[Mapping[_T, _T]] = None,
                 frontier_factory: Optional[Callable[[Iterable[_T]], Frontier[_T]]] = None) -> None:
         """
         Constructs a graph instance
@@ -87,8 +88,7 @@ class Graph(Generic[_T]):
         :param frontier_factory: (Optional) Frontier factory for topological sort
         """
         self.__nodes: dict[_T, _Node[_T]] = dict()
-        self.__frontier_factory: Callable[[Iterable[_T]], Frontier[_T]] = 
-            frontier_factory or (lambda: FIFOFrontier(()))
+        self.__frontier_factory: Callable[[Iterable[_T]], Frontier[_T]] = frontier_factory or (lambda n: FIFOFrontier(n))
         self.__topo: Optional[Graph._TopoView] = None
         self.__topo_strategy: Callable[[], Graph._TopoView[_T]] = self._build_topo
         if nodes is not None:
@@ -139,7 +139,7 @@ class Graph(Generic[_T]):
         for node in self.__nodes.values():
             for edge in node.dependents:
                 degrees[edge.payload] += 1
-        frontier: Frontier[_T] = factory(k for k, v in degrees.items() if v == 0)
+        frontier: Frontier[_T] = factory(k for k, v in degrees.items() if v <= 0)
         while frontier:  # At least one element 
             leaf: _T = frontier.pop()
             topo_sorted.append(leaf)
@@ -151,22 +151,15 @@ class Graph(Generic[_T]):
                 else: degrees[element] = degree - 1  # Kahn's
         cycle: int = len(self.__nodes) - len(topo_sorted)
         if cycle > 0:
-            raise RuntimeError(f"topological cycle(s) detected in the graph, cylce(s) size: {cycle}")
+            raise RuntimeError(f"topological cycle(s) detected in the graph, cycle(s) size: {cycle}")
         return topo_sorted
     
     @property
-    def nodes(self) -> set[_T]:
+    def nodes(self) -> KeysView[_T]:
         """
         :return: Set of all elements the graph
         """
         return self.__nodes.keys()
-        
-    @property
-    def topo(self) -> Graph._TopoView[_T]:
-        """
-        :return: Cached topologically-sorted view of the graph
-        """
-        return self.__topo_strategy()
         
     def _retrieve(self, key: _T) -> _Node[_T]:
         node: Optional[_Node[_T]] = self.__nodes.get(key)
@@ -175,16 +168,6 @@ class Graph(Generic[_T]):
             self.__nodes[key] = node
             self._invalidate()
         return node
-        
-    def _get_topo(self) -> Graph._TopoView[_T]:
-        if self.__topo is None:
-            raise RuntimeError("topological order has not yet been cached")
-        return self.__topo
-    
-    def _build_topo(self) -> Graph._TopoView[_T]:
-        self.__topo = Graph._TopoView(self)
-        self.__topo_strategy = self._get_topo  # Validate
-        return self.__topo
     
     def _invalidate(self) -> None:
         self.__topo = None  # Garbage collect
@@ -192,28 +175,45 @@ class Graph(Generic[_T]):
         
     def __iter__(self) -> Iterator[_T]:
         return iter(self.__nodes)
-    
+
     class _TopoView(Generic[_T]):
         def __init__(self, graph: Graph[_T]):
             self.__graph: Graph[_T] = graph
             self.__order: list[_T] = graph.topological_sort()
             self.__indexes: dict[_T, int] = { e: i for i, e in enumerate(self.__order) }
-            
+
         def index(self, element: _T) -> int:
             """
             :param element: Element to retrieve topological index
             """
             return self.__indexes[element]
-            
+
         def cmp(self, a: _T, b: _T) -> int:
             """
             :param a: Element to be topologically compared by
             :param b: Element to be topologically compared to
             :return: -1 if a < b, 1 if a > b, 0 if a == b
             """
-            i_a: int = self.__indexes(a)
-            i_b: int = self.__indexes(b)
+            i_a: int = self.__indexes[a]
+            i_b: int = self.__indexes[b]
             return (i_a > i_b) - (i_a < i_b)
 
         def __iter__(self) -> Iterator[_T]:
             return iter(self.__order)
+
+    @property
+    def topo(self) -> Graph._TopoView[_T]:
+        """
+        :return: Cached topologically-sorted view of the graph
+        """
+        return self.__topo_strategy()
+
+    def _get_topo(self) -> Graph._TopoView[_T]:
+        if self.__topo is None:
+            raise RuntimeError("topological order has not yet been cached")
+        return self.__topo
+
+    def _build_topo(self) -> Graph._TopoView[_T]:
+        self.__topo = Graph._TopoView(self)
+        self.__topo_strategy = self._get_topo  # Validate
+        return self.__topo

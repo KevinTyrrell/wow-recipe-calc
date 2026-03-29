@@ -1,4 +1,5 @@
 working/
 *.pkl
 *.env
+*.idea/
 __pycache__/
