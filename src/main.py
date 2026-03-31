@@ -80,8 +80,15 @@ def main():
             print(Color.RED.ITALIC(f"recipe is unknown: {name}"))
 
     plan: CraftPlan = planner.plan()
-    #for k, v in plan.craft_counts.items():
-    #    print(item_db.by_recipe[k].item_name, v)
+
+    print("\nITEMS")
+    for k, v in plan.craft_counts.items():
+        print(item_db.by_recipe[k].item_name, v)
+
+    print("\n\nORDER")
+    for t in plan.craft_order:
+        a, b, recipe, count = t
+        print(f"[{a}, {b}] x{count}: {recipe.name}")
     
 if __name__ == "__main__":
     main()

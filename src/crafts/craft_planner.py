@@ -81,12 +81,12 @@ class CraftPlanner:
         """
         materials: defaultdict[int, int] = defaultdict(lambda: 0)
         crafts: Mapping[Recipe, int] = self._plan_crafts(materials)
-        order: tuple[tuple[int, int, Recipe, int], ...] = self._plan_order(crafts.keys())
+        order: tuple[tuple[int, int, Recipe, int], ...] = self._plan_order(crafts)
         return CraftPlan(crafts, order, None, None)
         
-    def _plan_order(self, recipes: Iterable[Recipe]) -> tuple[tuple[int, int, Recipe, int], ...]:
-        graph: GrayPriortyRecipeGraph = GrayPriortyRecipeGraph(self.__item_db, recipes)
-        demands: dict[Recipe, int] = { k: v for k, v in self.__demands.items() if v > 0 }
+    def _plan_order(self, crafts: Mapping[Recipe, int]) -> tuple[tuple[int, int, Recipe, int], ...]:
+        graph: GrayPriortyRecipeGraph = GrayPriortyRecipeGraph(self.__item_db, crafts.keys())
+        demands: dict[Recipe, int] = { k: v for k, v in crafts.items() if v > 0 }
         skiller: CraftSkiller = CraftSkiller()
         cleaner: _GrayRecipeCleaner = _GrayRecipeCleaner(graph, skiller, demands)
         for section in self._calc_skill_sections(graph):
@@ -94,15 +94,17 @@ class CraftPlanner:
             if skiller.skill < L: skiller.advance(L)  # jump over impassible sections
             while active:  # as long as craftable recipes exist
                 while True:  # craft a single item, repeat until one is crafted
-                    recipe: Recipe = active.pop()
+                    recipe: Recipe = active[-1]
                     # Only craft if we have yet to meet demand
                     demand: int = demands[recipe]
                     if demand > 0:
                         skiller.craft(recipe)
                         demands[recipe] = demand - 1
                         if demand <= 1:  # We just finished crafting last of this item
+                            active.pop()
                             cleaner.clean(recipe)
-                    elif not active: break
+                    else: active.pop()
+                    if not active: break
                 if skiller.skill >= R:  # entered a new crafting skill section
                     cleaner.schedule(active)  # schedule gray recipes we've yet to craft
                     break  # current section is now inefficient, exit

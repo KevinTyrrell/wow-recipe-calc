@@ -66,7 +66,7 @@ class CraftSkiller:
         gray_skill: int = recipe.levels[-1]
         if yellow_skill != gray_skill:  # div/0 protection
             chance: float = (gray_skill - self.__skill) / (gray_skill - yellow_skill)
-            self.__skill += max(0.0, chance)
+            self.__skill += max(0.0, min(1.0, chance))
 
     def history(self) -> tuple[tuple[int, int, Recipe, int], ...]:
         """
