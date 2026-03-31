@@ -13,23 +13,25 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Optional
 from types import MappingProxyType as ReadOnly
-from collections import defaultdict
-from collections.abc import Iterable, Mapping
+from typing import Optional, Mapping, Generator
 from dataclasses import dataclass
+from collections import defaultdict
+from collections.abc import Iterable
 from math import ceil
 
 from src.crafts.recipe import Recipe
-from src.crafts.item_db import *
+from src.crafts.craft_skill import CraftSkiller
+from src.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
 from src.crafts.price_manager import PriceManager
 from src.crafts.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
+from src.util.heap import Heap
 
 
 @dataclass(frozen=True)
 class CraftPlan:
     craft_counts: Mapping[Recipe, int]
-    craft_order: tuple[tuple[Recipe, int], ...]
+    craft_order: tuple[tuple[int, int, Recipe, int], ...]
     craft_costs: Mapping[Recipe, int]
     craft_mats: tuple[int, int]
 
@@ -42,7 +44,7 @@ class CraftPlanner:
         """
         self.__item_db: ItemDB = item_db
         self.__prices: PriceManager = prices
-        self.__demand: defaultdict[Recipe, int] = defaultdict(lambda: 0)
+        self.__demands: defaultdict[Recipe, int] = defaultdict(lambda: 0)
         
     def craft(self, item: int | str | Recipe, quantity: Optional[int]=1) -> bool:
         """
@@ -63,8 +65,8 @@ class CraftPlanner:
             else: entry = self.__item_db.by_name.get(item)
             if not isinstance(entry, RecipeEntry):
                 return False
-            self.__demand[entry.recipe] += quantity
-        else: self.__demand[item] += quantity
+            self.__demands[entry.recipe] += quantity
+        else: self.__demands[item] += quantity
         return True
         
     def plan(self) -> CraftPlan:
@@ -79,36 +81,40 @@ class CraftPlanner:
         """
         materials: defaultdict[int, int] = defaultdict(lambda: 0)
         crafts: Mapping[Recipe, int] = self._plan_crafts(materials)
-        #order: tuple[Recipe, ...] = self._plan_order(crafts.keys())
-        #self._plan_order(crafts.keys())
-        return CraftPlan(crafts, None, None, None)
+        order: tuple[tuple[int, int, Recipe, int], ...] = self._plan_order(crafts.keys())
+        return CraftPlan(crafts, order, None, None)
         
-    def _plan_order(self, recipes: Iterable[Recipe]) -> tuple[Recipe, ...]:
-        events = sorted({e.learned for e in recipes} | {e.levels[-1] for e in recipes})
-        actives: tuple[int, int, list[Recipe]] = list()
-        for i in range(len(events) - 1):
-            L, R = events[i], events[i + 1]
-            actives.append((L, R, [e for e in recipes if e.learned <= L < e.levels[-1]]))
-        
-        for t in actives:
-            print(f"({t[0]}, {t[1]},): {[e.name for e in t[2]]}")
-        
-        
-        
-        
-        
-        return tuple() # pass
-        
+    def _plan_order(self, recipes: Iterable[Recipe]) -> tuple[tuple[int, int, Recipe, int], ...]:
+        graph: GrayPriortyRecipeGraph = GrayPriortyRecipeGraph(self.__item_db, recipes)
+        demands: dict[Recipe, int] = { k: v for k, v in self.__demands.items() if v > 0 }
+        skiller: CraftSkiller = CraftSkiller()
+        cleaner: _GrayRecipeCleaner = _GrayRecipeCleaner(graph, skiller, demands)
+        for section in self._calc_skill_sections(graph):
+            L, R, active = section
+            if skiller.skill < L: skiller.advance(L)  # jump over impassible sections
+            while active:  # as long as craftable recipes exist
+                while True:  # craft a single item, repeat until one is crafted
+                    recipe: Recipe = active.pop()
+                    # Only craft if we have yet to meet demand
+                    demand: int = demands[recipe]
+                    if demand > 0:
+                        skiller.craft(recipe)
+                        demands[recipe] = demand - 1
+                        if demand <= 1:  # We just finished crafting last of this item
+                            cleaner.clean(recipe)
+                    elif not active: break
+                if skiller.skill >= R:  # entered a new crafting skill section
+                    cleaner.schedule(active)  # schedule gray recipes we've yet to craft
+                    break  # current section is now inefficient, exit
+        return skiller.history()
+
+    # Determines the total number of crafts required per recipe, including nested recipes
     def _plan_crafts(self, materials: defaultdict[int, int]) -> Mapping[Recipe, int]:
-        demand: defaultdict[Recipe, int] = self.__demand.copy()
+        demand: defaultdict[Recipe, int] = self.__demands.copy()
         graph: RecipeGraph = RecipeGraph(self.__item_db, (k for k, v in demand.items() if v > 0))
         crafts: dict[Recipe, int] = dict()
-        for recipe in graph.topo:
-            # Max heap can be used here for O(k log k) iteration instead of O(n),
-            # where k is the demanded recipes & n is every-defined recipe.
-            # However, this can backfire in heavy crafts such that O(k log k) > O(n)
+        for recipe in reversed(list(graph.topo)):
             item_demand: int = demand[recipe]
-            if item_demand <= 0: continue # ignore undesired recipes
             # Determine how many times we have to craft to meet total demand
             count: int = ceil(item_demand / recipe.produces)
             crafts[recipe] = count
@@ -122,4 +128,41 @@ class CraftPlanner:
                             f"'{child.item_name}', which has already been processed")
                     demand[entry.recipe] += count * quantity
                 else: materials[reagent] += count * quantity
-        return ReadOnly(crafts) 
+        return ReadOnly(crafts)
+
+    @staticmethod
+    def _calc_skill_sections(graph: RecipeGraph) -> Generator[tuple[int, int, list[Recipe]]]:
+        # List of unique levels in which a recipe either becomes learnable or no longer grants skill-ups
+        events: list[int] = sorted({e.learned for e in graph} | {e.levels[-1] for e in graph})
+        for i in range(len(events) - 1):
+            L, R = events[i], events[i + 1]
+            active: list[Recipe] = [e for e in graph.topo if e.learned <= L < e.levels[-1]]  # slow, can be optimized
+            yield L, R, active
+
+
+class _GrayRecipeCleaner:
+    def __init__(self, graph: RecipeGraph, skiller: CraftSkiller, demands: dict[Recipe, int]) -> None:
+        self.__graph: RecipeGraph = graph
+        self.__skiller: CraftSkiller = skiller
+        self.__order: Heap[Recipe] = Heap(True, cmp = graph.topo.cmp)
+        self.__container: set[Recipe] = set()
+        self.__demands: dict[Recipe, int] = demands
+
+    # Checks recipes for any gray recipes yet to be crafted, then sets to craft them later on
+    def schedule(self, recipes: Iterable[Recipe]) -> None:
+        for recipe in recipes:
+            if self.__skiller.skill >= recipe.levels[-1] and recipe not in self.__container:
+                self.__order.push(recipe)
+                self.__container.add(recipe)
+
+    # Attempts to clean any gray recipes, reference: most recent skill-gaining recipe
+    def clean(self, reference: Recipe) -> None:
+        while self.__order:
+            ref_h: int = self.__graph.topo.index(self.__order.peek())
+            ref_i: int = self.__graph.topo.index(reference)
+            if ref_h <= ref_i + 1:  # If gray recipe is topologically craftable
+                recipe: Recipe = self.__order.pop()
+                for i in range(self.__demands[recipe]):
+                    self.__skiller.craft(recipe)  # Craft all of this gray recipe
+                self.__container.remove(recipe)  # Mark as removed
+            else: return  # Most craftable gray recipe is still waiting for a requirement to be met
