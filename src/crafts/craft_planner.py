@@ -26,6 +26,7 @@ from src.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
 from src.crafts.price_manager import PriceManager
 from src.crafts.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
 from src.util.heap import Heap
+from src.util.color import Color
 
 
 @dataclass(frozen=True)
@@ -33,7 +34,10 @@ class CraftPlan:
     craft_counts: Mapping[Recipe, int]
     craft_order: tuple[tuple[int, int, Recipe, int], ...]
     craft_costs: Mapping[Recipe, int]
-    craft_mats: tuple[int, int]
+    craft_mats: Mapping[int, int]
+    recipes: tuple[Recipe, ...]
+    materials: tuple[tuple[int, str], ...]
+    cost: int
 
 
 class CraftPlanner:
@@ -79,11 +83,37 @@ class CraftPlanner:
             craft_costs: Mapping[Recipe, int]
             craft_mats: tuple[int, int]
         """
-        materials: defaultdict[int, int] = defaultdict(lambda: 0)
-        crafts: Mapping[Recipe, int] = self._plan_crafts(materials)
-        order: tuple[tuple[int, int, Recipe, int], ...] = self._plan_order(crafts)
-        return CraftPlan(crafts, order, None, None)
-        
+        craft_counts: Mapping[Recipe, int] = self._plan_crafts()
+        craft_order: tuple[tuple[int, int, Recipe, int], ...] = self._plan_order(craft_counts)
+        craft_mats: Mapping[int, int] = self._plan_mats(craft_counts)
+        craft_costs: Mapping[Recipe, int] = self._plan_costs(craft_counts)
+        recipes: tuple[Recipe, ...] = self._get_recipes(craft_counts)
+        materials: tuple[tuple[int, str], ...] = self._get_materials(craft_mats)
+        cost: int = sum(craft_counts[k] * v for k, v in craft_costs.items())
+        return CraftPlan(craft_counts, craft_order, craft_costs, craft_mats, recipes, materials, cost)
+
+    # Determines the total number of crafts required per recipe, including nested recipes
+    def _plan_crafts(self) -> Mapping[Recipe, int]:
+        demand: defaultdict[Recipe, int] = self.__demands.copy()
+        graph: RecipeGraph = RecipeGraph(self.__item_db, (k for k, v in demand.items() if v > 0))
+        crafts: dict[Recipe, int] = dict()
+        for recipe in reversed(list(graph.topo)):
+            item_demand: int = demand[recipe]
+            # Determine how many times we have to craft to meet total demand
+            count: int = ceil(item_demand / recipe.produces)
+            crafts[recipe] = count
+            for reagent, quantity in recipe.reagents.items():
+                entry: ItemEntry = self.__item_db.by_id[reagent]
+                if isinstance(entry, RecipeEntry):
+                    if entry.recipe in crafts:
+                        child: RecipeEntry = self.__item_db.by_recipe[recipe]
+                        raise RuntimeError(
+                            f"invariant violation: '{entry.item_name}' depends on "
+                            f"'{child.item_name}', which has already been processed")
+                    demand[entry.recipe] += count * quantity
+        return ReadOnly(crafts)
+
+    # Calculates the optimal crafting order, returns: [start, end, recipe, count]
     def _plan_order(self, crafts: Mapping[Recipe, int]) -> tuple[tuple[int, int, Recipe, int], ...]:
         graph: GrayPriortyRecipeGraph = GrayPriortyRecipeGraph(self.__item_db, crafts.keys())
         demands: dict[Recipe, int] = { k: v for k, v in crafts.items() if v > 0 }
@@ -110,27 +140,47 @@ class CraftPlanner:
                     break  # current section is now inefficient, exit
         return skiller.history()
 
-    # Determines the total number of crafts required per recipe, including nested recipes
-    def _plan_crafts(self, materials: defaultdict[int, int]) -> Mapping[Recipe, int]:
-        demand: defaultdict[Recipe, int] = self.__demands.copy()
-        graph: RecipeGraph = RecipeGraph(self.__item_db, (k for k, v in demand.items() if v > 0))
-        crafts: dict[Recipe, int] = dict()
-        for recipe in reversed(list(graph.topo)):
-            item_demand: int = demand[recipe]
-            # Determine how many times we have to craft to meet total demand
-            count: int = ceil(item_demand / recipe.produces)
-            crafts[recipe] = count
-            for reagent, quantity in recipe.reagents.items():
+    # Calculates the cost to craft each specified recipe
+    def _plan_costs(self, recipes: Iterable[Recipe]) -> Mapping[Recipe, int]:
+        warned: set[int] = set()  # do not repeatedly warn for the same item
+        def warn_no_price(item_id: int) -> int:
+            if not item_id in warned:
+                # "warning: item has no defined or listed price: Nethercleft Armor (23492)"
+                name: str = self.__item_db.by_id[item_id].item_name
+                item_str: str = Color.MAGENTA(f"{name} ({item_id})")
+                print(f"{Color.YELLOW('warning: item has no listed or defined price:')} {item_str}")
+                warned.add(item_id)
+            return 0
+        costs: dict[Recipe, int] = dict()
+        graph: RecipeGraph = RecipeGraph(self.__item_db, recipes)
+        for recipe in graph.topo:
+            cost: int = 0
+            for reagent, count in recipe.reagents.items():
                 entry: ItemEntry = self.__item_db.by_id[reagent]
                 if isinstance(entry, RecipeEntry):
-                    if entry.recipe in crafts:
-                        child: RecipeEntry = self.__item_db.by_recipe[recipe]
-                        raise RuntimeError(
-                            f"invariant violation: '{entry.item_name}' depends on "
-                            f"'{child.item_name}', which has already been processed")
-                    demand[entry.recipe] += count * quantity
-                else: materials[reagent] += count * quantity
-        return ReadOnly(crafts)
+                    cost += costs[entry.recipe] * count
+                else: cost += self.__prices.get_price(reagent, warn_no_price)
+            costs[recipe] = cost
+        return ReadOnly(costs)
+
+    # Retrieves all needed materials along with their required quantities
+    def _plan_mats(self, crafts: Mapping[Recipe, int]) -> Mapping[int, int]:
+        materials: dict[int, int] = defaultdict(lambda: 0)
+        for recipe, count in crafts.items():
+            for reagent in recipe.reagents:
+                if not isinstance(self.__item_db.by_id[reagent], RecipeEntry):
+                    materials[reagent] += count
+        return ReadOnly(materials)
+
+    # Sorts recipes by name
+    def _get_recipes(self, recipes: Iterable[Recipe]) -> tuple[Recipe, ...]:
+        return tuple(sorted(recipes, key=lambda recipe: self.__item_db.by_recipe[recipe].item_name))
+
+    # Sorts materials by name
+    def _get_materials(self, materials: Iterable[int]) -> tuple[tuple[int, str], ...]:
+        return tuple(sorted(
+            ((e, self.__item_db.by_id[e].item_name) for e in materials),
+            key = lambda item_id_name: item_id_name[1]))
 
     @staticmethod
     def _calc_skill_sections(graph: RecipeGraph) -> Generator[tuple[int, int, list[Recipe]]]:
@@ -138,7 +188,7 @@ class CraftPlanner:
         events: list[int] = sorted({e.learned for e in graph} | {e.levels[-1] for e in graph})
         for i in range(len(events) - 1):
             L, R = events[i], events[i + 1]
-            active: list[Recipe] = [e for e in graph.topo if e.learned <= L < e.levels[-1]]  # slow, can be optimized
+            active: list[Recipe] = list(reversed([e for e in graph.topo if e.learned <= L < e.levels[-1]]))
             yield L, R, active
 
 

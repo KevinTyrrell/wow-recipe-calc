@@ -90,7 +90,8 @@ class Color(Enum):
     MAGENTA = _ColorInstance(_ColorCode(35))
     CYAN = _ColorInstance(_ColorCode(36))
     WHITE = _ColorInstance(_ColorCode(37))
-    
+
+    @staticmethod
     def of(fg: _ColorInstance, bg: _ColorInstance) -> _ColorInstance:
         """
         Note: If the fg has a bg or the bg has a fg,
@@ -98,6 +99,6 @@ class Color(Enum):
         
         :param fg: Color to be used in the foreground
         :param bg: Color to be used in the background
-        :return: New multi-colored instance
+        :return: New multicolored instance
         """
         return _ColorInstance(fg.fg, bg.fg, fg.styles)

@@ -34,10 +34,11 @@ class ItemClient:
     def get_item_name(self, item_id: int) -> Optional[str]:
         self.__throttle.tick()
         url: str = urljoin(self._BASE_URL_WH, self._PART_URL_WH_FMT.format(item_id))
-        response: requests.Reponse = requests.get(url)
+        response: requests.Response = requests.get(url)
         response.raise_for_status()  # Raise error if not status ~200
         soup: BeautifulSoup = BeautifulSoup(response.text, "html.parser")
         if soup.title and soup.title.string:
             title: str = soup.title.string.strip()
             matcher: Optional[Match[str]] = search(self._RE_TITLE_PATTERN, title)
             if matcher: return matcher.group(1)
+        return None

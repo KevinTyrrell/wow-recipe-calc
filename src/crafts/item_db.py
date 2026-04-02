@@ -13,10 +13,10 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from typing import Optional, Any, Callable
+from typing import Optional, Callable
 from types import MappingProxyType as RO
 from dataclasses import dataclass
-from collections.abc import Set, Mapping
+from collections.abc import Mapping
 
 from src.io.local_cache import LocalCache, CachePolicy
 from src.crafts.recipe import Recipe
@@ -52,7 +52,7 @@ class ItemDB:
         self.__by_recipe_ro: Mapping[Recipe, RecipeEntry] = RO(self.__by_recipe)
         
     def register(self, recipe: Recipe) -> None:
-        if recipe in self.__by_recipe: return None  # no duplicates'
+        if recipe in self.__by_recipe: return  # no duplicates'
         for mat_id in recipe.reagents:
             if mat_id not in self.__by_id:  # Don't overwrite recipes with items
                 self._add_item_entry(mat_id)

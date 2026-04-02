@@ -89,6 +89,11 @@ def main():
     for t in plan.craft_order:
         a, b, recipe, count = t
         print(f"[{a}, {b}] x{count}: {recipe.name}")
+
+    for recipe in plan.recipes:
+        print(f"Recipe: {item_db.by_recipe[recipe].item_name} - {plan.craft_costs[recipe]}")
+
+    print(plan.cost)
     
 if __name__ == "__main__":
     main()
