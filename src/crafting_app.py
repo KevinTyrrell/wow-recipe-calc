@@ -1,0 +1,72 @@
+#  Copyright (C) 2026  Kevin Tyrrell
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>
+
+from argparse import Namespace as ArgNamespace
+from typing import Optional
+from logging import getLogger, Logger
+from atexit import register as on_exit
+
+from src.client.item_client import ItemClient
+from src.client.tsm_client import TSMClient
+from src.io.environment import Environment
+from src.crafts.craft_planner import CraftPlanner
+from src.crafts.item_db import ItemDB, ItemEntry
+from src.crafts.price_manager import PriceManager
+from src.util.throttle import Throttle
+
+logger: Logger = getLogger(__name__)
+
+
+class CraftingApp:
+    _DEFAULT_ITEM_DB_BASENAME: str = "item_db"
+    _DEFAULT_ENV_BASENAME: str = "setup"
+    _DEFAULT_THROTTLE: Throttle = (Throttle.Builder()
+       .add(1, 5).add(15, 60).build())
+
+    def __init__(self, args: ArgNamespace, throttle: Optional[Throttle] = None) -> None:
+        """
+        Argparse should provide the following arguments:
+        * required_crafts_path: Path to the user's desired crafts
+        * (Optional) api_key: Used to retrieve TSM prices
+
+        If api_key is unspecified, all item pricing operations default to reporting zero.
+        If throttle is unspecified: defaults to 1 request per 5 seconds & 15 requests per minute.
+
+        :param args: Program Argparse arguments
+        :param throttle: (Optional) Throttle for web requests
+        """
+        self.__args: ArgNamespace = args.args
+        self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
+        # Web clients for data requests
+        self.__item_client: ItemClient = ItemClient(self.__throttle)
+        self.__tsm_client: TSMClient = TSMClient(args.api_key)
+        # Databases/containers/optimizers
+        self.__item_db: ItemDB = ItemDB(self.__item_client.get_item_name, self._DEFAULT_ITEM_DB_BASENAME)
+        self.__prices: PriceManager = PriceManager(self.__tsm_client, self._unknown_price_cb)
+        self.__planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
+        # Misc
+        self.__env: Environment = Environment("setup")
+        self.__no_price_warning: set[int] = set()
+        on_exit(self.__item_db.save)
+        on_exit(self.__tsm_client.save)
+
+    def _unknown_price_cb(self, item_id: int) -> int:
+        entry: Optional[ItemEntry] = self.__item_db.by_id.get(item_id)
+        if entry is None:
+            raise ValueError(f"item is unknown, item ID: {item_id}")
+        if not item_id in self.__no_price_warning:
+            logger.warning(f"item has no pricing data: {entry.item_name} ({item_id})")
+            self.__no_price_warning.add(item_id)  # Spam filter
+        return 0

@@ -18,14 +18,14 @@ import json
 from pathlib import Path
 from typing import Optional, Callable
 
-from src.util.json_wrapper import *
+from src.util.json_wrapper import JSO, wrap_json
 from src.client.tsm_client import TSMClient
 
 
 class PriceManager:
     _PRICE_JSON_RELATIVE_PATH: str = "data/VendorPrices.json"
     
-    def __init__(self, tsm: TSMClient, no_price_cb: Optional[Callable[[int], int]]=None) -> None:
+    def __init__(self, tsm: TSMClient, no_price_cb: Optional[Callable[[int], int]] = None) -> None:
         """
         :param tsm: TSM request instance for market value pricing
         :param no_price_cb: (Optional) Callback for pricing unknown items (default: 0)
@@ -35,7 +35,7 @@ class PriceManager:
         self.__vendor: dict[int, int] = {
             e.id: e.cost for e in self._load_vendor_prices() }
     
-    def get_price(self, item_id: int, no_price_cb: Optional[Callable[[int], int]]=None) -> int:
+    def get_price(self, item_id: int, no_price_cb: Optional[Callable[[int], int]] = None) -> int:
         """
         Retrieves the price of an item, if possible
         

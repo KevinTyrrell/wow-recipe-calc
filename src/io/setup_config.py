@@ -13,7 +13,7 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from questionary import Style, Choice, select
+from questionary import Style, Choice, select, password
 
 from src.util.json_wrapper import JSO
 from src.client.tsm_client import TSMClient
@@ -66,18 +66,43 @@ class SetupConfig:
         Completes a full setup, querying the user about the following:
         Region, Realm, Faction, Expansion, Profession
         """
+        api_key: str = self.enter_tsm_api_key()
         region: int = self.choose_region_id()
         realm_info: tuple[int, object] = self.choose_realm_id(region)
         auction_house: int = self.choose_ah_id(realm_info[1])
         expac_info: tuple[str, int] = self.choose_expansion()
-        prof: int = self.choose_profession(expac_info[1])
+        prof: str = self.choose_profession(expac_info[1])
         return {
+            "api_key": api_key,
             "region": region,
             "realm": realm_info[0],
             "auction_house": auction_house,
             "expansion": expac_info[0],
             "profession": prof
         }
+
+
+    def enter_tsm_api_key(self) -> str:
+        return password("Please enter your TSM API Key:",
+            instruction=(
+                "\nPaste in your copied key by pressing the SHIFT and INSERT keys.\n"
+                
+                "\nYour TSM API Key can be found by visiting the following URL:\n"
+                "(You can copy this URL by sweeping and pressing the SHIFT and CTRL and C keys)\n\n"
+                
+                "https://id.tradeskillmaster.com/realms/app/account"
+                
+                "\nYou may be prompted to sign in or create a TSM account.\n"
+                "Navigate to 'Account' --> 'Personal Info' --> 'Legacy API Key'\n"
+                "Your TSM API Key will look like: a3f9c7d2-b6e1-9c2a-f7d1-3b8e4a91c6d2\n"
+                "This key, along with your other responses, will be stored & loaded locally.\n"
+
+                "\nThe TSM API Key is required to retrieve auction houses pricing data.\n"
+                "Due to daily API request limits, we must request the entire auction\n"
+                "house's pricing data all at once. This may lead to long start-up times.\n"
+                "This pricing data is considered stale after three hours, and will be\n"
+                "requested again, on next run, after that threshold of time is exceeded."
+            )).ask()
     
     def choose_region_id(self) -> int:
         """
@@ -128,7 +153,7 @@ class SetupConfig:
     def choose_profession(self, expansion: int) -> str:
         """
         :param expansion: Expansion ID
-        :return: Profesion segment associated with the specified profession
+        :return: Profession segment associated with the specified profession
         """
         prof_data: dict[str, str] = self._WOW_PROFESSIONS.copy()
         if expansion < 3:

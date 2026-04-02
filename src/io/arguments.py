@@ -16,7 +16,6 @@
 import argparse
 import json
 from pathlib import Path
-from typing import Any
 
 def _json_file(path_str: str):
     path = Path(path_str)

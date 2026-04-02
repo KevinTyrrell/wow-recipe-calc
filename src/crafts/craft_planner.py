@@ -142,15 +142,6 @@ class CraftPlanner:
 
     # Calculates the cost to craft each specified recipe
     def _plan_costs(self, recipes: Iterable[Recipe]) -> Mapping[Recipe, int]:
-        warned: set[int] = set()  # do not repeatedly warn for the same item
-        def warn_no_price(item_id: int) -> int:
-            if not item_id in warned:
-                # "warning: item has no defined or listed price: Nethercleft Armor (23492)"
-                name: str = self.__item_db.by_id[item_id].item_name
-                item_str: str = Color.MAGENTA(f"{name} ({item_id})")
-                print(f"{Color.YELLOW('warning: item has no listed or defined price:')} {item_str}")
-                warned.add(item_id)
-            return 0
         costs: dict[Recipe, int] = dict()
         graph: RecipeGraph = RecipeGraph(self.__item_db, recipes)
         for recipe in graph.topo:
@@ -159,7 +150,7 @@ class CraftPlanner:
                 entry: ItemEntry = self.__item_db.by_id[reagent]
                 if isinstance(entry, RecipeEntry):
                     cost += costs[entry.recipe] * count
-                else: cost += self.__prices.get_price(reagent, warn_no_price)
+                else: cost += self.__prices.get_price(reagent)
             costs[recipe] = cost
         return ReadOnly(costs)
 

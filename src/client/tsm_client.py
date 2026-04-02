@@ -13,7 +13,7 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from requests import get as query, post as submit, Response, Session
+from requests import post as submit, Response, Session
 from typing import Optional, Iterator, Any
 
 from src.util.throttle import Throttle
@@ -40,7 +40,6 @@ class _TSMAuth:
         self.__throttle.tick()
         response: Response = submit(self._ENDPOINT_URL, json=self.__payload)
         response.raise_for_status()  # Raise error if not status ~200
-        data: dict[str, Any] = response.json()
         data = wrap_json(response.json())
         return data.access_token
 
