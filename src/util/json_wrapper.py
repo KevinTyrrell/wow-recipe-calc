@@ -14,7 +14,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from __future__ import annotations
-from typing import Any, TypeVar, Union
+
+from json.decoder import JSONArray
+from typing import Any, TypeAlias
 
 
 class _JsonObject:
@@ -41,7 +43,7 @@ class _JsonArray:
     def __len__(self): return len(self.__data)
     def __repr__(self): return repr(self.__data)
 
-JSO = TypeVar("JSO", bound=Union[_JsonObject, _JsonArray])
+JSO: TypeAlias = _JsonObject | _JsonArray
 
 def wrap_json(jso: dict[str, Any] | list) -> JSO:
     """

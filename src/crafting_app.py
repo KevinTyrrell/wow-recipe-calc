@@ -14,6 +14,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from argparse import Namespace as ArgNamespace
+from functools import cached_property
 from typing import Optional
 from logging import getLogger, Logger
 from atexit import register as on_exit
@@ -21,10 +22,13 @@ from atexit import register as on_exit
 from src.client.item_client import ItemClient
 from src.client.tsm_client import TSMClient
 from src.io.environment import Environment
-from src.crafts.craft_planner import CraftPlanner
+from src.crafts.craft_planner import CraftPlanner, CraftPlan
 from src.crafts.item_db import ItemDB, ItemEntry
 from src.crafts.price_manager import PriceManager
+from src.crafts.recipe import Recipe
+from src.io.setup_config import SetupConfig
 from src.util.throttle import Throttle
+from src.util.json_wrapper import JSO, wrap_json
 
 logger: Logger = getLogger(__name__)
 
@@ -47,20 +51,57 @@ class CraftingApp:
         :param args: Program Argparse arguments
         :param throttle: (Optional) Throttle for web requests
         """
-        self.__args: ArgNamespace = args.args
+        self.__args: ArgNamespace = args
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
+        self.__env: Environment = Environment(self._DEFAULT_ENV_BASENAME)
+        self.__no_price_warning: set[int] = set()
         # Web clients for data requests
         self.__item_client: ItemClient = ItemClient(self.__throttle)
-        self.__tsm_client: TSMClient = TSMClient(args.api_key)
+        self.__tsm_client: TSMClient = TSMClient()
         # Databases/containers/optimizers
         self.__item_db: ItemDB = ItemDB(self.__item_client.get_item_name, self._DEFAULT_ITEM_DB_BASENAME)
         self.__prices: PriceManager = PriceManager(self.__tsm_client, self._unknown_price_cb)
         self.__planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
-        # Misc
-        self.__env: Environment = Environment("setup")
-        self.__no_price_warning: set[int] = set()
+        self.__tsm_client.auction_house = self._environment.auction_house
         on_exit(self.__item_db.save)
         on_exit(self.__tsm_client.save)
+
+    def populate_recipes(self) -> None:
+        """
+        Populate the item database with profession recipe data
+        """
+        logger.debug("populating recipe data")
+        prof_data: JSO = wrap_json(self.__args.profession_data_path)
+        for recipe_data in prof_data:
+            recipe: Recipe = Recipe(
+                recipe_data.name,
+                next(iter(recipe_data.levels)),
+                list(recipe_data.levels)[1:],
+                { int(k): v for k, v in recipe_data.reagents },
+                int(recipe_data.product),
+                recipe_data.produces)
+            self.__item_db.register(recipe)
+
+    def run_planner(self) -> CraftPlan:
+        """
+        :return: craft plan detailing the optimal crafting routes/windows/materials
+        """
+        logger.debug("running craft planner")
+        for name, quantity in self.__args.required_crafts_path.items():
+            if not self.__planner.craft(name, quantity):
+                logger.debug(f"planned recipe is unrecognized: {name}")
+        return self.__planner.plan()
+
+    @cached_property
+    def _environment(self) -> JSO:
+        try:
+            settings: dict[str, str | int | float | bool] = self.__env.load()
+            self.__tsm_client.authorize(settings["api_key"])
+        except FileNotFoundError, OSError, ValueError:
+            config: SetupConfig = SetupConfig(self.__tsm_client)
+            settings: dict[str, str | int] = config.full_setup()
+            on_exit(self.__env.save, settings)
+        return wrap_json(settings)
 
     def _unknown_price_cb(self, item_id: int) -> int:
         entry: Optional[ItemEntry] = self.__item_db.by_id.get(item_id)

@@ -19,8 +19,11 @@ from typing import Optional
 from re import Match, search
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from logging import getLogger, Logger
 
 from src.util.throttle import Throttle
+
+logger: Logger = getLogger(__name__)
 
 
 class ItemClient:
@@ -30,8 +33,9 @@ class ItemClient:
     
     def __init__(self, throttle: Throttle) -> None:
         self.__throttle: Throttle = throttle
-        
+
     def get_item_name(self, item_id: int) -> Optional[str]:
+        logger.info(f"requesting web information for item ID: {item_id}")
         self.__throttle.tick()
         url: str = urljoin(self._BASE_URL_WH, self._PART_URL_WH_FMT.format(item_id))
         response: requests.Response = requests.get(url)

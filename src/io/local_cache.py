@@ -19,6 +19,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional, Any, Callable
 from time import time as unix_time
+from logging import getLogger, Logger
+
+logger: Logger = getLogger(__name__)
 
 
 @dataclass
@@ -38,7 +41,7 @@ class LocalCache:
     
     def __init__(self, file_basename: str, dir_path: Optional[str]=None, file_ext: Optional[str]=None) -> None:
         """
-        Constructs a key/value cache, which is manually saveable to the storage medium
+        Constructs a key/value cache, which is manually savable to the storage medium
         
         :param file_basename: Filename of the database to cache response data
         :param dir_path: Directory path to save the database in, default: $CWD
@@ -54,7 +57,7 @@ class LocalCache:
         Retrieves the value associated with the specified key in the database
         
         If no such key exists, or the pairing has become stale, a new value is generated.
-        Pairings become stale when their time-to-live (TTL) has been exeeded (None: Never Stale).
+        Pairings become stale when their time-to-live (TTL) has been exceeded (None: Never Stale).
         Generated values are created using the fetcher provided in the CachePolicy instance.
         If the fetcher returns None, the lookup is considered to have failed, thus returns None.
         
@@ -65,13 +68,14 @@ class LocalCache:
         entry: Optional[_DatabaseEntry] = self.__db.get(key)
         if entry is not None:
             if entry.expires is not None and entry.expires <= ts:
+                logger.debug(f"cached key has expired: key={key}, expires={entry.expires}, ts={ts}")
                 del self.__db[key]  # Eject stale entry
             else: return entry.data
         data: Optional[Any] = policy.fetcher(key)
         if data is not None:
             expires: Optional[int] = None if policy.ttl is None else ts + policy.ttl
             self.__db[key] = _DatabaseEntry(data, expires)
-            return data
+        return data
             
     def clean(self) -> None:
         """

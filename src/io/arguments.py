@@ -63,15 +63,5 @@ def parse_args() -> argparse.Namespace:
             "Must be a JSON object mapping recipe names (strings) to quantities (positive integers)."
         )
     )
-    
-    parser.add_argument(
-        "--api-key",
-        type=str,
-        default=None,
-        help=(
-            "API key from the user's TSM account. See URL: "
-            "https://id.tradeskillmaster.com/realms/app/account"
-        )
-    )
 
     return parser.parse_args()

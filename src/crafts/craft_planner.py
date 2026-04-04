@@ -26,18 +26,24 @@ from src.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
 from src.crafts.price_manager import PriceManager
 from src.crafts.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
 from src.util.heap import Heap
-from src.util.color import Color
 
 
 @dataclass(frozen=True)
 class CraftPlan:
     craft_counts: Mapping[Recipe, int]
+    """Required recipes & number of times each recipe must be casted"""
     craft_order: tuple[tuple[int, int, Recipe, int], ...]
+    """Optimal order to craft each recipe: from, to (inclusive), recipe, count"""
     craft_costs: Mapping[Recipe, int]
+    """Required recipes & cost per-cast of each recipe, in copper"""
     craft_mats: Mapping[int, int]
+    """Total raw reagents required: item ID, quantity"""
     recipes: tuple[Recipe, ...]
+    """List of required recipes, sorted by name lexicographically"""
     materials: tuple[tuple[int, str], ...]
+    """List of raw reagents, sorted by name lexicographically: item ID, item name"""
     cost: int
+    """Total cost of all the required crafts, in copper"""
 
 
 class CraftPlanner:

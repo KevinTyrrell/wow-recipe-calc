@@ -67,6 +67,7 @@ class SetupConfig:
         Region, Realm, Faction, Expansion, Profession
         """
         api_key: str = self.enter_tsm_api_key()
+        self.__tsm.authorize(api_key)  # JIT for following calls
         region: int = self.choose_region_id()
         realm_info: tuple[int, object] = self.choose_realm_id(region)
         auction_house: int = self.choose_ah_id(realm_info[1])
@@ -81,7 +82,6 @@ class SetupConfig:
             "profession": prof
         }
 
-
     def enter_tsm_api_key(self) -> str:
         return password("Please enter your TSM API Key:",
             instruction=(
@@ -92,7 +92,7 @@ class SetupConfig:
                 
                 "https://id.tradeskillmaster.com/realms/app/account"
                 
-                "\nYou may be prompted to sign in or create a TSM account.\n"
+                "\n\nYou may be prompted to sign in or create a TSM account.\n"
                 "Navigate to 'Account' --> 'Personal Info' --> 'Legacy API Key'\n"
                 "Your TSM API Key will look like: a3f9c7d2-b6e1-9c2a-f7d1-3b8e4a91c6d2\n"
                 "This key, along with your other responses, will be stored & loaded locally.\n"
@@ -101,9 +101,11 @@ class SetupConfig:
                 "Due to daily API request limits, we must request the entire auction\n"
                 "house's pricing data all at once. This may lead to long start-up times.\n"
                 "This pricing data is considered stale after three hours, and will be\n"
-                "requested again, on next run, after that threshold of time is exceeded."
+                "requested again, on next run, after that threshold of time is exceeded.\n"
+                
+                "\nEnter TSM API Key: "
             )).ask()
-    
+
     def choose_region_id(self) -> int:
         """
         :return: World of Warcraft Region ID corresponding to user's choice
@@ -133,7 +135,6 @@ class SetupConfig:
         :param auction_houses: JSON array of auction house information
         :return: Auction house ID
         """
-        realms = sorted(auction_houses, key = lambda x: x.type)
         choices: list[Choice] = [
             Choice(o.type, value = o.auctionHouseId) for o in auction_houses ]
         return select("Select World of Warcraft realm auction house",
