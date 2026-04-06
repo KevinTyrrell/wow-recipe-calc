@@ -46,22 +46,26 @@ def parse_args() -> argparse.Namespace:
     # ---------------------------
     # Required positional arguments
     # ---------------------------
-    parser.add_argument(
-        "profession_data_path",
+    parser.add_argument("profession_data_path",
         type=_json_file,
+        dest="profession_data",
         help=(
             "Path to a JSON file containing all craftable recipes in a particular profession.\n"
             "Each recipe must have the keys: 'name', 'levels', 'reagents', 'product', 'produces'."
         )
     )
 
-    parser.add_argument(
-        "required_crafts_path",
+    parser.add_argument("required_crafts_path",
         type=_json_file,
+        dest="required_crafts",
         help=(
             "Path to a JSON file describing what craftable recipes you wish to make, and in what quantity.\n"
             "Must be a JSON object mapping recipe names (strings) to quantities (positive integers)."
         )
+    )
+
+    parser.add_argument(
+
     )
 
     return parser.parse_args()

@@ -13,25 +13,18 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-import logging
+from dataclasses import dataclass
 
-from argparse import Namespace as ArgNamespace
+@dataclass(frozen=True)
+class WindowConfig:
+    name: str = "WoW Recipe Calculator"
+    width: int = 504
+    height: int = 912
+    margin_ratio: float = 0.05
 
-from src.crafting_app import CraftingApp
-from src.io.arguments import parse_args
-from src.crafts.craft_planner import CraftPlan
-from src.view.ui_manager import UIManager
-
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
-)
-
-def main() -> None:
-    args: ArgNamespace = parse_args()
-    app: CraftingApp = CraftingApp(args)
-    ui: UIManager = UIManager(app)
-    ui.show()
-
-if __name__ == "__main__":
-    main()
+@dataclass(frozen=True)
+class WindowTabs:
+    edit_tab_name: str = "Edit Manifest"
+    bom_tab_name: str = "Bill of Materials"
+    route_tab_name: str = "Crafting Route"
+    cost_tab_name: str = "Cost Breakdown"

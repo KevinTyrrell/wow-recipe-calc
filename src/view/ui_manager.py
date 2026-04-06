@@ -13,25 +13,11 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-import logging
-
-from argparse import Namespace as ArgNamespace
-
 from src.crafting_app import CraftingApp
-from src.io.arguments import parse_args
-from src.crafts.craft_planner import CraftPlan
-from src.view.ui_manager import UIManager
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
-)
+class UIManager:
+    def __init__(self, app: CraftingApp) -> None:
+        self.__app: CraftingApp = app
 
-def main() -> None:
-    args: ArgNamespace = parse_args()
-    app: CraftingApp = CraftingApp(args)
-    ui: UIManager = UIManager(app)
-    ui.show()
-
-if __name__ == "__main__":
-    main()
+    def show(self) -> None:
+        pass

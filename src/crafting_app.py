@@ -66,12 +66,14 @@ class CraftingApp:
         on_exit(self.__item_db.save)
         on_exit(self.__tsm_client.save)
 
-    def populate_recipes(self) -> None:
+    def populate_recipes(self) -> ItemDB:
         """
         Populate the item database with profession recipe data
+
+        :return: Completed item DB
         """
         logger.debug("populating recipe data")
-        prof_data: JSO = wrap_json(self.__args.profession_data_path)
+        prof_data: JSO = wrap_json(self.__args.profession_data)
         for recipe_data in prof_data:
             recipe: Recipe = Recipe(
                 recipe_data.name,
@@ -81,13 +83,14 @@ class CraftingApp:
                 int(recipe_data.product),
                 recipe_data.produces)
             self.__item_db.register(recipe)
+        return self.__item_db
 
     def run_planner(self) -> CraftPlan:
         """
         :return: craft plan detailing the optimal crafting routes/windows/materials
         """
         logger.debug("running craft planner")
-        for name, quantity in self.__args.required_crafts_path.items():
+        for name, quantity in self.__args.required_crafts.items():
             if not self.__planner.craft(name, quantity):
                 logger.debug(f"planned recipe is unrecognized: {name}")
         return self.__planner.plan()

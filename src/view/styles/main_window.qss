@@ -1,0 +1,28 @@
+QWidget {
+    background-color: #121212;
+    color: white;
+}
+QLineEdit {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 6px;
+    border-radius: 6px;
+}
+QListWidget {
+    background-color: #1a1a1a;
+    border: none;
+}
+QSpinBox {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+QTabBar::tab {
+    background: #1e1e1e;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 6px;
+}
+QTabBar::tab:selected {
+    background: #333;
+}
