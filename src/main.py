@@ -22,13 +22,12 @@ from src.io.arguments import parse_args
 from src.crafts.craft_planner import CraftPlan
 from src.view.ui_manager import UIManager
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
-)
 
 def main() -> None:
     args: ArgNamespace = parse_args()
+    logging.basicConfig(
+        level=args.log_level,
+        format="%(asctime)s [%(levelname)s] [%(name)s] %(message)s")
     app: CraftingApp = CraftingApp(args)
     ui: UIManager = UIManager(app)
     ui.show()
