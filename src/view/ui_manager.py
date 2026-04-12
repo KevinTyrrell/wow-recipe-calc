@@ -13,11 +13,22 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+from PySide6.QtWidgets import QApplication
+from sys import exit
+
 from src.crafting_app import CraftingApp
+from src.view.style_loader import StyleLoader
+from src.view.frame.main_window import MainWindow
 
 class UIManager:
     def __init__(self, app: CraftingApp) -> None:
-        self.__app: CraftingApp = app
+        self.__craft_app: CraftingApp = app
+        self.__view_app: QApplication = QApplication()
+        style_loader: StyleLoader = StyleLoader()
+        #   self.__view_app.setStyleSheet("QWidget { border: 1px solid red; }")
+        #self.__view_app.setStyleSheet(style_loader.load())
+        self.__window: MainWindow = MainWindow()
 
     def show(self) -> None:
-        pass
+        self.__window.show()
+        exit(self.__view_app.exec())

@@ -73,7 +73,7 @@ class CraftingApp:
         :return: Completed item DB
         """
         logger.debug("populating recipe data")
-        prof_data: JSO = wrap_json(self.__args.profession_data)
+        prof_data: JSO = wrap_json(self.__args.profession_data_path)
         for recipe_data in prof_data:
             recipe: Recipe = Recipe(
                 recipe_data.name,
@@ -90,7 +90,7 @@ class CraftingApp:
         :return: craft plan detailing the optimal crafting routes/windows/materials
         """
         logger.debug("running craft planner")
-        for name, quantity in self.__args.required_crafts.items():
+        for name, quantity in self.__args.required_crafts_path.items():
             if not self.__planner.craft(name, quantity):
                 logger.debug(f"planned recipe is unrecognized: {name}")
         return self.__planner.plan()

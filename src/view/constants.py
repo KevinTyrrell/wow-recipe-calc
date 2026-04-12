@@ -21,6 +21,7 @@ class WindowConfig:
     width: int = 504
     height: int = 912
     margin_ratio: float = 0.05
+    spacing: int = 10
 
 @dataclass(frozen=True)
 class WindowTabs:

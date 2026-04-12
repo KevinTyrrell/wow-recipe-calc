@@ -14,146 +14,233 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from PySide6.QtWidgets import (
-    QApplication, QWidget, QVBoxLayout, QLabel, QLineEdit,
-    QListWidget, QListWidgetItem, QTabWidget, QHBoxLayout,
-    QSpinBox, QFrame, QScrollArea)
+    QWidget, QVBoxLayout, QHBoxLayout,
+    QLabel, QTabWidget, QPushButton,
+    QLineEdit, QFrame
+)
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QFont
-import sys
 
 from src.view.constants import *
-from src.view.style_loader import StyleLoader
 
-
-class Divider(QFrame):
-    def __init__(self):
-        super().__init__()
-        self.setFixedHeight(4)
-        self.setStyleSheet("""
-            QFrame {
-                background: qlineargradient(
-                    x1:0, y1:0, x2:1, y2:0,
-                    stop:0 rgba(255,255,255,0),
-                    stop:0.2 rgba(255,255,255,120),
-                    stop:0.5 rgba(255,255,255,200),
-                    stop:0.8 rgba(255,255,255,120),
-                    stop:1 rgba(255,255,255,0)
-                );
-            }
-        """)
-
-class RecipeItem(QWidget):
-    def __init__(self, name):
-        super().__init__()
-        layout = QHBoxLayout()
-        layout.setContentsMargins(0, 0, 0, 0)
-
-        self.label = QLabel(name)
-        self.spin = QSpinBox()
-        self.spin.setMinimum(1)
-        self.spin.setValue(1)
-        self.spin.setFixedWidth(60)
-
-        layout.addWidget(self.label)
-        layout.addSpacing(5)
-        layout.addWidget(self.spin)
-        self.setLayout(layout)
 
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
+
         self.setWindowTitle(WindowConfig.name)
         self.resize(WindowConfig.width, WindowConfig.height)
 
-        self.all_recipes = [
-            "Iron Grenade", "Bronze Framework", "Copper Bolt",
-            "Silver Contact", "Rough Blasting Powder"
-        ]
+        # --- Frameless window ---
+        self.setWindowFlags(Qt.FramelessWindowHint)
 
-        self.selected_recipes = {}
+        # --- Drag state ---
+        self._dragging = False
+        self._drag_pos = None
 
-        main_layout = QVBoxLayout()
-        main_layout.setContentsMargins(25, 25, 25, 25)
-        main_layout.setSpacing(10)
+        # --- Root layout ---
+        root = QVBoxLayout(self)
+        root.setContentsMargins(8, 8, 8, 8)
+        root.setSpacing(0)
 
-        title = QLabel("WoW Recipe Calculator")
+        # --- Main container ---
+        container = QWidget()
+        container.setObjectName("container")
+
+        container_layout = QVBoxLayout(container)
+        container_layout.setContentsMargins(0, 0, 0, 0)
+        container_layout.setSpacing(0)
+
+        # =========================
+        # Top Bar
+        # =========================
+        top_bar = QWidget()
+        top_bar.setObjectName("topbar")
+        top_bar.setFixedHeight(48)
+
+        top_layout = QHBoxLayout(top_bar)
+        top_layout.setContentsMargins(12, 0, 12, 0)
+
+        title = QLabel(WindowConfig.name)
+        title.setFont(QFont("Arial", 11, QFont.Bold))
         title.setAlignment(Qt.AlignCenter)
-        title.setFont(QFont("Arial", 20, QFont.Bold))
-        title.setStyleSheet("color: white;")
+        title.setAttribute(Qt.WA_TransparentForMouseEvents)
 
-        main_layout.addWidget(title)
-        main_layout.addWidget(Divider())
+        btn_min = QPushButton("—")
+        btn_close = QPushButton("✕")
+        for btn in (btn_min, btn_close):
+            btn.setFixedSize(32, 24)
+        btn_min.clicked.connect(self.showMinimized)
+        btn_close.clicked.connect(self.close)
+        btn_min.setObjectName("secondary")
+        btn_close.setObjectName("close")
 
-        self.tabs = QTabWidget()
-        self.tabs.setTabPosition(QTabWidget.South)
+        button_container = QWidget()
+        button_layout = QHBoxLayout(button_container)
+        button_layout.setContentsMargins(0, 0, 0, 0)
+        button_layout.addWidget(btn_min)
+        button_layout.addWidget(btn_close)
 
-        self.edit_tab = QWidget()
-        self.bom_tab = QWidget()
-        self.route_tab = QWidget()
-        self.cost_tab = QWidget()
+        left_spacer = QWidget()
+        left_spacer.setFixedWidth(button_container.sizeHint().width())
+        top_layout.addWidget(left_spacer)
+        top_layout.addStretch()
+        top_layout.addWidget(title)
+        top_layout.addStretch()
+        top_layout.addWidget(button_container)
 
-        self.tabs.addTab(self.edit_tab, WindowTabs.edit_tab_name)
-        self.tabs.addTab(self.bom_tab, WindowTabs.bom_tab_name)
-        self.tabs.addTab(self.route_tab, WindowTabs.route_tab_name)
-        self.tabs.addTab(self.cost_tab, WindowTabs.cost_tab_name)
+        # =========================
+        # Content Area
+        # =========================
+        content = QWidget()
+        content_layout = QVBoxLayout(content)
+        content_layout.setContentsMargins(12, 12, 12, 12)
+        content_layout.setSpacing(12)
 
-        self.setup_edit_tab()
+        # --- Panel 1 (Tabs) ---
+        panel1 = self._make_panel()
+        panel1_layout = QVBoxLayout(panel1)
 
-        main_layout.addWidget(self.tabs)
-        main_layout.addWidget(Divider())
+        tabs = QTabWidget()
+        panel1_layout.addWidget(tabs)
 
-        self.setLayout(main_layout)
+        # --- Panel 2 (Controls row) ---
+        panel2 = self._make_panel()
+        panel2_layout = QHBoxLayout(panel2)
 
-    def setup_edit_tab(self):
-        layout = QVBoxLayout()
-        layout.setSpacing(10)
+        btn1 = QPushButton("Action 1")
+        btn2 = QPushButton("Action 2")
+        btn2.setObjectName("secondary")
 
-        self.search = QLineEdit()
-        self.search.setPlaceholderText("Search recipes...")
-        self.search.textChanged.connect(self.filter_recipes)
+        panel2_layout.addWidget(btn1)
+        panel2_layout.addWidget(btn2)
+        panel2_layout.addStretch()
 
-        layout.addWidget(self.search)
-        layout.addWidget(Divider())
+        # --- Panel 3 (Input row) ---
+        panel3 = self._make_panel()
+        panel3_layout = QHBoxLayout(panel3)
 
-        self.list_a = QListWidget()
-        self.list_a.addItems(self.all_recipes)
-        self.list_a.itemClicked.connect(self.add_recipe)
+        input_box = QLineEdit()
+        input_box.setPlaceholderText("Enter something...")
 
-        layout.addWidget(self.list_a)
-        layout.addWidget(Divider())
+        submit = QPushButton("Submit")
 
-        self.list_b = QListWidget()
+        panel3_layout.addWidget(input_box)
+        panel3_layout.addWidget(submit)
 
-        layout.addWidget(self.list_b)
+        # Add panels
+        content_layout.addWidget(panel1)
+        content_layout.addWidget(panel2)
+        content_layout.addWidget(panel3)
 
-        self.edit_tab.setLayout(layout)
+        # =========================
+        # Assemble
+        # =========================
+        container_layout.addWidget(top_bar)
+        container_layout.addWidget(content)
+        root.addWidget(container)
 
-    def filter_recipes(self):
-        text = self.search.text().strip().lower()
-        self.list_a.clear()
-        for r in self.all_recipes:
-            if r not in self.selected_recipes and text in r.lower():
-                self.list_a.addItem(r)
+        self._drag_widget = top_bar
 
-    def add_recipe(self, item):
-        name = item.text()
-        self.selected_recipes[name] = 1
+        # =========================
+        # Global Styling
+        # =========================
+        self.setStyleSheet("""
+            QWidget {
+                background-color: #1e1e1e;
+                color: #dddddd;
+                font-family: Arial;
+            }
+            QWidget#topbar > QWidget {
+                background-color: transparent;
+            }
+            QWidget#container {
+                background-color: #2b2b2b;
+                border-radius: 10px;
+            }
+            QWidget#topbar QLabel {
+                background-color: transparent;
+                border: none;
+            }
+            QWidget#topbar {
+                background-color: #2f2f2f;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom: 1px solid #3a3a3a;
+            }
 
-        self.filter_recipes()
+            QWidget#panel {
+                background-color: #333333;
+                border-radius: 8px;
+                border: 1px solid #3f3f3f;
+            }
 
-        widget = RecipeItem(name)
-        list_item = QListWidgetItem()
-        list_item.setSizeHint(widget.sizeHint())
+            QPushButton {
+                background-color: #2d79c7;
+                color: white;
+                border-radius: 6px;
+                padding: 6px 12px;
+            }
 
-        self.list_b.addItem(list_item)
-        self.list_b.setItemWidget(list_item, widget)
+            QPushButton:hover {
+                background-color: #3c8ee6;
+            }
 
-        widget.spin.setFocus()
+            QPushButton:pressed {
+                background-color: #1f5a96;
+            }
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    style_loader: StyleLoader = StyleLoader()
-    app.setStyleSheet(style_loader.load())
-    window = MainWindow()
-    window.show()
-    sys.exit(app.exec())
+            QPushButton#secondary {
+                background-color: #444;
+            }
+
+            QPushButton#secondary:hover {
+                background-color: #555;
+            }
+
+            QPushButton#close:hover {
+                background-color: #c94a4a;
+            }
+
+            QLineEdit {
+                background-color: #2a2a2a;
+                border: 1px solid #3a3a3a;
+                border-radius: 6px;
+                padding: 6px;
+            }
+
+            QTabWidget::pane {
+                border: 1px solid #3a3a3a;
+                border-radius: 6px;
+                background: #2a2a2a;
+            }
+        """)
+
+    # =========================
+    # Panel helper
+    # =========================
+    def _make_panel(self):
+        panel = QFrame()
+        panel.setObjectName("panel")
+        layout = QVBoxLayout(panel)
+        layout.setContentsMargins(10, 10, 10, 10)
+        layout.setSpacing(8)
+        return panel
+
+    # =========================
+    # Dragging logic
+    # =========================
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+            if self._drag_widget.geometry().contains(event.position().toPoint()):
+                self._dragging = True
+                self._drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
+                event.accept()
+
+    def mouseMoveEvent(self, event):
+        if self._dragging:
+            self.move(event.globalPosition().toPoint() - self._drag_pos)
+            event.accept()
+
+    def mouseReleaseEvent(self, event):
+        self._dragging = False
