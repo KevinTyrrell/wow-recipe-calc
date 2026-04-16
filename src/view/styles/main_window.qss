@@ -8,15 +8,6 @@ QWidget {
     font-family: Bahnschrift;
 }
 
-/* =========================
-   Containers
-========================= */
-
-QWidget#container {
-    background-color: #2b2b2b;
-    border-radius: 10px;
-}
-
 QWidget#panel {
     background-color: #333333;
     border: 1px solid #3f3f3f;

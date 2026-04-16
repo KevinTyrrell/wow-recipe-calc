@@ -42,14 +42,6 @@ class MainWindow(QWidget):
         root_layout.setContentsMargins(*C.Window.MARGINS)
         root_layout.setSpacing(0)
 
-        # --- Main container ---
-        container = QWidget()
-        container.setObjectName("container")
-
-        container_layout = QVBoxLayout(container)
-        container_layout.setContentsMargins(0, 0, 0, 0)
-        container_layout.setSpacing(0)
-
         # =========================
         # Banner
         # =========================
@@ -134,9 +126,8 @@ class MainWindow(QWidget):
         # =========================
         # Assemble
         # =========================
-        container_layout.addWidget(banner_frame)
-        container_layout.addWidget(content)
-        root_layout.addWidget(container)
+        root_layout.addWidget(banner_frame)
+        root_layout.addWidget(content)
 
         self._drag_widget = banner_frame
 
