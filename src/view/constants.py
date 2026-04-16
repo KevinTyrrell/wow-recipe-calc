@@ -27,9 +27,16 @@ class Tab:
     COST_NAME: str = "Cost Breakdown"
 
 
+class Control:
+    CLOSE_SYMBOL: str = "✕"
+    HIDE_SYMBOL: str = "—"
+    CLOSE_NAME: str = "close"
+    HIDE_NAME: str = "minimize"
+    WIDTH: int = 32
+    HEIGHT: int = 24
+
 class Banner:
     TITLE: str = "WoW Recipe Calculator"
     HANDLE: str = "banner"
     MARGINS: tuple[int, int, int, int] = (12, 0, 12, 0)
-    BUTTON_WIDTH: int = 32
-    BUTTON_HEIGHT: int = 24
+    HEIGHT: int = 48

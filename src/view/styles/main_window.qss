@@ -59,12 +59,13 @@ QPushButton:pressed {
 
 /* Variants */
 
-QPushButton#secondary {
+QPushButton#minimize {
     background-color: #444444;
 }
 
-QPushButton#secondary:hover {
-    background-color: #555555;
+QPushButton#minimize:hover {
+    background-color: #dddddd;
+    color: black;
 }
 
 QPushButton#close:hover {

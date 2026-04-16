@@ -13,15 +13,13 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
+from PySide6.QtCore import Qt, QObject, QEvent
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QTabWidget, QPushButton,
     QLineEdit, QFrame)
 
-from typing import cast
-
+from typing import cast, Callable
 
 import src.view.constants as C
 
@@ -34,37 +32,34 @@ class MainWindow(QWidget):
         self.resize(C.Window.WIDTH, C.Window.HEIGHT)
         self.setWindowFlags(Qt.FramelessWindowHint)  # remove window dressing
 
-        # --- Drag state ---
-        self._dragging = False
-        self._drag_pos = None
-
         root_layout: QVBoxLayout = QVBoxLayout(self)
         root_layout.setContentsMargins(*C.Window.MARGINS)
         root_layout.setSpacing(0)
 
-        # =========================
-        # Banner
-        # =========================
         banner_frame = QWidget()
         banner_frame.setObjectName(C.Banner.HANDLE)
-        banner_frame.setFixedHeight(48)
+        banner_frame.setFixedHeight(C.Banner.HEIGHT)
 
-        title: QLabel = QLabel(C.Banner.TITLE)
-        title.setAlignment(Qt.AlignCenter)
-        title.setAttribute(Qt.WA_TransparentForMouseEvents)
+        lbl_title: QLabel = QLabel(C.Banner.TITLE)
+        lbl_title.setAlignment(Qt.AlignCenter)
+        lbl_title.setAttribute(Qt.WA_TransparentForMouseEvents)
 
-        btn_min = QPushButton("—")
-        btn_close = QPushButton("✕")
+        btn_min = QPushButton(C.Control.HIDE_SYMBOL)
+        btn_close = QPushButton(C.Control.CLOSE_SYMBOL)
         for btn in (btn_min, btn_close):
-            btn.setFixedSize(C.Banner.BUTTON_WIDTH, C.Banner.BUTTON_HEIGHT)
+            btn.setFixedSize(C.Control.WIDTH, C.Control.HEIGHT)
         btn_min.clicked.connect(self.showMinimized)
         btn_close.clicked.connect(self.close)
-        btn_min.setObjectName("secondary")
-        btn_close.setObjectName("close")
+        btn_min.setObjectName(C.Control.HIDE_NAME)
+        btn_close.setObjectName(C.Control.CLOSE_NAME)
 
         button_container = QWidget()
         button_layout = QHBoxLayout(button_container)
         button_layout.setContentsMargins(0, 0, 0, 0)
+        btn_min: QPushButton = make_ctrl_button(C.Control.HIDE_NAME,
+            C.Control.HIDE_SYMBOL, C.Control.WIDTH, C.Control.HEIGHT, lambda _: self.showMinimized())
+        btn_close: QPushButton = make_ctrl_button(C.Control.CLOSE_NAME,
+            C.Control.CLOSE_SYMBOL, C.Control.WIDTH, C.Control.HEIGHT, lambda _: self.close())
         button_layout.addWidget(btn_min)
         button_layout.addWidget(btn_close)
 
@@ -75,7 +70,7 @@ class MainWindow(QWidget):
         banner_layout.setContentsMargins(*C.Banner.MARGINS)
         banner_layout.addWidget(left_spacer)
         banner_layout.addStretch()
-        banner_layout.addWidget(title)
+        banner_layout.addWidget(lbl_title)
         banner_layout.addStretch()
         banner_layout.addWidget(button_container)
 
@@ -123,13 +118,11 @@ class MainWindow(QWidget):
         content_layout.addWidget(panel2)
         content_layout.addWidget(panel3)
 
-        # =========================
-        # Assemble
-        # =========================
         root_layout.addWidget(banner_frame)
         root_layout.addWidget(content)
 
-        self._drag_widget = banner_frame
+        dragger: WindowDragMover = WindowDragMover(self, banner_frame)
+        banner_frame.installEventFilter(dragger)  # Allow window to be dragged
 
     # =========================
     # Panel helper
@@ -142,20 +135,48 @@ class MainWindow(QWidget):
         layout.setSpacing(8)
         return panel
 
-    # =========================
-    # Dragging logic
-    # =========================
-    def mousePressEvent(self, event):
+def make_ctrl_button(name: str, symbol: str, width: int, height: int,
+                     click: Callable[[Optional[bool]], Optional[bool]]) -> QPushButton:
+    btn: QPushButton = QPushButton(symbol)
+    btn.setFixedSize(width, height)
+    btn.setObjectName(name)
+    btn.clicked.connect(click)
+    return btn
+
+
+class WindowDragMover(QObject):
+    def __init__(self, window: QWidget, draggable: QWidget):
+        super().__init__(window)
+        self.__window = window
+        self.__draggable = draggable
+        self.__dragging: bool = False
+        self.__drag_pos: Optional[QPoint] = None
+        self.__handlers: dict[QEvent.Type, Callable[[QEvent], bool]] = {
+            QEvent.Type.MouseButtonPress: self._mouse_pressed,
+            QEvent.Type.MouseMove: self._mouse_moved,
+            QEvent.Type.MouseButtonRelease: self._mouse_released,
+        }
+
+    def eventFilter(self, obj: QObject, event: QEvent) -> bool:  # override
+        if not obj is self.__draggable: return False
+        handler: Callable[[QEvent], bool] = self.__handlers.get(event.type(), None)
+        return handler(event) if handler else False
+
+    def _mouse_pressed(self, event: QEvent):
         if event.button() == Qt.LeftButton:
-            if self._drag_widget.geometry().contains(event.position().toPoint()):
-                self._dragging = True
-                self._drag_pos = event.globalPosition().toPoint() - self.frameGeometry().topLeft()
-                event.accept()
-
-    def mouseMoveEvent(self, event):
-        if self._dragging:
-            self.move(event.globalPosition().toPoint() - self._drag_pos)
+            self.__dragging = True
+            self.__drag_pos = event.globalPosition().toPoint() - self.__window.frameGeometry().topLeft()
             event.accept()
+            return True
+        return False
 
-    def mouseReleaseEvent(self, event):
-        self._dragging = False
+    def _mouse_moved(self, event: QEvent) -> bool:
+        if self.__dragging:
+            self.__window.move(event.globalPosition().toPoint() - self.__drag_pos)
+            event.accept()
+            return True
+        return False
+
+    def _mouse_released(self, event: QEvent) -> bool:
+        self.__dragging = False
+        return False
