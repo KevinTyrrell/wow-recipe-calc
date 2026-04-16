@@ -13,19 +13,23 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from dataclasses import dataclass
+class Window:
+    WIDTH: int = 504
+    HEIGHT: int = 912
+    MARGINS: tuple[int, int, int, int] = (12, 12, 12, 12)
+    SPACING: int = 10
 
-@dataclass(frozen=True)
-class WindowConfig:
-    name: str = "WoW Recipe Calculator"
-    width: int = 504
-    height: int = 912
-    margin_ratio: float = 0.05
-    spacing: int = 10
 
-@dataclass(frozen=True)
-class WindowTabs:
-    edit_tab_name: str = "Edit Manifest"
-    bom_tab_name: str = "Bill of Materials"
-    route_tab_name: str = "Crafting Route"
-    cost_tab_name: str = "Cost Breakdown"
+class Tab:
+    EDIT_NAME: str = "Edit Manifest"
+    BOM_NAME: str = "Bill of Materials"
+    ROUTE_NAME: str = "Crafting Route"
+    COST_NAME: str = "Cost Breakdown"
+
+
+class Banner:
+    TITLE: str = "WoW Recipe Calculator"
+    HANDLE: str = "banner"
+    MARGINS: tuple[int, int, int, int] = (12, 0, 12, 0)
+    BUTTON_WIDTH: int = 32
+    BUTTON_HEIGHT: int = 24

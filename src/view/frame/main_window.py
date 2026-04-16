@@ -13,35 +13,34 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QTabWidget, QPushButton,
-    QLineEdit, QFrame
-)
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont
+    QLineEdit, QFrame)
 
-from src.view.constants import *
+from typing import cast
+
+
+import src.view.constants as C
 
 
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle(WindowConfig.name)
-        self.resize(WindowConfig.width, WindowConfig.height)
-
-        # --- Frameless window ---
-        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setWindowTitle(C.Banner.TITLE)
+        self.resize(C.Window.WIDTH, C.Window.HEIGHT)
+        self.setWindowFlags(Qt.FramelessWindowHint)  # remove window dressing
 
         # --- Drag state ---
         self._dragging = False
         self._drag_pos = None
 
-        # --- Root layout ---
-        root = QVBoxLayout(self)
-        root.setContentsMargins(8, 8, 8, 8)
-        root.setSpacing(0)
+        root_layout: QVBoxLayout = QVBoxLayout(self)
+        root_layout.setContentsMargins(*C.Window.MARGINS)
+        root_layout.setSpacing(0)
 
         # --- Main container ---
         container = QWidget()
@@ -52,24 +51,20 @@ class MainWindow(QWidget):
         container_layout.setSpacing(0)
 
         # =========================
-        # Top Bar
+        # Banner
         # =========================
-        top_bar = QWidget()
-        top_bar.setObjectName("topbar")
-        top_bar.setFixedHeight(48)
+        banner_frame = QWidget()
+        banner_frame.setObjectName(C.Banner.HANDLE)
+        banner_frame.setFixedHeight(48)
 
-        top_layout = QHBoxLayout(top_bar)
-        top_layout.setContentsMargins(12, 0, 12, 0)
-
-        title = QLabel(WindowConfig.name)
-        title.setFont(QFont("Arial", 11, QFont.Bold))
+        title: QLabel = QLabel(C.Banner.TITLE)
         title.setAlignment(Qt.AlignCenter)
         title.setAttribute(Qt.WA_TransparentForMouseEvents)
 
         btn_min = QPushButton("—")
         btn_close = QPushButton("✕")
         for btn in (btn_min, btn_close):
-            btn.setFixedSize(32, 24)
+            btn.setFixedSize(C.Banner.BUTTON_WIDTH, C.Banner.BUTTON_HEIGHT)
         btn_min.clicked.connect(self.showMinimized)
         btn_close.clicked.connect(self.close)
         btn_min.setObjectName("secondary")
@@ -81,20 +76,23 @@ class MainWindow(QWidget):
         button_layout.addWidget(btn_min)
         button_layout.addWidget(btn_close)
 
-        left_spacer = QWidget()
+        left_spacer = QWidget()  # exists so title remains centered
         left_spacer.setFixedWidth(button_container.sizeHint().width())
-        top_layout.addWidget(left_spacer)
-        top_layout.addStretch()
-        top_layout.addWidget(title)
-        top_layout.addStretch()
-        top_layout.addWidget(button_container)
+
+        banner_layout = QHBoxLayout(banner_frame)
+        banner_layout.setContentsMargins(*C.Banner.MARGINS)
+        banner_layout.addWidget(left_spacer)
+        banner_layout.addStretch()
+        banner_layout.addWidget(title)
+        banner_layout.addStretch()
+        banner_layout.addWidget(button_container)
 
         # =========================
         # Content Area
         # =========================
         content = QWidget()
         content_layout = QVBoxLayout(content)
-        content_layout.setContentsMargins(12, 12, 12, 12)
+        content_layout.setContentsMargins(0, 12, 0, 0)
         content_layout.setSpacing(12)
 
         # --- Panel 1 (Tabs) ---
@@ -136,85 +134,11 @@ class MainWindow(QWidget):
         # =========================
         # Assemble
         # =========================
-        container_layout.addWidget(top_bar)
+        container_layout.addWidget(banner_frame)
         container_layout.addWidget(content)
-        root.addWidget(container)
+        root_layout.addWidget(container)
 
-        self._drag_widget = top_bar
-
-        # =========================
-        # Global Styling
-        # =========================
-        self.setStyleSheet("""
-            QWidget {
-                background-color: #1e1e1e;
-                color: #dddddd;
-                font-family: Arial;
-            }
-            QWidget#topbar > QWidget {
-                background-color: transparent;
-            }
-            QWidget#container {
-                background-color: #2b2b2b;
-                border-radius: 10px;
-            }
-            QWidget#topbar QLabel {
-                background-color: transparent;
-                border: none;
-            }
-            QWidget#topbar {
-                background-color: #2f2f2f;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                border-bottom: 1px solid #3a3a3a;
-            }
-
-            QWidget#panel {
-                background-color: #333333;
-                border-radius: 8px;
-                border: 1px solid #3f3f3f;
-            }
-
-            QPushButton {
-                background-color: #2d79c7;
-                color: white;
-                border-radius: 6px;
-                padding: 6px 12px;
-            }
-
-            QPushButton:hover {
-                background-color: #3c8ee6;
-            }
-
-            QPushButton:pressed {
-                background-color: #1f5a96;
-            }
-
-            QPushButton#secondary {
-                background-color: #444;
-            }
-
-            QPushButton#secondary:hover {
-                background-color: #555;
-            }
-
-            QPushButton#close:hover {
-                background-color: #c94a4a;
-            }
-
-            QLineEdit {
-                background-color: #2a2a2a;
-                border: 1px solid #3a3a3a;
-                border-radius: 6px;
-                padding: 6px;
-            }
-
-            QTabWidget::pane {
-                border: 1px solid #3a3a3a;
-                border-radius: 6px;
-                background: #2a2a2a;
-            }
-        """)
+        self._drag_widget = banner_frame
 
     # =========================
     # Panel helper
