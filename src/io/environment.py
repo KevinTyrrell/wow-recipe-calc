@@ -13,17 +13,20 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Any, Optional
+from typing import Any, Optional, Mapping
 from pathlib import Path
+from types import MappingProxyType as ReadOnly
+
+EnvValue = str | int | float | bool
 
 
 class Environment:
     _DEFAULT_FILE_EXT = "env"
-    
-    def __init__(self, file_basename: str, dir_path: Optional[str]=None, file_ext: Optional[str]=None) -> None:
+
+    def __init__(self, file_basename: str, dir_path: Optional[str] = None, file_ext: Optional[str] = None) -> None:
         """
-        Defines a key/value file, which is loadable/saveable from the storage medium
-        
+        Defines a key/value file, which is loadable/savable from the storage medium
+
         :param file_basename: Filename name to save/load the environment as
         :param dir_path: Directory path to save the environment in, default: $CWD
         :param file_ext: Extension for the file (excluding dot), default: env
@@ -31,52 +34,87 @@ class Environment:
         if file_ext is None: file_ext = self._DEFAULT_FILE_EXT
         self.__file_name: str = f"{file_basename}.{file_ext}"
         self.__file_path: Path = self._get_path(dir_path)
-        
-    def load(self) -> dict[str, str | int | float | bool]:
+        self.__data: dict[str, EnvValue] = dict()
+        self.__data_ro: Mapping[str, EnvValue] = ReadOnly(self.__data)
+
+    def load(self) -> Mapping[str, EnvValue]:
         """
-        Throws an error on file not found, read errors, or malformed env
-        
-        Loads the environment from the storage medium
-        
-        :return: Loaded map of key/value pairs
+        Attempts to load the environment from the storage medium
+
+        Raises an error if environment file is not found, file reading
+        error(s), malformed data, or if existing environment was not empty.
+
+        :return: Read-only mapping of now-loaded key/value pairs
         """
-        env: dict[str, str | int | float | bool] = dict()
+        if self.__data:
+            raise RuntimeError("environment already contains data; cannot load into a non-empty environment")
         with open(self.__file_path, "r") as f:
             for line_no, line in enumerate(f, 1):
-                line = line.strip()
+                line: str = line.strip()
                 if not line or line.startswith("#"):
-                    continue  # Allow for comments
+                    continue  # allow for comments
                 if "=" not in line:
-                    raise ValueError(f"Env '{self.__file_name}' is malformed. Line '{line_no}': {line}")
+                    raise ValueError(f"env '{self.__file_name}' is malformed, line #{line_no}: {line}")
                 key, value = line.split("=", 1)
-                env[key] = self._parse_env_variable(value)
-        return env
-        
-    def save(self, data: dict[Any, Any]) -> None:
+                parsed: EnvValue = self._parse_value_from_str(value)
+                self._validate_value_type(parsed)
+                self.__data[key] = parsed
+        return self.__data_ro
+
+    def save(self) -> None:
         """
         Saves the environment to the storage medium
-        
-        :param data: Map of key/value pairs to be saved to the environment
         """
-        str_by_key: dict[Any, str] = { k: str(k) for k in data }
-        keys: list[str] = sorted(str_by_key.values(), key = lambda x: str_by_key[x])
-        lines: list[str] = [
-            f"{str_by_key[key]}={data[key]}" for key in
-            sorted(data.keys(), key = lambda x: str_by_key[x])
-        ]
-        self.__file_path.write_text("\n".join(lines) + "\n")
-                
+        self.__file_path.write_text(
+            "\n".join(f"{k}={self.__data[k]}" for k in sorted(self.__data)) + "\n")
+
+    def __getitem__(self, key: str) -> EnvValue:
+        """
+        Retrieves a value from the environment
+
+        :param key: Key to retrieve
+        :return: Stored value
+        """
+        return self.__data[key]
+
+    def __setitem__(self, key: str, value: EnvValue) -> None:
+        """
+        Sets a value in the environment
+
+        :param key: Key to assign (must be str)
+        :param value: Value to assign (must be EnvValue)
+        """
+        if not isinstance(key, str):
+            raise ValueError(f"environment key must be a str: {key}")
+        self._validate_value_type(value)
+        self.__data[key] = value
+
+    @property
+    def data(self) -> Mapping[str, EnvValue]:
+        """
+        Provides a read-only view of the environment data
+
+        :return: ReadOnly of internal data
+        """
+        return self.__data_ro
+
     @staticmethod
-    def _parse_env_variable(value: str) -> str | int | float | bool:
-        try: return int(value) 
+    def _validate_value_type(value: Any) -> None:
+        if not isinstance(value, (str, int, float, bool)):
+            raise ValueError(f"environment value's type is invalid: {value}")
+
+    @staticmethod
+    def _parse_value_from_str(value: str) -> EnvValue:
+        value: str = value.strip()
+        try: return int(value)  # test if integer
         except ValueError: pass
-        try: return float(value) 
+        try: return float(value)  # test if float
         except ValueError: pass
-        if value.lower() in ("true", "false"):
+        if value.lower() in ("true", "false"):  # test if bool
             return value.lower() == "true"
         return value
-        
-    def _get_path(self, directory: Optional[str]=None) -> Path:
+
+    def _get_path(self, directory: Optional[str] = None) -> Path:
         path: Path = Path.cwd() if directory is None else Path(directory)
         if not path.exists(): raise ValueError(f"directory path does not exist: {path}")
         if not path.is_dir(): raise ValueError(f"path is not a valid directory: {path}")
