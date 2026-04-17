@@ -19,7 +19,6 @@ from argparse import Namespace as ArgNamespace
 
 from src.crafting_app import CraftingApp
 from src.io.arguments import parse_args
-from src.crafts.craft_planner import CraftPlan
 from src.view.ui_manager import UIManager
 
 

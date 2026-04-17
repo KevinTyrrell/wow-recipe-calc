@@ -62,7 +62,8 @@ class CraftingApp:
         self.__item_db: ItemDB = ItemDB(self.__item_client.get_item_name, self._DEFAULT_ITEM_DB_BASENAME)
         self.__prices: PriceManager = PriceManager(self.__tsm_client, self._unknown_price_cb)
         self.__planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
-        self.__tsm_client.auction_house = self._environment.auction_house
+        self.__tsm_client.auction_house = wrap_json(self.environment.data).auction_house
+        on_exit(self.__env.save)
         on_exit(self.__item_db.save)
         on_exit(self.__tsm_client.save)
 
@@ -103,7 +104,7 @@ class CraftingApp:
         except FileNotFoundError, OSError, ValueError:
             config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
             settings: dict[str, str | int] = config.full_setup()
-            on_exit(self.__env.save, settings)
+            self.__env.extend(settings)
         return self.__env
 
     def _unknown_price_cb(self, item_id: int) -> int:
