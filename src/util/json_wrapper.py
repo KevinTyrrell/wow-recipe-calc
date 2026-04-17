@@ -14,13 +14,12 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from __future__ import annotations
-
 from json.decoder import JSONArray
-from typing import Any, TypeAlias
+from typing import Any, TypeAlias, Mapping
 
 
 class _JsonObject:
-    def __init__(self, jso: dict):
+    def __init__(self, jso: Mapping[str, Any]):
         self.__data: dict[str, Any] = dict()
         for key, value in jso.items():
             if isinstance(value, (dict, list)):
@@ -45,9 +44,9 @@ class _JsonArray:
 
 JSO: TypeAlias = _JsonObject | _JsonArray
 
-def wrap_json(jso: dict[str, Any] | list) -> JSO:
+def wrap_json(jso: Mapping[str, Any] | list) -> JSO:
     """
     :param jso: JSON object to be wrapped
     :return: Nested objects/list structure to enable field retrieval by members
     """
-    return _JsonObject(jso) if isinstance(jso, dict) else _JsonArray(jso)
+    return _JsonObject(jso) if isinstance(jso, Mapping) else _JsonArray(jso)

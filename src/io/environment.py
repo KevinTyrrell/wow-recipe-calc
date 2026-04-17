@@ -13,14 +13,15 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Any, Optional, Mapping
+from typing import Any, Optional, Mapping, Iterator
 from pathlib import Path
 from types import MappingProxyType as ReadOnly
+from collections.abc import MutableMapping
 
 EnvValue = str | int | float | bool
 
 
-class Environment:
+class Environment(MutableMapping[str, EnvValue]):
     _DEFAULT_FILE_EXT = "env"
 
     def __init__(self, file_basename: str, dir_path: Optional[str] = None, file_ext: Optional[str] = None) -> None:
@@ -36,6 +37,23 @@ class Environment:
         self.__file_path: Path = self._get_path(dir_path)
         self.__data: dict[str, EnvValue] = dict()
         self.__data_ro: Mapping[str, EnvValue] = ReadOnly(self.__data)
+
+    # Required functions for MutableMapping extension
+    def __getitem__(self, key: str) -> EnvValue:
+        return self.__data[key]
+    def __setitem__(self, key: str, value: EnvValue) -> None:
+        if not isinstance(key, str):
+            raise ValueError(f"environment key must be a str: {key}")
+        self._validate_value_type(value)
+        self.__data[key] = value
+    def __delitem__(self, key: str) -> None:
+        raise NotImplementedError("environment does not support deletion")
+    def __iter__(self) -> Iterator[str]: return iter(self.__data)
+    def __len__(self) -> int: return len(self.__data)
+    def update(self, other: Mapping[str, EnvValue] | None = None, **kwargs: EnvValue) -> None:
+        if other:
+            for k, v in other.items(): self[k] = v
+        for k, v in kwargs.items(): self[k] = v
 
     def load(self) -> Mapping[str, EnvValue]:
         """
@@ -68,33 +86,12 @@ class Environment:
         self.__file_path.write_text(
             "\n".join(f"{k}={self.__data[k]}" for k in sorted(self.__data)) + "\n")
 
-    def __getitem__(self, key: str) -> EnvValue:
-        """
-        Retrieves a value from the environment
-
-        :param key: Key to retrieve
-        :return: Stored value
-        """
-        return self.__data[key]
-
-    def __setitem__(self, key: str, value: EnvValue) -> None:
-        """
-        Sets a value in the environment
-
-        :param key: Key to assign (must be str)
-        :param value: Value to assign (must be EnvValue)
-        """
-        if not isinstance(key, str):
-            raise ValueError(f"environment key must be a str: {key}")
-        self._validate_value_type(value)
-        self.__data[key] = value
-
     @property
     def data(self) -> Mapping[str, EnvValue]:
         """
         Provides a read-only view of the environment data
 
-        :return: ReadOnly of internal data
+        :return: Read-only mapping of internal data
         """
         return self.__data_ro
 

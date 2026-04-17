@@ -96,15 +96,15 @@ class CraftingApp:
         return self.__planner.plan()
 
     @cached_property
-    def _environment(self) -> JSO:
+    def environment(self) -> Environment:
         try:
-            settings: dict[str, str | int | float | bool] = self.__env.load()
-            self.__tsm_client.authorize(settings["api_key"])
+            jso: JSO = wrap_json(self.__env.load())
+            self.__tsm_client.authorize(jso.api_key)  # init API key on load
         except FileNotFoundError, OSError, ValueError:
-            config: SetupConfig = SetupConfig(self.__tsm_client)
+            config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
             settings: dict[str, str | int] = config.full_setup()
             on_exit(self.__env.save, settings)
-        return wrap_json(settings)
+        return self.__env
 
     def _unknown_price_cb(self, item_id: int) -> int:
         entry: Optional[ItemEntry] = self.__item_db.by_id.get(item_id)
