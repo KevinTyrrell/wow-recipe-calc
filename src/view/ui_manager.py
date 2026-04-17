@@ -25,7 +25,7 @@ class UIManager:
         self.__craft_app: CraftingApp = app
         self.__view_app: QApplication = QApplication()
         style_loader: StyleLoader = StyleLoader()
-        #   self.__view_app.setStyleSheet("QWidget { border: 1px solid red; }")
+        #self.__view_app.setStyleSheet("QWidget { border: 1px solid red; }")
         self.__view_app.setStyleSheet(style_loader.load())
         self.__window: MainWindow = MainWindow()
 

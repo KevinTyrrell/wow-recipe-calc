@@ -14,7 +14,6 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from typing import Callable
-from abc import ABC, abstractmethod
 
 from PySide6.QtCore import Qt, QObject, QEvent
 from PySide6.QtWidgets import QWidget, QLabel, QPushButton, QHBoxLayout
@@ -25,6 +24,7 @@ import src.view.constants as C
 class WindowBanner(QWidget):
     def __init__(self, window_ref: QWidget) -> None:
         super().__init__()
+        self.setAttribute(Qt.WA_StyledBackground, True)
         self.setObjectName(C.Banner.HANDLE)
         self.setFixedHeight(C.Banner.HEIGHT)
         title: QLabel = self.make_title()
@@ -63,7 +63,7 @@ class WindowBanner(QWidget):
         return label
 
 
-class BannerPushButton(QPushButton, ABC):
+class BannerPushButton(QPushButton):
     def __init__(self, window_ref: QWidget, name: str, symbol: str, width: int, height: int) -> None:
         super().__init__(symbol)
         self._window_ref: QWidget = window_ref
@@ -72,9 +72,8 @@ class BannerPushButton(QPushButton, ABC):
         self.setFixedWidth(width)
         self.clicked.connect(self.button_clicked)
 
-    @abstractmethod
     def button_clicked(self) -> None:
-        pass
+        raise NotImplementedError
 
 
 class CloseButton(BannerPushButton):

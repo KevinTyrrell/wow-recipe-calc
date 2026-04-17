@@ -1,0 +1,55 @@
+
+/* =========================
+   Banner
+========================= */
+
+QWidget#banner {
+    background-color: #2f2f2f;
+    border-bottom: 1px solid #3a3a3a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+QWidget#banner QLabel {
+    font-size: 22px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+}
+
+QWidget#banner > QWidget {
+    background: transparent;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+QWidget#banner QPushButton {
+    background-color: #2d79c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+QWidget#banner QPushButton:hover {
+    background-color: #3c8ee6;
+}
+
+QWidget#banner QPushButton:pressed {
+    background-color: #1f5a96;
+}
+
+QWidget#banner QPushButton#minimize {
+    background-color: #444444;
+}
+
+QWidget#banner QPushButton#minimize:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+QWidget#banner QPushButton#close:hover {
+    background-color: #c94a4a;
+}
