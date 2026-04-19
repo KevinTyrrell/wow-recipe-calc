@@ -15,7 +15,7 @@
 
 from typing import Any, Optional, Mapping, Iterator
 from pathlib import Path
-from types import MappingProxyType as ReadOnly
+from types import MappingProxyType as ReadOnlyMap
 from collections.abc import MutableMapping
 
 EnvValue = str | int | float | bool
@@ -36,7 +36,7 @@ class Environment(MutableMapping[str, EnvValue]):
         self.__file_name: str = f"{file_basename}.{file_ext}"
         self.__file_path: Path = self._get_path(dir_path)
         self.__data: dict[str, EnvValue] = dict()
-        self.__data_ro: Mapping[str, EnvValue] = ReadOnly(self.__data)
+        self.__data_ro: Mapping[str, EnvValue] = ReadOnlyMap(self.__data)
 
     # Required functions for MutableMapping extension
     def __getitem__(self, key: str) -> EnvValue:

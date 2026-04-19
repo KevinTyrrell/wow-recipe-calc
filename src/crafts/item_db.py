@@ -14,12 +14,12 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from typing import Optional, Callable
-from types import MappingProxyType as ReadOnly
+from types import MappingProxyType as ReadOnlyMap
 from dataclasses import dataclass
 from collections.abc import Mapping
 
 from src.io.local_cache import LocalCache, CachePolicy
-from src.crafts.recipe import Recipe
+from src.crafts.recipe.recipe import Recipe
 
 
 @dataclass(frozen=True)
@@ -47,9 +47,9 @@ class ItemDB:
         self.__by_name: dict[str, ItemEntry] = dict()
         self.__by_id: dict[int, ItemEntry] = dict()
         self.__by_recipe: dict[Recipe, RecipeEntry] = dict()
-        self.__by_name_ro: Mapping[str, ItemEntry] = ReadOnly(self.__by_name)
-        self.__by_id_ro: Mapping[int, ItemEntry] = ReadOnly(self.__by_id)
-        self.__by_recipe_ro: Mapping[Recipe, RecipeEntry] = ReadOnly(self.__by_recipe)
+        self.__by_name_ro: Mapping[str, ItemEntry] = ReadOnlyMap(self.__by_name)
+        self.__by_id_ro: Mapping[int, ItemEntry] = ReadOnlyMap(self.__by_id)
+        self.__by_recipe_ro: Mapping[Recipe, RecipeEntry] = ReadOnlyMap(self.__by_recipe)
         
     def register(self, recipe: Recipe) -> None:
         if recipe in self.__by_recipe: return  # no duplicates'

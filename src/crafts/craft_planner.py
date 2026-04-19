@@ -13,18 +13,18 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from types import MappingProxyType as ReadOnly
+from types import MappingProxyType as ReadOnlyMap
 from typing import Optional, Mapping, Generator
 from dataclasses import dataclass
 from collections import defaultdict
 from collections.abc import Iterable
 from math import ceil
 
-from src.crafts.recipe import Recipe
+from src.crafts.recipe.recipe import Recipe
 from src.crafts.craft_skill import CraftSkiller
 from src.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
 from src.crafts.price_manager import PriceManager
-from src.crafts.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
+from src.crafts.recipe.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
 from src.util.heap import Heap
 
 
@@ -117,7 +117,7 @@ class CraftPlanner:
                             f"invariant violation: '{entry.item_name}' depends on "
                             f"'{child.item_name}', which has already been processed")
                     demand[entry.recipe] += count * quantity
-        return ReadOnly(crafts)
+        return ReadOnlyMap(crafts)
 
     # Calculates the optimal crafting order, returns: [start, end, recipe, count]
     def _plan_order(self, crafts: Mapping[Recipe, int]) -> tuple[tuple[int, int, Recipe, int], ...]:
@@ -158,7 +158,7 @@ class CraftPlanner:
                     cost += costs[entry.recipe] * count
                 else: cost += self.__prices.get_price(reagent)
             costs[recipe] = cost
-        return ReadOnly(costs)
+        return ReadOnlyMap(costs)
 
     # Retrieves all needed materials along with their required quantities
     def _plan_mats(self, crafts: Mapping[Recipe, int]) -> Mapping[int, int]:
@@ -167,7 +167,7 @@ class CraftPlanner:
             for reagent in recipe.reagents:
                 if not isinstance(self.__item_db.by_id[reagent], RecipeEntry):
                     materials[reagent] += count
-        return ReadOnly(materials)
+        return ReadOnlyMap(materials)
 
     # Sorts recipes by name
     def _get_recipes(self, recipes: Iterable[Recipe]) -> tuple[Recipe, ...]:

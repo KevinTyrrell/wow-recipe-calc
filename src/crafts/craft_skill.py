@@ -16,7 +16,7 @@
 from typing import Optional
 from math import floor
 
-from src.crafts.recipe import Recipe
+from src.crafts.recipe.recipe import Recipe
 
 
 class CraftSkiller:

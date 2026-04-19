@@ -25,7 +25,7 @@ from src.io.environment import Environment
 from src.crafts.craft_planner import CraftPlanner, CraftPlan
 from src.crafts.item_db import ItemDB, ItemEntry
 from src.crafts.price_manager import PriceManager
-from src.crafts.recipe import Recipe
+from src.crafts.recipe.recipe import Recipe
 from src.io.setup_config import SetupConfig
 from src.util.throttle import Throttle
 from src.util.json_wrapper import JSO, wrap_json
