@@ -21,7 +21,7 @@ from sys import exit
 
 from src.crafting_app import CraftingApp
 from src.crafts.item_db import ItemEntry, RecipeEntry
-from src.view.style_loader import StyleLoader
+from src.view.styles.style_loader import StyleLoader
 from src.view.frame.main_window import MainWindow
 from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafts.recipe.recipe import Recipe

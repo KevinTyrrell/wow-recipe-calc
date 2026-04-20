@@ -13,10 +13,12 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+import logging
+
+from datetime import datetime
+
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
-
-import logging
 
 import src.view.constants as C
 
@@ -24,15 +26,7 @@ from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafting_app import CraftingApp
 from src.view.frame.window_banner import WindowBanner
 
-
-class LogEmitter(logging.Handler):
-    def __init__(self, widget: QPlainTextEdit):
-        super().__init__()
-        self.__editor: QPlainTextEdit = widget
-
-    def emit(self, record):
-        msg: str = self.format(record)
-        self.__editor.appendPlainText(msg)
+logger: logging.Logger = logging.getLogger(__name__)
 
 
 class MainWindow(QWidget):
@@ -43,21 +37,21 @@ class MainWindow(QWidget):
         self.resize(C.Window.WIDTH, C.Window.HEIGHT)
         self.setWindowFlags(Qt.FramelessWindowHint)
 
-        layout = QVBoxLayout(self)
+        layout: QVBoxLayout = QVBoxLayout(self)
         layout.setContentsMargins(*C.Window.MARGINS)
         layout.setSpacing(C.Window.SPACING)
 
         # -------------------
         # 1. BANNER
         # -------------------
-        banner = WindowBanner(self)
+        banner: WindowBanner = WindowBanner(self)
         layout.addWidget(banner)
 
         # -------------------
         # 2. TAB PANE
         # -------------------
-        self.tabs = QTabWidget()
-        layout.addWidget(self.tabs)
+        tabs: QTabWidget = QTabWidget()
+        layout.addWidget(tabs)
 
         # tabs will later be injected here
         # e.g. self.tabs.addTab(EditTab(...), "Edit")
@@ -65,29 +59,36 @@ class MainWindow(QWidget):
         # -------------------
         # 3. CONSOLE OUTPUT
         # -------------------
-        console: QPlainTextEdit = QPlainTextEdit()
-        console.setReadOnly(True)
-        console.setObjectName(C.Console.HANDLE)
-        console.setFixedHeight(C.Console.HEIGHT)
-
+        console: QPlainTextEdit = make_console_window()
         layout.addWidget(console)
 
         # -------------------
         # LOGGER HOOK
         # -------------------
 
-        from PySide6.QtCore import QTimer
-        from datetime import datetime
-        import logging
         handler = LogEmitter(console)
-        handler.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
-
         logging.getLogger().addHandler(handler)
         logging.getLogger().setLevel(logging.INFO)
 
-        def _log_time():
-            logging.info(datetime.now().strftime("%H:%M:%S"))
 
-        self._timer = QTimer(self)
-        self._timer.timeout.connect(_log_time)
-        self._timer.start(1000)
+def make_console_window() -> QPlainTextEdit:
+    console: QPlainTextEdit = QPlainTextEdit()
+    console.setReadOnly(True)
+    console.setMaximumBlockCount(C.Console.MAX_LINES)  # don't persist text forever
+    console.setObjectName(C.Console.HANDLE)
+    console.setFixedHeight(C.Console.HEIGHT)
+    return console
+
+
+class LogEmitter(logging.Handler):
+    _LOG_FMT: str = "[%(asctime)s] (%(levelname)s) %(message)s"
+    _TIME_FMT: str = "%I:%M:%S %p"
+
+    def __init__(self, widget: QPlainTextEdit):
+        super().__init__()
+        self.__editor: QPlainTextEdit = widget
+        self.setFormatter(logging.Formatter(self._LOG_FMT, datefmt=self._TIME_FMT))
+
+    def emit(self, record: logging.LogRecord):
+        msg: str = self.format(record)
+        self.__editor.appendPlainText(msg)

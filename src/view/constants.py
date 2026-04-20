@@ -45,3 +45,4 @@ class Banner:
 class Console:
     HANDLE: str = "console"
     HEIGHT: int = 100
+    MAX_LINES: int = 500
