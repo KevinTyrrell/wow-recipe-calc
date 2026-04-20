@@ -96,6 +96,10 @@ class CraftingApp:
                 logger.debug(f"planned recipe is unrecognized: {name}")
         return self.__planner.plan()
 
+    @property
+    def item_db(self) -> ItemDB:
+        return self.__item_db
+
     @cached_property
     def environment(self) -> Environment:
         try:

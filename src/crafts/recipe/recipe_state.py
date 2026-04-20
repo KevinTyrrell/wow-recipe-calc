@@ -17,8 +17,7 @@ from collections.abc import MutableMapping, Mapping, Iterator
 from typing import Optional, Callable
 from types import MappingProxyType as ReadOnlyMap
 
-from src.crafts.recipe import Recipe
-from src.io.environment import Environment
+from src.crafts.recipe.recipe import Recipe
 
 
 class _RecipeState:
