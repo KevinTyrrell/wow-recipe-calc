@@ -39,14 +39,13 @@ class UIManager:
         style_loader: StyleLoader = StyleLoader()
         #self.__view_app.setStyleSheet("QWidget { border: 1px solid red; }")
         self.__view_app.setStyleSheet(style_loader.load())
-        self.__window: MainWindow = MainWindow()
-
+        self.__window: MainWindow = MainWindow(app, self._make_recipe_state())
 
     def show(self) -> None:
         self.__window.show()
         exit(self.__view_app.exec())
 
-    def make_recipe_state(self) -> RecipeStateCore:
+    def _make_recipe_state(self) -> RecipeStateCore:
         state: RecipeStateCore = RecipeStateCore()
         selections: Optional[str] = self.__craft_app.environment.get(self._RECIPE_SELECTION_KEY)
         if selections is not None:

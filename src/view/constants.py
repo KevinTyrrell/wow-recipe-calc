@@ -35,8 +35,13 @@ class Control:
     WIDTH: int = 32
     HEIGHT: int = 24
 
+
 class Banner:
     TITLE: str = "WoW Recipe Calculator"
     HANDLE: str = "banner"
     MARGINS: tuple[int, int, int, int] = (12, 0, 12, 0)
     HEIGHT: int = 48
+
+class Console:
+    HANDLE: str = "console"
+    HEIGHT: int = 100
