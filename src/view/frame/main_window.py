@@ -20,6 +20,7 @@ from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
 
 import src.view.constants as C
 
+from src.util.log_manager import LogManager
 from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafting_app import CraftingApp
 from src.view.frame.window_banner import WindowBanner
@@ -29,7 +30,7 @@ logger: logging.Logger = logging.getLogger(__name__)
 
 
 class MainWindow(QWidget):
-    def __init__(self, craft_app: CraftingApp, state: RecipeStateCore):
+    def __init__(self, craft_app: CraftingApp, state: RecipeStateCore, logs: LogManager):
         super().__init__()
 
         self.setWindowTitle(C.Banner.TITLE)
@@ -68,7 +69,9 @@ class MainWindow(QWidget):
         # LOGGER HOOK
         # -------------------
 
-        handler = LogEmitter(console)
+        handler: LogEmitter = LogEmitter(console)
+        for record in logs.history: handler.emit(record)
+        logs.stop_buffering()  # save on resources
         logging.getLogger().addHandler(handler)
         logging.getLogger().setLevel(logging.INFO)
 

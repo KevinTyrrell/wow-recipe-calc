@@ -13,11 +13,9 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-import logging
-from logging.handlers import MemoryHandler
-
 from argparse import Namespace as ArgNamespace
 
+from src.util.log_manager import LogManager
 from src.crafting_app import CraftingApp
 from src.io.arguments import parse_args
 from src.view.ui_manager import UIManager
@@ -25,15 +23,10 @@ from src.view.ui_manager import UIManager
 
 def main() -> None:
     args: ArgNamespace = parse_args()
-
-    logging.basicConfig(
-        level=args.log_level,
-        format="%(asctime)s [%(levelname)s] [%(name)s] %(message)s")
-    memory_handler: MemoryHandler = MemoryHandler(capacity=1000, flushLevel=logging.CRITICAL)
-
+    log_manager = LogManager(log_level = args.log_level)
     app: CraftingApp = CraftingApp(args)
     app.populate_recipes()
-    ui: UIManager = UIManager(app)
+    ui: UIManager = UIManager(app, log_manager)
     ui.show()
 
 if __name__ == "__main__":

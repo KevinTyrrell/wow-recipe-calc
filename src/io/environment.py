@@ -76,15 +76,15 @@ class Environment(MutableMapping[str, EnvValue]):
                 key, value = line.split("=", 1)
                 parsed: EnvValue = self._parse_value_from_str(value)
                 self._validate_value_type(parsed)
-                self.__data[key] = parsed
+                self.__data[key.lower()] = parsed  # keys are lower during runtime, upper in file
         return self.__data_ro
 
     def save(self) -> None:
         """
         Saves the environment to the storage medium
         """
-        self.__file_path.write_text(
-            "\n".join(f"{k}={self.__data[k]}" for k in sorted(self.__data)) + "\n")
+        self.__file_path.write_text(  # save key as uppercase, load as lowercase
+            "\n".join(f"{k.upper()}={self.__data[k]}" for k in sorted(self.__data)) + "\n")
 
     @property
     def data(self) -> Mapping[str, EnvValue]:

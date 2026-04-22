@@ -19,6 +19,7 @@ from logging import Logger, getLogger
 from PySide6.QtWidgets import QApplication
 from sys import exit
 
+from src.util.log_manager import LogManager
 from src.crafting_app import CraftingApp
 from src.crafts.item_db import ItemEntry, RecipeEntry
 from src.view.styles.style_loader import StyleLoader
@@ -30,22 +31,23 @@ logger: Logger = getLogger(__name__)
 
 
 class UIManager:
-    _RECIPE_SELECTION_KEY: str = "RECIPE_SELECTION"
+    _RECIPE_SELECTION_KEY: str = "recipe_selection"
     _RECIPE_SELECTION_SEP: str = ";"
 
-    def __init__(self, app: CraftingApp) -> None:
+    def __init__(self, app: CraftingApp, logs: LogManager) -> None:
         self.__craft_app: CraftingApp = app
         self.__view_app: QApplication = QApplication()
         style_loader: StyleLoader = StyleLoader()
         #self.__view_app.setStyleSheet("QWidget { border: 1px solid red; }")
         self.__view_app.setStyleSheet(style_loader.load())
-        self.__window: MainWindow = MainWindow(app, self._make_recipe_state())
+        self.__window: MainWindow = MainWindow(app, self._make_recipe_state(), logs)
 
     def show(self) -> None:
         self.__window.show()
         exit(self.__view_app.exec())
 
     def _make_recipe_state(self) -> RecipeStateCore:
+        """Creates mapping of currently-selected recipes & their quantities"""
         state: RecipeStateCore = RecipeStateCore()
         selections: Optional[str] = self.__craft_app.environment.get(self._RECIPE_SELECTION_KEY)
         if selections is not None:  # attempt to load last selection(s) from saved environment
@@ -56,8 +58,8 @@ class UIManager:
         state.listen(on_recipe_select_changed)
         return state
 
-    # Parses saved recipe selection ids;quantity into formal Recipe->quantity pairings
     def _parse_selected_recipes(self, raw_selection: str) -> Mapping[Recipe, int]:
+        """Parses saved recipe selection ids;quantity into formal Recipe->quantity pairings"""
         def parse_failure(msg) -> Mapping[Recipe, int]:
             logger.warning(msg); return dict()
         parts: list[str] = raw_selection.split(";") if raw_selection else []
