@@ -43,8 +43,8 @@ class StyleLoader:
         """
         styles: list[str] = [
             file.read_text(encoding="utf-8")
-            for file in self.__path.iterdir()
-            if file.is_file() and file.suffix == f".{self.__ext}"
+            for file in self.__path.rglob(f"*.{self.__ext}")
+            if file.is_file()
         ]
 
         if not styles:
