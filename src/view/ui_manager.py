@@ -48,9 +48,12 @@ class UIManager:
     def _make_recipe_state(self) -> RecipeStateCore:
         state: RecipeStateCore = RecipeStateCore()
         selections: Optional[str] = self.__craft_app.environment.get(self._RECIPE_SELECTION_KEY)
-        if selections is not None:
+        if selections is not None:  # attempt to load last selection(s) from saved environment
             state.update(self._parse_selected_recipes(selections))
-        state.listen(self._on_recipe_select_change)
+        def on_recipe_select_changed(_: Recipe, __: Optional[int]) -> None:
+            self.__craft_app.environment[self._RECIPE_SELECTION_KEY] = (
+                self._RECIPE_SELECTION_SEP.join(f"{r.product};{q}" for r, q in state.items()))
+        state.listen(on_recipe_select_changed)
         return state
 
     # Parses saved recipe selection ids;quantity into formal Recipe->quantity pairings
@@ -72,9 +75,3 @@ class UIManager:
                 return parse_failure(f"environment's saved recipe id is unrecognized: {item_id}")
             recipes[entry.recipe] = quantity
         return recipes
-
-    @staticmethod
-    def _on_recipe_select_change(_: object = None, __: object = None) -> None:
-        data: Mapping[Recipe, int] = state.state
-        self.__craft_app.environment[self._RECIPE_SELECTION_KEY] = (
-            self._RECIPE_SELECTION_SEP.join(f"{r.product};{q}" for r, q in data.items()))

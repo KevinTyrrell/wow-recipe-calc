@@ -37,7 +37,7 @@ class RecipeStateObserver(_RecipeState):
     def ignore(self, callback: Callable[[Recipe, Optional[int]], None]) -> None:
         self.__listeners.discard(callback)
 
-    def _fire_listeners(self, recipe: Recipe, quantity: int) -> None:
+    def _notify(self, recipe: Recipe, quantity: Optional[int]) -> None:
         for listener in self.__listeners:
             listener(recipe, quantity)
 

@@ -15,8 +15,6 @@
 
 import logging
 
-from datetime import datetime
-
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
 
@@ -25,6 +23,7 @@ import src.view.constants as C
 from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafting_app import CraftingApp
 from src.view.frame.window_banner import WindowBanner
+from src.view.frame.tabs.edit_tab import EditTab
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -51,6 +50,9 @@ class MainWindow(QWidget):
         # 2. TAB PANE
         # -------------------
         tabs: QTabWidget = QTabWidget()
+        tabs.setTabPosition(QTabWidget.South)
+        edit_tab: EditTab = EditTab(craft_app, state)
+        tabs.addTab(edit_tab, C.Tab.EDIT_NAME)
         layout.addWidget(tabs)
 
         # tabs will later be injected here
