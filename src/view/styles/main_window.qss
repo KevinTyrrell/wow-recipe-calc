@@ -16,17 +16,6 @@ QWidget#panel {
 }
 
 /* =========================
-   Inputs
-========================= */
-
-QLineEdit {
-    background-color: #2a2a2a;
-    border: 1px solid #3a3a3a;
-    border-radius: 6px;
-    padding: 6px;
-}
-
-/* =========================
    Tabs
 ========================= */
 
@@ -77,6 +66,6 @@ QTabBar::tab:hover {
 
 QPlainTextEdit {
     font-family: Consolas;
-    font-size: 12px;
+    font-size: 11px;
     color: #dddddd;
 }

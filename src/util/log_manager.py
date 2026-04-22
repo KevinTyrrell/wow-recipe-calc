@@ -15,6 +15,8 @@
 
 import logging
 
+from typing import Optional
+
 from logging.handlers import MemoryHandler
 from logging import getLogger, Logger, LogRecord
 
@@ -22,10 +24,11 @@ from logging import getLogger, Logger, LogRecord
 class LogManager:
     DEFAULT_MEM_CAPACITY: int = 1000
     DEFAULT_FLUSH_LEVEL: int = 100  # 100 is higher than CRITICAL, to avoid flush
-    DEFAULT_LOG_FMT: str = "%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
+    DEFAULT_LOG_LEVEL: int = logging.INFO
 
-    def __init__(self, log_level: int = logging.INFO):
-        logging.basicConfig(level = log_level, format = self.DEFAULT_LOG_FMT)
+    def __init__(self, log_level: Optional[int] = None):
+        if log_level is None: log_level = self.DEFAULT_LOG_LEVEL
+        logging.basicConfig(level = log_level)
         self.__logger: Logger = getLogger()
         self.__mem_handler: MemoryHandler = MemoryHandler(
             capacity = self.DEFAULT_MEM_CAPACITY,

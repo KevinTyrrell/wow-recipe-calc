@@ -86,7 +86,7 @@ def make_console_window() -> QPlainTextEdit:
 
 
 class LogEmitter(logging.Handler):
-    _LOG_FMT: str = "[%(asctime)s] (%(levelname)s) %(message)s"
+    _LOG_FMT: str = "[%(asctime)s] (%(levelname)s) [%(name)s] %(message)s"
     _TIME_FMT: str = "%I:%M:%S %p"
 
     def __init__(self, widget: QPlainTextEdit):

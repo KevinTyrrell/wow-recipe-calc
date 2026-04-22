@@ -73,7 +73,7 @@ class UIManager:
             if quantity <= 0:
                 return parse_failure("environment's saved recipe quantities must be positive")
             entry: Optional[ItemEntry] = self.__craft_app.item_db.by_id.get(item_id)
-            if entry is not None or not isinstance(entry, RecipeEntry):
+            if entry is None or not isinstance(entry, RecipeEntry):
                 return parse_failure(f"environment's saved recipe id is unrecognized: {item_id}")
             recipes[entry.recipe] = quantity
         return recipes
