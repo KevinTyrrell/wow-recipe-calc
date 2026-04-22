@@ -35,11 +35,13 @@ class UIManager:
     _RECIPE_SELECTION_SEP: str = ";"
 
     def __init__(self, app: CraftingApp, logs: LogManager) -> None:
+        """
+        :param app: Entry-point to crafting, recipe, material, and cost information
+        :param logs: Log history buffer, for retrieving logging prior to GUI being displayed
+        """
         self.__craft_app: CraftingApp = app
         self.__view_app: QApplication = QApplication()
-        style_loader: StyleLoader = StyleLoader()
-        #self.__view_app.setStyleSheet("QWidget { border: 1px solid red; }")
-        self.__view_app.setStyleSheet(style_loader.load())
+        self.__view_app.setStyleSheet(StyleLoader().load())
         self.__window: MainWindow = MainWindow(app, self._make_recipe_state(), logs)
 
     def show(self) -> None:

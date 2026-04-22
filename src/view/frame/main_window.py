@@ -31,6 +31,11 @@ logger: logging.Logger = logging.getLogger(__name__)
 
 class MainWindow(QWidget):
     def __init__(self, craft_app: CraftingApp, state: RecipeStateCore, logs: LogManager):
+        """
+        :param craft_app: Entry-point to crafting, recipe, material, and cost information
+        :param state: Observable mapping of selected recipes -> desired number of products
+        :param logs: Log history buffer, for retrieving logging prior to GUI being displayed
+        """
         super().__init__()
 
         self.setWindowTitle(C.Banner.TITLE)

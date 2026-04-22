@@ -29,43 +29,35 @@ class EditTab(QWidget):
     DEFAULT_ITEM_CRAFT_COUNT: int = 1  # starting quantities for selected items
 
     def __init__(self, craft_app: CraftingApp, state: RecipeStateCore) -> None:
+        """
+        :param craft_app: Entry-point to crafting, recipe, material, and cost information
+        :param state: Observable mapping of selected recipes -> desired number of products
+        """
         super().__init__()
         self.__craft_app: CraftingApp = craft_app
         self.__state: RecipeStateCore = state
 
-        # recipe -> display name
-        self._all_recipes: Dict[Recipe, str] = {
-            recipe: entry.item_name
-            for recipe, entry in self.__craft_app.item_db.by_recipe.items()
-            if isinstance(entry, RecipeEntry)
-        }
-
-        # -------------------
-        # UI Elements
-        # -------------------
-
         search_box: QLineEdit = QLineEdit()
         search_box.setPlaceholderText("Search recipes...")
-
-
-        layout: QVBoxLayout = QVBoxLayout(self)
-        layout.addWidget(search_box)
+        filtered_recipes: QListView = QListView()
 
         # -------------------
         # Wiring
         # -------------------
 
-        recipe_view: QListView = QListView()
-        layout.addWidget(recipe_view)
         model: FilteredRecipeModel = FilteredRecipeModel(self.__craft_app.item_db, state)
         def _on_recipe_clicked(index: QModelIndex) -> None:
             recipe: Recipe = model.recipe_at(index.row())
             state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
-        recipe_view.clicked.connect(_on_recipe_clicked)
-        recipe_view.setModel(model)
-        recipe_view.show()
+        filtered_recipes.clicked.connect(_on_recipe_clicked)
+        filtered_recipes.setModel(model)
+        filtered_recipes.show()
 
         search_box.textChanged.connect(model.set_search_text)
+
+        layout: QVBoxLayout = QVBoxLayout(self)
+        layout.addWidget(search_box)
+        layout.addWidget(filtered_recipes)
 
 
 class FilteredRecipeModel(QAbstractListModel):
