@@ -34,30 +34,59 @@ class EditTab(QWidget):
         :param state: Observable mapping of selected recipes -> desired number of products
         """
         super().__init__()
-        self.__craft_app: CraftingApp = craft_app
-        self.__state: RecipeStateCore = state
 
         search_box: QLineEdit = QLineEdit()
         search_box.setPlaceholderText("Search recipes...")
-        filtered_recipes: QListView = QListView()
 
-        # -------------------
-        # Wiring
-        # -------------------
-
-        model: FilteredRecipeModel = FilteredRecipeModel(self.__craft_app.item_db, state)
-        def _on_recipe_clicked(index: QModelIndex) -> None:
+        model: FilteredRecipeModel = FilteredRecipeModel(craft_app.item_db, state)
+        search_box.textChanged.connect(model.set_search_text)
+        def on_recipe_clicked(index: QModelIndex) -> None:
             recipe: Recipe = model.recipe_at(index.row())
             state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
-        filtered_recipes.clicked.connect(_on_recipe_clicked)
+
+        filtered_recipes: QListView = QListView()
+        filtered_recipes.clicked.connect(on_recipe_clicked)
         filtered_recipes.setModel(model)
         filtered_recipes.show()
-
-        search_box.textChanged.connect(model.set_search_text)
 
         layout: QVBoxLayout = QVBoxLayout(self)
         layout.addWidget(search_box)
         layout.addWidget(filtered_recipes)
+
+
+class SelectedRecipeModel(QAbstractListModel):
+    def __init__(self, item_db: ItemDB, state: RecipeStateCore) -> None:
+        super().__init__()
+        self.__item_db: ItemDB = item_db
+        self.__state: RecipeStateCore = state
+        self.__visible: list[Recipe] = list(state)
+        self.__state.listen(self._on_state_change)
+        self._recompute()
+
+    def rowCount(self, parent: QModelIndex = QModelIndex()) -> int:
+        return len(self.__visible)
+
+    def data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> Optional[str]:
+        if not index.isValid(): return None
+        if role != Qt.DisplayRole: return None
+        recipe: Recipe = self.__visible[index.row()]
+        name: str = self.__item_db.by_recipe[recipe].item_name
+        return name
+
+    def recipe_at(self, row: int) -> Recipe:
+        return self.__visible[row]
+
+    def _recompute(self) -> None:
+        self.beginResetModel() #  prepare next frame of the UI
+        self.__visible = list(self.__state)
+        self.endResetModel()  # allow next frame to process
+
+    def _search_match(self, recipe: Recipe) -> bool:
+        name: str = self.__item_db.by_recipe[recipe].item_name
+        return self.__filter_text in name.lower()
+
+    def _on_state_change(self, __: Recipe, _: int | None) -> None:
+        self._recompute()
 
 
 class FilteredRecipeModel(QAbstractListModel):
@@ -98,4 +127,5 @@ class FilteredRecipeModel(QAbstractListModel):
         return self.__filter_text in name.lower()
 
     def _on_state_change(self, __: Recipe, _: int | None) -> None:
-        self._recompute()
+        if len(self.__visible) != len(self.__state):
+            self._recompute()  # avoid redraw on value changes
