@@ -33,7 +33,7 @@ QListView::item:selected {
    Search Box Refinement
 ========================= */
 
-QLineEdit {
+QLineEdit#edit-search-bar {
     font-family: Bahnschrift;
     font-weight: bold;
     font-size: 17px;
@@ -50,7 +50,7 @@ QLineEdit:focus {
 }
 
 /* =========================
-   Scrollbar (The "Modern" look)
+   Scrollbar
 ========================= */
 
 QScrollBar:vertical {

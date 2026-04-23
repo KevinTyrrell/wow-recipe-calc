@@ -73,7 +73,7 @@ class MainWindow(QWidget):
         tabs: QTabWidget = QTabWidget()
         tabs.setTabPosition(QTabWidget.South)
         self.__edit_tab: EditTab = EditTab(self.__craft_app, self.__state)
-        tabs.addTab(self.__edit_tab, C.Tab.EDIT_NAME)
+        tabs.addTab(self.__edit_tab, C.EditTab.NAME)
         return tabs
 
     def _setup_logging(self, logs: LogManager) -> None:

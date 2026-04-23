@@ -68,15 +68,13 @@ class Environment(MutableMapping[str, EnvValue]):
             raise RuntimeError("environment already contains data; cannot load into a non-empty environment")
         with open(self.__file_path, "r") as f:
             for line_no, line in enumerate(f, 1):
-                line: str = line.strip()
-                if not line or line.startswith("#"):
-                    continue  # allow for comments
-                if "=" not in line:
+                line = line.strip()
+                if not line or line.startswith("#"): continue  # allow for comments
+                if "=" not in line:  # line is not a key/value pair
                     raise ValueError(f"env '{self.__file_name}' is malformed, line #{line_no}: {line}")
-                key, value = line.split("=", 1)
-                parsed: EnvValue = self._parse_value_from_str(value)
-                self._validate_value_type(parsed)
-                self.__data[key.lower()] = parsed  # keys are lower during runtime, upper in file
+                key, raw_val = [part.strip() for part in line.split("=", 1)]
+                if not raw_val: continue  # ignore empty values
+                self.__data[key.lower()] = self._parse_value_from_str(raw_val)
         return self.__data_ro
 
     def save(self) -> None:

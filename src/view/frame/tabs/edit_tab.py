@@ -25,6 +25,8 @@ from src.crafts.item_db import ItemDB
 from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafts.recipe.recipe import Recipe
 
+import src.view.constants as C
+
 
 class EditTab(QWidget):
     DEFAULT_ITEM_CRAFT_COUNT: int = 1  # starting quantities for selected items
@@ -35,9 +37,11 @@ class EditTab(QWidget):
         :param state: Observable mapping of selected recipes -> desired number of products
         """
         super().__init__()
+        self.setObjectName(C.EditTab.NAME)
 
         search_box: QLineEdit = QLineEdit()
-        search_box.setPlaceholderText("Search recipes...")
+        search_box.setPlaceholderText(C.EditTab.FILTER_PROMPT)
+        search_box.setObjectName(C.EditTab.SEARCH_HANDLE)
 
         filter_model: FilteredRecipeModel = FilteredRecipeModel(craft_app.item_db, state)
         search_box.textChanged.connect(filter_model.set_search_text)
@@ -57,6 +61,7 @@ class EditTab(QWidget):
             del state[recipe]
         delegate: QuantityDelegate = QuantityDelegate(selected_recipes)
         selected_recipes.setItemDelegate(delegate)
+        selected_recipes.clicked.connect(lambda index: selected_recipes.edit(index))
         select_model.focus_signal.connect(delegate.set_focus_row)
         selected_recipes.clicked.connect(on_clicked)
         selected_recipes.setModel(select_model)

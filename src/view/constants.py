@@ -39,10 +39,11 @@ class Banner:
 
 class EditTab:
     NAME: str = "Edit Manifest"
+    SEARCH_HANDLE: str = "edit-search-bar"
+    FILTER_PROMPT: str = "Search Recipes..."
 
 
 class Tab:
-    EDIT_NAME: str = "Edit Manifest"
     BOM_NAME: str = "Bill of Materials"
     ROUTE_NAME: str = "Crafting Route"
     COST_NAME: str = "Cost Breakdown"
