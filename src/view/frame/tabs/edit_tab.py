@@ -13,16 +13,17 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Dict, Optional
+from typing import Optional
 
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QListWidget, QListWidgetItem, QListView
-from PySide6.QtCore import Qt, QAbstractListModel, QModelIndex
+from PySide6.QtWidgets import (QWidget, QVBoxLayout, QLineEdit, QListWidget,
+                               QListWidgetItem, QListView, QStyledItemDelegate, QAbstractItemView)
+from PySide6.QtCore import Qt, QAbstractListModel, QModelIndex, Signal
+from PySide6.QtGui import QIntValidator
 
 from src.crafting_app import CraftingApp
 from src.crafts.item_db import ItemDB
-from src.crafts.recipe.recipe_state import RecipeStateCore, RecipeStateViewer
+from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafts.recipe.recipe import Recipe
-from src.crafts.item_db import RecipeEntry
 
 
 class EditTab(QWidget):
@@ -38,55 +39,108 @@ class EditTab(QWidget):
         search_box: QLineEdit = QLineEdit()
         search_box.setPlaceholderText("Search recipes...")
 
-        model: FilteredRecipeModel = FilteredRecipeModel(craft_app.item_db, state)
-        search_box.textChanged.connect(model.set_search_text)
+        filter_model: FilteredRecipeModel = FilteredRecipeModel(craft_app.item_db, state)
+        search_box.textChanged.connect(filter_model.set_search_text)
         def on_recipe_clicked(index: QModelIndex) -> None:
-            recipe: Recipe = model.recipe_at(index.row())
+            recipe: Recipe = filter_model.recipe_at(index.row())
             state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
 
         filtered_recipes: QListView = QListView()
         filtered_recipes.clicked.connect(on_recipe_clicked)
-        filtered_recipes.setModel(model)
+        filtered_recipes.setModel(filter_model)
         filtered_recipes.show()
+
+        select_model: SelectedRecipeModel = SelectedRecipeModel(craft_app.item_db, state)
+        selected_recipes: QListView = QListView()
+        def on_clicked(index: QModelIndex) -> None:
+            recipe: Recipe = index.data(Qt.UserRole)
+            del state[recipe]
+        delegate: QuantityDelegate = QuantityDelegate(selected_recipes)
+        selected_recipes.setItemDelegate(delegate)
+        select_model.focus_signal.connect(delegate.set_focus_row)
+        selected_recipes.clicked.connect(on_clicked)
+        selected_recipes.setModel(select_model)
+        selected_recipes.show()
 
         layout: QVBoxLayout = QVBoxLayout(self)
         layout.addWidget(search_box)
         layout.addWidget(filtered_recipes)
+        layout.addWidget(selected_recipes)
+
+
+class QuantityDelegate(QStyledItemDelegate):
+    _INF: int = 10 ** 9
+
+    def __init__(self, parent = None) -> None:
+        super().__init__(parent)
+        self.__focus_row: Optional[int] = None
+
+    def set_focus_row(self, row: int) -> None:
+        self.__focus_row = row
+
+    def createEditor(self, parent, option, index: QModelIndex) -> QLineEdit:
+        editor: QLineEdit = QLineEdit(parent)
+        editor.setValidator(QIntValidator(1, self._INF, editor))
+        return editor
+
+    def setEditorData(self, editor: QLineEdit, index: QModelIndex) -> None:
+        value: int = index.model().data(index, Qt.EditRole)
+        editor.setText(str(value))
+        if self.__focus_row is not None and index.row() == self.__focus_row:
+            editor.setFocus()  # seize focus upon a new element being inserted
+            editor.selectAll()
+            self.__focus_row = None
+
+    def setModelData(self, editor: QLineEdit, model, index: QModelIndex) -> None:
+        text: str = editor.text()
+        if not text.isdigit(): return  # only allow digit inputs
+        value: int = int(text)
+        model.setData(index, value, Qt.EditRole)
 
 
 class SelectedRecipeModel(QAbstractListModel):
+    focus_signal = Signal(int)
+
     def __init__(self, item_db: ItemDB, state: RecipeStateCore) -> None:
         super().__init__()
         self.__item_db: ItemDB = item_db
         self.__state: RecipeStateCore = state
         self.__visible: list[Recipe] = list(state)
         self.__state.listen(self._on_state_change)
-        self._recompute()
 
     def rowCount(self, parent: QModelIndex = QModelIndex()) -> int:
         return len(self.__visible)
 
-    def data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> Optional[str]:
+    def data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> Optional[str | int | Recipe]:
         if not index.isValid(): return None
-        if role != Qt.DisplayRole: return None
         recipe: Recipe = self.__visible[index.row()]
-        name: str = self.__item_db.by_recipe[recipe].item_name
-        return name
+        if role == Qt.DisplayRole:  # caller wants the recipe name
+            name: str = self.__item_db.by_recipe[recipe].item_name
+            quantity: int = self.__state[recipe]
+            return name
+        if role == Qt.EditRole: return self.__state[recipe]  # caller wants the quantity
+        if role == Qt.UserRole: return recipe  # caller wants the recipe instance
+        return None
+
+    def setData(self, index: QModelIndex, value: int, role: int = Qt.EditRole) -> bool:
+        if role != Qt.EditRole or not index.isValid(): return False
+        recipe: Recipe = self.__visible[index.row()]
+        self.__state[recipe] = int(value)
+        return True
+
+    def flags(self, index: QModelIndex) -> Qt.ItemFlags:
+        return Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsEditable
 
     def recipe_at(self, row: int) -> Recipe:
         return self.__visible[row]
 
-    def _recompute(self) -> None:
-        self.beginResetModel() #  prepare next frame of the UI
+    def _on_state_change(self, recipe: Recipe, new_quantity: Optional[int]) -> None:
+        prev_len: int = len(self.__visible)
+        self.beginResetModel()
         self.__visible = list(self.__state)
-        self.endResetModel()  # allow next frame to process
-
-    def _search_match(self, recipe: Recipe) -> bool:
-        name: str = self.__item_db.by_recipe[recipe].item_name
-        return self.__filter_text in name.lower()
-
-    def _on_state_change(self, __: Recipe, _: int | None) -> None:
-        self._recompute()
+        self.endResetModel()
+        if new_quantity is not None and len(self.__visible) > prev_len:
+            self.focus_signal.emit(self.__visible.index(recipe))
 
 
 class FilteredRecipeModel(QAbstractListModel):
@@ -126,6 +180,6 @@ class FilteredRecipeModel(QAbstractListModel):
         name: str = self.__item_db.by_recipe[recipe].item_name
         return self.__filter_text in name.lower()
 
-    def _on_state_change(self, __: Recipe, _: int | None) -> None:
+    def _on_state_change(self, __: Recipe, _: Optional[int]) -> None:
         if len(self.__visible) != len(self.__state):
             self._recompute()  # avoid redraw on value changes

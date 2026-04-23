@@ -13,18 +13,12 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+
 class Window:
     WIDTH: int = 504
     HEIGHT: int = 912
     MARGINS: tuple[int, int, int, int] = (12, 12, 12, 12)
     SPACING: int = 10
-
-
-class Tab:
-    EDIT_NAME: str = "Edit Manifest"
-    BOM_NAME: str = "Bill of Materials"
-    ROUTE_NAME: str = "Crafting Route"
-    COST_NAME: str = "Cost Breakdown"
 
 
 class Control:
@@ -41,6 +35,18 @@ class Banner:
     HANDLE: str = "banner"
     MARGINS: tuple[int, int, int, int] = (12, 0, 12, 0)
     HEIGHT: int = 48
+
+
+class EditTab:
+    NAME: str = "Edit Manifest"
+
+
+class Tab:
+    EDIT_NAME: str = "Edit Manifest"
+    BOM_NAME: str = "Bill of Materials"
+    ROUTE_NAME: str = "Crafting Route"
+    COST_NAME: str = "Cost Breakdown"
+
 
 class Console:
     HANDLE: str = "console"

@@ -30,64 +30,60 @@ logger: logging.Logger = logging.getLogger(__name__)
 
 
 class MainWindow(QWidget):
-    def __init__(self, craft_app: CraftingApp, state: RecipeStateCore, logs: LogManager):
+    def __init__(self, craft_app: CraftingApp, state: RecipeStateCore, logs: LogManager) -> None:
         """
         :param craft_app: Entry-point to crafting, recipe, material, and cost information
         :param state: Observable mapping of selected recipes -> desired number of products
         :param logs: Log history buffer, for retrieving logging prior to GUI being displayed
         """
         super().__init__()
+        self.__craft_app: CraftingApp = craft_app
+        self.__state: RecipeStateCore = state
+        self._configure_window()
+        self._setup_ui()
+        self._setup_logging(logs)
 
+    def _configure_window(self) -> None:
+        """Initializes the main window frame properties"""
         self.setWindowTitle(C.Banner.TITLE)
         self.resize(C.Window.WIDTH, C.Window.HEIGHT)
         self.setWindowFlags(Qt.FramelessWindowHint)
 
-        layout: QVBoxLayout = QVBoxLayout(self)
-        layout.setContentsMargins(*C.Window.MARGINS)
-        layout.setSpacing(C.Window.SPACING)
+    def _setup_ui(self) -> None:
+        """Builds the layout and initializes all child widgets"""
+        self.__layout: QVBoxLayout = QVBoxLayout(self)
+        self.__layout.setContentsMargins(*C.Window.MARGINS)
+        self.__layout.setSpacing(C.Window.SPACING)
+        # Header
+        self.__banner: WindowBanner = WindowBanner(self)
+        self.__layout.addWidget(self.__banner)
+        # Content (Tabs)
+        self.__tabs: QTabWidget = self._create_tab_widget()
+        self.__layout.addWidget(self.__tabs)
+        # Footer (Console)
+        self.__console: QPlainTextEdit = QPlainTextEdit()
+        self.__console.setReadOnly(True)
+        self.__console.setMaximumBlockCount(C.Console.MAX_LINES)
+        self.__console.setObjectName(C.Console.HANDLE)
+        self.__console.setFixedHeight(C.Console.HEIGHT)
+        self.__layout.addWidget(self.__console)
 
-        # -------------------
-        # 1. BANNER
-        # -------------------
-        banner: WindowBanner = WindowBanner(self)
-        layout.addWidget(banner)
-
-        # -------------------
-        # 2. TAB PANE
-        # -------------------
+    def _create_tab_widget(self) -> QTabWidget:
+        """Configures and returns the central tab navigation"""
         tabs: QTabWidget = QTabWidget()
         tabs.setTabPosition(QTabWidget.South)
-        edit_tab: EditTab = EditTab(craft_app, state)
-        tabs.addTab(edit_tab, C.Tab.EDIT_NAME)
-        layout.addWidget(tabs)
+        self.__edit_tab: EditTab = EditTab(self.__craft_app, self.__state)
+        tabs.addTab(self.__edit_tab, C.Tab.EDIT_NAME)
+        return tabs
 
-        # tabs will later be injected here
-        # e.g. self.tabs.addTab(EditTab(...), "Edit")
-
-        # -------------------
-        # 3. CONSOLE OUTPUT
-        # -------------------
-        console: QPlainTextEdit = make_console_window()
-        layout.addWidget(console)
-
-        # -------------------
-        # LOGGER HOOK
-        # -------------------
-
-        handler: LogEmitter = LogEmitter(console)
-        for record in logs.history: handler.emit(record)
-        logs.stop_buffering()  # save on resources
-        logging.getLogger().addHandler(handler)
-        logging.getLogger().setLevel(logging.INFO)
-
-
-def make_console_window() -> QPlainTextEdit:
-    console: QPlainTextEdit = QPlainTextEdit()
-    console.setReadOnly(True)
-    console.setMaximumBlockCount(C.Console.MAX_LINES)  # don't persist text forever
-    console.setObjectName(C.Console.HANDLE)
-    console.setFixedHeight(C.Console.HEIGHT)
-    return console
+    def _setup_logging(self, logs: LogManager) -> None:
+        """Hooks the Python logging system into the console widget"""
+        self.__log_handler: LogEmitter = LogEmitter(self.__console)
+        for record in logs.history:
+            self.__log_handler.emit(record)
+        logs.stop_buffering()  # stop saving logs to ram
+        logger.addHandler(self.__log_handler)
+        logger.setLevel(logging.INFO)
 
 
 class LogEmitter(logging.Handler):
