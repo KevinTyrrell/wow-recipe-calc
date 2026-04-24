@@ -108,9 +108,11 @@ class RecipeRow(QWidget):
         label.setCursor(Qt.PointingHandCursor)
         label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
+
         self.__edit: QLineEdit = QLineEdit(str(state[recipe]))
         self.__edit.setObjectName("recipe-row-qty")
         self.__edit.setValidator(QIntValidator(1, 10 ** 9))
+        self.__edit.setAlignment(Qt.AlignCenter)
         self.__edit.setFixedWidth(80)
 
         def on_text_changed(text: str) -> None:

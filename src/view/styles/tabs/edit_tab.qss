@@ -62,14 +62,16 @@ QWidget#recipe-row:hover QLabel#recipe-row-label {
     color: #ffffff;
 }
 
-/* The quantity field inside each row */
 QLineEdit#recipe-row-qty {
     background-color: #1e1e1e;
     border: 1px solid #3a3a3a;
     border-radius: 3px;
     color: #f0ad4e;
-    font-size: 13px;
-    padding: 2px 4px;
+    font-family: Consolas;
+    font-size: 16.5px;        /* increase as desired */
+    font-weight: bold;
+    padding: 0px;           /* remove padding so the text doesn't push the height */
+    max-height: 20px;       /* clamp the field's height to keep rows compact */
 }
 
 QLineEdit#recipe-row-qty:focus {
