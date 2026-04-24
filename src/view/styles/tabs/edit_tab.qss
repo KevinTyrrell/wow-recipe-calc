@@ -1,12 +1,9 @@
-/* =========================
-   Recipe List (QListView)
-========================= */
-
+/* ========================= Recipe List (QListView) ========================= */
 QListView {
     background-color: #252525;
     border: 2px solid #3a3a3a;
     border-radius: 4px;
-    outline: none; /* Removes the dotted focus rectangle */
+    outline: none;
     padding: 5px;
     font-size: 14px;
 }
@@ -25,14 +22,62 @@ QListView::item:hover {
 
 QListView::item:selected {
     background-color: #666666;
-    color: #f0ad4e; /* WoW-style gold accent for selection */
+    color: #f0ad4e;
     border: 1px solid #333333;
 }
 
-/* =========================
-   Search Box Refinement
-========================= */
+/* ========================= Selected Recipe List (QScrollArea) ========================= */
+QScrollArea#selected-list {
+    background-color: #252525;
+    border: 2px solid #3a3a3a;
+    border-radius: 4px;
+    font-size: 14px;
+}
 
+/* The inner container widget inside the scroll area */
+QWidget#selected-list-container {
+    background-color: #252525;
+}
+
+/* Each row widget */
+QWidget#recipe-row {
+    background-color: transparent;
+    border-bottom: 1px solid #2d2d2d;
+    border-radius: 4px;
+}
+
+QWidget#recipe-row:hover {
+    background-color: #353535;
+}
+
+/* The name label inside each row */
+QLabel#recipe-row-label {
+    color: #bbbbbb;
+    font-size: 14px;
+    padding: 6px;
+    background: transparent;
+}
+
+QWidget#recipe-row:hover QLabel#recipe-row-label {
+    color: #ffffff;
+}
+
+/* The quantity field inside each row */
+QLineEdit#recipe-row-qty {
+    background-color: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    border-radius: 3px;
+    color: #f0ad4e;
+    font-size: 13px;
+    padding: 2px 4px;
+}
+
+QLineEdit#recipe-row-qty:focus {
+    border: 1px solid #555555;
+    background-color: #222222;
+}
+
+/* ========================= Search Box ========================= */
 QLineEdit#edit-search-bar {
     font-family: Bahnschrift;
     font-weight: bold;
@@ -44,15 +89,12 @@ QLineEdit#edit-search-bar {
     color: #eeeeee;
 }
 
-QLineEdit:focus {
+QLineEdit:focus#edit-search-bar {
     border: 2px solid #555555;
     background-color: #222222;
 }
 
-/* =========================
-   Scrollbar
-========================= */
-
+/* ========================= Scrollbar ========================= */
 QScrollBar:vertical {
     border: 2px solid black;
     border-radius: 6px;
@@ -71,6 +113,7 @@ QScrollBar::handle:vertical:hover {
     background: #4f4f4f;
 }
 
-QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-    height: 0px; /* Hides the arrows for a cleaner look */
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
 }
