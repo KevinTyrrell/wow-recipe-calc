@@ -33,143 +33,140 @@ class EditTab(QWidget):
 
     def __init__(self, craft_app: CraftingApp, state: RecipeStateCore) -> None:
         super().__init__()
-        self.app = craft_app
-        self.state = state
-        self.row_widgets: dict[Recipe, RecipeRow] = {}
+        self.__app = craft_app
+        self.__state = state
+        self.__contents: dict[Recipe, RecipeRow] = dict()
+        self._setup_frames()
+        self._setup_connections()
 
-        self._setup_ui()
-        self._connect_signals()
-
-    def _setup_ui(self) -> None:
-        """Initialize UI components and layout."""
+    def _setup_frames(self) -> None:
         self.setObjectName(C.EditTab.NAME)
-        layout = QVBoxLayout(self)
+        layout: QVBoxLayout = QVBoxLayout(self)
 
-        # 1. Search Box
-        self.search_box = QLineEdit()
-        self.search_box.setPlaceholderText(C.EditTab.FILTER_PROMPT)
-        self.search_box.setObjectName(C.EditTab.SEARCH_HANDLE)
+        self.__search: QLineEdit = QLineEdit()
+        self.__search.setPlaceholderText(C.EditTab.SearchBar.PROMPT)
+        self.__search.setObjectName(C.EditTab.SearchBar.HANDLE)
 
         # 2. Recipe List (Model/View)
-        self.filter_model = FilteredRecipeModel(self.app.item_db, self.state)
-        self.recipe_view = QListView()
-        self.recipe_view.setModel(self.filter_model)
+        self.__filter_model = RecipeFilterModel(self.__app.item_db, self.__state)
+        self.__filter_view: QListView = QListView()
+        self.__filter_view.setModel(self.__filter_model)
 
         # 3. Selected Items Scroll Area
-        self.scroll_area = QScrollArea()
-        self.scroll_area.setObjectName(C.EditTab.SELECT_LIST_HANDLE)
-        self.scroll_area.setWidgetResizable(True)
-        self.scroll_area.setFrameShape(QFrame.StyledPanel)
+        self.__scroll_frame: QScrollArea = QScrollArea()
+        self.__scroll_frame.setObjectName(C.EditTab.SelectList.HANDLE)
+        self.__scroll_frame.setWidgetResizable(True)
+        self.__scroll_frame.setFrameShape(QFrame.StyledPanel)
 
-        self.selected_container = QWidget()
-        self.selected_container.setObjectName(C.EditTab.SELECT_BOX_HANDLE)
-        self.selected_layout = QVBoxLayout(self.selected_container)
-        self.selected_layout.setAlignment(Qt.AlignTop)
-        self.selected_layout.setSpacing(0)
-        self.selected_layout.setContentsMargins(5, 5, 5, 5)
+        self.__select_frame: QWidget = QWidget()
+        self.__select_frame.setObjectName(C.EditTab.SelectList.BOX_HANDLE)
+        self.__select_layout = QVBoxLayout(self.__select_frame)
+        self.__select_layout.setAlignment(Qt.AlignTop)
+        self.__scroll_frame.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.__select_layout.setSpacing(0)
+        self.__select_layout.setContentsMargins(*C.EditTab.SelectList.MARGINS)
 
-        self.scroll_area.setWidget(self.selected_container)
+        self.__scroll_frame.setWidget(self.__select_frame)
 
-        # Assemble main layout
-        layout.addWidget(self.search_box)
-        layout.addWidget(self.recipe_view)
-        layout.addWidget(self.scroll_area)
+        layout.addWidget(self.__search)
+        layout.addWidget(self.__filter_view)
+        layout.addWidget(self.__scroll_frame)
 
-    def _connect_signals(self) -> None:
-        """Wire up reactivity."""
-        self.search_box.textChanged.connect(self.filter_model.set_search_text)
-        self.recipe_view.clicked.connect(self._on_recipe_selected)
-
+    def _setup_connections(self) -> None:
+        self.__search.textChanged.connect(self.__filter_model.filter_text)
+        self.__filter_view.clicked.connect(self._on_recipe_selected)
         # Listen for state changes to sync UI rows
-        self.state.listen(lambda *_: self.sync_selected_rows())
+        self.__state.listen(lambda _, __: self.sync_selected_rows())
         self.sync_selected_rows()
 
     def _on_recipe_selected(self, index: QModelIndex) -> None:
         """Handle adding a recipe from the list to the state."""
-        recipe = self.filter_model.recipe_at(index.row())
-        self.state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
+        recipe = self.__filter_model.recipe_at(index.row())
+        self.__state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
 
     def sync_selected_rows(self) -> None:
-        """Synchronizes the RecipeRow widgets with the current state."""
+        """Synchronizes the RecipeRow widgets with the current state"""
         # Remove stale widgets (recipes no longer in state)
-        for recipe in list(self.row_widgets.keys()):
-            if recipe not in self.state:
-                widget = self.row_widgets.pop(recipe)
-                self.selected_layout.removeWidget(widget)
+        for recipe in list(self.__contents.keys()):
+            if recipe not in self.__state:
+                widget: RecipeRow = self.__contents.pop(recipe)
+                self.__select_layout.removeWidget(widget)
                 widget.deleteLater()
-
         # Add new widgets (recipes added to state)
         last_added = None
-        for recipe in self.state:
-            if recipe not in self.row_widgets:
-                widget = RecipeRow(recipe, self.app.item_db, self.state)
-                self.row_widgets[recipe] = widget
-                self.selected_layout.addWidget(widget)
+        for recipe in self.__state:
+            if recipe not in self.__contents:
+                widget: RecipeRow = RecipeRow(recipe, self.__app.item_db, self.__state)
+                self.__contents[recipe] = widget
+                self.__select_layout.addWidget(widget)
                 last_added = widget
-
-        if last_added:
-            last_added.focus_edit()
+        if last_added: last_added.focus()
 
 
 class RecipeRow(QWidget):
-    _INF: int = 10 ** 9
+    _MAX_QTY: int = 10 ** 9
 
     def __init__(self, recipe: Recipe, item_db: ItemDB, state: RecipeStateCore) -> None:
         super().__init__()
-        self.setObjectName(C.EditTab.ROW_HANDLE)
-        self.setAttribute(Qt.WA_StyledBackground, True)  # enables css bg/hover
-
         self.__recipe: Recipe = recipe
         self.__state: RecipeStateCore = state
+        self._setup_frames(item_db)
+        self._setup_connections()
 
-        name: str = item_db.by_recipe[recipe].item_name
+    def _setup_frames(self, item_db: ItemDB) -> None:
+        self.setObjectName(C.EditTab.SelectList.Row.HANDLE)
+        self.setAttribute(Qt.WA_StyledBackground, True)
 
+        layout: QHBoxLayout = QHBoxLayout(self)
+        layout.setContentsMargins(*C.EditTab.SelectList.Row.MARGINS)
+
+        name: str = item_db.by_recipe[self.__recipe].item_name
         self.__label: QLabel = QLabel(name)
-        self.__label.setObjectName(C.EditTab.ROW_NAME_HANDLE)
+        self.__label.setObjectName(C.EditTab.SelectList.Row.NAME_HANDLE)
         self.__label.setCursor(Qt.PointingHandCursor)
         self.__label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
-
-        self.__edit: QLineEdit = QLineEdit(str(state[recipe]))
-        self.__edit.setObjectName(C.EditTab.ROW_QTY_HANDLE)
-        self.__edit.setValidator(QIntValidator(1, self._INF))
+        self.__edit: QLineEdit = QLineEdit(str(self.__state[self.__recipe]))
+        self.__edit.setObjectName(C.EditTab.SelectList.Row.QTY_HANDLE)
+        self.__edit.setValidator(QIntValidator(1, self._MAX_QTY))
         self.__edit.setAlignment(Qt.AlignCenter)
-        self.__edit.setFixedWidth(C.EditTab.ROW_QTY_WIDTH)
+        self.__edit.setFixedWidth(C.EditTab.SelectList.Row.QTY_WIDTH)
 
-        def on_text_changed(text: str) -> None:
-            if text.isdigit():
-                state[recipe] = int(text)
-
-        self.__edit.textChanged.connect(on_text_changed)
-        self.__label.mousePressEvent = lambda e: self._set_pressed(True)
-        self.__label.mouseReleaseEvent = lambda e: self._remove()
-        layout: QHBoxLayout = QHBoxLayout(self)
-        layout.setContentsMargins(4, 2, 4, 2)
         layout.addWidget(self.__label)
         layout.addWidget(self.__edit)
 
-    def focus_edit(self) -> None:
+    def focus(self) -> None:
         self.__edit.setFocus()
         self.__edit.selectAll()
 
-    def _set_pressed(self, pressed: bool) -> None:
-        self.setProperty("pressed", pressed)
-        self.style().unpolish(self)
-        self.style().polish(self)
-        self.__label.style().unpolish(self.__label)
-        self.__label.style().polish(self.__label)
+    def _setup_connections(self) -> None:
+        self.__edit.textChanged.connect(self._quantity_changed_cb)
+        # Enable mouse press to show 'pressed' css styling
+        self.__label.mousePressEvent = lambda _: self._mouse_pressed_cb(True)
+        # Enable mouse press to eject recipe rows
+        self.__label.mouseReleaseEvent = lambda _: self.__state.pop(self.__recipe, None)
+
+    def _quantity_changed_cb(self, text: str) -> None:
+        if text.isdigit(): self.__state[self.__recipe] = int(text)
+
+    def _mouse_pressed_cb(self, is_pressed: bool) -> None:
+        """Updates the CSS 'pressed' property and refreshes styling"""
+        self.setProperty(C.EditTab.SelectList.Row.PRESS_PROPERTY, is_pressed)
+        for obj in (self, self.__label):
+            obj.style().unpolish(obj)
+            obj.style().polish(obj)
 
     def _remove(self) -> None:
-        self._set_pressed(False)
-        del self.__state[self.__recipe]
+        if self.__recipe in self.__state:  # removing from state will eject this row
+            del self.__state[self.__recipe]
 
 
-class FilteredRecipeModel(QAbstractListModel):
+class RecipeFilterModel(QAbstractListModel):
     def __init__(self, item_db: ItemDB, state: RecipeStateCore) -> None:
         super().__init__()
         self.__item_db: ItemDB = item_db
         self.__state: RecipeStateCore = state
-        self.__filter_text: str = ""
+        self.__filter_text: str = str()
         self.__visible: list[Recipe] = list()
         self.__state.listen(self._on_state_change)
         self._recompute()
@@ -184,7 +181,7 @@ class FilteredRecipeModel(QAbstractListModel):
         name: str = self.__item_db.by_recipe[recipe].item_name
         return name
 
-    def set_search_text(self, text: str) -> None:
+    def filter_text(self, text: str) -> None:
         self.__filter_text = text.lower()
         self._recompute()
 

@@ -39,14 +39,20 @@ class Banner:
 
 class EditTab:
     NAME: str = "Edit Manifest"
-    SEARCH_HANDLE: str = "edit-search-bar"
-    SELECT_LIST_HANDLE: str = "selected-list"
-    SELECT_BOX_HANDLE: str = "selected-list-container"
-    ROW_HANDLE: str = "recipe-row"
-    ROW_NAME_HANDLE: str = "recipe-row-label"
-    ROW_QTY_HANDLE: str = "recipe-row-qty"
-    ROW_QTY_WIDTH: int = 60
-    FILTER_PROMPT: str = "Search Recipes..."
+    class SearchBar:
+        HANDLE: str = "edit-search-bar"
+        PROMPT: str = "Search Recipes..."
+    class SelectList:
+        HANDLE: str = "selected-list"
+        BOX_HANDLE: str = "selected-list-container"
+        MARGINS: tuple[int, int, int, int] = (5, 5, 5, 5)
+        class Row:
+            HANDLE: str = "recipe-row"
+            NAME_HANDLE: str = "recipe-row-label"
+            QTY_HANDLE: str = "recipe-row-qty"
+            PRESS_PROPERTY: str = "pressed"
+            MARGINS: tuple[int, int, int, int] = (0, 2, 4, 2)
+            QTY_WIDTH: int = 60
 
 
 class Tab:

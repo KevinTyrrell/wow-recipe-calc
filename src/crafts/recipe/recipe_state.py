@@ -64,14 +64,13 @@ class RecipeStateCore(RecipeStateViewer, MutableMapping[Recipe, int]):
 
     def pop(self, key: Recipe, default: object = ...) -> object:
         if key in self._data:
-            return self._delete(key)
+            return self._deleter(key)
         if default is ...: raise KeyError(key)
         return default
 
     def __delitem__(self, key: Recipe) -> None: self._deleter(key)
     def __setitem__(self, key: Recipe, value: int) -> None:
-        if value <= 0:
-            self._deleter(key)
+        if value <= 0: self._deleter(key)
         else: self._setter(key, value)
 
     def _deleter(self, key: Recipe) -> int:

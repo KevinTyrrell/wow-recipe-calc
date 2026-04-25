@@ -52,6 +52,11 @@ QScrollArea#selected-list {
     font-size: 14px;
 }
 
+QScrollArea#selected-list QScrollBar:vertical {
+    margin-right: 5px;
+    width: 15px;
+}
+
 QWidget#selected-list-container {
     background-color: #252525;
 }
