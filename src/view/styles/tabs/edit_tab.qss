@@ -1,4 +1,21 @@
-/* ========================= Recipe List (QListView) ========================= */
+/* =============================================================================
+   SHARED TOKENS
+   These colors are reused across both lists — update here to change globally.
+   bg-base:      #252525   main list background
+   bg-hover:     #353535   hovered row
+   bg-selected:  #666666   pressed/selected row
+   bg-input:     #1e1e1e   input fields
+   border-dim:   #2d2d2d   row dividers
+   border-mid:   #3a3a3a   widget borders
+   border-focus: #555555   focused input border
+   text-dim:     #bbbbbb   normal item text
+   text-bright:  #ffffff   hovered item text
+   text-gold:    #f0ad4e   selected/accent text
+============================================================================= */
+
+/* =============================================================================
+   FILTERED RECIPE LIST (QListView)
+============================================================================= */
 QListView {
     background-color: #252525;
     border: 2px solid #3a3a3a;
@@ -22,11 +39,12 @@ QListView::item:hover {
 
 QListView::item:selected {
     background-color: #666666;
-    color: #f0ad4e;
     border: 1px solid #333333;
 }
 
-/* ========================= Selected Recipe List (QScrollArea) ========================= */
+/* =============================================================================
+   SELECTED RECIPE LIST (QScrollArea + RecipeRow widgets)
+============================================================================= */
 QScrollArea#selected-list {
     background-color: #252525;
     border: 2px solid #3a3a3a;
@@ -34,12 +52,10 @@ QScrollArea#selected-list {
     font-size: 14px;
 }
 
-/* The inner container widget inside the scroll area */
 QWidget#selected-list-container {
     background-color: #252525;
 }
 
-/* Each row widget */
 QWidget#recipe-row {
     background-color: transparent;
     border-bottom: 1px solid #2d2d2d;
@@ -50,65 +66,70 @@ QWidget#recipe-row:hover {
     background-color: #353535;
 }
 
-/* The name label inside each row */
+QWidget#recipe-row[pressed="true"] {
+    background-color: #666666;
+    border: 1px solid #333333;
+}
+
+/* Label: color managed in Python (enterEvent/leaveEvent/_set_pressed) */
 QLabel#recipe-row-label {
-    color: #bbbbbb;
     font-size: 14px;
     padding: 6px;
     background: transparent;
 }
 
-QWidget#recipe-row:hover QLabel#recipe-row-label {
-    color: #ffffff;
-}
-
+/* Quantity field */
 QLineEdit#recipe-row-qty {
     background-color: #1e1e1e;
     border: 1px solid #3a3a3a;
     border-radius: 3px;
     color: #f0ad4e;
     font-family: Consolas;
-    font-size: 16.5px;        /* increase as desired */
+    font-size: 16.5px;
     font-weight: bold;
-    padding: 0px;           /* remove padding so the text doesn't push the height */
-    max-height: 20px;       /* clamp the field's height to keep rows compact */
+    padding: 0px;
+    max-height: 20px;
 }
 
 QLineEdit#recipe-row-qty:focus {
-    border: 1px solid #555555;
     background-color: #222222;
+    border: 1px solid #555555;
 }
 
-/* ========================= Search Box ========================= */
+/* =============================================================================
+   SEARCH BAR
+============================================================================= */
 QLineEdit#edit-search-bar {
-    font-family: Bahnschrift;
-    font-weight: bold;
-    font-size: 17px;
-    border-radius: 6px;
-    padding: 6px;
     background-color: #1a1a1a;
     border: 2px solid #333333;
+    border-radius: 6px;
     color: #eeeeee;
+    font-family: Bahnschrift;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 6px;
 }
 
-QLineEdit:focus#edit-search-bar {
-    border: 2px solid #555555;
+QLineEdit#edit-search-bar:focus {
     background-color: #222222;
+    border: 2px solid #555555;
 }
 
-/* ========================= Scrollbar ========================= */
+/* =============================================================================
+   SCROLLBAR
+============================================================================= */
 QScrollBar:vertical {
+    background: #1e1e1e;
     border: 2px solid black;
     border-radius: 6px;
-    background: #1e1e1e;
-    width: 10px;
     margin: 0px;
+    width: 10px;
 }
 
 QScrollBar::handle:vertical {
     background: #3f3f3f;
-    min-height: 20px;
     border-radius: 5px;
+    min-height: 20px;
 }
 
 QScrollBar::handle:vertical:hover {

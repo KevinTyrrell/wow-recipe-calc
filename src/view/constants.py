@@ -40,8 +40,12 @@ class Banner:
 class EditTab:
     NAME: str = "Edit Manifest"
     SEARCH_HANDLE: str = "edit-search-bar"
-    ROW_NAME_HANDLE: str = "recipe-row-name"
+    SELECT_LIST_HANDLE: str = "selected-list"
+    SELECT_BOX_HANDLE: str = "selected-list-container"
+    ROW_HANDLE: str = "recipe-row"
+    ROW_NAME_HANDLE: str = "recipe-row-label"
     ROW_QTY_HANDLE: str = "recipe-row-qty"
+    ROW_QTY_WIDTH: int = 60
     FILTER_PROMPT: str = "Search Recipes..."
 
 

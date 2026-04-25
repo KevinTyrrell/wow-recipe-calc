@@ -33,106 +33,134 @@ class EditTab(QWidget):
 
     def __init__(self, craft_app: CraftingApp, state: RecipeStateCore) -> None:
         super().__init__()
+        self.app = craft_app
+        self.state = state
+        self.row_widgets: dict[Recipe, RecipeRow] = {}
+
+        self._setup_ui()
+        self._connect_signals()
+
+    def _setup_ui(self) -> None:
+        """Initialize UI components and layout."""
         self.setObjectName(C.EditTab.NAME)
+        layout = QVBoxLayout(self)
 
-        search_box: QLineEdit = QLineEdit()
-        search_box.setPlaceholderText(C.EditTab.FILTER_PROMPT)
-        search_box.setObjectName(C.EditTab.SEARCH_HANDLE)
+        # 1. Search Box
+        self.search_box = QLineEdit()
+        self.search_box.setPlaceholderText(C.EditTab.FILTER_PROMPT)
+        self.search_box.setObjectName(C.EditTab.SEARCH_HANDLE)
 
-        filter_model: FilteredRecipeModel = FilteredRecipeModel(craft_app.item_db, state)
-        search_box.textChanged.connect(filter_model.set_search_text)
+        # 2. Recipe List (Model/View)
+        self.filter_model = FilteredRecipeModel(self.app.item_db, self.state)
+        self.recipe_view = QListView()
+        self.recipe_view.setModel(self.filter_model)
 
-        def on_recipe_clicked(index: QModelIndex) -> None:
-            recipe: Recipe = filter_model.recipe_at(index.row())
-            state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
+        # 3. Selected Items Scroll Area
+        self.scroll_area = QScrollArea()
+        self.scroll_area.setObjectName(C.EditTab.SELECT_LIST_HANDLE)
+        self.scroll_area.setWidgetResizable(True)
+        self.scroll_area.setFrameShape(QFrame.StyledPanel)
 
-        filtered_recipes: QListView = QListView()
-        filtered_recipes.clicked.connect(on_recipe_clicked)
-        filtered_recipes.setModel(filter_model)
+        self.selected_container = QWidget()
+        self.selected_container.setObjectName(C.EditTab.SELECT_BOX_HANDLE)
+        self.selected_layout = QVBoxLayout(self.selected_container)
+        self.selected_layout.setAlignment(Qt.AlignTop)
+        self.selected_layout.setSpacing(0)
+        self.selected_layout.setContentsMargins(5, 5, 5, 5)
 
-        scroll_area: QScrollArea = QScrollArea()
-        scroll_area.setObjectName("selected-list")          # <-- targeted in QSS
-        scroll_area.setWidgetResizable(True)
-        scroll_area.setFrameShape(QFrame.StyledPanel)
+        self.scroll_area.setWidget(self.selected_container)
 
-        selected_container: QWidget = QWidget()
-        selected_container.setObjectName("selected-list-container")  # <-- targeted in QSS
-        selected_layout: QVBoxLayout = QVBoxLayout(selected_container)
-        selected_layout.setAlignment(Qt.AlignTop)
-        selected_layout.setSpacing(0)   # 0 so border-bottom acts as the only divider, like QListView
-        selected_layout.setContentsMargins(5, 5, 5, 5)
-        scroll_area.setWidget(selected_container)
+        # Assemble main layout
+        layout.addWidget(self.search_box)
+        layout.addWidget(self.recipe_view)
+        layout.addWidget(self.scroll_area)
 
-        row_widgets: dict[Recipe, RecipeRow] = {}
+    def _connect_signals(self) -> None:
+        """Wire up reactivity."""
+        self.search_box.textChanged.connect(self.filter_model.set_search_text)
+        self.recipe_view.clicked.connect(self._on_recipe_selected)
 
-        def rebuild_selected() -> None:
-            for recipe in list(row_widgets):
-                if recipe not in state:
-                    widget: RecipeRow = row_widgets.pop(recipe)
-                    selected_layout.removeWidget(widget)
-                    widget.deleteLater()
+        # Listen for state changes to sync UI rows
+        self.state.listen(lambda *_: self.sync_selected_rows())
+        self.sync_selected_rows()
 
-            last_added: Optional[RecipeRow] = None
-            for recipe in state:
-                if recipe not in row_widgets:
-                    widget = RecipeRow(recipe, craft_app.item_db, state)
-                    row_widgets[recipe] = widget
-                    selected_layout.addWidget(widget)
-                    last_added = widget
+    def _on_recipe_selected(self, index: QModelIndex) -> None:
+        """Handle adding a recipe from the list to the state."""
+        recipe = self.filter_model.recipe_at(index.row())
+        self.state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
 
-            if last_added is not None:
-                last_added.focus_edit()
+    def sync_selected_rows(self) -> None:
+        """Synchronizes the RecipeRow widgets with the current state."""
+        # Remove stale widgets (recipes no longer in state)
+        for recipe in list(self.row_widgets.keys()):
+            if recipe not in self.state:
+                widget = self.row_widgets.pop(recipe)
+                self.selected_layout.removeWidget(widget)
+                widget.deleteLater()
 
-        state.listen(lambda recipe, qty: rebuild_selected())
-        rebuild_selected()
+        # Add new widgets (recipes added to state)
+        last_added = None
+        for recipe in self.state:
+            if recipe not in self.row_widgets:
+                widget = RecipeRow(recipe, self.app.item_db, self.state)
+                self.row_widgets[recipe] = widget
+                self.selected_layout.addWidget(widget)
+                last_added = widget
 
-        layout: QVBoxLayout = QVBoxLayout(self)
-        layout.addWidget(search_box)
-        layout.addWidget(filtered_recipes)
-        layout.addWidget(scroll_area)
+        if last_added:
+            last_added.focus_edit()
 
 
 class RecipeRow(QWidget):
+    _INF: int = 10 ** 9
+
     def __init__(self, recipe: Recipe, item_db: ItemDB, state: RecipeStateCore) -> None:
         super().__init__()
-        self.setObjectName("recipe-row")                    # <-- targeted in QSS
-        self.setAttribute(Qt.WA_StyledBackground, True)    # required for QWidget bg/hover rules to apply
+        self.setObjectName(C.EditTab.ROW_HANDLE)
+        self.setAttribute(Qt.WA_StyledBackground, True)  # enables css bg/hover
 
         self.__recipe: Recipe = recipe
         self.__state: RecipeStateCore = state
 
         name: str = item_db.by_recipe[recipe].item_name
 
-        label: QLabel = QLabel(name)
-        label.setObjectName("recipe-row-label")
-        label.setCursor(Qt.PointingHandCursor)
-        label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        self.__label: QLabel = QLabel(name)
+        self.__label.setObjectName(C.EditTab.ROW_NAME_HANDLE)
+        self.__label.setCursor(Qt.PointingHandCursor)
+        self.__label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
 
         self.__edit: QLineEdit = QLineEdit(str(state[recipe]))
-        self.__edit.setObjectName("recipe-row-qty")
-        self.__edit.setValidator(QIntValidator(1, 10 ** 9))
+        self.__edit.setObjectName(C.EditTab.ROW_QTY_HANDLE)
+        self.__edit.setValidator(QIntValidator(1, self._INF))
         self.__edit.setAlignment(Qt.AlignCenter)
-        self.__edit.setFixedWidth(80)
+        self.__edit.setFixedWidth(C.EditTab.ROW_QTY_WIDTH)
 
         def on_text_changed(text: str) -> None:
             if text.isdigit():
                 state[recipe] = int(text)
 
         self.__edit.textChanged.connect(on_text_changed)
-        label.mousePressEvent = lambda _: self._remove()
-
+        self.__label.mousePressEvent = lambda e: self._set_pressed(True)
+        self.__label.mouseReleaseEvent = lambda e: self._remove()
         layout: QHBoxLayout = QHBoxLayout(self)
         layout.setContentsMargins(4, 2, 4, 2)
-        layout.addWidget(label)
-        #layout.addStretch()
+        layout.addWidget(self.__label)
         layout.addWidget(self.__edit)
 
     def focus_edit(self) -> None:
         self.__edit.setFocus()
         self.__edit.selectAll()
 
+    def _set_pressed(self, pressed: bool) -> None:
+        self.setProperty("pressed", pressed)
+        self.style().unpolish(self)
+        self.style().polish(self)
+        self.__label.style().unpolish(self.__label)
+        self.__label.style().polish(self.__label)
+
     def _remove(self) -> None:
+        self._set_pressed(False)
         del self.__state[self.__recipe]
 
 
