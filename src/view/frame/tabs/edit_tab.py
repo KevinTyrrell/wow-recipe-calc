@@ -76,31 +76,29 @@ class EditTab(QWidget):
         self.__search.textChanged.connect(self.__filter_model.filter_text)
         self.__filter_view.clicked.connect(self._on_recipe_selected)
         # Listen for state changes to sync UI rows
-        self.__state.listen(lambda _, __: self.sync_selected_rows())
-        self.sync_selected_rows()
+        self.__state.listen(self._update_rows)
+        for recipe in self.__state: self._add_row(recipe)
 
     def _on_recipe_selected(self, index: QModelIndex) -> None:
-        """Handle adding a recipe from the list to the state."""
-        recipe = self.__filter_model.recipe_at(index.row())
+        """Handle adding a recipe from the list to the state"""
+        recipe: Recipe = self.__filter_model.recipe_at(index.row())
         self.__state[recipe] = self.DEFAULT_ITEM_CRAFT_COUNT
 
-    def sync_selected_rows(self) -> None:
-        """Synchronizes the RecipeRow widgets with the current state"""
-        # Remove stale widgets (recipes no longer in state)
-        for recipe in list(self.__contents.keys()):
-            if recipe not in self.__state:
-                widget: RecipeRow = self.__contents.pop(recipe)
-                self.__select_layout.removeWidget(widget)
-                widget.deleteLater()
-        # Add new widgets (recipes added to state)
-        last_added = None
-        for recipe in self.__state:
-            if recipe not in self.__contents:
-                widget: RecipeRow = RecipeRow(recipe, self.__app.item_db, self.__state)
-                self.__contents[recipe] = widget
-                self.__select_layout.addWidget(widget)
-                last_added = widget
-        if last_added: last_added.focus()
+    def _update_rows(self, recipe: Recipe, _: Optional[int]) -> None:
+        len_old, len_new = len(self.__contents), len(self.__state)
+        if len_old < len_new: self._add_row(recipe).focus()
+        elif len_old > len_new: self._remove_row(recipe)
+
+    def _add_row(self, recipe: Recipe) -> RecipeRow:
+        widget: RecipeRow = RecipeRow(recipe, self.__app.item_db, self.__state)
+        self.__contents[recipe] = widget
+        self.__select_layout.addWidget(widget)
+        return widget
+
+    def _remove_row(self, recipe: Recipe) -> None:
+        widget: RecipeRow = self.__contents.pop(recipe)
+        self.__select_layout.removeWidget(widget)
+        widget.deleteLater()
 
 
 class RecipeRow(QWidget):

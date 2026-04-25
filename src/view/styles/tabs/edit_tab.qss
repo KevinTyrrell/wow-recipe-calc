@@ -54,6 +54,8 @@ QScrollArea#selected-list {
 
 QScrollArea#selected-list QScrollBar:vertical {
     margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 15px;
 }
 
