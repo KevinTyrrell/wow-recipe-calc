@@ -40,12 +40,12 @@ class EditTab(QWidget):
         self._setup_connections()
 
     def _setup_frames(self) -> None:
-        self.setObjectName(C.EditTab.NAME)
+        self.setObjectName(C.EditTab.HANDLE)
         layout: QVBoxLayout = QVBoxLayout(self)
 
-        self.__search: QLineEdit = QLineEdit()
-        self.__search.setPlaceholderText(C.EditTab.SearchBar.PROMPT)
-        self.__search.setObjectName(C.EditTab.SearchBar.HANDLE)
+        self.__search_bar: QLineEdit = QLineEdit()
+        self.__search_bar.setPlaceholderText(C.EditTab.SearchBar.PROMPT)
+        self.__search_bar.setObjectName(C.EditTab.SearchBar.HANDLE)
 
         # 2. Recipe List (Model/View)
         self.__filter_model = RecipeFilterModel(self.__app.item_db, self.__state)
@@ -68,12 +68,12 @@ class EditTab(QWidget):
 
         self.__scroll_frame.setWidget(self.__select_frame)
 
-        layout.addWidget(self.__search)
+        layout.addWidget(self.__search_bar)
         layout.addWidget(self.__filter_view)
         layout.addWidget(self.__scroll_frame)
 
     def _setup_connections(self) -> None:
-        self.__search.textChanged.connect(self.__filter_model.filter_text)
+        self.__search_bar.textChanged.connect(self.__filter_model.filter_text)
         self.__filter_view.clicked.connect(self._on_recipe_selected)
         # Listen for state changes to sync UI rows
         self.__state.listen(self._update_rows)

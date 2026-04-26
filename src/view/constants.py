@@ -39,6 +39,7 @@ class Banner:
 
 class EditTab:
     NAME: str = "Edit Manifest"
+    HANDLE: str = "manifest"
     class SearchBar:
         HANDLE: str = "edit-search-bar"
         PROMPT: str = "Search Recipes..."
@@ -55,10 +56,27 @@ class EditTab:
             QTY_WIDTH: int = 60
 
 
-class Tab:
-    BOM_NAME: str = "Bill of Materials"
-    ROUTE_NAME: str = "Crafting Route"
-    COST_NAME: str = "Cost Breakdown"
+class BomTab:
+    NAME: str = "Bill of Materials"
+    HANDLE: str = "bom"
+    class List:
+        HANDLE: str = "bom-list"
+        BOX_HANDLE: str = "bom-list-container"
+        MARGINS: tuple[int, int, int, int] = (5, 5, 5, 5)
+        class Row:
+            HANDLE: str = "bom-row"
+            NAME_HANDLE: str = "bom-row-name"
+            QTY_HANDLE: str = "bom-row-qty"
+            QTY_WIDTH: int = 50
+            MARGINS: tuple[int, int, int, int] = (0, 2, 4, 2)
+
+
+class RouteTab:
+    NAME: str = "Crafting Route"
+
+
+class CostTab:
+    NAME: str = "Cost Breakdown"
 
 
 class Console:

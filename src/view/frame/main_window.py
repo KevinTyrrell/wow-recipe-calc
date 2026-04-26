@@ -19,17 +19,21 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
 
 import src.view.constants as C
+from src.crafts.craft_planner import CraftPlan
 
 from src.util.log_manager import LogManager
 from src.crafts.recipe.recipe_state import RecipeStateCore
 from src.crafting_app import CraftingApp
 from src.view.frame.window_banner import WindowBanner
 from src.view.frame.tabs.edit_tab import EditTab
+from src.view.frame.tabs.bom_tab import BomTab
 
 logger: logging.Logger = logging.getLogger(__name__)
 
 
 class MainWindow(QWidget):
+    DEFAULT_TAB_INDEX: int = 0
+
     def __init__(self, craft_app: CraftingApp, state: RecipeStateCore, logs: LogManager) -> None:
         """
         :param craft_app: Entry-point to crafting, recipe, material, and cost information
@@ -39,8 +43,10 @@ class MainWindow(QWidget):
         super().__init__()
         self.__craft_app: CraftingApp = craft_app
         self.__state: RecipeStateCore = state
+        self.__plan: Optional[CraftPlan] = None
+        self.__current_tab: int = self.DEFAULT_TAB_INDEX
         self._configure_window()
-        self._setup_ui()
+        self._setup_frames()
         self._setup_logging(logs)
 
     def _configure_window(self) -> None:
@@ -49,7 +55,7 @@ class MainWindow(QWidget):
         self.resize(C.Window.WIDTH, C.Window.HEIGHT)
         self.setWindowFlags(Qt.FramelessWindowHint)
 
-    def _setup_ui(self) -> None:
+    def _setup_frames(self) -> None:
         """Builds the layout and initializes all child widgets"""
         self.__layout: QVBoxLayout = QVBoxLayout(self)
         self.__layout.setContentsMargins(*C.Window.MARGINS)
@@ -70,11 +76,23 @@ class MainWindow(QWidget):
 
     def _create_tab_widget(self) -> QTabWidget:
         """Configures and returns the central tab navigation"""
-        tabs: QTabWidget = QTabWidget()
-        tabs.setTabPosition(QTabWidget.South)
-        self.__edit_tab: EditTab = EditTab(self.__craft_app, self.__state)
-        tabs.addTab(self.__edit_tab, C.EditTab.NAME)
-        return tabs
+        tab_container: QTabWidget = QTabWidget()
+        tab_container.setTabPosition(QTabWidget.South)
+        tab_names: tuple[str, ...] = (
+            C.EditTab.NAME, C.BomTab.NAME, C.RouteTab.NAME, C.CostTab.NAME)
+        tab_frames: tuple[QWidget, ...] = (
+            EditTab(self.__craft_app, self.__state),
+            BomTab(lambda: self.__plan))
+        for i in range(len(tab_frames)):
+            tab_container.addTab(tab_frames[i], tab_names[i])
+        tab_container.currentChanged.connect(self._tab_change_cb)
+        return tab_container
+
+    def _tab_change_cb(self, index: int) -> None:
+        print("currentTabChanged event firing")
+        if self.__current_tab == 0 and index != 0:  # generate new plan
+            self.__plan = self.__craft_app.run_planner(self.__state)
+        self.__current_tab = index
 
     def _setup_logging(self, logs: LogManager) -> None:
         """Hooks the Python logging system into the console widget"""

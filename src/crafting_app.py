@@ -61,7 +61,6 @@ class CraftingApp:
         # Databases/containers/optimizers
         self.__item_db: ItemDB = ItemDB(self.__item_client.get_item_name, self._DEFAULT_ITEM_DB_BASENAME)
         self.__prices: PriceManager = PriceManager(self.__tsm_client, self._unknown_price_cb)
-        self.__planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
         self.__tsm_client.auction_house = wrap_json(self.environment.data).auction_house
         on_exit(self.__env.save)
         on_exit(self.__item_db.save)
@@ -86,15 +85,16 @@ class CraftingApp:
             self.__item_db.register(recipe)
         return self.__item_db
 
-    def run_planner(self) -> CraftPlan:
+    def run_planner(self, desired_crafts: Mapping[str | int | Recipe, int]) -> CraftPlan:
         """
         :return: craft plan detailing the optimal crafting routes/windows/materials
         """
         logger.debug("running craft planner")
-        for name, quantity in self.__args.required_crafts_path.items():
-            if not self.__planner.craft(name, quantity):
+        planner: CraftPlanner = CraftPlanner(self.item_db, self.__prices)
+        for name, quantity in desired_crafts.items():
+            if not planner.craft(name, quantity):
                 logger.debug(f"planned recipe is unrecognized: {name}")
-        return self.__planner.plan()
+        return planner.plan()
 
     @property
     def item_db(self) -> ItemDB:

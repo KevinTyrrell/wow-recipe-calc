@@ -1,0 +1,48 @@
+/* =============================================================================
+   BILL OF MATERIALS LIST
+============================================================================= */
+QScrollArea#bom-list {
+    background-color: #252525;
+    border: 2px solid #3a3a3a;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QScrollArea#bom-list QScrollBar:vertical {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 15px;
+}
+
+QWidget#bom-list-container {
+    background-color: #252525;
+}
+
+QWidget#bom-row {
+    background-color: transparent;
+    border-bottom: 1px solid #2d2d2d;
+    border-radius: 4px;
+}
+
+QWidget#bom-row:hover {
+    background-color: #353535;
+}
+
+QLabel#bom-row-name {
+    color: #bbbbbb;
+    font-size: 14px;
+    padding: 6px;
+    background: transparent;
+}
+
+QWidget#bom-row:hover QLabel#bom-row-name {
+    color: #ffffff;
+}
+
+QLabel#bom-row-qty {
+    color: #f0ad4e;
+    font-family: Consolas;
+    font-size: 16.5px;
+    font-weight: bold;
+}
