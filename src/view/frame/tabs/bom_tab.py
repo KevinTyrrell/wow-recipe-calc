@@ -26,10 +26,8 @@ import src.view.constants as C
 
 
 class BomTab(PlanTab):
-    def __init__(self, plan_cb: Callable[[], CraftPlan]) -> None:
+    def __init__(self) -> None:
         super().__init__()
-        self.__plan_cb: Callable[[], CraftPlan] = plan_cb
-        self.__plan: Optional[CraftPlan] = None
         self._setup_frames()
 
     def _setup_frames(self) -> None:
@@ -53,12 +51,7 @@ class BomTab(PlanTab):
         self.__scroll_frame.setWidget(self.__list_frame)
         layout.addWidget(self.__scroll_frame)
 
-    def showEvent(self, event) -> None:  # event fires when tab is displayed
-        print("showEvent function called")
-        super().showEvent(event)  # QT housekeeping
-        plan: CraftPlan = self.__plan_cb()
-        if plan == self.__plan: return  # no change, do not rebuild
-        self.__plan = plan
+    def _rebuild(self, plan: CraftPlan) -> None:
         while self.__list_layout.count():
             child = self.__list_layout.takeAt(0)
             if child.widget():  # cleanup existing content

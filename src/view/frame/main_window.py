@@ -27,6 +27,7 @@ from src.crafting_app import CraftingApp
 from src.view.frame.window_banner import WindowBanner
 from src.view.frame.tabs.edit_tab import EditTab
 from src.view.frame.tabs.bom_tab import BomTab
+from src.view.frame.tabs.plan_tab import PlanTab
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -43,7 +44,6 @@ class MainWindow(QWidget):
         super().__init__()
         self.__craft_app: CraftingApp = craft_app
         self.__state: RecipeStateCore = state
-        self.__plan: Optional[CraftPlan] = None
         self.__current_tab: int = self.DEFAULT_TAB_INDEX
         self._configure_window()
         self._setup_frames()
@@ -80,19 +80,20 @@ class MainWindow(QWidget):
         tab_container.setTabPosition(QTabWidget.South)
         tab_names: tuple[str, ...] = (
             C.EditTab.NAME, C.BomTab.NAME, C.RouteTab.NAME, C.CostTab.NAME)
-        tab_frames: tuple[QWidget, ...] = (
-            EditTab(self.__craft_app, self.__state),
-            BomTab(lambda: self.__plan))
+        plan_tabs: tuple[PlanTab, ...] = (
+            BomTab(),
+        )
+        tab_frames: tuple[QWidget, ...] = (EditTab(self.__craft_app, self.__state),) + plan_tabs
         for i in range(len(tab_frames)):
             tab_container.addTab(tab_frames[i], tab_names[i])
-        tab_container.currentChanged.connect(self._tab_change_cb)
+        def tab_change_cb(index: int) -> None:
+            if self.__current_tab == 0 and index != 0:
+                plan: CraftPlan = self.__craft_app.run_planner(self.__state)
+                for plan_tab in plan_tabs: plan_tab.invalidate(plan)
+                plan_tabs[index - 1].refresh()
+            self.__current_tab = index
+        tab_container.currentChanged.connect(tab_change_cb)
         return tab_container
-
-    def _tab_change_cb(self, index: int) -> None:
-        print("currentTabChanged event firing")
-        if self.__current_tab == 0 and index != 0:  # generate new plan
-            self.__plan = self.__craft_app.run_planner(self.__state)
-        self.__current_tab = index
 
     def _setup_logging(self, logs: LogManager) -> None:
         """Hooks the Python logging system into the console widget"""
