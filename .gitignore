@@ -1,5 +1,6 @@
-working/
-*.pkl
 *.env
 *.idea/
 __pycache__/
+cache/
+working/
+TODO
