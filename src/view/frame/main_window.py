@@ -17,6 +17,7 @@ import logging
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
+from charset_normalizer.md import getLogger
 
 import src.view.constants as C
 from src.crafts.craft_planner import CraftPlan
@@ -101,8 +102,7 @@ class MainWindow(QWidget):
         for record in logs.history:
             self.__log_handler.emit(record)
         logs.stop_buffering()  # stop saving logs to ram
-        logger.addHandler(self.__log_handler)
-        logger.setLevel(logging.INFO)
+        getLogger().addHandler(self.__log_handler)
 
 
 class LogEmitter(logging.Handler):
