@@ -48,7 +48,7 @@ class MainWindow(QWidget):
         self.__current_tab: int = self.DEFAULT_TAB_INDEX
         self._configure_window()
         self._setup_frames()
-        self._setup_logging(logs)
+        logs.broadcast(self._console_logging_cb)
 
     def _configure_window(self) -> None:
         """Initializes the main window frame properties"""
@@ -96,24 +96,5 @@ class MainWindow(QWidget):
         tab_container.currentChanged.connect(tab_change_cb)
         return tab_container
 
-    def _setup_logging(self, logs: LogManager) -> None:
-        """Hooks the Python logging system into the console widget"""
-        self.__log_handler: LogEmitter = LogEmitter(self.__console)
-        for record in logs.history:
-            self.__log_handler.emit(record)
-        logs.stop_buffering()  # stop saving logs to ram
-        getLogger().addHandler(self.__log_handler)
-
-
-class LogEmitter(logging.Handler):
-    _LOG_FMT: str = "[%(asctime)s] (%(levelname)s) [%(name)s] %(message)s"
-    _TIME_FMT: str = "%I:%M:%S %p"
-
-    def __init__(self, widget: QPlainTextEdit):
-        super().__init__()
-        self.__editor: QPlainTextEdit = widget
-        self.setFormatter(logging.Formatter(self._LOG_FMT, datefmt=self._TIME_FMT))
-
-    def emit(self, record: logging.LogRecord):
-        msg: str = self.format(record)
-        self.__editor.appendPlainText(msg)
+    def _console_logging_cb(self, msg: str) -> None:
+            self.__console.appendPlainText(msg)

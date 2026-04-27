@@ -15,6 +15,7 @@
 
 import argparse
 import json
+import logging
 from pathlib import Path
 
 def _json_file(path_str: str):
@@ -64,9 +65,9 @@ def parse_args() -> argparse.Namespace:
 
     parser.add_argument("--log-level",
         dest="log_level",
-        type=lambda s: s.upper(),
+        type=lambda x: getattr(logging, x),  # convert to logging param
         choices = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
-        default="WARNING",
+        default=logging.INFO,
         help="Sets the logging level, which is primarily used for debugging."
     )
 
