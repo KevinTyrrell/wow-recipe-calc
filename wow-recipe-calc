@@ -1,2 +1,2 @@
 #!/bin/bash
-python -m src.main "$@"
+python -m wow_recipe_calc.main "$@"

@@ -15,10 +15,10 @@
 
 from argparse import Namespace as ArgNamespace
 
-from src.util.log_manager import LogManager
-from src.crafting_app import CraftingApp
-from src.io.arguments import parse_args
-from src.view.ui_manager import UIManager
+from wow_recipe_calc.util.log_manager import LogManager
+from wow_recipe_calc.crafting_app import CraftingApp
+from wow_recipe_calc.io.arguments import parse_args
+from wow_recipe_calc.view.ui_manager import UIManager
 
 
 def main() -> None:

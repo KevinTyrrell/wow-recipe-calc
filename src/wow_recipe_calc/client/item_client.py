@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from logging import getLogger, Logger
 
-from src.util.throttle import Throttle
+from wow_recipe_calc.util.throttle import Throttle
 
 logger: Logger = getLogger(__name__)
 

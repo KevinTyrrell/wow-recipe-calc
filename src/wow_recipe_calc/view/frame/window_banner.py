@@ -18,7 +18,7 @@ from typing import Callable
 from PySide6.QtCore import Qt, QObject, QEvent
 from PySide6.QtWidgets import QWidget, QLabel, QPushButton, QHBoxLayout
 
-import src.view.constants as C
+import wow_recipe_calc.view.constants as C
 
 
 class WindowBanner(QWidget):

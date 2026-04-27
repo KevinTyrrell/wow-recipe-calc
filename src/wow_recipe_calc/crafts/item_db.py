@@ -18,8 +18,8 @@ from types import MappingProxyType as ReadOnlyMap
 from dataclasses import dataclass
 from collections.abc import Mapping
 
-from src.io.local_cache import LocalCache, CachePolicy
-from src.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.io.local_cache import LocalCache, CachePolicy
+from wow_recipe_calc.crafts.recipe.recipe import Recipe
 
 
 @dataclass(frozen=True)
@@ -33,7 +33,7 @@ class RecipeEntry(ItemEntry):
     recipe: Recipe
 
 
-class ItemDB:    
+class ItemDB:
     def __init__(self, item_requester: Callable[[int], Optional[str]], file_basename: str, 
                 dir_path: Optional[str]=None, file_ext: Optional[str]=None) -> None:
         """

@@ -17,9 +17,9 @@ from requests import post as submit, Response, Session
 from typing import Optional, Iterator
 from logging import getLogger, Logger
 
-from src.util.throttle import Throttle
-from src.util.json_wrapper import wrap_json, JSO
-from src.io.local_cache import LocalCache, CachePolicy
+from wow_recipe_calc.util.throttle import Throttle
+from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
+from wow_recipe_calc.io.local_cache import LocalCache, CachePolicy
 
 logger: Logger = getLogger(__name__)
 
@@ -53,7 +53,7 @@ class TSMClient:
     _CACHE_DB_KEY: str = "REALM_MARKET_VALUE_PRICES"
     _API_REALM_URL: str = "https://realm-api.tradeskillmaster.com"
     _API_PRICE_URL: str = "https://pricing-api.tradeskillmaster.com"
-    _FAKE_API_KEY: str = "a3f9c7d2-b6e1-9c2a-f7d1-3b8e4a91c6d2"
+    _FAKE_API_KEY: str = "a3f9c7d2-b6e1-9c2a-f7d1-3b8e4a91c6d2"  # stand-in
     _DEFAULT_AUCTION_HOUSE: int = 4
     _DEFAULT_PRICING_STALE: int = 3 * 60 * 60  # 3 hours before pricing becomes stale
     

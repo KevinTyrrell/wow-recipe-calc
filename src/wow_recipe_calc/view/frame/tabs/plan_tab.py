@@ -17,7 +17,7 @@ from typing import Optional, Callable
 
 from PySide6.QtWidgets import QWidget
 
-from src.crafts.craft_planner import CraftPlan
+from wow_recipe_calc.crafts.craft_planner import CraftPlan
 
 
 class PlanTab(QWidget):

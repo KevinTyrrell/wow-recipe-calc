@@ -13,16 +13,14 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Callable, Optional
-
 from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLabel,
                                QScrollArea, QFrame, QSizePolicy)
 from PySide6.QtCore import Qt
 
-from src.crafts.craft_planner import CraftPlan
-from src.view.frame.tabs.plan_tab import PlanTab
+from wow_recipe_calc.crafts.craft_planner import CraftPlan
+from wow_recipe_calc.view.frame.tabs.plan_tab import PlanTab
 
-import src.view.constants as C
+import wow_recipe_calc.view.constants as C
 
 
 class BomTab(PlanTab):

@@ -15,10 +15,10 @@
 
 from typing import Optional, Iterable, Callable, TypeVar
 
-from src.util.graph import Graph, Frontier
-from src.util.heap import Heap
-from src.crafts.recipe.recipe import Recipe
-from src.crafts.item_db import ItemDB, RecipeEntry
+from wow_recipe_calc.util.graph import Graph, Frontier
+from wow_recipe_calc.util.heap import Heap
+from wow_recipe_calc.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.crafts.item_db import ItemDB, RecipeEntry
 
 _T = TypeVar("_T")
 

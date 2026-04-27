@@ -17,18 +17,17 @@ import logging
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
-from charset_normalizer.md import getLogger
 
-import src.view.constants as C
-from src.crafts.craft_planner import CraftPlan
+import wow_recipe_calc.view.constants as C
+from wow_recipe_calc.crafts.craft_planner import CraftPlan
 
-from src.util.log_manager import LogManager
-from src.crafts.recipe.recipe_state import RecipeStateCore
-from src.crafting_app import CraftingApp
-from src.view.frame.window_banner import WindowBanner
-from src.view.frame.tabs.edit_tab import EditTab
-from src.view.frame.tabs.bom_tab import BomTab
-from src.view.frame.tabs.plan_tab import PlanTab
+from wow_recipe_calc.util.log_manager import LogManager
+from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
+from wow_recipe_calc.crafting_app import CraftingApp
+from wow_recipe_calc.view.frame.window_banner import WindowBanner
+from wow_recipe_calc.view.frame.tabs.edit_tab import EditTab
+from wow_recipe_calc.view.frame.tabs.bom_tab import BomTab
+from wow_recipe_calc.view.frame.tabs.plan_tab import PlanTab
 
 logger: logging.Logger = logging.getLogger(__name__)
 

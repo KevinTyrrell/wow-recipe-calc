@@ -18,8 +18,8 @@ import json
 from pathlib import Path
 from typing import Optional, Callable
 
-from src.util.json_wrapper import JSO, wrap_json
-from src.client.tsm_client import TSMClient
+from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
+from wow_recipe_calc.client.tsm_client import TSMClient
 
 
 class PriceManager:

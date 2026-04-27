@@ -20,12 +20,12 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLineEdit,
 from PySide6.QtCore import Qt, QAbstractListModel, QModelIndex
 from PySide6.QtGui import QIntValidator
 
-from src.crafting_app import CraftingApp
-from src.crafts.item_db import ItemDB
-from src.crafts.recipe.recipe_state import RecipeStateCore
-from src.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.crafting_app import CraftingApp
+from wow_recipe_calc.crafts.item_db import ItemDB
+from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
+from wow_recipe_calc.crafts.recipe.recipe import Recipe
 
-import src.view.constants as C
+import wow_recipe_calc.view.constants as C
 
 
 class EditTab(QWidget):

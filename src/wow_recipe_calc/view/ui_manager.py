@@ -19,13 +19,13 @@ from logging import Logger, getLogger
 from PySide6.QtWidgets import QApplication
 from sys import exit
 
-from src.util.log_manager import LogManager
-from src.crafting_app import CraftingApp
-from src.crafts.item_db import ItemEntry, RecipeEntry
-from src.view.styles.style_loader import StyleLoader
-from src.view.frame.main_window import MainWindow
-from src.crafts.recipe.recipe_state import RecipeStateCore
-from src.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.util.log_manager import LogManager
+from wow_recipe_calc.crafting_app import CraftingApp
+from wow_recipe_calc.crafts.item_db import ItemEntry, RecipeEntry
+from wow_recipe_calc.view.styles.style_loader import StyleLoader
+from wow_recipe_calc.view.frame.main_window import MainWindow
+from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
+from wow_recipe_calc.crafts.recipe.recipe import Recipe
 
 logger: Logger = getLogger(__name__)
 

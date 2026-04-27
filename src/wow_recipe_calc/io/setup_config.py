@@ -15,8 +15,8 @@
 
 from questionary import Style, Choice, select, password
 
-from src.util.json_wrapper import JSO
-from src.client.tsm_client import TSMClient
+from wow_recipe_calc.util.json_wrapper import JSO
+from wow_recipe_calc.client.tsm_client import TSMClient
 
 
 class SetupConfig:

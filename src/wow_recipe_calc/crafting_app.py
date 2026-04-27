@@ -19,16 +19,16 @@ from typing import Optional
 from logging import getLogger, Logger
 from atexit import register as on_exit
 
-from src.client.item_client import ItemClient
-from src.client.tsm_client import TSMClient
-from src.io.environment import Environment
-from src.crafts.craft_planner import CraftPlanner, CraftPlan
-from src.crafts.item_db import ItemDB, ItemEntry
-from src.crafts.price_manager import PriceManager
-from src.crafts.recipe.recipe import Recipe
-from src.io.setup_config import SetupConfig
-from src.util.throttle import Throttle
-from src.util.json_wrapper import JSO, wrap_json
+from wow_recipe_calc.client.item_client import ItemClient
+from wow_recipe_calc.client.tsm_client import TSMClient
+from wow_recipe_calc.io.environment import Environment
+from wow_recipe_calc.crafts.craft_planner import CraftPlanner, CraftPlan
+from wow_recipe_calc.crafts.item_db import ItemDB, ItemEntry
+from wow_recipe_calc.crafts.price_manager import PriceManager
+from wow_recipe_calc.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.io.setup_config import SetupConfig
+from wow_recipe_calc.util.throttle import Throttle
+from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
 
 logger: Logger = getLogger(__name__)
 

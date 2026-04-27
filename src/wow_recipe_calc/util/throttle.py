@@ -17,6 +17,9 @@ from __future__ import annotations
 from typing import List, Deque
 from collections import namedtuple, deque
 from time import time as now, sleep
+from logging import getLogger, Logger
+
+logger: Logger = getLogger(__name__)
 
 
 class Throttle:
@@ -49,6 +52,7 @@ class Throttle:
             if len(rule.ticks) >= rule.limit:
                 dropped: float = rule.ticks.popleft()
                 delay: float = rule.window - (ts - dropped)
+                logger.info(f"throttling for {delay:.1f} second(s)")
                 sleep(delay)
                 ts = now()  # Timestamp should be updated, since we've slept
         for rule in self.__rules:

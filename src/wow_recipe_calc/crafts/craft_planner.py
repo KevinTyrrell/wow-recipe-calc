@@ -20,12 +20,12 @@ from collections import defaultdict
 from collections.abc import Iterable
 from math import ceil
 
-from src.crafts.recipe.recipe import Recipe
-from src.crafts.craft_skill import CraftSkiller
-from src.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
-from src.crafts.price_manager import PriceManager
-from src.crafts.recipe.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
-from src.util.heap import Heap
+from wow_recipe_calc.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.crafts.craft_skill import CraftSkiller
+from wow_recipe_calc.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
+from wow_recipe_calc.crafts.price_manager import PriceManager
+from wow_recipe_calc.crafts.recipe.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
+from wow_recipe_calc.util.heap import Heap
 
 
 @dataclass(frozen=True)

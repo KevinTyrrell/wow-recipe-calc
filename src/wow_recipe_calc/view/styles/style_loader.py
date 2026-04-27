@@ -18,7 +18,7 @@ from pathlib import Path
 
 
 class StyleLoader:
-    _DEFAULT_STYLE_PATH: str = "src/view/styles/"
+    _DEFAULT_STYLE_PATH: str = "src/wow_recipe_calc/view/styles/"
     _DEFAULT_STYLE_EXT: str = "qss"
     _DEFAULT_ENCODING: str = "utf-8"
 
