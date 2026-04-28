@@ -19,6 +19,8 @@ from logging import Logger, getLogger
 from PySide6.QtWidgets import QApplication
 from sys import exit
 
+import wow_recipe_calc.view.constants as C
+
 from wow_recipe_calc.util.log_manager import LogManager
 from wow_recipe_calc.crafting_app import CraftingApp
 from wow_recipe_calc.crafts.item_db import ItemEntry, RecipeEntry
@@ -41,8 +43,9 @@ class UIManager:
         """
         self.__craft_app: CraftingApp = app
         self.__view_app: QApplication = QApplication()
-        self.__view_app.setStyleSheet(StyleLoader().load())
         self.__window: MainWindow = MainWindow(app, self._make_recipe_state(), logs)
+        stylesheet: StyleLoader = StyleLoader(C.STYLE_RESOURCE_PATH)
+        self.__view_app.setStyleSheet(stylesheet.load())
 
     def show(self) -> None:
         self.__window.show()

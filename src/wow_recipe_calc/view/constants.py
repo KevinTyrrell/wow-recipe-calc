@@ -13,6 +13,8 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+STYLE_RESOURCE_PATH: str = "wow_recipe_calc.view.styles"
+
 
 class Window:
     WIDTH: int = 504

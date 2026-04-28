@@ -14,25 +14,26 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from typing import Optional
-from pathlib import Path
+from importlib.resources import files
+from importlib.resources.abc import Traversable
 
 
 class StyleLoader:
-    _DEFAULT_STYLE_PATH: str = "src/wow_recipe_calc/view/styles/"
     _DEFAULT_STYLE_EXT: str = "qss"
     _DEFAULT_ENCODING: str = "utf-8"
 
-    def __init__(self, path: Optional[str] = None, ext: Optional[str] = None,
-                 encoding: Optional[str] = None) -> None:
+    def __init__(self, style_dir_importlib_res_path: str, ext: Optional[str] = None) -> None:
         """
-        :param path: (Optional) Path to the directory containing the stylesheets, default: /src/view/styles
+        Path to stylesheet directory must be an importlib resource path.
+        e.g.: "wow_recipe_calc.view.styles"
+        Each section must be a valid package, excluding the last.
+
+        :param style_dir_importlib_res_path: importlib resource path
         :param ext: (Optional) Extension of the stylesheets to-be loaded, default: qss
-        :param encoding: (Optional) Encoding of the stylesheet files, default: utf-8
         """
-        self.__path: Path = Path(path or self._DEFAULT_STYLE_PATH)
-        self.__encoding: str = encoding or self._DEFAULT_ENCODING
-        if not self.__path.is_dir():
-            raise NotADirectoryError(f"stylesheet directory does not exist: {self.__path}")
+        self.__trav: Traversable = files(style_dir_importlib_res_path)
+        if not self.__trav.is_dir():
+            raise NotADirectoryError(f"stylesheet directory does not exist: {self.__trav}")
         if ext is not None:
             self.__ext: str = ext.lstrip(".").lower()
         else: self.__ext: str = self._DEFAULT_STYLE_EXT
@@ -41,13 +42,14 @@ class StyleLoader:
         """
         :return: Concatenation of all stylesheets in the specified directory
         """
-        styles: list[str] = [
-            file.read_text(encoding="utf-8")
-            for file in self.__path.rglob(f"*.{self.__ext}")
-            if file.is_file()
-        ]
-
-        if not styles:
-            raise FileNotFoundError(
-                f"no such stylesheet extension (.{self.__ext}) found in path: {self.__path}")
+        styles: list[str] = list(self._walk_styles(self.__trav))
+        if not styles: raise FileNotFoundError(
+            f"no such stylesheet extension (.{self.__ext}) found in path: {self.__path}")
         return "\n".join(styles)
+
+    def _walk_styles(self, t: Traversable) -> Generator[str, None, None]:
+        if t.is_file():
+            if t.name.endswith(self.__ext): yield t.read_text()
+        elif t.is_dir():  # sort so that loading becomes deterministic
+            for child in sorted(t.iterdir(), key = lambda x: x.name):
+                yield from self._walk_styles(child)
