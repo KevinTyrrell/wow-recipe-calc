@@ -18,7 +18,6 @@ from types import MappingProxyType as ReadOnlyMap
 from dataclasses import dataclass
 from collections.abc import Mapping
 
-from wow_recipe_calc.io.local_cache import LocalCache, CachePolicy
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
 
 
@@ -34,16 +33,16 @@ class RecipeEntry(ItemEntry):
 
 
 class ItemDB:
-    def __init__(self, item_requester: Callable[[int], Optional[str]], file_basename: str, 
-                dir_path: Optional[str]=None, file_ext: Optional[str]=None) -> None:
+    _DEFAULT_ITEM_DB_NAME: str = "item_db"
+
+    def __init__(self, item_requester: Callable[[int], Optional[str]], db_name: Optional[str] = None,
+                 dir_path: Optional[str] = None, file_ext: Optional[str] = None) -> None:
         """
         :param item_requester: Callback to translate item_id -> item_name
         :param file_basename: Filename of the database to cache response data
         :param dir_path: Directory path to save the database in, default: CWD
-        :param file_ext: Extension for the database, default: pkl
+        :param file_ext: Extension for the database, default: json
         """
-        self.__db: LocalCache = LocalCache(file_basename, dir_path, file_ext)
-        self.__policy: CachePolicy = CachePolicy(None, item_requester)
         self.__by_name: dict[str, ItemEntry] = dict()
         self.__by_id: dict[int, ItemEntry] = dict()
         self.__by_recipe: dict[Recipe, RecipeEntry] = dict()
@@ -59,7 +58,7 @@ class ItemDB:
         self._add_recipe_entry(recipe)
         
     def save(self) -> None:
-        self.__db.save()  # Save requested names
+        pass
         
     def _add_item_entry(self, item_id: int) -> None:
         e: ItemEntry = ItemEntry(item_id, self._item_name(item_id))

@@ -21,6 +21,8 @@ from typing import Optional, Any, Callable
 from time import time as unix_time
 from logging import getLogger, Logger
 
+from wow_recipe_calc.util.project_info import get_project_root
+
 logger: Logger = getLogger(__name__)
 
 
@@ -104,7 +106,7 @@ class LocalCache:
     def file_path(self) -> Path: return self.__file_path
     
     def _get_path(self, directory: Optional[str]=None) -> Path:
-        path: Path = Path.cwd() if directory is None else Path(directory)
+        path: Path = (get_project_root() if directory is None else Path(directory)).resolve()
         if not path.exists(): raise ValueError(f"directory path does not exist: {path}")
         if not path.is_dir(): raise ValueError(f"path is not a valid directory: {path}")
         return path / self.__file_name
