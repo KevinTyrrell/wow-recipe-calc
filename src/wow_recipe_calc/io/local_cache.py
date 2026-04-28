@@ -39,7 +39,7 @@ class _DatabaseEntry:
 class LocalCache:
     _DEFAULT_DB_FILE_EXT: str = "pkl"
     
-    def __init__(self, file_basename: str, dir_path: Optional[str]=None, file_ext: Optional[str]=None) -> None:
+    def __init__(self, file_basename: str, dir_path: Optional[str] = None, file_ext: Optional[str] = None) -> None:
         """
         Constructs a key/value cache, which is manually savable to the storage medium
         

@@ -16,7 +16,9 @@
 from requests import post as submit, Response, Session
 from typing import Optional, Iterator
 from logging import getLogger, Logger
+from pathlib import Path
 
+from wow_recipe_calc.util.project_info import get_project_root
 from wow_recipe_calc.util.throttle import Throttle
 from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
 from wow_recipe_calc.io.local_cache import LocalCache, CachePolicy
@@ -50,6 +52,7 @@ class _TSMAuth:
 
 class TSMClient:
     _LOCAL_DB_NAME: str = "tsm_db"
+    _LOCAL_DB_DIR_PATH: str = "cache"
     _CACHE_DB_KEY: str = "REALM_MARKET_VALUE_PRICES"
     _API_REALM_URL: str = "https://realm-api.tradeskillmaster.com"
     _API_PRICE_URL: str = "https://pricing-api.tradeskillmaster.com"
@@ -60,11 +63,12 @@ class TSMClient:
     def __init__(self) -> None:
         self.auction_house: int = self._DEFAULT_AUCTION_HOUSE
         self.__api_key: str = self._FAKE_API_KEY
-        self.__throttle: Throttle = Throttle.Builder().add(1, 2).build()
-        self.__cache: LocalCache = LocalCache(self._LOCAL_DB_NAME)
+        dir_path: Path = get_project_root() / self._LOCAL_DB_DIR_PATH
+        self.__cache: LocalCache = LocalCache(self._LOCAL_DB_NAME, str(dir_path))
         self.__session: Session = Session()
         self.__policy: CachePolicy = CachePolicy(
             self._DEFAULT_PRICING_STALE, self._refresh_auction_house)
+        self.__throttle: Throttle = Throttle.Builder().add(1, 2).build()
 
     def authorize(self, api_key: str) -> None:
         """
