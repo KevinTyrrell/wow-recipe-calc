@@ -21,7 +21,7 @@ from typing import Optional, Any, Callable
 from time import time as unix_time
 from logging import getLogger, Logger
 
-from wow_recipe_calc.util.project_info import get_project_root
+from io.project_info import get_project_root
 
 logger: Logger = getLogger(__name__)
 

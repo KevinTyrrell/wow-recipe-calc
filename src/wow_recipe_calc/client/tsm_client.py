@@ -18,7 +18,7 @@ from typing import Optional, Iterator
 from logging import getLogger, Logger
 from pathlib import Path
 
-from wow_recipe_calc.util.project_info import get_project_root
+from io.project_info import get_project_root
 from wow_recipe_calc.util.throttle import Throttle
 from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
 from wow_recipe_calc.io.local_cache import LocalCache, CachePolicy

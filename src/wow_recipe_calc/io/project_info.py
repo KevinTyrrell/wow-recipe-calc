@@ -15,10 +15,18 @@
 
 from functools import cache
 from pathlib import Path
+from typing import Protocol
 
 _ROOT_IDENTIFIERS: src = [  # known landmarks to ascertain location of project root
     "LICENSE", "src", "pyproject.toml", ".git", ".idea", "setup.py", "setup.cfg", ".vscode"
 ]
+
+
+
+class Saveable(Protocol):
+    def save(self) -> None: ...
+    def load(self) -> None: ...
+
 
 
 @cache
