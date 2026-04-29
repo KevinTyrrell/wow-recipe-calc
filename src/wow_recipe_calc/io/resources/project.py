@@ -1,4 +1,5 @@
 #  Copyright (C) 2026  Kevin Tyrrell
+# GUI-driven WoW profession analyzer for material aggregation, cost calculation, and optimized crafting sequences
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -24,9 +25,12 @@ from typing import Generic, Optional, TypeVar
 _KT: TypeVar = TypeVar("_KT")
 _VT: TypeVar = TypeVar("_VT")
 
+
+_TOML_CONFIG_NAME: str = "pyproject.toml"
+_TOML_CONFIG_VERSION: str = "version"
+_TOML_CONFIG_KEY: str = "project"
 _ROOT_LANDMARKS: list[str] = [
-    "LICENSE", "src", "pyproject.toml", ".git", ".idea", "setup.py", "setup.cfg", ".vscode"
-]
+    "LICENSE", "src", "pyproject.toml", ".git", ".idea", "setup.py", "setup.cfg", ".vscode" ]
 
 
 class Project(Enum):
@@ -35,6 +39,9 @@ class Project(Enum):
     @staticmethod
     @cache
     def root() -> Path:
+        """
+        :return: Path to the root folder of the project, detected by landmark files
+        """
         for parent in Path(__file__).parents:
             if any((parent / lm).exists() for lm in _ROOT_LANDMARKS):
                 return parent
@@ -43,35 +50,40 @@ class Project(Enum):
     @staticmethod
     @cache
     def name() -> str:
-        return Project._read_pyproject("name", fallback="unknown")
+        """
+        :return: Name of the project, via the pyproject.toml configuration file
+        """
+        return Project._read_pyproject(_TOML_CONFIG_NAME)
 
     @staticmethod
     @cache
     def version() -> str:
-        return Project._read_pyproject("version", fallback="0.0.0")
+        """
+        :return: Version of the project, via the pyproject.toml configuration file
+        """
+        return Project._read_pyproject(_TOML_CONFIG_VERSION)
 
     @staticmethod
     def resource(relative: str) -> Path:
-        """Resolve a path relative to the project root."""
-        return Project.root() / relative
+        """
+        Resolves a path relative to the project root folder
+
+        :param relative: Relative path to be resolved from root
+        :return: Resolved path to the resource
+        """
+        return (Project.root() / relative).resolve()
 
     @staticmethod
-    def _read_pyproject(key: str, *, fallback: str) -> str:
-        try: import tomllib  # stdlib from 3.11
-        except ImportError:
-            try: import tomli as tomllib  # type: ignore[no-redef]
-            except ImportError: return fallback
-        pyproject: Path = Project.root() / "pyproject.toml"
-        if not pyproject.exists():
-            return fallback
+    @cache
+    def _read_pyproject(key: str) -> str:
+        try: import tomllib
+        except ImportError:  # check older python version's name
+            import tomli as tomllib    # type: ignore[no-redef]
+        pyproject: Path = Project.root() / _TOML_CONFIG_NAME
         with pyproject.open("rb") as f:
             data = tomllib.load(f)
-        return data.get("project", {}).get(key, fallback)
+        return data[_TOML_CONFIG_KEY][key]
 
-
-# ------------------------------------------------------------------
-# Base class #1 — read-only persistent resource
-# ------------------------------------------------------------------
 
 class Resource(ABC, Mapping[_KT, _VT], Generic[_KT, _VT]):
     """
