@@ -25,7 +25,7 @@ from wow_recipe_calc.view.ui_manager import UIManager
 def main() -> None:
     args: ArgNamespace = parse_args()
     log_manager = LogManager(log_level = args.log_level)
-    app: CraftingApp = CraftingApp(args)
+    app: CraftingApp = CraftingApp()
     app.populate_recipes()
     ui: UIManager = UIManager(app, log_manager)
     ui.show()

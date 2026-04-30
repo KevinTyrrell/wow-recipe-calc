@@ -25,15 +25,9 @@ JsonPrimitive = str | int | float | bool  # TODO: Include NoneType?
 JsonValue = JsonPrimitive | list["JsonValue"] | dict[str, "JsonValue"]
 
 
-class JsonStore(MutableResource[str, JsonValue]):
+class JsonStore(MutableResource[str, JsonValue], JsonWrappable):
     _DEFAULT_FILE_EXT: str = "json"
     _DEFAULT_FILE_ENCODING: str = "utf-8"
-
-    def jso(self) -> JSO:
-        """
-        :return: JSO instance, backed by a copy of the store object
-        """
-        return wrap_json(deepcopy(self._data))
 
     def load(self) -> None:
         """

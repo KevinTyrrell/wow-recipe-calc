@@ -15,8 +15,10 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from __future__ import annotations
-from json.decoder import JSONArray
-from typing import Any, TypeAlias, Mapping
+from typing import Any, TypeAlias
+from abc import ABC
+from collections.abc import Mapping
+from copy import deepcopy
 
 
 class _JsonObject:
@@ -26,28 +28,46 @@ class _JsonObject:
             if isinstance(value, (dict, list)):
                 value = _JsonObject(value) if isinstance(value, dict) else _JsonArray(value)
             self.__data[key] = value
-            setattr(self, key, value)  # Treat key as a class attribute
+
+    def __getattr__(self, name: str):  # safer alternative to setattr
+        try: return self.__data[name]
+        except KeyError: raise AttributeError(name)
 
     def __getitem__(self, item): return self.__data[item]
     def __iter__(self): yield from iter(self.__data.items())
     def __len__(self): return len(self.__data)
-    def __repr__(self): return f"{self.__dict__}"
+    def __repr__(self):
+        return f"JSO({repr(self.__data)})"
 
 
 class _JsonArray:
     def __init__(self, jso: list):
-        self.__data = [_JsonObject(item) if isinstance(item, dict) else item for item in jso]
+        self.__data = [
+            _JsonObject(item) if isinstance(item, dict)
+            else _JsonArray(item) if isinstance(item, list)
+            else item for item in jso
+    ]
 
     def __getitem__(self, index: int): return self.__data[index]
     def __iter__(self): yield from iter(self.__data)
     def __len__(self): return len(self.__data)
-    def __repr__(self): return repr(self.__data)
+    def __repr__(self):
+        return f"JSO({repr(self.__data)})"
 
 JSO: TypeAlias = _JsonObject | _JsonArray
 
-def wrap_json(jso: Mapping[str, Any] | list) -> JSO:
-    """
-    :param jso: JSON object to be wrapped
-    :return: Nested objects/list structure to enable field retrieval by members
-    """
-    return _JsonObject(jso) if isinstance(jso, Mapping) else _JsonArray(jso)
+
+class JsonWrappable(ABC, Mapping[str, Any]):
+    @staticmethod
+    def wrap(obj: Mapping[str, Any] | list[Any]) -> JSO:
+        """
+        :param obj: Object to be wrapped as a JSO
+        :return: Nested objects/list structure to enable field retrieval by attribute
+        """
+        return _JsonObject(obj) if isinstance(obj, Mapping) else _JsonArray(obj)
+
+    def jso(self) -> JSO:
+        """
+        :return: JSO instance, backed by a deep copy of the mapping
+        """
+        return self.wrap(deepcopy(dict(self)))

@@ -15,15 +15,17 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from logging import getLogger, Logger
+from copy import deepcopy
 
 from wow_recipe_calc.io.resources.project import MutableResource
+from wow_recipe_calc.util.json_wrapper import JsonWrappable
 
 logger: Logger = getLogger(__name__)
 
 EnvValue = str | int | float | bool
 
 
-class Environment(MutableResource[str, EnvValue]):
+class Environment(MutableResource[str, EnvValue], JsonWrappable):
     _DEFAULT_FILE_EXT: str = "env"
     _DEFAULT_CACHE_DIR: str = "cache"
     _COMMENT_LINE_CHAR: str = "#"

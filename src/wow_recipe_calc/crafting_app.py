@@ -35,12 +35,16 @@ logger: Logger = getLogger(__name__)
 
 
 class CraftingApp:
+    _DEFAULT_ENV_STEM: str = "setup"
+
+
+
     _DEFAULT_ITEM_DB_BASENAME: str = "item_db"
     _DEFAULT_ENV_BASENAME: str = "setup"
     _DEFAULT_THROTTLE: Throttle = (Throttle.Builder()
        .add(1, 5).add(15, 60).build())
 
-    def __init__(self, args: ArgNamespace, throttle: Optional[Throttle] = None) -> None:
+    def __init__(self, throttle: Optional[Throttle] = None) -> None:
         """
         Argparse should provide the following arguments:
         * required_crafts_path: Path to the user's desired crafts
@@ -49,12 +53,9 @@ class CraftingApp:
         If api_key is unspecified, all item pricing operations default to reporting zero.
         If throttle is unspecified: defaults to 1 request per 5 seconds & 15 requests per minute.
 
-        :param args: Program Argparse arguments
         :param throttle: (Optional) Throttle for web requests
         """
-        self.__args: ArgNamespace = args
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
-        self.__env: Environment = Environment(self._DEFAULT_ENV_BASENAME)
         self.__no_price_warning: set[int] = set()
         # Web clients for data requests
         self.__item_client: ItemClient = ItemClient(self.__throttle)
@@ -103,14 +104,17 @@ class CraftingApp:
 
     @cached_property
     def environment(self) -> Environment:
+        env: Environment = Environment(self._DEFAULT_ENV_STEM)
         try:
+            env.load()
             jso: JSO = wrap_json(self.__env.load())
             self.__tsm_client.authorize(jso.api_key)  # init API key on load
         except FileNotFoundError, OSError, ValueError:
+            logger.info("no config environment found, running setup")
             config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
             settings: dict[str, str | int] = config.full_setup()
             self.__env.extend(settings)
-        return self.__env
+        return env
 
     def _unknown_price_cb(self, item_id: int) -> int:
         entry: Optional[ItemEntry] = self.__item_db.by_id.get(item_id)
