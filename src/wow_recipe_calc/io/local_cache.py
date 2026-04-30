@@ -39,7 +39,7 @@ class _DatabaseEntry:
     expires: Optional[int]
 
 
-class LocalCache:
+class TTLCache:
     _DEFAULT_DB_FILE_EXT: str = "pkl"
     
     def __init__(self, file_basename: str, dir_path: Optional[str] = None, file_ext: Optional[str] = None) -> None:

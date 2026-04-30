@@ -22,7 +22,7 @@ from pathlib import Path
 from io.project_info import get_project_root
 from wow_recipe_calc.util.throttle import Throttle
 from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
-from wow_recipe_calc.io.local_cache import LocalCache, CachePolicy
+from wow_recipe_calc.io.local_cache import TTLCache, CachePolicy
 
 logger: Logger = getLogger(__name__)
 
@@ -65,7 +65,7 @@ class TSMClient:
         self.auction_house: int = self._DEFAULT_AUCTION_HOUSE
         self.__api_key: str = self._FAKE_API_KEY
         dir_path: Path = get_project_root() / self._LOCAL_DB_DIR_PATH
-        self.__cache: LocalCache = LocalCache(self._LOCAL_DB_NAME, str(dir_path))
+        self.__cache: TTLCache = TTLCache(self._LOCAL_DB_NAME, str(dir_path))
         self.__session: Session = Session()
         self.__policy: CachePolicy = CachePolicy(
             self._DEFAULT_PRICING_STALE, self._refresh_auction_house)
