@@ -29,7 +29,7 @@ from wow_recipe_calc.crafts.price_manager import PriceManager
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
 from wow_recipe_calc.io.setup_config import SetupConfig
 from wow_recipe_calc.util.throttle import Throttle
-from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
+from wow_recipe_calc.util.json_wrapper import JSO
 
 logger: Logger = getLogger(__name__)
 
@@ -46,15 +46,15 @@ class CraftingApp:
 
     def __init__(self, throttle: Optional[Throttle] = None) -> None:
         """
-        Argparse should provide the following arguments:
-        * required_crafts_path: Path to the user's desired crafts
-        * (Optional) api_key: Used to retrieve TSM prices
+        Crafting app houses all backend components
 
-        If api_key is unspecified, all item pricing operations default to reporting zero.
-        If throttle is unspecified: defaults to 1 request per 5 seconds & 15 requests per minute.
+        If throttle is unspecified: defaults to 1 request per 5 seconds & 15 requests per minute
 
         :param throttle: (Optional) Throttle for web requests
         """
+
+
+
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
         self.__no_price_warning: set[int] = set()
         # Web clients for data requests
@@ -106,14 +106,13 @@ class CraftingApp:
     def environment(self) -> Environment:
         env: Environment = Environment(self._DEFAULT_ENV_STEM)
         try:
-            env.load()
-            jso: JSO = wrap_json(self.__env.load())
-            self.__tsm_client.authorize(jso.api_key)  # init API key on load
+            env.load()  # attempt to load from storage medium
+            # If SetupConfig doesn't set the api_key, we have to here
+            self.__tsm_client.authorize(env.jso().api_key)
         except FileNotFoundError, OSError, ValueError:
             logger.info("no config environment found, running setup")
             config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
-            settings: dict[str, str | int] = config.full_setup()
-            self.__env.extend(settings)
+            self.__env.extend(config.full_setup())  # run user through questionnaire
         return env
 
     def _unknown_price_cb(self, item_id: int) -> int:
