@@ -22,7 +22,7 @@ from atexit import register as on_exit
 
 from wow_recipe_calc.client.item_client import ItemClient
 from wow_recipe_calc.client.tsm_client import TSMClient
-from wow_recipe_calc.io.environment import Environment
+from io.resources.environment import Environment
 from wow_recipe_calc.crafts.craft_planner import CraftPlanner, CraftPlan
 from wow_recipe_calc.crafts.item_db import ItemDB, ItemEntry
 from wow_recipe_calc.crafts.price_manager import PriceManager
