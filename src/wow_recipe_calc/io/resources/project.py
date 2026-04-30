@@ -99,7 +99,7 @@ class Resource(ABC, Mapping[_KT, _VT], Generic[_KT, _VT]):
         :param file_ext: (Optional) File extension, classes defined default if not provided
         """
         ext: str = file_ext or self._DEFAULT_FILE_EXT
-        self._file_path: Path = self._resolve_path(file_stem, dir_path, ext)
+        self.__file_path: Path = self._resolve_path(file_stem, dir_path, ext)
         self._data: dict[_KT, _VT] = dict()
 
     @abstractmethod
@@ -122,7 +122,7 @@ class Resource(ABC, Mapping[_KT, _VT], Generic[_KT, _VT]):
         """
         :return: Resolved path to the resource
         """
-        return self._file_path
+        return self.__file_path
 
     @staticmethod
     def _resolve_path(file_stem: str, directory: Optional[Path | str], ext: str) -> Path:
