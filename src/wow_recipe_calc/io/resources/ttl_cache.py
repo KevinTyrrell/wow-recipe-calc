@@ -16,104 +16,84 @@
 
 import pickle
 
-from dataclasses import dataclass
-from pathlib import Path
-from typing import Optional, Any, Callable
 from time import time as unix_time
 from logging import getLogger, Logger
+from typing import TypeVar, Generic, Callable, Iterator
+from dataclasses import dataclass
 
-from io.project_info import get_project_root
+from wow_recipe_calc.io.resources.project import MutableResource
 
 logger: Logger = getLogger(__name__)
 
-
-@dataclass
-class CachePolicy:
-    ttl: Optional[int]  # Seconds for the data to persist for
-    fetcher: Callable[[Any], Optional[Any]]  # fetcher(key) -> value
+_CKT: TypeVar = TypeVar("_CKT")
+_CVT: TypeVar = TypeVar("_CVT")
 
 
-@dataclass
-class _DatabaseEntry:
-    data: Any
-    expires: Optional[int]
+@dataclass(frozen=True)
+class CachePolicy(Generic[_CKT, _CVT]):
+    ttl: int  # seconds until the entire cache is considered stale
+    fetcher: Callable[[], dict[_CKT, _CVT]]  # called with no args, returns fresh data
 
 
-class TTLCache:
-    _DEFAULT_DB_FILE_EXT: str = "pkl"
-    
-    def __init__(self, file_basename: str, dir_path: Optional[str] = None, file_ext: Optional[str] = None) -> None:
+class TTLCache(MutableResource[_CKT, _CVT], Generic[_CKT, _CVT]):
+    _DEFAULT_FILE_EXT = "pkl"
+    _DEFAULT_CACHE_DIR: str = "cache"
+
+    def __init__(self, file_stem: str, policy: CachePolicy[_CKT, _CVT]) -> None:
+        super().__init__(file_stem, self._DEFAULT_CACHE_DIR, self._DEFAULT_FILE_EXT)
+        self.__policy: CachePolicy[_CKT, _CVT] = policy
+        self.__expires: int = 0  # unix time in which the cache becomes stale
+
+    @property
+    def policy(self) -> CachePolicy[_CKT, _CVT]:
         """
-        Constructs a key/value cache, which is manually savable to the storage medium
-        
-        :param file_basename: Filename of the database to cache response data
-        :param dir_path: Directory path to save the database in, default: $CWD
-        :param file_ext: Extension for the database (excluding dot), default: pkl
+        :return: Current caching policy for the mapping
         """
-        if file_ext is None: file_ext = self._DEFAULT_DB_FILE_EXT
-        self.__file_name: str = f"{file_basename}.{file_ext}"
-        self.__file_path: Path = self._get_path(dir_path)
-        self.__db: dict[Any, _DatabaseEntry] = self._load_database()
-        
-    def fetch(self, key: Any, policy: CachePolicy) -> Optional[Any]:
+        return self.__policy
+
+    @policy.setter
+    def policy(self, value: CachePolicy[_CKT, _CVT]) -> None:
         """
-        Retrieves the value associated with the specified key in the database
-        
-        If no such key exists, or the pairing has become stale, a new value is generated.
-        Pairings become stale when their time-to-live (TTL) has been exceeded (None: Never Stale).
-        Generated values are created using the fetcher provided in the CachePolicy instance.
-        If the fetcher returns None, the lookup is considered to have failed, thus returns None.
-        
-        :param key: Key to retrieve, or generate new value for if stale
-        :param policy: Fetching / Cleaning policy used for generating new values
+        :param value: Replacement caching policy for the mapping
         """
+        self.__policy = value
+
+    def _check_ttl(self) -> None:
+        """Purges and refetches data if the cache has gone stale"""
         ts: int = int(unix_time())
-        entry: Optional[_DatabaseEntry] = self.__db.get(key)
-        if entry is not None:
-            if entry.expires is not None and entry.expires <= ts:
-                logger.debug(f"cached key has expired: key={key}, expires={entry.expires}, ts={ts}")
-                del self.__db[key]  # Eject stale entry
-            else: return entry.data
-        data: Optional[Any] = policy.fetcher(key)
-        if data is not None:
-            expires: Optional[int] = None if policy.ttl is None else ts + policy.ttl
-            self.__db[key] = _DatabaseEntry(data, expires)
-        return data
-            
-    def clean(self) -> None:
-        """
-        Ejects stale entries from the db.
-        
-        Called on load or on-demand. Entries with 'expires' as 'None' are not removed
-        """
-        ts: int = int(unix_time())
-        stale: set[Any] = {
-            k for k, v in self.__db.items()
-            if v.expires is not None and v.expires <= ts
-        }
-        for k in stale:  
-            del self.__db[k]  # Clean up expired keys in the db
+        if ts >= self.__expires:
+            self._data.clear()
+            logger.debug(f"TTL cache data expired, fetching new data")
+            self._data.update(self.__policy.fetcher())
+            self.__expires = ts + self.__policy.ttl
+
+    # Freshness checks must take place on every read operation
+    def __getitem__(self, key: _CKT) -> _CVT:
+        self._check_ttl()
+        return self._data.__getitem__(key)
+    def __iter__(self) -> Iterator[_CKT]:
+        self._check_ttl()
+        return self._data.__iter__()
+    def __len__(self) -> int:
+        self._check_ttl()
+        return self._data.__len__()
+    def __contains__(self, key: _CKT) -> bool:
+        self._check_ttl()
+        return self._data.__contains__(key)
 
     def save(self) -> None:
         """
-        Saves all loaded requests to a local database
+        Saves the environment to the storage medium
         """
-        with open(self.__file_path, "wb") as f:
-            pickle.dump(self.__db, f)
+        with self.file_path.open("wb") as f:
+            pickle.dump((self._data, self.__expires), f)
 
-    @property
-    def file_name(self) -> str: return self.__file_name
-    @property
-    def file_path(self) -> Path: return self.__file_path
-    
-    def _get_path(self, directory: Optional[str]=None) -> Path:
-        path: Path = (get_project_root() if directory is None else Path(directory)).resolve()
-        if not path.exists(): raise ValueError(f"directory path does not exist: {path}")
-        if not path.is_dir(): raise ValueError(f"path is not a valid directory: {path}")
-        return path / self.__file_name
-        
-    def _load_database(self) -> dict[Any, _DatabaseEntry]:
-        if self.__file_path.exists():
-            with open(self.__file_path, "rb") as f:
-                return pickle.load(f)
-        return dict()
+    def load(self) -> None:
+        """
+        Attempts to load the cache from the storage medium
+
+        Raises an error if cache file is not found, on file
+        reading error(s), or if the file has malformed / invalid data.
+        """
+        with self.file_path.open("rb") as f:
+            self._data, self.__expires = pickle.load(f)

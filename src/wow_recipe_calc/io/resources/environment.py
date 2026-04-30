@@ -14,14 +14,18 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+from logging import getLogger, Logger
+
 from wow_recipe_calc.io.resources.project import MutableResource
+
+logger: Logger = getLogger(__name__)
 
 EnvValue = str | int | float | bool
 
 
 class Environment(MutableResource[str, EnvValue]):
     _DEFAULT_FILE_EXT: str = "env"
-    _DEFAULT_ENV_DIR: str = "cache"
+    _DEFAULT_CACHE_DIR: str = "cache"
     _COMMENT_LINE_CHAR: str = "#"
     _PAIRING_CHAR: str = "="
 
@@ -29,7 +33,7 @@ class Environment(MutableResource[str, EnvValue]):
         """
         :param file_stem: Name of the file, excluding file extension
         """
-        super().__init__(file_stem, self._DEFAULT_ENV_DIR, self._DEFAULT_FILE_EXT)
+        super().__init__(file_stem, self._DEFAULT_CACHE_DIR, self._DEFAULT_FILE_EXT)
 
     def save(self) -> None:
         """
