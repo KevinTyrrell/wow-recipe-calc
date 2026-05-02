@@ -37,7 +37,12 @@ logger: Logger = getLogger(__name__)
 class CraftingApp:
     _DEFAULT_ENV_STEM: str = "setup"
 
+    ~from pathlib import Path
+    my_path = Path("../../clients/folders/chaki.txt")
 
+    stem = my_path.stem  # "chaki"
+    ext = my_path.suffix  # ".txt"
+    dir_path = my_path.parent  # PosixPath('../../clients/folders')
 
     _DEFAULT_ITEM_DB_BASENAME: str = "item_db"
     _DEFAULT_ENV_BASENAME: str = "setup"
@@ -52,10 +57,8 @@ class CraftingApp:
 
         :param throttle: (Optional) Throttle for web requests
         """
-
-
-
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
+
         self.__no_price_warning: set[int] = set()
         # Web clients for data requests
         self.__item_client: ItemClient = ItemClient(self.__throttle)

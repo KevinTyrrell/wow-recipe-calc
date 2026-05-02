@@ -15,7 +15,6 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from logging import getLogger, Logger
-from copy import deepcopy
 
 from wow_recipe_calc.io.resources.project import MutableResource
 from wow_recipe_calc.util.json_wrapper import JsonWrappable

@@ -16,8 +16,6 @@
 
 import json
 
-from copy import deepcopy
-
 from wow_recipe_calc.io.resources.project import MutableResource
 from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
 

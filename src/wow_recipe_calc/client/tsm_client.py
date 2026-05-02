@@ -17,9 +17,7 @@
 from requests import post as submit, Response, Session
 from typing import Optional, Iterator
 from logging import getLogger, Logger
-from pathlib import Path
 
-from io.project_info import get_project_root
 from wow_recipe_calc.util.throttle import Throttle
 from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
 from io.resources.ttl_cache import TTLCache, CachePolicy
@@ -45,52 +43,50 @@ class _TSMAuth:
     def authorize(self) -> str:
         logger.debug("requesting TSM API access_token")
         self.__throttle.tick()
-        response: Response = submit(self._ENDPOINT_URL, json=self.__payload)
+        response: Response = submit(self._ENDPOINT_URL, json = self.__payload)
         response.raise_for_status()  # Raise error if not status ~200
         data = wrap_json(response.json())
         return data.access_token
 
 
 class TSMClient:
-    _LOCAL_DB_NAME: str = "tsm_db"
-    _LOCAL_DB_DIR_PATH: str = "cache"
-    _CACHE_DB_KEY: str = "REALM_MARKET_VALUE_PRICES"
+    _RESOURCE_NAME: str = "tsm_db"
     _API_REALM_URL: str = "https://realm-api.tradeskillmaster.com"
     _API_PRICE_URL: str = "https://pricing-api.tradeskillmaster.com"
-    _FAKE_API_KEY: str = "a3f9c7d2-b6e1-9c2a-f7d1-3b8e4a91c6d2"  # stand-in
-    _DEFAULT_AUCTION_HOUSE: int = 4
-    _DEFAULT_PRICING_STALE: int = 3 * 60 * 60  # 3 hours before pricing becomes stale
-    
+    _PRICING_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
+    _HEADER_KEY: str = "Authorization"
+    _HEADER_FMT: str = "Bearer {}"
+    _KEY_MASK_CHARS: int = 6  # Number of characters of the key to reveal for logging
+    _KEY_MASK_SYMBOL: str = "*"
+
     def __init__(self) -> None:
-        self.auction_house: int = self._DEFAULT_AUCTION_HOUSE
-        self.__api_key: str = self._FAKE_API_KEY
-        dir_path: Path = get_project_root() / self._LOCAL_DB_DIR_PATH
-        self.__cache: TTLCache = TTLCache(self._LOCAL_DB_NAME, str(dir_path))
+        policy: CachePolicy = CachePolicy(self._PRICING_STALE_THRESH, self._refresh_auction_house)
+        self.__cache: TTLCache = TTLCache(self._RESOURCE_NAME, policy)  # continuously tosses stale data
         self.__session: Session = Session()
-        self.__policy: CachePolicy = CachePolicy(
-            self._DEFAULT_PRICING_STALE, self._refresh_auction_house)
         self.__throttle: Throttle = Throttle.Builder().add(1, 2).build()
+        # API key and auction house both come from user, only access via _get calls
+        self.__auth: Optional[_TSMAuth] = None
+        self.__auction_house: Optional[int] = None
+
+    def set_auction_house(self, auction_house_id: int) -> None:
+        """
+        This field must be initialized before pricing data can be requested
+
+        :param auction_house_id: TSM auction house ID provided by other TSM API calls
+        """
+        self.__auction_house = auction_house_id
 
     def authorize(self, api_key: str) -> None:
         """
         Attempts to request an access token from the TSM API
 
+        Authorization must be acquired before pricing data can be requested
+
         :param api_key: TSM API key, provided from the user's TSM account page
         """
-        auth: _TSMAuth = _TSMAuth(api_key, self.__throttle)
-        self.__api_key = api_key
-        self.__session.headers.update({ "Authorization": f"Bearer {auth.authorize()}" })
-        
-    def _refresh_auction_house(self, _) -> dict[int, int]:
-        ah_jso = wrap_json(self.auction_data(self.auction_house))
-        price_by_id: dict[int, int] = dict()
-        for item_jso in ah_jso:
-            if item_jso.itemId is not None:
-                if item_jso.marketValue is not None:
-                    price_by_id[item_jso.itemId] = item_jso.marketValue
-                else: logger.warning(f"TSM API item has no market value, item ID: {item_jso.itemId}")
-            else: logger.warning(f"TSM API reported null item ID, 'petSpeciesId'={item_jso.petSpeciesId}")
-        return price_by_id
+        self.__auth = _TSMAuth(api_key, self.__throttle)
+        logger.info(f"TSM API key loaded: {self._mask_api_key(api_key)}")
+        self._authorize()
         
     def get_price(self, item_id: int) -> Optional[int]:
         price_by_id: dict[int, int] = self.__cache.fetch(self._CACHE_DB_KEY, self.__policy)
@@ -141,3 +137,49 @@ class TSMClient:
         Saves TSM data to the storage medium
         """
         self.__cache.save()
+
+    def _authorize(self) -> None:  # call this method to reauthorize if token expires
+        assert self.__auth is not None
+        self.__session.headers[self._HEADER_KEY] = self._HEADER_FMT.format(self.__auth.authorize())
+
+    def _get_auth(self) -> _TSMAuth:
+        if self.__auth is None:
+            raise RuntimeError("missing TSM API key, provide api key to: authorize()")
+        return self.__auth
+
+    def _get_auction_house(self) -> int:
+        if self.__auction_house is None:
+            raise RuntimeError("missing auction house ID, provide id to: set_auction_house()")
+        return self.__auction_house
+
+    def _request(self, url: str) -> Response:
+        """Requests information from the TSM API, requesting twice if no authorization"""
+        response: Response = self.__session.get(url)
+        if response.status_code == 401:  # invalid access token
+            logger.warning("TSM API access token rejected (401) — re-authorizing and retrying")
+            self._authorize()  # attempt to retrieve a fresh auth token
+            response = self.__session.get(url)
+        response.raise_for_status()
+        return response
+
+    @classmethod
+    def _mask_api_key(cls, key: str) -> str:
+        """Returns a masked variant of an API key, only revealing some characters"""
+        half_len: int = cls._KEY_MASK_CHARS + cls._KEY_MASK_CHARS
+        if len(key) < half_len + half_len:
+            print("TSM API key is atypically short, check for bad key")
+        dx: int = len(key) - half_len - cls._KEY_MASK_CHARS
+        suffix: str = key[len(key) - min(dx, cls._KEY_MASK_CHARS):]
+        return suffix.rjust(half_len + half_len, cls._KEY_MASK_SYMBOL)
+
+    def _refresh_auction_house(self) -> dict[int, int]:
+        """Requests auction house data from the TSM API"""
+        ah_data: JSO = wrap_json(self.auction_data(self._get_auction_house()))
+        price_by_id: dict[int, int] = dict()
+        for item_jso in ah_data:
+            if item_jso.itemId is not None:
+                if item_jso.marketValue is not None:
+                    price_by_id[item_jso.itemId] = item_jso.marketValue
+                else: logger.warning(f"TSM API item has no market value, item ID: {item_jso.itemId}")
+            else: logger.warning(f"TSM API reported null item ID, 'petSpeciesId'={item_jso.petSpeciesId}")
+        return price_by_id
