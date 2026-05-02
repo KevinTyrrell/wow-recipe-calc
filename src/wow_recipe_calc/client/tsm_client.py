@@ -58,6 +58,11 @@ class TSMClient:
     _HEADER_FMT: str = "Bearer {}"
     _KEY_MASK_CHARS: int = 6  # Number of characters of the key to reveal for logging
     _KEY_MASK_SYMBOL: str = "*"
+    _ENDPOINTS: JSO = wrap_json({
+        "realms": "{}/regions/{}/realms",  # realm url, region id
+        "regions": "{}/regions",  # realm url
+        "auctions": "{}/ah/{}",  # price url, auction house id
+    })
 
     def __init__(self) -> None:
         policy: CachePolicy = CachePolicy(self._PRICING_STALE_THRESH, self._refresh_auction_house)
@@ -89,10 +94,13 @@ class TSMClient:
         self._authorize()
         
     def get_price(self, item_id: int) -> Optional[int]:
-        price_by_id: dict[int, int] = self.__cache.fetch(self._CACHE_DB_KEY, self.__policy)
-        return price_by_id.get(item_id)
+        """
+        :param item_id: Item ID to retrieve pricing information
+        :return: Market value of the item, in copper, if present
+        """
+        return self.__cache.get(item_id)
         
-    def auction_data(self, auction_house_id: int) -> list[dict[str, Optional[int]]]:
+    def auction_data(self, auction_house_id: int) -> JSO:
         """
         Note: This function may only be called 100 times per day
         See: https://support.tradeskillmaster.com/en_US/api-documentation/tsm-public-web-api
@@ -101,11 +109,8 @@ class TSMClient:
         :return: JSON data of all items in the auction house when scanned
         """
         logger.info(f"requesting entire auction house data for AH ID: {auction_house_id}")
-        self.__throttle.tick()
-        response: Response = self.__session.get(f"{self._API_PRICE_URL}/ah/{auction_house_id}")
-        response.raise_for_status()
-        return response.json()
-    
+        return self._request(self._ENDPOINTS.auctions.format(self._API_PRICE_URL, auction_house_id))
+
     def regions(self) -> Iterator[tuple[str, str, int]]:
         """
         Tuple format: (Realm Group Name, Geographic Region Name, Region ID)
@@ -113,10 +118,7 @@ class TSMClient:
         :return: Iterator of all known World of Warcraft regions
         """
         logger.debug(f"requesting TSM API region data")
-        self.__throttle.tick()
-        response: Response = self.__session.get(f"{self._API_REALM_URL}/regions")
-        response.raise_for_status()
-        jso = wrap_json(response.json())
+        jso: JSO = self._request(self._ENDPOINTS.regions.format(self._API_REALM_URL))
         return ((e.gameVersion, e.name, e.regionId) for e in jso.items)
         
     def realms(self, region_id: int) -> Iterator[tuple[str, int, JSO]]:
@@ -126,10 +128,7 @@ class TSMClient:
         :return: Iterator of all known World of Warcraft regions
         """
         logger.debug(f"requesting TSM API realm data for region ID: {region_id}")
-        self.__throttle.tick()
-        response: Response = self.__session.get(f"{self._API_REALM_URL}/regions/{region_id}/realms")
-        response.raise_for_status()
-        jso = wrap_json(response.json())
+        jso: JSO = self._request(self._ENDPOINTS.realms.format(self._API_REALM_URL, region_id))
         return ((e.name, e.realmId, e.auctionHouses) for e in jso.items)
         
     def save(self) -> None:
@@ -140,7 +139,7 @@ class TSMClient:
 
     def _authorize(self) -> None:  # call this method to reauthorize if token expires
         assert self.__auth is not None
-        self.__session.headers[self._HEADER_KEY] = self._HEADER_FMT.format(self.__auth.authorize())
+        self.__session.headers[self._HEADER_KEY] = self._HEADER_FMT.format(self._get_auth().authorize())
 
     def _get_auth(self) -> _TSMAuth:
         if self.__auth is None:
@@ -152,29 +151,30 @@ class TSMClient:
             raise RuntimeError("missing auction house ID, provide id to: set_auction_house()")
         return self.__auction_house
 
-    def _request(self, url: str) -> Response:
+    def _request(self, url: str) -> JSO:
         """Requests information from the TSM API, requesting twice if no authorization"""
+        self.__throttle.tick()
         response: Response = self.__session.get(url)
         if response.status_code == 401:  # invalid access token
             logger.warning("TSM API access token rejected (401) — re-authorizing and retrying")
             self._authorize()  # attempt to retrieve a fresh auth token
             response = self.__session.get(url)
         response.raise_for_status()
-        return response
+        return wrap_json(response.json())
 
     @classmethod
     def _mask_api_key(cls, key: str) -> str:
         """Returns a masked variant of an API key, only revealing some characters"""
-        half_len: int = cls._KEY_MASK_CHARS + cls._KEY_MASK_CHARS
-        if len(key) < half_len + half_len:
-            print("TSM API key is atypically short, check for bad key")
-        dx: int = len(key) - half_len - cls._KEY_MASK_CHARS
+        section_len: int = cls._KEY_MASK_CHARS + cls._KEY_MASK_CHARS
+        if len(key) < section_len + section_len:
+            logger.warning("TSM API key is atypically short, check for bad key")
+        dx: int = len(key) - section_len - cls._KEY_MASK_CHARS
         suffix: str = key[len(key) - min(dx, cls._KEY_MASK_CHARS):]
-        return suffix.rjust(half_len + half_len, cls._KEY_MASK_SYMBOL)
+        return suffix.rjust(section_len + section_len, cls._KEY_MASK_SYMBOL)
 
     def _refresh_auction_house(self) -> dict[int, int]:
         """Requests auction house data from the TSM API"""
-        ah_data: JSO = wrap_json(self.auction_data(self._get_auction_house()))
+        ah_data: JSO = self.auction_data(self._get_auction_house())
         price_by_id: dict[int, int] = dict()
         for item_jso in ah_data:
             if item_jso.itemId is not None:
