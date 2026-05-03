@@ -52,7 +52,7 @@ class Expansion(Enum):
     @classmethod
     def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by modal
         if not isinstance(value, int): return None
-        return _expac_reverse.get(value)
+        return _expac_reverse.get(value - 1)
 
     # "Shim" methods to avoid needing to call .value
     @property
@@ -94,7 +94,7 @@ class Profession(Enum):
     @classmethod
     def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by modal
         if not isinstance(value, int): return None
-        return _prof_reverse.get(value)
+        return _prof_reverse.get(value - 1)
 
     @classmethod
     def available_in(cls, expansion: Expansion) -> Iterator[Profession]:

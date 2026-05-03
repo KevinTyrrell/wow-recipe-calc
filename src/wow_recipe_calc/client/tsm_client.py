@@ -55,7 +55,7 @@ class TSMClient(Saveable):
     _API_PRICE_URL: str = "https://pricing-api.tradeskillmaster.com"
     _HEADER_KEY: str = "Authorization"
     _HEADER_FMT: str = "Bearer {}"
-    _KEY_MASK_CHARS: int = 6  # Number of characters of the key to reveal for logging
+    _KEY_MASK_CHARS: int = 4  # Number of characters of the key to reveal for logging
     _KEY_MASK_SYMBOL: str = "*"
     _ENDPOINTS: JSO = wrap_json({
         "realms": "{}/regions/{}/realms",  # realm url, region id
