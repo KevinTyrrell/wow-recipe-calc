@@ -20,6 +20,7 @@ from dataclasses import dataclass
 from collections import defaultdict
 from collections.abc import Iterable
 from math import ceil
+from logging import getLogger, Logger
 
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
 from wow_recipe_calc.crafts.craft_skill import CraftSkiller
@@ -27,6 +28,8 @@ from wow_recipe_calc.crafts.item_db import ItemDB, RecipeEntry, ItemEntry
 from wow_recipe_calc.crafts.price_manager import PriceManager
 from wow_recipe_calc.crafts.recipe.recipe_graph import RecipeGraph, GrayPriortyRecipeGraph
 from wow_recipe_calc.util.heap import Heap
+
+logger: Logger = getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -57,11 +60,13 @@ class CraftPlanner:
         self.__prices: PriceManager = prices
         self.__demands: defaultdict[Recipe, int] = defaultdict(lambda: 0)
         
-    def craft(self, item: int | str | Recipe, quantity: Optional[int]=1) -> bool:
+    def craft(self, item: int | str | Recipe, quantity: Optional[int] = 1) -> None:
         """
         Constructs a specified number of items from a recipe
-        
+
         Note: This does not craft the recipe X number of times.
+        e.g: if a recipe produces two
+
         For example, if a recipe crafts two items per cast and
         a quantity=2 is provided, only one craft is required.
         
@@ -75,10 +80,9 @@ class CraftPlanner:
                 entry = self.__item_db.by_id.get(item)
             else: entry = self.__item_db.by_name.get(item)
             if not isinstance(entry, RecipeEntry):
-                return False
-            self.__demands[entry.recipe] += quantity
+                logger.error(f"no known recipe can craft item, id/name: {item}")
+            else: self.__demands[entry.recipe] += quantity
         else: self.__demands[item] += quantity
-        return True
         
     def plan(self) -> CraftPlan:
         """

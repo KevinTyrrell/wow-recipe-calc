@@ -19,6 +19,7 @@ from functools import cached_property
 from typing import Optional
 from logging import getLogger, Logger
 from atexit import register as on_exit
+from pathlib import Path
 
 from wow_recipe_calc.client.item_client import ItemClient
 from wow_recipe_calc.client.tsm_client import TSMClient
@@ -36,7 +37,10 @@ logger: Logger = getLogger(__name__)
 
 
 class CraftingApp:
-    _DEFAULT_ENV_STEM: str = "setup"
+    _RESOURCE_ENV_NAME: str = "setup"
+    # TODO: Construct a class to handle expac/prof handling
+    _RESOURCE_RECIPE_DATA: Path = Path("data/items/recipes/tbc/engineering")
+
     _DEFAULT_THROTTLE: Throttle = (Throttle.Builder()
        .add(1, 5).add(15, 60).build())
 
@@ -88,8 +92,7 @@ class CraftingApp:
         logger.debug("running craft planner")
         planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
         for name, quantity in desired_crafts.items():
-            if not planner.craft(name, quantity):
-                logger.debug(f"planned recipe is unrecognized: {name}")
+            planner.craft(name, quantity)
         return planner.plan()
 
     @property
@@ -97,7 +100,7 @@ class CraftingApp:
 
     @cached_property
     def environment(self) -> Environment:
-        env: Environment = Environment(self._DEFAULT_ENV_STEM)
+        env: Environment = Environment(self._RESOURCE_ENV_NAME)
         try:
             env.load()  # attempt to load from storage medium
             # If SetupConfig doesn't set the api_key, we have to here
@@ -107,5 +110,3 @@ class CraftingApp:
             config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
             self.__env.extend(config.full_setup())  # run user through questionnaire
         return env
-
-
