@@ -52,5 +52,5 @@ class StyleLoader:
         if t.is_file():
             if t.name.endswith(self.__ext): yield t.read_text()
         elif t.is_dir():  # sort so that loading becomes deterministic
-            for child in sorted(t.iterdir(), key = lambda x: x.name):
+            for child in sorted(t.iterdir(), key = lambda x: x.label):
                 yield from self._walk_styles(child)

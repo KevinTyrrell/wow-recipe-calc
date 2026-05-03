@@ -14,7 +14,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from argparse import Namespace as ArgNamespace
 from functools import cached_property
 from typing import Optional
 from logging import getLogger, Logger
@@ -38,8 +37,6 @@ logger: Logger = getLogger(__name__)
 
 class CraftingApp:
     _RESOURCE_ENV_NAME: str = "setup"
-    # TODO: Construct a class to handle expac/prof handling
-    _RESOURCE_RECIPE_DATA: Path = Path("data/items/recipes/tbc/engineering")
 
     _DEFAULT_THROTTLE: Throttle = (Throttle.Builder()
        .add(1, 5).add(15, 60).build())
@@ -74,7 +71,7 @@ class CraftingApp:
         prof_data: JSO = wrap_json(self.__args.profession_data_path)
         for recipe_data in prof_data:
             recipe: Recipe = Recipe(
-                recipe_data.name,
+                recipe_data.label,
                 next(iter(recipe_data.levels)),
                 list(recipe_data.levels)[1:],
                 { int(k): v for k, v in recipe_data.reagents },

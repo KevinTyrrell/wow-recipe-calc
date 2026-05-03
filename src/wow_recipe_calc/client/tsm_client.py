@@ -116,7 +116,7 @@ class TSMClient(Saveable):
         """
         logger.debug(f"requesting TSM API region data")
         jso: JSO = self._request(self._ENDPOINTS.regions.format(self._API_REALM_URL))
-        return ((e.gameVersion, e.name, e.regionId) for e in jso.items)
+        return ((e.gameVersion, e.label, e.regionId) for e in jso.items)
         
     def realms(self, region_id: int) -> Iterator[tuple[str, int, JSO]]:
         """
@@ -126,7 +126,7 @@ class TSMClient(Saveable):
         """
         logger.debug(f"requesting TSM API realm data for region ID: {region_id}")
         jso: JSO = self._request(self._ENDPOINTS.realms.format(self._API_REALM_URL, region_id))
-        return ((e.name, e.realmId, e.auctionHouses) for e in jso.items)
+        return ((e.label, e.realmId, e.auctionHouses) for e in jso.items)
 
     def _authorize(self) -> None:  # call this method to reauthorize if token expires
         assert self.__auth is not None

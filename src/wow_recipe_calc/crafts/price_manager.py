@@ -39,7 +39,7 @@ class PriceManager(Saveable):
         self.__no_price_cb: Callable[[int], int] = no_price_cb or (lambda _: 0)
         self.__tsm = tsm_client
         self.__vendor: dict[int, int] = {
-            e.id: e.cost for e in self._load_vendor_prices() }
+            e.modal: e.cost for e in self._load_vendor_prices() }
     
     def get_price(self, item_id: int, no_price_cb: Optional[Callable[[int], int]] = None) -> int:
         """

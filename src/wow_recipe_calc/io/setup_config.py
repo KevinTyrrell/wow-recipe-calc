@@ -36,7 +36,7 @@ class SetupConfig:
         ("The Burning Crusade", "tbc"),
         ("Wrath of the Lich King", "wotlk"),
         ("Cataclysm", "cata"),
-        ("Mists of Pandaria", "mop"),
+        ("Mists of Pandaria", "mop-classic"),
         ("Warlords of Draenor", "wow/retail"),
         ("Legion", "wow/retail"),
         ("Battle for Azeroth", "wow/retail"),
