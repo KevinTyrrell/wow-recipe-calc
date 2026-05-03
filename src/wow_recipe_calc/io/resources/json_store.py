@@ -17,7 +17,7 @@
 import json
 
 from wow_recipe_calc.io.resources.project import MutableResource
-from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
+from wow_recipe_calc.util.json_wrapper import JsonWrappable
 
 JsonPrimitive = str | int | float | bool  # TODO: Include NoneType?
 JsonValue = JsonPrimitive | list["JsonValue"] | dict[str, "JsonValue"]
