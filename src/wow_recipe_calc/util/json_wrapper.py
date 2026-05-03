@@ -57,7 +57,7 @@ class _JsonArray:
 JSO: TypeAlias = _JsonObject | _JsonArray
 
 
-class JsonWrappable(ABC, Mapping[str, Any]):
+class JsonWrappable(ABC, Mapping[str, Any]):  # must be ABC to avoid needing to implement mapping
     @staticmethod
     def wrap(obj: Mapping[str, Any] | list[Any]) -> JSO:
         """

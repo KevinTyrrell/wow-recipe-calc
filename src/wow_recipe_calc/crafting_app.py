@@ -52,19 +52,13 @@ class CraftingApp:
         # Web clients for data requests
         self.__item_client: ItemClient = ItemClient(self.__throttle)
         self.__tsm_client: TSMClient = TSMClient()
-        # Databases/containers/optimizers
+        # Databases/caches/containers/optimizers
         self.__item_db: ItemDB = ItemDB(self.__item_client)
-        handler: _UnpriceableHandler = _UnpriceableHandler(self.__item_db)
-        self.__prices: PriceManager = PriceManager(self.__tsm_client, handler.fallback_price)
-
-
-        self.__tsm_client.auction_house = wrap_json(self.environment.data).auction_house
-
-
-
-        to_save: list[Saveable] = [ self.environment, self.__item_db, self.__tsm_client ]
-        for database in to_save: on_exit(database.save)
-
+        self.__prices: PriceManager = PriceManager(self.__tsm_client)
+        self.__tsm_client.set_auction_house(self.environment.jso().auction_house)
+        # Set all databases/caches to save at the end of runtime
+        saveable: list[Saveable] = [ self.environment, self.__item_db, self.__prices ]
+        for resource in saveable: on_exit(resource.save)
 
     def populate_recipes(self) -> ItemDB:
         """
@@ -87,18 +81,19 @@ class CraftingApp:
 
     def run_planner(self, desired_crafts: Mapping[str | int | Recipe, int]) -> CraftPlan:
         """
+        Runs the optimizer on the crafting plan, calculating materials, routes, and pricing
+
         :return: craft plan detailing the optimal crafting routes/windows/materials
         """
         logger.debug("running craft planner")
-        planner: CraftPlanner = CraftPlanner(self.item_db, self.__prices)
+        planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
         for name, quantity in desired_crafts.items():
             if not planner.craft(name, quantity):
                 logger.debug(f"planned recipe is unrecognized: {name}")
         return planner.plan()
 
     @property
-    def item_db(self) -> ItemDB:
-        return self.__item_db
+    def item_db(self) -> ItemDB: return self.__item_db
 
     @cached_property
     def environment(self) -> Environment:

@@ -25,16 +25,16 @@ from wow_recipe_calc.client.tsm_client import TSMClient
 
 
 class PriceManager(Saveable):
-    _PRICE_JSON_RELATIVE_PATH: str = "data/VendorPrices.json"
-    _RESOURCE_NAME: str = "market_value_db"
-    _PRICING_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
+    _RESOURCE_MARKET_STEM: str = "market_value_db"
+    _RESOURCE_VENDOR_PRICES: Path = Path("data/items/vendor_prices")
+    _MARKET_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
     
     def __init__(self, tsm_client: TSMClient, no_price_cb: Optional[Callable[[int], int]] = None) -> None:
         """
         :param tsm_client: TSM request instance for market value pricing
         :param no_price_cb: (Optional) Callback for pricing unknown items (default: 0)
         """
-        policy: CachePolicy = CachePolicy(self._PRICING_STALE_THRESH, self._refresh_auction_house)
+        policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, self._refresh_auction_house)
         self.__cache: TTLCache = TTLCache(self._RESOURCE_NAME, policy)  # continuously tosses stale data
         self.__no_price_cb: Callable[[int], int] = no_price_cb or (lambda _: 0)
         self.__tsm = tsm_client
