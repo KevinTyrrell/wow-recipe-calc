@@ -14,6 +14,8 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+import json
+
 from pathlib import Path
 
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
@@ -26,16 +28,19 @@ class RecipeProvider(Resource[str, JsonValue], JsonWrappable):
     _DEFAULT_FILE_EXT: str = "json"
     _RESOURCE: Path = Path("data/recipes")
     _DEFAULT_FILE_ENCODING: str = "utf-8"
+    _RECIPE_KEY_FIELD: str = "name"  # recipe data loads as a list, so we need a key
 
     def __init__(self, expac: Expansion, prof: Profession) -> None:
         super().__init__(prof.resource, self._RESOURCE / expac.navigation)
         self.__expac: Expansion = expac
         self.__prof: Profession = prof
+        self.load()  # TODO: handle exceptions
+        # TODO: If data is not present, we must request from the server
 
     def load(self) -> None:
         """Attempts to load the json file from the storage medium"""
         with self.file_path.open("r", encoding = self._DEFAULT_FILE_ENCODING) as f:
-            data: dict[str, JsonValue] = json.load(f)
+            data: list[JsonValue] = json.load(f)
         if not isinstance(data, dict):
             raise ValueError(f"expected a JSON object, got {type(data).__name__}, path: {self.file_path}")
-        self._data = data
+        self._data = { e[self._RECIPE_KEY_FIELD]: e for e in data }  # convert list to dict
