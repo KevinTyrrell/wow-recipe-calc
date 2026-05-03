@@ -24,7 +24,7 @@ from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.util.json_wrapper import JsonWrappable
 
 
-class RecipeProvider(Resource[str, JsonValue], JsonWrappable):
+class RecipeData(Resource[str, JsonValue], JsonWrappable):
     _DEFAULT_FILE_EXT: str = "json"
     _RESOURCE: Path = Path("data/recipes")
     _DEFAULT_FILE_ENCODING: str = "utf-8"
