@@ -22,7 +22,8 @@ from atexit import register as on_exit
 
 from wow_recipe_calc.client.item_client import ItemClient
 from wow_recipe_calc.client.tsm_client import TSMClient
-from io.resources.environment import Environment
+from wow_recipe_calc.io.resources.project import Saveable
+from wow_recipe_calc.io.resources.environment import Environment
 from wow_recipe_calc.crafts.craft_planner import CraftPlanner, CraftPlan
 from wow_recipe_calc.crafts.item_db import ItemDB, ItemEntry
 from wow_recipe_calc.crafts.price_manager import PriceManager
@@ -36,16 +37,6 @@ logger: Logger = getLogger(__name__)
 
 class CraftingApp:
     _DEFAULT_ENV_STEM: str = "setup"
-
-    ~from pathlib import Path
-    my_path = Path("../../clients/folders/chaki.txt")
-
-    stem = my_path.stem  # "chaki"
-    ext = my_path.suffix  # ".txt"
-    dir_path = my_path.parent  # PosixPath('../../clients/folders')
-
-    _DEFAULT_ITEM_DB_BASENAME: str = "item_db"
-    _DEFAULT_ENV_BASENAME: str = "setup"
     _DEFAULT_THROTTLE: Throttle = (Throttle.Builder()
        .add(1, 5).add(15, 60).build())
 
@@ -58,18 +49,22 @@ class CraftingApp:
         :param throttle: (Optional) Throttle for web requests
         """
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
-
-        self.__no_price_warning: set[int] = set()
         # Web clients for data requests
         self.__item_client: ItemClient = ItemClient(self.__throttle)
         self.__tsm_client: TSMClient = TSMClient()
         # Databases/containers/optimizers
-        self.__item_db: ItemDB = ItemDB(self.__item_client.get_item_name, self._DEFAULT_ITEM_DB_BASENAME)
-        self.__prices: PriceManager = PriceManager(self.__tsm_client, self._unknown_price_cb)
+        self.__item_db: ItemDB = ItemDB(self.__item_client)
+        handler: _UnpriceableHandler = _UnpriceableHandler(self.__item_db)
+        self.__prices: PriceManager = PriceManager(self.__tsm_client, handler.fallback_price)
+
+
         self.__tsm_client.auction_house = wrap_json(self.environment.data).auction_house
-        on_exit(self.__env.save)
-        on_exit(self.__item_db.save)
-        on_exit(self.__tsm_client.save)
+
+
+
+        to_save: list[Saveable] = [ self.environment, self.__item_db, self.__tsm_client ]
+        for database in to_save: on_exit(database.save)
+
 
     def populate_recipes(self) -> ItemDB:
         """
@@ -118,11 +113,4 @@ class CraftingApp:
             self.__env.extend(config.full_setup())  # run user through questionnaire
         return env
 
-    def _unknown_price_cb(self, item_id: int) -> int:
-        entry: Optional[ItemEntry] = self.__item_db.by_id.get(item_id)
-        if entry is None:
-            raise ValueError(f"item is unknown, item ID: {item_id}")
-        if not item_id in self.__no_price_warning:
-            logger.warning(f"item has no pricing data: {entry.item_name} ({item_id})")
-            self.__no_price_warning.add(item_id)  # Spam filter
-        return 0
+

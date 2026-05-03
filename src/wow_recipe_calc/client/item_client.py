@@ -44,6 +44,11 @@ class ItemClient:
         :return: Item name, if it can be ascertained
         """
         logger.info(f"requesting web information for item ID: {item_id}")
+
+        # TODO: remove this stub section
+        from uuid import uuid4  # Testing purposes to avoid waiting for names
+        name: str = str(uuid4()); if name is not None: return name
+
         self.__throttle.tick()
         url: str = urljoin(self._WH_ENDPOINT_URL, self._PART_URL_WH_FMT.format(item_id))
         response: requests.Response = requests.get(url)

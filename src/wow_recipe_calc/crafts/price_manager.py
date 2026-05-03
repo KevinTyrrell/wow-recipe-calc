@@ -19,20 +19,25 @@ import json
 from pathlib import Path
 from typing import Optional, Callable
 
+from wow_recipe_calc.io.resources.project import Saveable
 from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
 from wow_recipe_calc.client.tsm_client import TSMClient
 
 
-class PriceManager:
+class PriceManager(Saveable):
     _PRICE_JSON_RELATIVE_PATH: str = "data/VendorPrices.json"
+    _RESOURCE_NAME: str = "market_value_db"
+    _PRICING_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
     
-    def __init__(self, tsm: TSMClient, no_price_cb: Optional[Callable[[int], int]] = None) -> None:
+    def __init__(self, tsm_client: TSMClient, no_price_cb: Optional[Callable[[int], int]] = None) -> None:
         """
-        :param tsm: TSM request instance for market value pricing
+        :param tsm_client: TSM request instance for market value pricing
         :param no_price_cb: (Optional) Callback for pricing unknown items (default: 0)
         """
+        policy: CachePolicy = CachePolicy(self._PRICING_STALE_THRESH, self._refresh_auction_house)
+        self.__cache: TTLCache = TTLCache(self._RESOURCE_NAME, policy)  # continuously tosses stale data
         self.__no_price_cb: Callable[[int], int] = no_price_cb or (lambda _: 0)
-        self.__tsm = tsm
+        self.__tsm = tsm_client
         self.__vendor: dict[int, int] = {
             e.id: e.cost for e in self._load_vendor_prices() }
     
@@ -46,13 +51,16 @@ class PriceManager:
         :param item_id: Item ID to query price
         :param no_price_cb: (Optional) Callback if no price can be found for the item
         """
-        for source in (self.__vendor.get, self.__tsm.get_price):
+        for source in (self.__vendor.get, self.__tsm.market_value):
             price: Optional[int] = source(item_id)
             if price is not None: return price
         if no_price_cb is not None:
             return no_price_cb(item_id)
         return self.__no_price_cb(item_id)
-    
+
+    def save(self) -> None:
+        pass
+
     def _load_vendor_prices(self) -> JSO:
         path = Path(self._PRICE_JSON_RELATIVE_PATH)
         try:
@@ -60,3 +68,19 @@ class PriceManager:
                 return wrap_json(json.load(f))
         except (FileNotFoundError, json.JSONDecodeError, OSError) as e:
             raise RuntimeError(f"failed to load json: {path.absolute()}") from e
+
+
+class _UnpriceableHandler:
+    def __init__(self, item_db: ItemDB) -> None:
+        self.__unpriceable: set[int] = set()
+        self.__item_db: ItemDB = item_db
+
+    def fallback_price(self, item_id: int) -> int:
+        """Retrieve prices for items in which the item_db cannot handle"""
+        entry: Optional[ItemEntry] = self.__item_db.get(item_id)
+        if entry is None:
+            raise ValueError(f"item ID is unknown: {item_id}")
+        if not item_id in self.__unpriceable:
+            logger.warning(f"item '{entry.item_name}' has no pricing data, ID: {item_id}")
+            self.__unpriceable.add(item_id)
+        return 0  # fallback pricing

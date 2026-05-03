@@ -51,10 +51,8 @@ class _TSMAuth:
 
 
 class TSMClient(Saveable):
-    _RESOURCE_NAME: str = "tsm_db"
     _API_REALM_URL: str = "https://realm-api.tradeskillmaster.com"
     _API_PRICE_URL: str = "https://pricing-api.tradeskillmaster.com"
-    _PRICING_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
     _HEADER_KEY: str = "Authorization"
     _HEADER_FMT: str = "Bearer {}"
     _KEY_MASK_CHARS: int = 6  # Number of characters of the key to reveal for logging
@@ -66,8 +64,6 @@ class TSMClient(Saveable):
     })
 
     def __init__(self) -> None:
-        policy: CachePolicy = CachePolicy(self._PRICING_STALE_THRESH, self._refresh_auction_house)
-        self.__cache: TTLCache = TTLCache(self._RESOURCE_NAME, policy)  # continuously tosses stale data
         self.__session: Session = Session()
         self.__throttle: Throttle = Throttle.Builder().add(1, 2).build()
         # API key and auction house both come from user, only access via _get calls
@@ -94,7 +90,7 @@ class TSMClient(Saveable):
         logger.info(f"TSM API key loaded: {self._mask_api_key(api_key)}")
         self._authorize()
         
-    def get_price(self, item_id: int) -> Optional[int]:
+    def market_value(self, item_id: int) -> Optional[int]:
         """
         :param item_id: Item ID to retrieve pricing information
         :return: Market value of the item, in copper, if present
@@ -131,12 +127,6 @@ class TSMClient(Saveable):
         logger.debug(f"requesting TSM API realm data for region ID: {region_id}")
         jso: JSO = self._request(self._ENDPOINTS.realms.format(self._API_REALM_URL, region_id))
         return ((e.name, e.realmId, e.auctionHouses) for e in jso.items)
-        
-    def save(self) -> None:
-        """
-        Saves TSM data to the storage medium
-        """
-        self.__cache.save()
 
     def _authorize(self) -> None:  # call this method to reauthorize if token expires
         assert self.__auth is not None
