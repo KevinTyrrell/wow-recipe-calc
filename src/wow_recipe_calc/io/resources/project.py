@@ -88,7 +88,17 @@ class Project(Enum):
         return data[_TOML_CONFIG_KEY][key]
 
 
-class Resource(ABC, Mapping[_KT, _VT], Generic[_KT, _VT]):
+@runtime_checkable
+class Loadable(Protocol):
+    def load(self) -> None: ...
+
+
+@runtime_checkable
+class Saveable(Protocol):
+    def save(self) -> None: ...
+
+
+class Resource(ABC, Loadable, Mapping[_KT, _VT], Generic[_KT, _VT]):
     _DEFAULT_FILE_EXT: str  # subclasses must declare; omitting raises AttributeError on init
 
     def __init__(self, file_stem: str,
@@ -134,7 +144,7 @@ class Resource(ABC, Mapping[_KT, _VT], Generic[_KT, _VT]):
         return dir_path / f"{file_stem}.{ext}"
 
 
-class MutableResource(Resource[_KT, _VT], MutableMapping[_KT, _VT]):
+class MutableResource(Saveable, Resource[_KT, _VT], MutableMapping[_KT, _VT]):
     @abstractmethod
     def save(self) -> None:
         """

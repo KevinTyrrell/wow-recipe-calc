@@ -29,16 +29,23 @@ logger: Logger = getLogger(__name__)
 
 class ItemClient:
     _RE_TITLE_PATTERN: str = r"^(.+?)\s*-\s*Item"
-    _BASE_URL_WH: str = "https://www.wowhead.com/tbc/"
+    _WH_ENDPOINT_URL: str = "https://www.wowhead.com/tbc/"  # TODO: don't hardcode tbc/etc
     _PART_URL_WH_FMT: str = "item={}"
     
     def __init__(self, throttle: Throttle) -> None:
+        """
+        :param throttle: Throttle for web requests
+        """
         self.__throttle: Throttle = throttle
 
     def get_item_name(self, item_id: int) -> Optional[str]:
+        """
+        :param item_id: Item ID to request
+        :return: Item name, if it can be ascertained
+        """
         logger.info(f"requesting web information for item ID: {item_id}")
         self.__throttle.tick()
-        url: str = urljoin(self._BASE_URL_WH, self._PART_URL_WH_FMT.format(item_id))
+        url: str = urljoin(self._WH_ENDPOINT_URL, self._PART_URL_WH_FMT.format(item_id))
         response: requests.Response = requests.get(url)
         response.raise_for_status()  # Raise error if not status ~200
         soup: BeautifulSoup = BeautifulSoup(response.text, "html.parser")

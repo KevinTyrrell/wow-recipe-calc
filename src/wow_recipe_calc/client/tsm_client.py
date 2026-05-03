@@ -18,6 +18,7 @@ from requests import post as submit, Response, Session
 from typing import Optional, Iterator
 from logging import getLogger, Logger
 
+from wow_recipe_calc.io.resources.project import Saveable
 from wow_recipe_calc.util.throttle import Throttle
 from wow_recipe_calc.util.json_wrapper import wrap_json, JSO
 from io.resources.ttl_cache import TTLCache, CachePolicy
@@ -49,7 +50,7 @@ class _TSMAuth:
         return data.access_token
 
 
-class TSMClient:
+class TSMClient(Saveable):
     _RESOURCE_NAME: str = "tsm_db"
     _API_REALM_URL: str = "https://realm-api.tradeskillmaster.com"
     _API_PRICE_URL: str = "https://pricing-api.tradeskillmaster.com"
