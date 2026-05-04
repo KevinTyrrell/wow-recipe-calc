@@ -57,6 +57,13 @@ class _JsonArray:
 JSO: TypeAlias = _JsonObject | _JsonArray
 
 
+def wrap_json(obj: Mapping[Any, Any]) -> JSO:
+    """
+    TODO: Heavy work on this class
+    """
+    return _JsonObject(obj) if isinstance(obj, Mapping) else _JsonArray(obj)
+
+
 class JsonWrappable(ABC, Mapping[str, Any]):  # must be ABC to avoid needing to implement mapping
     @staticmethod
     def wrap(obj: Mapping[str, Any] | list[Any]) -> JSO:
@@ -64,7 +71,7 @@ class JsonWrappable(ABC, Mapping[str, Any]):  # must be ABC to avoid needing to 
         :param obj: Object to be wrapped as a JSO
         :return: Nested objects/list structure to enable field retrieval by attribute
         """
-        return _JsonObject(obj) if isinstance(obj, Mapping) else _JsonArray(obj)
+        return wrap_json(obj)
 
     def jso(self) -> JSO:
         """

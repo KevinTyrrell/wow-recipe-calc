@@ -21,7 +21,7 @@ from collections.abc import Iterator
 
 
 class ExpansionData(NamedTuple):
-    modal: int
+    ordinal: int
     label: str
     navigation: str
     portal: str
@@ -45,18 +45,18 @@ class Expansion(Enum):
     MIDNIGHT = ExpansionData(12, "Midnight", "retail", "data/retail")
     LAST_TITAN = ExpansionData(13, "The Last Titan", "retail", "data/retail")
 
-    def __init__(self, data: ExpansionData):
-        # Setup reverse mapping via modal
-        _expac_reverse[data.modal] = self
+    def __init__(self, *_):  # ignore args
+        # Setup reverse mapping via ordinal
+        _expac_reverse[self.value.ordinal - 1] = self
 
     @classmethod
-    def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by modal
+    def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by ordinal
         if not isinstance(value, int): return None
         return _expac_reverse.get(value - 1)
 
     # "Shim" methods to avoid needing to call .value
     @property
-    def modal(self) -> int: return self.value.modal
+    def ordinal(self) -> int: return self.value.ordinal
     @property
     def label(self) -> str: return self.value.label
     @property
@@ -66,7 +66,7 @@ class Expansion(Enum):
 
 
 class ProfessionData(NamedTuple):
-    modal: int
+    ordinal: int
     label: str
     resource: str
     portal: str  # web portal entry-point
@@ -88,11 +88,11 @@ class Profession(Enum):
     TAILORING = ProfessionData(9, "Tailoring", "tailoring", "professions/tailoring", 1)
 
     def __init__(self, data: ProfessionData):
-        # Setup reverse mapping via modal
-        _prof_reverse[data.modal] = self
+        # Setup reverse mapping via ordinal
+        _prof_reverse[data.ordinal] = self
 
     @classmethod
-    def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by modal
+    def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by ordinal
         if not isinstance(value, int): return None
         return _prof_reverse.get(value - 1)
 
@@ -102,11 +102,11 @@ class Profession(Enum):
         :param expansion: Expansion to query
         :return: Professions which existed in the expansion
         """
-        return (p for p in cls if expansion.modal >= p.expansion)
+        return (p for p in cls if expansion.ordinal >= p.expansion)
 
     # "Shim" methods to avoid needing to call .value
     @property
-    def modal(self) -> int: return self.value.modal
+    def ordinal(self) -> int: return self.value.ordinal
     @property
     def label(self) -> str: return self.value.label
     @property

@@ -102,8 +102,11 @@ class CraftingApp:
             env.load()  # attempt to load from storage medium
             # If SetupConfig doesn't set the api_key, we have to here
             self.__tsm_client.authorize(env.jso().api_key)
-        except FileNotFoundError, OSError, ValueError:
+            return env
+        except FileNotFoundError:
             logger.info("no config environment found, running setup")
-            config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
-            self.__env.extend(config.full_setup())  # run user through questionnaire
+        except (OSError, ValueError) as e:
+            logger.error(f"config cannot be loaded, running setup: {str(e)}")
+        config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
+        self.__env.extend(config.full_setup())  # run user through questionnaire
         return env

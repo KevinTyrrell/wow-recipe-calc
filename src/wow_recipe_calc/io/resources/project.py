@@ -20,7 +20,7 @@ from collections.abc import Iterator, Mapping, MutableMapping
 from enum import Enum
 from functools import cache
 from pathlib import Path
-from typing import Generic, Optional, TypeVar, overload, Optional
+from typing import Generic, Optional, TypeVar, overload, runtime_checkable, Protocol
 
 _KT: TypeVar = TypeVar("_KT")  # key of each pairing
 _VT: TypeVar = TypeVar("_VT")  # value of each pairing
