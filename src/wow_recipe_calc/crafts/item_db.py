@@ -19,11 +19,14 @@ from types import MappingProxyType as ReadOnlyMap
 from dataclasses import dataclass
 from collections.abc import Mapping
 from pathlib import Path
+from logging import getLogger, Logger
 
 from wow_recipe_calc.io.resources.json_store import JsonStore
 from wow_recipe_calc.io.resources.project import Saveable
 from wow_recipe_calc.client.item_client import ItemClient
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
+
+logger: Logger = getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -83,7 +86,7 @@ class ItemDB(Saveable):
             self.__database.load()
             self.__transpose.update({v: k for k, v in self.__database.items()})
         except FileNotFoundError:
-            logger.info(f"no existing cache file found at: {self.file_path}")
+            logger.info(f"no existing cache file found at: {self.__database.file_path}")
         except Exception as e:
             logger.critical(str(e))
             raise  # raise the original exception

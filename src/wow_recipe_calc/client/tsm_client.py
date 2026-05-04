@@ -88,13 +88,26 @@ class TSMClient(Saveable):
         self.__auth = _TSMAuth(api_key, self.__throttle)
         logger.info(f"TSM API key loaded: {self._mask_api_key(api_key)}")
         self._authorize()
-        
-    def market_value(self, item_id: int) -> Optional[int]:
+
+    def scan_ah_market_value(self) -> dict[int, int]:
         """
-        :param item_id: Item ID to retrieve pricing information
-        :return: Market value of the item, in copper, if present
+        Requests entire auction house data from the TSM API,
+        and flattens it into: Mapping[item_id] = market_value
+
+        Note: This function may only be called 100 times per day
+        See: https://support.tradeskillmaster.com/en_US/api-documentation/tsm-public-web-api
+
+        :return: Mapping of item ids to market value pricing for said items
         """
-        return self.__cache.get(item_id)
+        ah_data: JSO = self.auction_data(self._get_auction_house())
+        price_by_id: dict[int, int] = dict()
+        for item_jso in ah_data:
+            if item_jso.itemId is not None:
+                if item_jso.marketValue is not None:
+                    price_by_id[item_jso.itemId] = item_jso.marketValue
+                else: logger.warning(f"TSM API item has no market value, item ID: {item_jso.itemId}")
+            else: logger.warning(f"TSM API reported null item ID, 'petSpeciesId'={item_jso.petSpeciesId}")
+        return price_by_id
         
     def auction_data(self, auction_house_id: int) -> JSO:
         """
@@ -102,7 +115,7 @@ class TSMClient(Saveable):
         See: https://support.tradeskillmaster.com/en_US/api-documentation/tsm-public-web-api
         
         :param auction_house_id: TSM auction house ID, provided by the TSM realm API
-        :return: JSON data of all items in the auction house when scanned
+        :return: JSON pricing data from the TSM API of all known auctioned items
         """
         logger.info(f"requesting entire auction house data for AH ID: {auction_house_id}")
         return self._request(self._ENDPOINTS.auctions.format(self._API_PRICE_URL, auction_house_id))
@@ -161,15 +174,3 @@ class TSMClient(Saveable):
         dx: int = len(key) - section_len - cls._KEY_MASK_CHARS
         suffix: str = key[len(key) - min(dx, cls._KEY_MASK_CHARS):]
         return suffix.rjust(section_len + section_len, cls._KEY_MASK_SYMBOL)
-
-    def _refresh_auction_house(self) -> dict[int, int]:
-        """Requests auction house data from the TSM API"""
-        ah_data: JSO = self.auction_data(self._get_auction_house())
-        price_by_id: dict[int, int] = dict()
-        for item_jso in ah_data:
-            if item_jso.itemId is not None:
-                if item_jso.marketValue is not None:
-                    price_by_id[item_jso.itemId] = item_jso.marketValue
-                else: logger.warning(f"TSM API item has no market value, item ID: {item_jso.itemId}")
-            else: logger.warning(f"TSM API reported null item ID, 'petSpeciesId'={item_jso.petSpeciesId}")
-        return price_by_id

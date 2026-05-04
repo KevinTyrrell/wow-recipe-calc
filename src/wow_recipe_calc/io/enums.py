@@ -47,12 +47,12 @@ class Expansion(Enum):
 
     def __init__(self, *_):  # ignore args
         # Setup reverse mapping via ordinal
-        _expac_reverse[self.value.ordinal - 1] = self
+        _expac_reverse[self.value.ordinal] = self
 
     @classmethod
     def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by ordinal
         if not isinstance(value, int): return None
-        return _expac_reverse.get(value - 1)
+        return _expac_reverse.get(value)
 
     # "Shim" methods to avoid needing to call .value
     @property
@@ -87,14 +87,14 @@ class Profession(Enum):
     LEATHERWORKING = ProfessionData(8, "Leatherworking", "leatherworking", "professions/leatherworking", 1)
     TAILORING = ProfessionData(9, "Tailoring", "tailoring", "professions/tailoring", 1)
 
-    def __init__(self, data: ProfessionData):
+    def __init__(self, *_):  # ignore args
         # Setup reverse mapping via ordinal
-        _prof_reverse[data.ordinal] = self
+        _prof_reverse[self.value.ordinal] = self
 
     @classmethod
     def _missing_(cls, value: object) -> Optional[Self]:  # reverse lookup by ordinal
         if not isinstance(value, int): return None
-        return _prof_reverse.get(value - 1)
+        return _prof_reverse.get(value)
 
     @classmethod
     def available_in(cls, expansion: Expansion) -> Iterator[Profession]:

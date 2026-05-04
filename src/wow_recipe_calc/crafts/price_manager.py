@@ -22,6 +22,7 @@ from typing import Optional, Callable
 from wow_recipe_calc.io.resources.project import Saveable
 from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
 from wow_recipe_calc.client.tsm_client import TSMClient
+from wow_recipe_calc.io.resources.ttl_cache import TTLCache, CachePolicy
 
 
 class PriceManager(Saveable):
@@ -30,12 +31,12 @@ class PriceManager(Saveable):
     _MARKET_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
     
     def __init__(self, tsm_client: TSMClient, no_price_cb: Optional[Callable[[int], int]] = None) -> None:
-        """
+        """ 
         :param tsm_client: TSM request instance for market value pricing
         :param no_price_cb: (Optional) Callback for pricing unknown items (default: 0)
         """
-        policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, self._refresh_auction_house)
-        self.__cache: TTLCache = TTLCache(self._RESOURCE_NAME, policy)  # continuously tosses stale data
+        policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, tsm_client.scan_ah_market_value)
+        self.__cache: TTLCache = TTLCache(self._RESOURCE_MARKET_STEM, policy)  # continuously tosses stale data
         self.__no_price_cb: Callable[[int], int] = no_price_cb or (lambda _: 0)
         self.__tsm = tsm_client
         self.__vendor: dict[int, int] = {
@@ -57,6 +58,13 @@ class PriceManager(Saveable):
         if no_price_cb is not None:
             return no_price_cb(item_id)
         return self.__no_price_cb(item_id)
+
+    def market_value(self, item_id: int) -> Optional[int]:
+        """
+        :param item_id: Item ID to retrieve pricing information
+        :return: Market value of the item, in copper, if present
+        """
+        return self.__cache.get(item_id)
 
     def save(self) -> None:
         pass
