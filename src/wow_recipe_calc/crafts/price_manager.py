@@ -21,10 +21,11 @@ from typing import Optional
 from logging import getLogger, Logger
 
 from wow_recipe_calc.io.resources.project import Saveable, Resource
-from wow_recipe_calc.io.resources.json_store import load_json
+from wow_recipe_calc.io.resources.json_store import load_json, JsonValue
+from wow_recipe_calc.io.resources.ttl_cache import TTLCache, CachePolicy
 from wow_recipe_calc.crafts.item_db import ItemDB
 from wow_recipe_calc.client.tsm_client import TSMClient
-from wow_recipe_calc.io.resources.ttl_cache import TTLCache, CachePolicy
+from wow_recipe_calc.util.json_wrapper import wrap_json, JSW
 
 logger: Logger = getLogger(__name__)
 
@@ -41,7 +42,7 @@ class PriceManager(Saveable):
         policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, tsm_client.scan_ah_market_value)
         self.__mv_cache: TTLCache = TTLCache(self._RESOURCE_MARKET_STEM, policy)  # continuously tosses stale data
         self.__vendor: Resource[int, int] = _VendorPriceDB()  # [item_id, copper cost from vendor]
-        self.__unpriceable: _UnpriceableHandler = _UnpriceableHandler()
+        self.__unpriceable: _UnpriceableHandler = _UnpriceableHandler(item_db)
         self.__tsm_client = tsm_client
         self.__vendor.load()
 
@@ -82,6 +83,11 @@ class _VendorPriceDB(Resource[int, int]):
 
     def load(self) -> None:
         """Loads the vendor prices from the storage medium"""
+        data: list[JsonValue] = load_json(self.file_path, list, True)
+        jso: JSW = wrap_json(data)
+
+
+
         self._data = load_json(self.file_path, dict, True)
 
 

@@ -16,7 +16,7 @@
 
 from questionary import Style, Choice, select, password
 
-from wow_recipe_calc.util.json_wrapper import JSO
+from wow_recipe_calc.util.json_wrapper import JSW
 from wow_recipe_calc.client.tsm_client import TSMClient
 from wow_recipe_calc.io.enums import Profession, Expansion
 
@@ -94,7 +94,7 @@ class SetupConfig:
         return select("Select World of Warcraft game region",
             choices = choices, style = self._DEFAULT_SELECT_STYLE).ask()
 
-    def choose_realm_id(self, region: int) -> tuple[int, JSO]:
+    def choose_realm_id(self, region: int) -> tuple[int, JSW]:
         """
         :param region: World of Warcraft Region ID
         :return: Realm ID and auction house info for the chosen realm
@@ -107,7 +107,7 @@ class SetupConfig:
         return select("Select World of Warcraft game realm",
             choices = choices, style = self._DEFAULT_SELECT_STYLE).ask()
 
-    def choose_ah_id(self, auction_houses: JSO) -> int:
+    def choose_ah_id(self, auction_houses: JSW) -> int:
         """
         :param auction_houses: JSON array of auction house information
         :return: Auction house ID

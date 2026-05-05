@@ -16,19 +16,17 @@
 
 import json
 
-from typing import TypeAlias, Optional, TypeVar
+from typing import Optional, TypeVar
 from logging import getLogger, Logger
 
 from wow_recipe_calc.io.resources.project import MutableResource
-from wow_recipe_calc.util.json_wrapper import JsonWrappable
-
-JsonPrimitive: TypeAlias = str | int | float | bool | None  # in case user wants to distinguish obj vs. primitive
-JsonValue: TypeAlias = JsonPrimitive | list["JsonValue"] | dict[str, "JsonValue"]
-JsonObject: TypeAlias = dict[str, JsonValue]
-
-_T: TypeVar = TypeVar("_T", bound=JsonValue)
+from wow_recipe_calc.util.json_wrapper import JsonWrappable, JsonValue
 
 _DEFAULT_FILE_ENCODING: str = "utf-8"
+_T: TypeVar = TypeVar("_T", bound = JsonValue)
+
+logger: Logger = getLogger(__name__)
+
 
 def load_json(path: Path, expected: type[_T], fallback: bool = False) -> _T:
     """

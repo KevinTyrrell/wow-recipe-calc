@@ -145,6 +145,10 @@ class Resource(ABC, Loadable, Mapping[_KT, _VT], Generic[_KT, _VT]):
 
 
 class MutableResource(Saveable, Resource[_KT, _VT], MutableMapping[_KT, _VT]):
+    def __init__(self, file_stem: str,
+                 dir_path: Optional[Path | str] = None, file_ext: Optional[str] = None) -> None:
+        Resource.__init__(self, file_stem, dir_path, file_ext)
+
     @abstractmethod
     def save(self) -> None:
         """

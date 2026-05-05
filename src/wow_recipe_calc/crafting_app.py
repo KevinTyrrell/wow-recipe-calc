@@ -30,7 +30,7 @@ from wow_recipe_calc.crafts.price_manager import PriceManager
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
 from wow_recipe_calc.io.setup_config import SetupConfig
 from wow_recipe_calc.util.throttle import Throttle
-from wow_recipe_calc.util.json_wrapper import JSO
+from wow_recipe_calc.util.json_wrapper import JSW
 
 logger: Logger = getLogger(__name__)
 
@@ -55,7 +55,7 @@ class CraftingApp:
         self.__tsm_client: TSMClient = TSMClient()
         # Databases/caches/containers/optimizers
         self.__item_db: ItemDB = ItemDB(self.__item_client)
-        self.__prices: PriceManager = PriceManager(self.__tsm_client)
+        self.__prices: PriceManager = PriceManager(self.__tsm_client, self.__item_db)
         self.__tsm_client.set_auction_house(self.environment.jso().auction_house)
         # Set all databases/caches to save at the end of runtime
         saveable: list[Saveable] = [ self.environment, self.__item_db, self.__prices ]
@@ -68,7 +68,7 @@ class CraftingApp:
         :return: Completed item DB
         """
         logger.debug("populating recipe data")
-        prof_data: JSO = wrap_json(self.__args.profession_data_path)
+        prof_data: JSW = wrap_json(self.__args.profession_data_path)
         for recipe_data in prof_data:
             recipe: Recipe = Recipe(
                 recipe_data.label,

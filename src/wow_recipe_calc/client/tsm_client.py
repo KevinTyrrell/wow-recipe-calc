@@ -20,7 +20,7 @@ from logging import getLogger, Logger
 
 from wow_recipe_calc.io.resources.project import Saveable
 from wow_recipe_calc.util.throttle import Throttle
-from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
+from wow_recipe_calc.util.json_wrapper import JSW, wrap_json
 
 logger: Logger = getLogger(__name__)
 
@@ -56,7 +56,7 @@ class TSMClient(Saveable):
     _HEADER_FMT: str = "Bearer {}"
     _KEY_MASK_CHARS: int = 4  # Number of characters of the key to reveal for logging
     _KEY_MASK_SYMBOL: str = "*"
-    _ENDPOINTS: JSO = wrap_json({
+    _ENDPOINTS: JSW = wrap_json({
         "realms": "{}/regions/{}/realms",  # realm url, region id
         "regions": "{}/regions",  # realm url
         "auctions": "{}/ah/{}",  # price url, auction house id
@@ -99,7 +99,7 @@ class TSMClient(Saveable):
 
         :return: Mapping of item ids to market value pricing for said items
         """
-        ah_data: JSO = self.auction_data(self._get_auction_house())
+        ah_data: JSW = self.auction_data(self._get_auction_house())
         price_by_id: dict[int, int] = dict()
         for item_jso in ah_data:
             if item_jso.itemId is not None:
@@ -109,7 +109,7 @@ class TSMClient(Saveable):
             else: logger.warning(f"TSM API reported null item ID, 'petSpeciesId'={item_jso.petSpeciesId}")
         return price_by_id
         
-    def auction_data(self, auction_house_id: int) -> JSO:
+    def auction_data(self, auction_house_id: int) -> JSW:
         """
         Note: This function may only be called 100 times per day
         See: https://support.tradeskillmaster.com/en_US/api-documentation/tsm-public-web-api
@@ -127,17 +127,17 @@ class TSMClient(Saveable):
         :return: Iterator of all known World of Warcraft regions
         """
         logger.debug(f"requesting TSM API region data")
-        jso: JSO = self._request(self._ENDPOINTS.regions.format(self._API_REALM_URL))
+        jso: JSW = self._request(self._ENDPOINTS.regions.format(self._API_REALM_URL))
         return ((e.gameVersion, e.label, e.regionId) for e in jso.items)
         
-    def realms(self, region_id: int) -> Iterator[tuple[str, int, JSO]]:
+    def realms(self, region_id: int) -> Iterator[tuple[str, int, JSW]]:
         """
         Tuple format: (Realm Name, Realm ID, Auction House Table)
         
         :return: Iterator of all known World of Warcraft regions
         """
         logger.debug(f"requesting TSM API realm data for region ID: {region_id}")
-        jso: JSO = self._request(self._ENDPOINTS.realms.format(self._API_REALM_URL, region_id))
+        jso: JSW = self._request(self._ENDPOINTS.realms.format(self._API_REALM_URL, region_id))
         return ((e.label, e.realmId, e.auctionHouses) for e in jso.items)
 
     def _authorize(self) -> None:  # call this method to reauthorize if token expires
@@ -154,7 +154,7 @@ class TSMClient(Saveable):
             raise RuntimeError("missing auction house ID, provide id to: set_auction_house()")
         return self.__auction_house
 
-    def _request(self, url: str) -> JSO:
+    def _request(self, url: str) -> JSW:
         """Requests information from the TSM API, requesting twice if no authorization"""
         self.__throttle.tick()
         response: Response = self.__session.get(url)
