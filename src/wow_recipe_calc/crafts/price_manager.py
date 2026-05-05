@@ -14,8 +14,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-import json
-
 from pathlib import Path
 from typing import Optional
 from logging import getLogger, Logger
@@ -84,11 +82,8 @@ class _VendorPriceDB(Resource[int, int]):
     def load(self) -> None:
         """Loads the vendor prices from the storage medium"""
         data: list[JsonValue] = load_json(self.file_path, list, True)
-        jso: JSW = wrap_json(data)
-
-
-
-        self._data = load_json(self.file_path, dict, True)
+        for jsv in wrap_json(data):
+            self._data[jsv.id] = jsv.cost  # load prices
 
 
 class _UnpriceableHandler:

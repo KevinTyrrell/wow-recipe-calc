@@ -47,6 +47,7 @@ class Project(Enum):
         """
         for parent in Path(__file__).parents:
             if any((parent / lm).exists() for lm in _ROOT_LANDMARKS):
+                print(f"root path found: {parent}")
                 return parent
         raise FileNotFoundError("project root could not be ascertained")
 
@@ -135,13 +136,19 @@ class Resource(ABC, Loadable, Mapping[_KT, _VT], Generic[_KT, _VT]):
         return self.__file_path
 
     @staticmethod
-    def _resolve_path(file_stem: str, directory: Optional[Path | str], ext: str) -> Path:
-        dir_path: Path = Project.root() if directory is None else Path(directory).resolve()
+    def _resolve_path(file_stem: str, directory: Optional[Path | str] = None, ext: Optional[str] = None) -> Path:
+        """Locates a resource by relative path from the root folder"""
+        root: Path = Project.root()
+        dir_path = (root / directory).resolve() if directory is not None else root
         if not dir_path.exists():
             raise ValueError(f"directory does not exist: {dir_path}")
         if not dir_path.is_dir():
             raise ValueError(f"path is not a directory: {dir_path}")
-        return dir_path / f"{file_stem}.{ext}"
+        file_name: str = file_stem
+        if ext is not None:
+            file_ext: str = ext.strip().lstrip(".")
+            if file_ext: file_name += f".{file_ext}"
+        return dir_path / file_name
 
 
 class MutableResource(Saveable, Resource[_KT, _VT], MutableMapping[_KT, _VT]):

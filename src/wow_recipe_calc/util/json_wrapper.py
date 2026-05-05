@@ -28,7 +28,7 @@ JsonContainer: TypeAlias = JsonObject | JsonList
 
 
 class _JsonObjectWrapper:
-    _DATA_ATTR: str = self._DATA_ATTR
+    _DATA_ATTR: str = "_data"
 
     def __init__(self, jso: Mapping[str, JsonValue]) -> None:
         data: dict[str, JsonValue] = dict()
