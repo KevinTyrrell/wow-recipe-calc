@@ -30,9 +30,9 @@ JsonContainer: TypeAlias = JsonObject | JsonList
 class _JsonObjectWrapper:
     _DATA_ATTR: str = "_data"
 
-    def __init__(self, jso: Mapping[str, JsonValue]) -> None:
+    def __init__(self, mapping: Mapping[str, JsonValue]) -> None:
         data: dict[str, JsonValue] = dict()
-        for key, value in jso.items():
+        for key, value in mapping.items():
             if isinstance(value, dict):   value = _JsonObjectWrapper(value)
             elif isinstance(value, list): value = _JsonListWrapper(value)
             data[key] = value
@@ -55,12 +55,6 @@ class _JsonObjectWrapper:
         return item in object.__getattribute__(self, self._DATA_ATTR)
     def __repr__(self) -> str:
         return f"JSO({object.__getattribute__(self, self._DATA_ATTR)!r})"
-    def items(self):
-        return object.__getattribute__(self, self._DATA_ATTR).items()
-    def keys(self):
-        return object.__getattribute__(self, self._DATA_ATTR).keys()
-    def values(self):
-        return object.__getattribute__(self, self._DATA_ATTR).values()
 
 
 class _JsonListWrapper:

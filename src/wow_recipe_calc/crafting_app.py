@@ -109,5 +109,5 @@ class CraftingApp:
             logger.error(f"config cannot be loaded, running setup: {str(e)}")
         config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
         env.update(config.full_setup())  # run user through questionnaire
-        env.save()
+        env.save()  # TODO: remove
         return env
