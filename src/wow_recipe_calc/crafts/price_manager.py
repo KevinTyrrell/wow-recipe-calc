@@ -18,31 +18,31 @@ import json
 
 from pathlib import Path
 from typing import Optional, Callable
+from logging import getLogger, Logger
 
-from wow_recipe_calc.io.resources.project import Saveable
+from wow_recipe_calc.io.resources.project import Saveable, Resource
+from wow_recipe_calc.io.resources.json_store import JsonStore
 from wow_recipe_calc.util.json_wrapper import JSO, wrap_json
 from wow_recipe_calc.client.tsm_client import TSMClient
 from wow_recipe_calc.io.resources.ttl_cache import TTLCache, CachePolicy
 
+logger: Logger = getLogger(__name__)
+
 
 class PriceManager(Saveable):
     _RESOURCE_MARKET_STEM: str = "market_value_db"
-    _RESOURCE_VENDOR_PRICES: Path = Path("data/items/vendor_prices")
     _MARKET_STALE_THRESH: int = 3 * 60 * 60  # 3 hours before pricing data becomes stale
     
-    def __init__(self, tsm_client: TSMClient, no_price_cb: Optional[Callable[[int], int]] = None) -> None:
-        """ 
+    def __init__(self, tsm_client: TSMClient) -> None:
+        """
         :param tsm_client: TSM request instance for market value pricing
-        :param no_price_cb: (Optional) Callback for pricing unknown items (default: 0)
         """
         policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, tsm_client.scan_ah_market_value)
-        self.__cache: TTLCache = TTLCache(self._RESOURCE_MARKET_STEM, policy)  # continuously tosses stale data
-        self.__no_price_cb: Callable[[int], int] = no_price_cb or (lambda _: 0)
-        self.__tsm = tsm_client
-        self.__vendor: dict[int, int] = {
-            e.modal: e.cost for e in self._load_vendor_prices() }
-    
-    def get_price(self, item_id: int, no_price_cb: Optional[Callable[[int], int]] = None) -> int:
+        self.__mv_cache: TTLCache = TTLCache(self._RESOURCE_MARKET_STEM, policy)  # continuously tosses stale data
+        self.__vendor: dict[int, int] = dict()  # [item_id, copper cost from vendor]
+        self.__tsm_client = tsm_client
+
+    def get_price(self, item_id: int) -> int:
         """
         Retrieves the price of an item, if possible
         
@@ -52,7 +52,7 @@ class PriceManager(Saveable):
         :param item_id: Item ID to query price
         :param no_price_cb: (Optional) Callback if no price can be found for the item
         """
-        for source in (self.__vendor.get, self.__tsm.market_value):
+        for source in (self.__vendor.get, self.__tsm_client.market_value):
             price: Optional[int] = source(item_id)
             if price is not None: return price
         if no_price_cb is not None:
@@ -64,18 +64,45 @@ class PriceManager(Saveable):
         :param item_id: Item ID to retrieve pricing information
         :return: Market value of the item, in copper, if present
         """
-        return self.__cache.get(item_id)
+        return self.__mv_cache.get(item_id)
 
     def save(self) -> None:
         pass
 
+
+
+
+
+
     def _load_vendor_prices(self) -> JSO:
-        path = Path(self._PRICE_JSON_RELATIVE_PATH)
         try:
-            with path.open("r", encoding="utf-8") as f:
+            with path.open("r", encoding = self._FILE_ENCODING) as f:
                 return wrap_json(json.load(f))
+        except FileNotFoundError as e:
+            logger.error(f"no vendor prices at path, recipe costs will be inaccurate: {self._RESOURCE_VENDOR}")
         except (FileNotFoundError, json.JSONDecodeError, OSError) as e:
             raise RuntimeError(f"failed to load json: {path.absolute()}") from e
+
+
+class _VendorPriceDB(Resource[int, int]):
+    _RESOURCE: Path = Path("data/items/vendor_prices")
+    _FILE_ENCODING: str = "utf-8"
+
+    def __init__(self) -> None:
+        super().__init__(self._RESOURCE.stem, self._RESOURCE.parent)
+
+    def load(self) -> None:
+
+
+
+        with self.file_path.open("r", encoding = self._FILE_ENCODING) as f:
+            data: dict[str, JsonValue] = json.load(f)
+        if not isinstance(data, dict):
+            raise ValueError(f"expected a JSON object, got {type(data).__name__}, path: {self.file_path}")
+        self._data = data
+
+
+
 
 
 class _UnpriceableHandler:
