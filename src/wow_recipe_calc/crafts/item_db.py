@@ -23,7 +23,7 @@ from logging import getLogger, Logger
 
 from wow_recipe_calc.io.resources.json_store import JsonStore
 from wow_recipe_calc.io.resources.project import Saveable
-from wow_recipe_calc.client.item_client import ItemClient
+from wow_recipe_calc.client.wh_client import WHClient
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
 
 logger: Logger = getLogger(__name__)
@@ -43,11 +43,11 @@ class RecipeEntry(ItemEntry):
 class ItemDB(Saveable):
     _RESOURCE: Path = Path("data/items/item_db")
 
-    def __init__(self, client: ItemClient) -> None:
+    def __init__(self, client: WHClient) -> None:
         """
         :param client: Web requester used for requesting missing item names
         """
-        self.__client: ItemClient = client
+        self.__client: WHClient = client
         self.__database: JsonStore = JsonStore(self._RESOURCE.stem, self._RESOURCE.parent)
         self.__transpose: dict[int, str] = dict()  # reverse pairing view of JsonStore
         self.__by_name: dict[str, ItemEntry] = dict()

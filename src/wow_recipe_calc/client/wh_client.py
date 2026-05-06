@@ -27,7 +27,7 @@ from wow_recipe_calc.util.throttle import Throttle
 logger: Logger = getLogger(__name__)
 
 
-class ItemClient:
+class WHClient:
     _RE_TITLE_PATTERN: str = r"^(.+?)\s*-\s*Item"
     _WH_ENDPOINT_URL: str = "https://www.wowhead.com/tbc/"  # TODO: don't hardcode tbc/etc
     _PART_URL_WH_FMT: str = "item={}"

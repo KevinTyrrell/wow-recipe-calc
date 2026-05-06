@@ -20,7 +20,7 @@ from logging import getLogger, Logger
 from atexit import register as on_exit
 from functools import partial
 
-from wow_recipe_calc.client.item_client import ItemClient
+from wow_recipe_calc.client.wh_client import WHClient
 from wow_recipe_calc.client.tsm_client import TSMClient
 from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.io.resources.project import Saveable
@@ -53,7 +53,7 @@ class CraftingApp:
         """
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
         # Web clients for data requests
-        self.__item_client: ItemClient = ItemClient(self.__throttle)
+        self.__item_client: WHClient = WHClient(self.__throttle)
         self.__tsm_client: TSMClient = TSMClient()
         # Databases/caches/containers/optimizers
         self.__item_db: ItemDB = ItemDB(self.__item_client)
