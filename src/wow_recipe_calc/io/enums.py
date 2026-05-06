@@ -114,4 +114,4 @@ class Profession(Enum):
     @property
     def portal(self) -> str: return self.value.portal
     @property
-    def introduction(self) -> int: return self.value.expansion
+    def expansion(self) -> int: return self.value.expansion

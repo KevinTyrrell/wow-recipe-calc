@@ -40,6 +40,7 @@ class Environment(MutableResource[str, EnvValue], JsonWrappable):
         """
         Saves the environment to the storage medium
         """
+        print(f"writing to: {self.file_path}")
         self.file_path.write_text(  # save key as uppercase, load as lowercase
             "\n".join(f"{k.upper()}={self._data[k]}" for k in sorted(self._data)) + "\n")
 

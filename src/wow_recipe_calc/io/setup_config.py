@@ -54,8 +54,8 @@ class SetupConfig:
             "region": region,
             "realm": realm_id,
             "auction_house": auction_house,
-            "expansion": expansion.modal,
-            "profession": profession.modal,
+            "expansion": expansion.ordinal,
+            "profession": profession.ordinal,
         }
 
     def enter_tsm_api_key(self) -> str:
