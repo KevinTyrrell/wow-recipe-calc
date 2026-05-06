@@ -24,18 +24,16 @@ from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.util.json_wrapper import JsonWrappable
 
 
-class RecipeData(Resource[str, JsonValue], JsonWrappable):
+class RecipeBook(Resource[str, JsonValue], JsonWrappable):
     _DEFAULT_FILE_EXT: str = "json"
     _RESOURCE: Path = Path("data/recipes")
-    _DEFAULT_FILE_ENCODING: str = "utf-8"
-    _RECIPE_KEY_FIELD: str = "name"  # recipe data loads as a list, so we need a key
 
     def __init__(self, expac: Expansion, prof: Profession) -> None:
         super().__init__(prof.resource, self._RESOURCE / expac.navigation)
         self.__expac: Expansion = expac
         self.__prof: Profession = prof
-        self.load()  # TODO: handle exceptions
-        # TODO: If data is not present, we must request from the server
+
+
 
     def load(self) -> None:
         """Attempts to load the json file from the storage medium"""

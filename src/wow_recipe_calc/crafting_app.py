@@ -18,7 +18,7 @@ from functools import cached_property
 from typing import Optional
 from logging import getLogger, Logger
 from atexit import register as on_exit
-from pathlib import Path
+from functools import partial
 
 from wow_recipe_calc.client.item_client import ItemClient
 from wow_recipe_calc.client.tsm_client import TSMClient
@@ -57,15 +57,11 @@ class CraftingApp:
         self.__item_db: ItemDB = ItemDB(self.__item_client)
         self.__prices: PriceManager = PriceManager(self.__tsm_client, self.__item_db)
         self.__tsm_client.set_auction_house(self.environment.jso().auction_house)
-        # Set all databases/caches to save at the end of runtime
-        saveable: list[Saveable] = [ self.environment, self.__item_db, self.__prices ]
-        for resource in saveable: on_exit(resource.save)
+        self.save_resources_on_exit()
 
-    def populate_recipes(self) -> ItemDB:
+    def populate_recipes(self) -> None:
         """
         Populate the item database with profession recipe data
-
-        :return: Completed item DB
         """
         logger.debug("populating recipe data")
         prof_data: JSW = wrap_json(self.__args.profession_data_path)
@@ -78,7 +74,6 @@ class CraftingApp:
                 int(recipe_data.product),
                 recipe_data.produces)
             self.__item_db.register(recipe)
-        return self.__item_db
 
     def run_planner(self, desired_crafts: Mapping[str | int | Recipe, int]) -> CraftPlan:
         """
@@ -109,7 +104,17 @@ class CraftingApp:
             logger.error(f"config cannot be loaded, running setup: {str(e)}")
         config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
         env.update(config.full_setup())  # run user through questionnaire
-        print("saving env to the storage")
-        env.save()  # TODO: remove
-        print("saving env to the storage, done")
         return env
+
+    @staticmethod  # helper method
+    def _save_resource(resource: Saveable) -> None:
+        try:
+            resource.save()
+        except Exception as e:
+            logger.error(f"failed to save resource '{type(res).__name__}': {e}")
+
+    def save_resources_on_exit(self) -> None:
+        """Sets all resources to save at the end of runtime"""
+        saveable: list[Saveable] = [self.environment, self.__item_db, self.__prices]
+        for resource in saveable:
+            on_exit(partial(self._save_resource, resource))
