@@ -47,7 +47,6 @@ class Project(Enum):
         """
         for parent in Path(__file__).parents:
             if any((parent / lm).exists() for lm in _ROOT_LANDMARKS):
-                print(f"root path found: {parent}")
                 return parent
         raise FileNotFoundError("project root could not be ascertained")
 

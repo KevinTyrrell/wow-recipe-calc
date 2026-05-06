@@ -22,13 +22,15 @@ from functools import partial
 
 from wow_recipe_calc.client.item_client import ItemClient
 from wow_recipe_calc.client.tsm_client import TSMClient
+from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.io.resources.project import Saveable
 from wow_recipe_calc.io.resources.environment import Environment
+from wow_recipe_calc.io.setup_config import SetupConfig
 from wow_recipe_calc.crafts.craft_planner import CraftPlanner, CraftPlan
-from wow_recipe_calc.crafts.item_db import ItemDB, ItemEntry
+from wow_recipe_calc.crafts.item_db import ItemDB
+from wow_recipe_calc.crafts.recipe.recipe_book import RecipeBook
 from wow_recipe_calc.crafts.price_manager import PriceManager
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
-from wow_recipe_calc.io.setup_config import SetupConfig
 from wow_recipe_calc.util.throttle import Throttle
 from wow_recipe_calc.util.json_wrapper import JSW
 
@@ -56,7 +58,9 @@ class CraftingApp:
         # Databases/caches/containers/optimizers
         self.__item_db: ItemDB = ItemDB(self.__item_client)
         self.__prices: PriceManager = PriceManager(self.__tsm_client, self.__item_db)
-        self.__tsm_client.set_auction_house(self.environment.jso().auction_house)
+        env: JSW = self.environment.jso()  # load the environment
+        self.__tsm_client.set_auction_house(env.auction_house)
+        self.__book: RecipeBook = RecipeBook(Expansion(env.expansion), Profession(env.profession))
         self.save_resources_on_exit()
 
     def populate_recipes(self) -> None:
@@ -64,15 +68,7 @@ class CraftingApp:
         Populate the item database with profession recipe data
         """
         logger.debug("populating recipe data")
-        prof_data: JSW = wrap_json(self.__args.profession_data_path)
-        for recipe_data in prof_data:
-            recipe: Recipe = Recipe(
-                recipe_data.label,
-                next(iter(recipe_data.levels)),
-                list(recipe_data.levels)[1:],
-                { int(k): v for k, v in recipe_data.reagents },
-                int(recipe_data.product),
-                recipe_data.produces)
+        for recipe in self.__book.recipes:
             self.__item_db.register(recipe)
 
     def run_planner(self, desired_crafts: Mapping[str | int | Recipe, int]) -> CraftPlan:
