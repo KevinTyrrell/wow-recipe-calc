@@ -67,15 +67,35 @@ class Project(Enum):
         """
         return Project._read_pyproject(_TOML_CONFIG_VERSION)
 
-    @staticmethod
-    def resource(relative: str) -> Path:
+    @classmethod
+    def resource(cls, stem: Optional[str] = None,
+                 branch: Optional[Path | str] = None, ext: Optional[str] = None) -> Path:
         """
-        Resolves a path relative to the project root folder
+        Retrieves a file or folder resource, relatively, from the root project folder
 
-        :param relative: Relative path to be resolved from root
-        :return: Resolved path to the resource
+        If no stem and extension are provided, a folder path is retrieved instead.
+        Said folder, and the parent folders of the entire path, must exist.
+        If no extension is provided, a hidden file resource path is retrieved.
+        The extension should, but does not have to, omit the dot character.
+        With no arguments, this function is identical to Project.root().
+
+        :param stem: (Optional) Name (excluding extension) of the resource
+        :param branch: (Optional) Descending directories to the resource, relative to the root
+        :param ext: (Optional) Extension of the resource, omitting the dot
+        :return: Path to the resource file or folder
         """
-        return (Project.root() / relative).resolve()
+        root: Path = cls.root()
+        # Ensure resulting directory is valid
+        dir_path: Path = (root / branch).resolve() if branch is not None else root
+        if not dir_path.exists():
+            raise ValueError(f"directory does not exist: {dir_path}")
+        if not dir_path.is_dir():
+            raise ValueError(f"path is not a directory: {dir_path}")
+        if ext is None:  # user wants a plain file or a directory
+            return dir_path if stem is None else dir_path / stem
+        file_ext: str = f".{ext.strip().lstrip('.')}"
+        if stem is None: return dir_path / file_ext  # hidden file
+        return dir_path / (stem.strip() + file_ext)
 
     @staticmethod
     @cache

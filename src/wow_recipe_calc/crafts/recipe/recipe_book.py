@@ -15,30 +15,34 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 import json
+from functools import cached_property
 
 from pathlib import Path
+from typing import Optional
 
+from io.resources.project import Saveable, Loadable
+from util.json_wrapper import JsonValue
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
-from wow_recipe_calc.io.resources.project import Resource
 from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.util.json_wrapper import JsonWrappable
 
 
-class RecipeBook(Resource[str, JsonValue], JsonWrappable):
-    _DEFAULT_FILE_EXT: str = "json"
-    _RESOURCE: Path = Path("data/recipes")
-
+class RecipeBook:
     def __init__(self, expac: Expansion, prof: Profession) -> None:
-        super().__init__(prof.resource, self._RESOURCE / expac.navigation)
         self.__expac: Expansion = expac
         self.__prof: Profession = prof
 
+    @cached_property
+    def recipes(self) -> tuple[Recipe, ...]:
+        return tuple()
 
 
-    def load(self) -> None:
-        """Attempts to load the json file from the storage medium"""
-        with self.file_path.open("r", encoding = self._DEFAULT_FILE_ENCODING) as f:
-            data: list[JsonValue] = json.load(f)
-        if not isinstance(data, dict):
-            raise ValueError(f"expected a JSON object, got {type(data).__name__}, path: {self.file_path}")
-        self._data = { e[self._RECIPE_KEY_FIELD]: e for e in data }  # convert list to dict
+class _RecipeBookData(MutableSequence[JsonValue], Saveable, Loadable):
+    _DEFAULT_RESOURCE_EXT: str = "json"
+    _RESOURCE: Path = Path("data/recipes")
+
+    def __init__(self, file_stem: str, parent_dir: str) -> None:
+
+
+
+

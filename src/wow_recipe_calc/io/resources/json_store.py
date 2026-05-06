@@ -42,7 +42,7 @@ def load_json(path: Path, expected: type[_T], fallback: bool = False) -> _T:
     :return: Loaded JSON object on load success, or call & return expected if fallback is True
     """
     try:
-        with path.open("r", encoding=_DEFAULT_FILE_ENCODING) as f:
+        with path.open("r", encoding = _DEFAULT_FILE_ENCODING) as f:
             data: JsonValue = json.load(f)
             if not isinstance(data, expected):
                 raise ValueError(f"JSON load type mismatch, expected: "
@@ -56,6 +56,16 @@ def load_json(path: Path, expected: type[_T], fallback: bool = False) -> _T:
         if not fallback: raise
         logger.warning(f"JSON resource '{path}' failed to load: {e}")
     return expected()
+
+def save_json(path: Path, content: JsonValue) -> None:
+    """
+    Attempts to save json content to the storage medium
+    
+    :param path: Path to the JSON resource
+    :param content: JSON content to be saved
+    """
+    with path.open("w", encoding = _DEFAULT_FILE_ENCODING) as f:
+        json.dump(content, f, indent = 4, ensure_ascii = False)
 
 
 class JsonStore(MutableResource[str, JsonValue], JsonWrappable):
@@ -75,11 +85,10 @@ class JsonStore(MutableResource[str, JsonValue], JsonWrappable):
         Raises an error if the file is not found, on file
         reading error(s), or if the file has malformed / invalid data.
         """
-        self._data = load_json(self.file_path, dict, True)
+        self._data = load_json(self.file_path, dict)
 
     def save(self) -> None:
         """
-        Saves the JSON resource to the storage medium
+        Attempts to save json content to the storage medium
         """
-        with self.file_path.open("w", encoding = _DEFAULT_FILE_ENCODING) as f:
-            json.dump(self._data, f, indent = 4, ensure_ascii = False)
+        save_json(self.file_path, self._data)
