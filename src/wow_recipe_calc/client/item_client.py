@@ -31,6 +31,7 @@ class ItemClient:
     _RE_TITLE_PATTERN: str = r"^(.+?)\s*-\s*Item"
     _WH_ENDPOINT_URL: str = "https://www.wowhead.com/tbc/"  # TODO: don't hardcode tbc/etc
     _PART_URL_WH_FMT: str = "item={}"
+    _PARSER_TYPE: str = "html.parser"
     
     def __init__(self, throttle: Throttle) -> None:
         """
@@ -44,17 +45,11 @@ class ItemClient:
         :return: Item name, if it can be ascertained
         """
         logger.info(f"requesting web information for item ID: {item_id}")
-
-        # TODO: remove this stub section
-        from uuid import uuid4  # Testing purposes to avoid waiting for names
-        name: str = str(uuid4())
-        if name is not None: return name
-
         self.__throttle.tick()
         url: str = urljoin(self._WH_ENDPOINT_URL, self._PART_URL_WH_FMT.format(item_id))
         response: requests.Response = requests.get(url)
         response.raise_for_status()  # Raise error if not status ~200
-        soup: BeautifulSoup = BeautifulSoup(response.text, "html.parser")
+        soup: BeautifulSoup = BeautifulSoup(response.text, self._PARSER_TYPE)
         if soup.title and soup.title.string:
             title: str = soup.title.string.strip()
             matcher: Optional[Match[str]] = search(self._RE_TITLE_PATTERN, title)

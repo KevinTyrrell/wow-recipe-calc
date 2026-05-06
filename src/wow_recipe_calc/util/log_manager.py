@@ -17,11 +17,11 @@
 from __future__ import annotations
 from logging import getLogger, Logger, LogRecord, Formatter, Handler
 from logging.handlers import MemoryHandler
-from typing import Optional, Callable, TextIO
+from typing import Optional, Callable, TextIO, TypeAlias
 
 import logging
 
-Destination = Optional[TextIO | Callable[[str], None]]
+Destination: TypeAlias = Optional[TextIO | Callable[[str], None]]
 
 
 class LogManager:
@@ -49,6 +49,7 @@ class LogManager:
         self.__hook_emitter: Callable[[Handler], None] = self.__shutdown_log_buffer
         self.__root.setLevel(self.__level)
         self.__root.addHandler(self.__mem_handler)
+        self.__root.addHandler(self.__console_handler)  # allow console to always be listening
 
     @property
     def level(self) -> int: return self.__level
@@ -77,7 +78,7 @@ class LogManager:
         self.__hook_emitter(handler)
 
     def _map_to_handler(self, destination: Destination) -> Handler:
-        if destination is None: return self.__console_handler
+        if destination is None: return self.__console_handler  # default to console emitter
         if callable(destination): return LogManager._CallbackEmitter(self.__formatter, destination)
         return LogManager._IOEmitter(self.__formatter, destination)
 

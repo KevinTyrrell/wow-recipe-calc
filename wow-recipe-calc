@@ -1,2 +1,3 @@
 #!/bin/bash
+export PYTHONPATH="${PYTHONPATH}:$(pwd)/src"
 python -m wow_recipe_calc.main "$@"
