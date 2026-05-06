@@ -130,7 +130,7 @@ class Resource(ABC, Loadable, Mapping[_KT, _VT], Generic[_KT, _VT]):
         :param file_ext: (Optional) File extension, classes defined default if not provided
         """
         ext: str = file_ext or self._DEFAULT_FILE_EXT
-        self.__file_path: Path = self._resolve_path(file_stem, dir_path, ext)
+        self.__file_path: Path = Project.resource(file_stem, dir_path, ext)
         self._data: dict[_KT, _VT] = dict()
 
     @abstractmethod
