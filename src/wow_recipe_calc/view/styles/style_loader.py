@@ -14,43 +14,52 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Optional
-from importlib.resources import files
-from importlib.resources.abc import Traversable
+from typing import Optional, Iterator
+from pathlib import Path
+from logging import Logger, getLogger
+
+from wow_recipe_calc.io.resources.project import Project
+
+logger: Logger = getLogger(__name__)
 
 
 class StyleLoader:
     _DEFAULT_STYLE_EXT: str = "qss"
-    _DEFAULT_ENCODING: str = "utf-8"
+    _DEFAULT_FILE_ENCODING: str = "utf-8"
 
-    def __init__(self, style_dir_importlib_res_path: str, ext: Optional[str] = None) -> None:
+    def __init__(self, branch: Optional[Path] = None, ext: Optional[str] = None) -> None:
         """
-        Path to stylesheet directory must be an importlib resource path.
-        e.g.: "wow_recipe_calc.view.styles"
-        Each section must be a valid package, excluding the last.
-
-        :param style_dir_importlib_res_path: importlib resource path
-        :param ext: (Optional) Extension of the stylesheets to-be loaded, default: qss
+        :param branch: (Optional) Relative path, from the root, to the stylesheet directory
+        :param ext: (Optional) Target extension to match when loading stylesheets (default: qss)
         """
-        self.__trav: Traversable = files(style_dir_importlib_res_path)
-        if not self.__trav.is_dir():
-            raise NotADirectoryError(f"stylesheet directory does not exist: {self.__trav}")
+        self.__parent: Path = Project.resource(branch = branch)
         if ext is not None:
-            self.__ext: str = ext.lstrip(".").lower()
+            self.__ext: str = ext.strip().lstrip(".")
         else: self.__ext: str = self._DEFAULT_STYLE_EXT
 
-    def load(self) -> str:
+    def bundle_styles(self) -> str:
         """
-        :return: Concatenation of all stylesheets in the specified directory
+        Bundles stylesheets in the specified stylesheet directory into one stylesheet.
+
+        Stylesheets are sorted lexicographically, making bundling deterministic.
+        If no stylesheets are found or could be loaded, returns empty string.
+
+        :return: Concatenation of all stylesheets present in the stylesheet directory
         """
-        styles: list[str] = list(self._walk_styles(self.__trav))
-        if not styles: raise FileNotFoundError(
-            f"no such stylesheet extension (.{self.__ext}) found in path: {self.__path}")
+        styles: list[str] = list(self.styles)
+        if not styles:
+            logger.warning(f"no stylesheets found at path: {self.dir_path}")
+            return str()
         return "\n".join(styles)
 
-    def _walk_styles(self, t: Traversable) -> Generator[str, None, None]:
-        if t.is_file():
-            if t.name.endswith(self.__ext): yield t.read_text()
-        elif t.is_dir():  # sort so that loading becomes deterministic
-            for child in sorted(t.iterdir(), key = lambda x: x.label):
-                yield from self._walk_styles(child)
+
+    @property
+    def styles(self) -> Iterator[str]:
+        for stylesheet in sorted(self.__parent.rglob(f"*.{self.__ext}")):
+            try:
+                yield stylesheet.read_text(encoding = self._DEFAULT_FILE_ENCODING)
+            except Exception as e:
+                logger.error(f"failed to load stylesheet '{stylesheet}': {e}")
+
+    @property
+    def dir_path(self) -> Path: return self.__parent

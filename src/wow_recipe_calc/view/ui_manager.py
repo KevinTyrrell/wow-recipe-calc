@@ -15,6 +15,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from typing import Optional
+from pathlib import Path
 from logging import Logger, getLogger
 
 from PySide6.QtWidgets import QApplication
@@ -34,6 +35,7 @@ logger: Logger = getLogger(__name__)
 
 
 class UIManager:
+    _STYLESHEET_RESOURCE: Path = Path("src/wow_recipe_calc/view/styles")
     _RECIPE_SELECTION_KEY: str = "recipe_selection"
     _RECIPE_SELECTION_SEP: str = ";"
 
@@ -45,8 +47,8 @@ class UIManager:
         self.__craft_app: CraftingApp = app
         self.__view_app: QApplication = QApplication()
         self.__window: MainWindow = MainWindow(app, self._make_recipe_state(), logs)
-        stylesheet: StyleLoader = StyleLoader(C.STYLE_RESOURCE_PATH)
-        self.__view_app.setStyleSheet(stylesheet.load())
+        styling: StyleLoader = StyleLoader(self._STYLESHEET_RESOURCE)
+        self.__view_app.setStyleSheet(styling.bundle_styles())
 
     def show(self) -> None:
         self.__window.show()
