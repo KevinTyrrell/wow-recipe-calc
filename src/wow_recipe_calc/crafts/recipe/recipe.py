@@ -14,15 +14,9 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+from __future__ import annotations
 from dataclasses import dataclass
-from typing import Any
-
-def _pred_non_neg_int(x: Any) -> bool:
-    return isinstance(x, int) and x >= 0
-def _pred_positive_int(x: Any) -> bool:
-    return isinstance(x, int) and x > 0
-def _pred_positive_float(x: Any) -> bool:
-    return isinstance(x, float) and x > 0
+from typing import Mapping, Optional
 
 
 @dataclass(frozen=True)
@@ -42,52 +36,56 @@ class RecipeJson:
 class Recipe:
     name: str
     learned: int
-    levels: list[int]
-    reagents: dict[int, int]
+    yellow: int
+    gray: int
+    reagents: Mapping[int, int]
     product: int
     produces: float
-    
+    sources: tuple[int, ...]
+    specialization: Optional[str] = None
+
     def __hash__(self) -> int:
         return hash((
             self.name,
             self.learned,
-            tuple(self.levels),
+            self.yellow,
+            self.gray,
+            # sorting ensures consistent hashes
             tuple(sorted(self.reagents.items())),
             self.product,
             self.produces,
-        ))
-    
-    def __validate_name(self):
-        if not isinstance(self.name, str):
-            raise ValueError(f"recipe name is invalid: {self.name}")
-    def __validate_levels(self):
-        if not isinstance(self.levels, list):
-            raise ValueError(f"recipe '{self.name}' levels are invalid: {self.levels}")
-        last_level = 0
-        for value in self.levels:
-            if not _pred_non_neg_int(value):
-                raise ValueError(f"recipe '{self.name}' levels must be a non-negative integer: {value} | {self.levels}")
-            if value < last_level:
-                raise ValueError(f"recipe '{self.name}' levels are non-monotonic: [{last_level}, {value}]")
-            last_level = value
-    def __validate_reagents(self):
-        if not isinstance(self.reagents, dict):
-            raise ValueError(f"recipe '{self.name}' reagents are invalid: {self.reagents}")
-        for k, v in self.reagents.items():
-            if not _pred_positive_int(k):
-                raise ValueError(f"recipe '{self.name}' reagent's ID must be a positive integer: {k}")
-            if not _pred_positive_int(v):
-                raise ValueError(f"recipe '{self.name}' reagent's quantity must be a positive integer: {v}")
-    def __validate_product(self):
-        if not _pred_positive_int(self.product):
-            raise ValueError(f"recipe '{self.name}' product must be a positive integer: {self.product}")
-    def __validate_produces(self):
-        if not _pred_positive_float(self.produces):
-            raise ValueError(f"recipe '{self.name}' produces amount must be a positive float: {self.produces}")
-    
-    def __post_init__(self):
-        self.__validate_name()
-        self.__validate_levels()
-        self.__validate_reagents()
-        self.__validate_product()
-        self.__validate_produces()
+            tuple(self.sources),
+            self.specialization))
+
+    @classmethod
+    def from_json(cls, r: RecipeJson) -> Recipe:
+        if not r.name: raise ValueError("name must not be empty")
+
+        if not (r.learned > 0 and r.yellow > 0 and r.gray > 0):
+            raise ValueError(f"learned, yellow, gray must all be positive, received: {r.learned}, {r.yellow}, {r.gray}")
+        if not (r.learned <= r.yellow <= r.gray):
+            raise ValueError(f"skill levels cannot be a non-monotonic sequence: {r.learned}, {r.yellow}, {r.gray}")
+        if not r.reagents: raise ValueError("reagents must not be empty")
+        for pair in r.reagents:
+            if len(pair) < 2:
+                raise ValueError(f"reagent entry must be a pair of [item_id, quantity], received: {pair}")
+            if pair[0] <= 0 or pair[1] <= 0:
+                raise ValueError(f"reagent item ID and quantity must be positive, received: {pair}")
+        if r.product <= 0: raise ValueError(f"product must be positive, received: {r.product}")
+        if r.produces < 1: raise ValueError(f"produces must be >= 1, received: {r.produces}")
+
+        if not r.sources: raise ValueError("sources must not be empty")
+        if any(s < 0 for s in r.sources): raise ValueError("source IDs must be positive")
+        if r.specialization is not None and not r.specialization:
+            raise ValueError("specialization must not be empty string")
+        return cls(
+            name=r.name,
+            learned=r.learned,
+            yellow=r.yellow,
+            gray=r.gray,  # reagents: read only dict
+            reagents=MappingProxyType({pair[0]: pair[1] for pair in r.reagents}),
+            product=r.product,
+            produces=r.produces,
+            sources=tuple(r.sources),
+            specialization=r.specialization,
+        )
