@@ -17,25 +17,26 @@
 from typing import Optional
 from pathlib import Path
 from logging import Logger, getLogger
-
-from PySide6.QtWidgets import QApplication
 from sys import exit
 
-import wow_recipe_calc.view.constants as C
+from PySide6.QtWidgets import QApplication
+from PySide6.QtGui import QIcon
 
-from wow_recipe_calc.util.log_manager import LogManager
 from wow_recipe_calc.crafting_app import CraftingApp
+from wow_recipe_calc.util.log_manager import LogManager
+from wow_recipe_calc.io.resources.project import Project
 from wow_recipe_calc.crafts.item_db import ItemEntry, RecipeEntry
-from wow_recipe_calc.view.styles.style_loader import StyleLoader
-from wow_recipe_calc.view.frame.main_window import MainWindow
 from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.view.styles.style_loader import StyleLoader
+from wow_recipe_calc.view.frame.main_window import MainWindow
 
 logger: Logger = getLogger(__name__)
 
 
 class UIManager:
     _STYLESHEET_RESOURCE: Path = Path("src/wow_recipe_calc/view/styles")
+    _ICON: Path = Path("res/icon-std-256.png")
     _RECIPE_SELECTION_KEY: str = "recipe_selection"
     _RECIPE_SELECTION_SEP: str = ";"
 
@@ -47,8 +48,8 @@ class UIManager:
         self.__craft_app: CraftingApp = app
         self.__view_app: QApplication = QApplication()
         self.__window: MainWindow = MainWindow(app, self._make_recipe_state(), logs)
-        styling: StyleLoader = StyleLoader(self._STYLESHEET_RESOURCE)
-        self.__view_app.setStyleSheet(styling.bundle_styles())
+        self.setup_stylesheets()
+        self.setup_icon()
 
     def show(self) -> None:
         self.__window.show()
@@ -85,3 +86,13 @@ class UIManager:
                 return parse_failure(f"environment's saved recipe id is unrecognized: {item_id}")
             recipes[entry.recipe] = quantity
         return recipes
+
+    def setup_stylesheets(self) -> None:
+        """Loads and assembles all stylesheets in the styles/ directory"""
+        styling: StyleLoader = StyleLoader(self._STYLESHEET_RESOURCE)
+        self.__view_app.setStyleSheet(styling.bundle_styles())
+
+    def setup_icon(self) -> None:
+        """Assigns the icon of the program from the loaded icon resource"""
+        icon: Path = Project.resource(self._ICON.stem, self._ICON.parent, self._ICON.suffix)
+        self.__view_app.setWindowIcon(QIcon(str(icon)))
