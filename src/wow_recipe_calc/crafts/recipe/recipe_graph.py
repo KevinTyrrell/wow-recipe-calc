@@ -24,10 +24,8 @@ from wow_recipe_calc.crafts.item_db import ItemDB, RecipeEntry
 _T = TypeVar("_T")
 
 def _cmp_recipe(a: Recipe, b: Recipe) -> int:
-    a_grey: int = a.levels[-1]
-    b_grey: int = b.levels[-1]
-    if a_grey < b_grey: return -1
-    if a_grey > b_grey: return 1
+    if a.gray < b.gray: return -1
+    if a.gray > b.gray: return 1
     return 0
 
 

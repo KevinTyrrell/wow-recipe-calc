@@ -187,10 +187,10 @@ class CraftPlanner:
     @staticmethod
     def _calc_skill_sections(graph: RecipeGraph) -> Generator[tuple[int, int, list[Recipe]]]:
         # List of unique levels in which a recipe either becomes learnable or no longer grants skill-ups
-        events: list[int] = sorted({e.learned for e in graph} | {e.levels[-1] for e in graph})
+        events: list[int] = sorted({e.learned for e in graph} | {e.gray for e in graph})
         for i in range(len(events) - 1):
             L, R = events[i], events[i + 1]
-            active: list[Recipe] = list(reversed([e for e in graph.topo if e.learned <= L < e.levels[-1]]))
+            active: list[Recipe] = list(reversed([e for e in graph.topo if e.learned <= L < e.gray]))
             yield L, R, active
 
 
@@ -205,7 +205,7 @@ class _GrayRecipeCleaner:
     # Checks recipes for any gray recipes yet to be crafted, then sets to craft them later on
     def schedule(self, recipes: Iterable[Recipe]) -> None:
         for recipe in recipes:
-            if self.__skiller.skill >= recipe.levels[-1] and recipe not in self.__container:
+            if self.__skiller.skill >= recipe.gray and recipe not in self.__container:
                 self.__order.push(recipe)
                 self.__container.add(recipe)
 

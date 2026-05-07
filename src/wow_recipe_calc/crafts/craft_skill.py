@@ -63,10 +63,8 @@ class CraftSkiller:
             raise ValueError(f"recipe level requirement is not met: "
                              f"{floor(self.__skill)} -> [{recipe.learned}] {recipe.name}")
         self.__history.append((floor(self.__skill), recipe))  # save to history
-        yellow_skill: int = recipe.levels[2]
-        gray_skill: int = recipe.levels[-1]
-        if yellow_skill != gray_skill:  # div/0 protection
-            chance: float = (gray_skill - self.__skill) / (gray_skill - yellow_skill)
+        if recipe.yellow != recipe.gray:  # div/0 protection
+            chance: float = (recipe.gray - self.__skill) / (recipe.gray - recipe.yellow)
             self.__skill += max(0.0, min(1.0, chance))
 
     def history(self) -> tuple[tuple[int, int, Recipe, int], ...]:
