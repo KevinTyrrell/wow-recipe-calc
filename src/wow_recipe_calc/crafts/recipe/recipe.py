@@ -17,6 +17,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Mapping, Optional
+from types import MappingProxyType as ReadOnlyMap
 
 
 @dataclass(frozen=True)
@@ -83,7 +84,7 @@ class Recipe:
             learned=r.learned,
             yellow=r.yellow,
             gray=r.gray,  # reagents: read only dict
-            reagents=MappingProxyType({pair[0]: pair[1] for pair in r.reagents}),
+            reagents=ReadOnlyMap({pair[0]: pair[1] for pair in r.reagents}),
             product=r.product,
             produces=r.produces,
             sources=tuple(r.sources),

@@ -23,7 +23,7 @@ from wow_recipe_calc.client.wh_client import WHClient
 from wow_recipe_calc.io.resources.project import Saveable, Loadable, Project
 from wow_recipe_calc.io.resources.json_store import load_json, save_json
 from wow_recipe_calc.io.enums import Expansion, Profession
-from wow_recipe_calc.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.crafts.recipe.recipe import Recipe, RecipeJson
 from wow_recipe_calc.util.json_wrapper import JsonValue, wrap_json, JSW
 
 logger: Logger = getLogger(__name__)
@@ -43,14 +43,9 @@ class RecipeBook:
 
     @staticmethod
     def parse_recipe(data: JsonValue) -> Recipe:
-        jso: JSW = wrap_json(data)
-        return Recipe(
-            jso.name,  # name
-            next(iter(jso.levels)),  # level learned at
-            list(jso.levels)[1:],  # orange/yellow/green/gray levels
-            { int(e): jso.reagents[e] for e in jso.reagents },  # reagent map
-            int(jso.product),  # product item id
-            jso.produces)  # yield count
+        json_rep: RecipeJson = RecipeJson(**data)
+        recipe: Recipe = Recipe.from_json(json_rep)
+        return recipe
 
     @cached_property
     def recipes(self) -> tuple[Recipe, ...]:
