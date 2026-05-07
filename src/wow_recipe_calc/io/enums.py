@@ -24,26 +24,26 @@ class ExpansionData(NamedTuple):
     ordinal: int
     label: str
     navigation: str
-    portal: str
+    portal: Optional[str] = None
 
 
 _expac_reverse: dict[int, Expansion] = dict()
 
 
 class Expansion(Enum):
-    CLASSIC = ExpansionData(1, "World of Warcraft", "classic", "data/classic")
-    BURNING_CRUSADE = ExpansionData(2, "The Burning Crusade", "tbc", "data/tbc")
-    WRATH = ExpansionData(3, "Wrath of the Lich King", "wotlk", "data/wotlk")
-    CATACLYSM = ExpansionData(4, "Cataclysm", "cata", "data/cata")
-    MISTS = ExpansionData(5, "Mists of Pandaria", "mop-classic", "data/mop-classic")
-    WARLORDS = ExpansionData(6, "Warlords of Draenor", "retail", "data/retail")
-    LEGION = ExpansionData(7, "Legion", "retail", "data/retail")
-    BATTLE_FOR_AZEROTH = ExpansionData(8, "Battle for Azeroth", "retail", "data/retail")
-    SHADOWLANDS = ExpansionData(9, "Shadowlands", "retail", "data/retail")
-    DRAGONFLIGHT = ExpansionData(10, "Dragonflight", "retail", "data/retail")
-    WAR_WITHIN = ExpansionData(11, "The War Within", "retail", "data/retail")
-    MIDNIGHT = ExpansionData(12, "Midnight", "retail", "data/retail")
-    LAST_TITAN = ExpansionData(13, "The Last Titan", "retail", "data/retail")
+    CLASSIC = ExpansionData(1, "World of Warcraft", "classic", "classic")
+    BURNING_CRUSADE = ExpansionData(2, "The Burning Crusade", "tbc", "tbc")
+    WRATH = ExpansionData(3, "Wrath of the Lich King", "wotlk", "wotlk")
+    CATACLYSM = ExpansionData(4, "Cataclysm", "cata", "cata")
+    MISTS = ExpansionData(5, "Mists of Pandaria", "mop", "mop-classic")
+    WARLORDS = ExpansionData(6, "Warlords of Draenor", "retail")
+    LEGION = ExpansionData(7, "Legion", "retail")
+    BATTLE_FOR_AZEROTH = ExpansionData(8, "Battle for Azeroth", "retail")
+    SHADOWLANDS = ExpansionData(9, "Shadowlands", "retail")
+    DRAGONFLIGHT = ExpansionData(10, "Dragonflight", "retail")
+    WAR_WITHIN = ExpansionData(11, "The War Within", "retail")
+    MIDNIGHT = ExpansionData(12, "Midnight", "retail")
+    LAST_TITAN = ExpansionData(13, "The Last Titan", "retail")
 
     def __init__(self, *_):  # ignore args
         # Setup reverse mapping via ordinal

@@ -52,15 +52,14 @@ class CraftingApp:
         :param throttle: (Optional) Throttle for web requests
         """
         self.__throttle: Throttle = throttle or self._DEFAULT_THROTTLE
-        # Web clients for data requests
-        self.__item_client: WHClient = WHClient(self.__throttle)
-        self.__tsm_client: TSMClient = TSMClient()
-        # Databases/caches/containers/optimizers
-        self.__item_db: ItemDB = ItemDB(self.__item_client)
-        self.__prices: PriceManager = PriceManager(self.__tsm_client, self.__item_db)
+        self.__tsm_client: TSMClient = TSMClient()  # item pricing
         env: JSW = self.environment.jso()  # load the environment
-        self.__tsm_client.set_auction_house(env.auction_house)
-        self.__book: RecipeBook = RecipeBook(Expansion(env.expansion), Profession(env.profession))
+        expac, prof = Expansion(env.expansion), Profession(env.profession)
+        self.__wh_client: WHClient = WHClient(self.__throttle, expac, prof)
+        self.__book: RecipeBook = RecipeBook(expac, prof)
+        self.__tsm_client.set_auction_house(env.auction_house)  # notify TSM the AH it must use
+        self.__item_db: ItemDB = ItemDB(self.__wh_client)
+        self.__prices: PriceManager = PriceManager(self.__tsm_client, self.__item_db)
         self.save_resources_on_exit()
 
     def populate_recipes(self) -> None:
