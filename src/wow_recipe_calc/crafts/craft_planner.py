@@ -169,9 +169,9 @@ class CraftPlanner:
     def _plan_mats(self, crafts: Mapping[Recipe, int]) -> Mapping[int, int]:
         materials: dict[int, int] = defaultdict(lambda: 0)
         for recipe, count in crafts.items():
-            for reagent in recipe.reagents:
+            for reagent, quantity in recipe.reagents.items():
                 if not isinstance(self.__item_db.by_id[reagent], RecipeEntry):
-                    materials[reagent] += count
+                    materials[reagent] += count * quantity
         return ReadOnlyMap(materials)
 
     # Sorts recipes by name

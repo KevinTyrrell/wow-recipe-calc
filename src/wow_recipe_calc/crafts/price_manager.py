@@ -23,7 +23,7 @@ from wow_recipe_calc.io.resources.json_store import load_json, JsonValue
 from wow_recipe_calc.io.resources.ttl_cache import TTLCache, CachePolicy
 from wow_recipe_calc.crafts.item_db import ItemDB
 from wow_recipe_calc.client.tsm_client import TSMClient
-from wow_recipe_calc.util.json_wrapper import wrap_json, JSW
+from wow_recipe_calc.util.json_wrapper import wrap_json
 
 logger: Logger = getLogger(__name__)
 
