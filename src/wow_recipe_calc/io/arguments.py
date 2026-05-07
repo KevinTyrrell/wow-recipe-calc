@@ -20,22 +20,34 @@ import logging
 from argparse import ArgumentParser
 
 
+def _parse_log_level(value: str) -> int:
+    # abuse the fact that logging has these constants pre-defined
+    level: int = getattr(logging, value.upper(), None)
+    if not isinstance(level, int):
+        raise argparse.ArgumentTypeError(
+            f"invalid log level: '{value}' — choices: debug, info, warning, error, critical"
+        )
+    return level
+
+
 def parse_args() -> argparse.Namespace:
     parser: ArgumentParser = ArgumentParser(
         description=(
             "WoW Recipe Calculator\n\n"
-            "Calculates the raw materials required for a set of crafts."
+            
+            "GUI-driven WoW profession analyzer for material aggregation,"
+            " cost calculation, and optimized crafting sequences."
         ),
-        formatter_class = argparse.RawTextHelpFormatter
+        formatter_class=argparse.RawTextHelpFormatter
     )
 
     parser.add_argument(
         "--log-level",
-        dest = "log_level",
-        type = lambda x: getattr(logging, x.upper()),
-        choices = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
-        default = logging.INFO,
-        help = "Sets the logging level (default: INFO)"
+        dest="log_level",
+        type=_parse_log_level,
+        default=logging.INFO,
+        metavar="LEVEL",
+        help="Sets the logging level — choices: debug, info, warning, error, critical (default: info)"
     )
 
     return parser.parse_args()
