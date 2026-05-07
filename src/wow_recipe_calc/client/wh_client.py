@@ -16,13 +16,15 @@
 
 from typing import Optional
 from functools import cached_property
-from re import Match, search
-from bs4 import BeautifulSoup
+from re import Match, search, compile
+from bs4 import BeautifulSoup, Tag
 from urllib.parse import urljoin
 from logging import getLogger, Logger
 from functools import reduce
 from requests import Response, get as query
+from dataclasses import dataclass, asdict
 
+from wow_recipe_calc.util.json_wrapper import JsonValue
 from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.util.throttle import Throttle
 
@@ -30,8 +32,11 @@ logger: Logger = getLogger(__name__)
 
 
 class WHClient:
-    _RE_TITLE_PATTERN: str = r"^(.+?)\s*-\s*Item"
-    _PARSER_TYPE: str = "html.parser"
+    _RE_ITEM_TITLE: str = r"^(.+?)\s*-\s*Item"
+    _RE_SPELL_TBL_1: str = r"var listviewspells ="
+    _RE_SPELL_TBL_2: str = r" (.+?);"
+    _SOUP_LOCATE_TAG: str = "script"
+    _SOUP_PARSER_TYPE: str = "html.parser"
     
     def __init__(self, throttle: Throttle, expac: Expansion, prof: Profession) -> None:
         """
@@ -41,25 +46,46 @@ class WHClient:
         self.__url: _WHURLDirector = _WHURLDirector(expac)
         self.__prof: Profession = prof
 
-    def request(self, url: str) -> BeautifulSoup:
+    def get_item_name(self, item_id: int) -> Optional[str]:
+        """
+        :param item_id: Item ID to query
+        :return: Name of the item, if it can be ascertained, else None
+        """
+        logger.info(f"requesting web information for item ID: {item_id}")
+        soup: BeautifulSoup = self._request(self.__url.item(item_id))
+        if soup.title and soup.title.string:
+            title: str = soup.title.string.strip()
+            matcher: Optional[Match[str]] = search(self._RE_ITEM_TITLE, title)
+            if matcher: return matcher.group(1)
+        return None
+
+    def get_prof_data(self, prof: Optional[Profession] = None) -> JsonValue:
+        profession: Profession = prof or self.__prof
+        logger.info(f"requesting web information for profession: {profession.name}")
+        soup: BeautifulSoup = self._request(self.__url.recipes(profession))
+        table: Optional[str] = self._find_table_script(soup)
+        if table is None:
+            raise RuntimeError(f"table data could not be located for profession: {profession.name}")
+
+    def _find_table_script(self, soup: BeautifulSoup) -> Optional[str]:
+        """Attempts to locate the script which populates html rows with profession data"""
+        # noinspection PyTypeChecker
+        script: Optional[Tag] = soup.find(self._SOUP_LOCATE_TAG, string=compile(self._RE_SPELL_TBL_1))
+        if script is not None:
+            match: Optional[Match] = search(self._RE_SPELL_TBL_1 + self._RE_SPELL_TBL_2, script.string)
+            if match: return match.group(1)
+        return None
+
+    def _request(self, url: str) -> BeautifulSoup:
         """Requests from a specified url, obeying throttles, and souping"""
         self.__throttle.tick()
         response: Response = query(url)
         response.raise_for_status()
-        return BeautifulSoup(response.content, self._PARSER_TYPE)
+        return BeautifulSoup(response.content, self._SOUP_PARSER_TYPE)
 
-    def get_item_name(self, item_id: int) -> Optional[str]:
-        """
-        :param item_id: Item ID to request
-        :return: Item name, if it can be ascertained
-        """
-        logger.info(f"requesting web information for item ID: {item_id}")
-        soup: BeautifulSoup = self.request(self.__url.item(item_id))
-        if soup.title and soup.title.string:
-            title: str = soup.title.string.strip()
-            matcher: Optional[Match[str]] = search(self._RE_TITLE_PATTERN, title)
-            if matcher: return matcher.group(1)
-        return None
+
+class _WHRecipeJson:
+    pass
 
 
 class _WHURLDirector:

@@ -60,6 +60,9 @@ class CraftingApp:
         self.__tsm_client.set_auction_house(env.auction_house)  # notify TSM the AH it must use
         self.__item_db: ItemDB = ItemDB(self.__wh_client)
         self.__prices: PriceManager = PriceManager(self.__tsm_client, self.__item_db)
+
+        print(self.__wh_client.get_prof_data())
+
         self.save_resources_on_exit()
 
     def populate_recipes(self) -> None:
