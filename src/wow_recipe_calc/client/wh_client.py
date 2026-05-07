@@ -14,7 +14,9 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from typing import Optional
+import json
+
+from typing import Optional, Iterator
 from functools import cached_property
 from re import Match, search, compile
 from bs4 import BeautifulSoup, Tag
@@ -24,7 +26,8 @@ from functools import reduce
 from requests import Response, get as query
 from dataclasses import dataclass, asdict
 
-from wow_recipe_calc.util.json_wrapper import JsonValue
+from wow_recipe_calc.crafts.recipe.recipe import RecipeJson
+from wow_recipe_calc.util.json_wrapper import JsonList, JSW, wrap_json
 from wow_recipe_calc.io.enums import Expansion, Profession
 from wow_recipe_calc.util.throttle import Throttle
 
@@ -66,6 +69,9 @@ class WHClient:
         table: Optional[str] = self._find_table_script(soup)
         if table is None:
             raise RuntimeError(f"table data could not be located for profession: {profession.name}")
+        parser: _JsonTableParser = _JsonTableParser(table)
+        for jsw in parser.elements:
+            parser.parse(jsw)
 
     def _find_table_script(self, soup: BeautifulSoup) -> Optional[str]:
         """Attempts to locate the script which populates html rows with profession data"""
@@ -84,8 +90,53 @@ class WHClient:
         return BeautifulSoup(response.content, self._SOUP_PARSER_TYPE)
 
 
-class _WHRecipeJson:
-    pass
+class _JsonTableParser:
+    def __init__(self, raw_table: str) -> None:
+        # protect json loading from non-quoted strings
+        raw_table = raw_table.replace("popularity:", "\"popularity\":")
+        raw_table = raw_table.replace("quality:", "\"quality\":")
+        self.__table: JsonList = json.loads(raw_table)
+
+    @property
+    def elements(self) -> Iterator[JSW]:
+        """Iterates over all table data as wrapped JSON objects"""
+        for data in self.__table:
+            yield wrap_json(data)
+
+    def parse(self, jso: JSW) -> Optional[RecipeJson]:
+        """Parses a JSON-wrapped data table into a formal recipe JSON entry"""
+        try:  # Attempt to weed out 'fake' recipes
+            _, _ = jso.colors, jso.reagents
+        except AttributeError: return None
+
+        return RecipeJson(
+            jso.name,
+            jso.learnedat,
+            jso.colors[1],
+            jso.colors[3],
+            jso.reagents,
+            jso.creates[0],
+            self._get_avg_net_produced(jso),
+            self._get_sources(jso),
+            self._get_specialization(jso)
+        )
+
+    @staticmethod
+    def _get_specialization(self, jso: JSW) -> Optional[str]:
+        try:  # e.g. Spellfire Tailor, Tribal Leatherworking
+            return jso.specialization
+        except AttributeError: return None
+
+    @staticmethod
+    def _get_sources(jso: JSW) -> list[int]:
+        try:  # 2: Drop, 4: Quest, 5: Vendor, 6: Trainer, 16: Fishing?, 21: Pickpocketing?
+            return list(jso.source)
+        except AttributeError: return [6]  # trainer
+
+    @staticmethod
+    def _get_avg_net_produced(jso: JSW) -> float:
+        if len(jso.creates) <= 2: return float(jso.creates[1])
+        return (jso.creates[1] + jso.creates[2]) / 2.0
 
 
 class _WHURLDirector:
