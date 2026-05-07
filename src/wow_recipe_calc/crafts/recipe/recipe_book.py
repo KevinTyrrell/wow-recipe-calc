@@ -19,6 +19,7 @@ from pathlib import Path
 from collections.abc import MutableSequence
 from logging import getLogger, Logger
 
+from wow_recipe_calc.client.wh_client import WHClient
 from wow_recipe_calc.io.resources.project import Saveable, Loadable, Project
 from wow_recipe_calc.io.resources.json_store import load_json, save_json
 from wow_recipe_calc.io.enums import Expansion, Profession
@@ -29,13 +30,16 @@ logger: Logger = getLogger(__name__)
 
 
 class RecipeBook:
-    def __init__(self, expac: Expansion, prof: Profession) -> None:
+    def __init__(self, wh_client: WHClient, expac: Expansion, prof: Profession) -> None:
+        self.__wh_client: WHClient = wh_client
         self.__expac: Expansion = expac
         self.__prof: Profession = prof
         self.__book: _RecipeBookData = _RecipeBookData(prof.resource, expac.navigation)
-        logger.debug(f"attempting to load {prof.name} recipes from {expac.name}")
+        logger.debug(f"attempting to load {self.__prof.name} recipes from {self.__expac.name}")
         self.__book.load()
-        # TODO: Check if loaded content exists -- if not, request from server & save
+        if not self.__book:  # loading failure or empty json
+            self.__book.extend(wh_client.get_prof_data(prof))
+            self.__book.save()  # save immediately so we don't need to request again
 
     @staticmethod
     def parse_recipe(data: JsonValue) -> Recipe:

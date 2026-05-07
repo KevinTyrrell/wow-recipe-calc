@@ -26,6 +26,8 @@ from functools import reduce
 from requests import Response, get as query
 from dataclasses import dataclass, asdict
 
+from tomlkit import value
+
 from wow_recipe_calc.crafts.recipe.recipe import RecipeJson
 from wow_recipe_calc.util.json_wrapper import JsonList, JSW, wrap_json
 from wow_recipe_calc.io.enums import Expansion, Profession
@@ -36,8 +38,8 @@ logger: Logger = getLogger(__name__)
 
 class WHClient:
     _RE_ITEM_TITLE: str = r"^(.+?)\s*-\s*Item"
-    _RE_SPELL_TBL_1: str = r"var listviewspells ="
-    _RE_SPELL_TBL_2: str = r" (.+?);"
+    _RE_SPELL_TABLE: str = r"var listviewspells ="
+    _RE_CAPTURE: str = r" (.+?);"
     _SOUP_LOCATE_TAG: str = "script"
     _SOUP_PARSER_TYPE: str = "html.parser"
     
@@ -62,7 +64,11 @@ class WHClient:
             if matcher: return matcher.group(1)
         return None
 
-    def get_prof_data(self, prof: Optional[Profession] = None) -> JsonValue:
+    def get_prof_data(self, prof: Optional[Profession] = None) -> JsonList:
+        """
+        :param prof: Profession to query recipe data
+        :return: List of all recipes in the profession for the set expansion
+        """
         profession: Profession = prof or self.__prof
         logger.info(f"requesting web information for profession: {profession.name}")
         soup: BeautifulSoup = self._request(self.__url.recipes(profession))
@@ -70,15 +76,15 @@ class WHClient:
         if table is None:
             raise RuntimeError(f"table data could not be located for profession: {profession.name}")
         parser: _JsonTableParser = _JsonTableParser(table)
-        for jsw in parser.elements:
-            parser.parse(jsw)
+        # Clean the json objects and prepare them for saving to storage & recipe loading
+        return [ asdict(e) for jsw in parser.elements if (e := parser.parse(jsw)) is not None ]
 
     def _find_table_script(self, soup: BeautifulSoup) -> Optional[str]:
         """Attempts to locate the script which populates html rows with profession data"""
         # noinspection PyTypeChecker
-        script: Optional[Tag] = soup.find(self._SOUP_LOCATE_TAG, string=compile(self._RE_SPELL_TBL_1))
+        script: Optional[Tag] = soup.find(self._SOUP_LOCATE_TAG, string=compile(self._RE_SPELL_TABLE))
         if script is not None:
-            match: Optional[Match] = search(self._RE_SPELL_TBL_1 + self._RE_SPELL_TBL_2, script.string)
+            match: Optional[Match] = search(self._RE_SPELL_TABLE + self._RE_CAPTURE, script.string)
             if match: return match.group(1)
         return None
 
@@ -108,21 +114,20 @@ class _JsonTableParser:
         try:  # Attempt to weed out 'fake' recipes
             _, _ = jso.colors, jso.reagents
         except AttributeError: return None
-
         return RecipeJson(
-            jso.name,
-            jso.learnedat,
-            jso.colors[1],
-            jso.colors[3],
-            jso.reagents,
-            jso.creates[0],
-            self._get_avg_net_produced(jso),
-            self._get_sources(jso),
-            self._get_specialization(jso)
+            jso.name,  # name of the recipe
+            jso.learnedat,  # level learned at
+            jso.colors[1],  # yellow level
+            jso.colors[3],  # gray level
+            list(list(e) for e in jso.reagents),  # nested reagents
+            jso.creates[0],  # product item id
+            self._get_avg_net_produced(jso),  # avg yield
+            self._get_sources(jso),  # how to obtain the recipe
+            self._get_specialization(jso)  # required specialization (nullable)
         )
 
     @staticmethod
-    def _get_specialization(self, jso: JSW) -> Optional[str]:
+    def _get_specialization(jso: JSW) -> Optional[str]:
         try:  # e.g. Spellfire Tailor, Tribal Leatherworking
             return jso.specialization
         except AttributeError: return None

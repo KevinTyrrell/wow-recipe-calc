@@ -1,0 +1,9984 @@
+[
+    {
+        "name": "Rough Sharpening Stone",
+        "learned": 1,
+        "yellow": 15,
+        "gray": 55,
+        "reagents": [
+            [
+                2835,
+                1
+            ]
+        ],
+        "product": 2862,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Chain Belt",
+        "learned": 35,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                2840,
+                6
+            ]
+        ],
+        "product": 2851,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Chain Pants",
+        "learned": 1,
+        "yellow": 50,
+        "gray": 90,
+        "reagents": [
+            [
+                2840,
+                4
+            ]
+        ],
+        "product": 2852,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Bracers",
+        "learned": 1,
+        "yellow": 20,
+        "gray": 60,
+        "reagents": [
+            [
+                2840,
+                2
+            ]
+        ],
+        "product": 2853,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Copper Bracers",
+        "learned": 90,
+        "yellow": 115,
+        "gray": 140,
+        "reagents": [
+            [
+                2840,
+                10
+            ],
+            [
+                3470,
+                3
+            ]
+        ],
+        "product": 2854,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coarse Sharpening Stone",
+        "learned": 65,
+        "yellow": 65,
+        "gray": 80,
+        "reagents": [
+            [
+                2836,
+                1
+            ]
+        ],
+        "product": 2863,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Copper Belt",
+        "learned": 70,
+        "yellow": 110,
+        "gray": 150,
+        "reagents": [
+            [
+                2840,
+                10
+            ]
+        ],
+        "product": 2857,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Copper Breastplate",
+        "learned": 80,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                2840,
+                12
+            ],
+            [
+                1210,
+                1
+            ],
+            [
+                3470,
+                2
+            ]
+        ],
+        "product": 2864,
+        "produces": 1.0,
+        "sources": [
+            2,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Bronze Leggings",
+        "learned": 105,
+        "yellow": 145,
+        "gray": 175,
+        "reagents": [
+            [
+                2841,
+                6
+            ]
+        ],
+        "product": 2865,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Bronze Cuirass",
+        "learned": 105,
+        "yellow": 145,
+        "gray": 175,
+        "reagents": [
+            [
+                2841,
+                7
+            ]
+        ],
+        "product": 2866,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Patterned Bronze Bracers",
+        "learned": 120,
+        "yellow": 150,
+        "gray": 180,
+        "reagents": [
+            [
+                2841,
+                5
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 2868,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silvered Bronze Breastplate",
+        "learned": 130,
+        "yellow": 160,
+        "gray": 190,
+        "reagents": [
+            [
+                2841,
+                10
+            ],
+            [
+                2842,
+                2
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 2869,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Sharpening Stone",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 140,
+        "reagents": [
+            [
+                2838,
+                1
+            ]
+        ],
+        "product": 2871,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shining Silver Breastplate",
+        "learned": 145,
+        "yellow": 175,
+        "gray": 205,
+        "reagents": [
+            [
+                2841,
+                20
+            ],
+            [
+                1206,
+                2
+            ],
+            [
+                1705,
+                2
+            ],
+            [
+                5500,
+                2
+            ],
+            [
+                2842,
+                4
+            ]
+        ],
+        "product": 2870,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Mace",
+        "learned": 15,
+        "yellow": 55,
+        "gray": 95,
+        "reagents": [
+            [
+                2840,
+                6
+            ],
+            [
+                2880,
+                1
+            ],
+            [
+                2589,
+                2
+            ]
+        ],
+        "product": 2844,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Axe",
+        "learned": 20,
+        "yellow": 60,
+        "gray": 100,
+        "reagents": [
+            [
+                2840,
+                6
+            ],
+            [
+                2880,
+                1
+            ],
+            [
+                2589,
+                2
+            ]
+        ],
+        "product": 2845,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Shortsword",
+        "learned": 25,
+        "yellow": 65,
+        "gray": 105,
+        "reagents": [
+            [
+                2840,
+                6
+            ],
+            [
+                2880,
+                1
+            ],
+            [
+                2589,
+                2
+            ]
+        ],
+        "product": 2847,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Mace",
+        "learned": 110,
+        "yellow": 140,
+        "gray": 170,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                2880,
+                4
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 2848,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Axe",
+        "learned": 115,
+        "yellow": 145,
+        "gray": 175,
+        "reagents": [
+            [
+                2841,
+                7
+            ],
+            [
+                2880,
+                4
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 2849,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Shortsword",
+        "learned": 120,
+        "yellow": 150,
+        "gray": 180,
+        "reagents": [
+            [
+                2841,
+                5
+            ],
+            [
+                2880,
+                4
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 2850,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Weightstone",
+        "learned": 1,
+        "yellow": 15,
+        "gray": 55,
+        "reagents": [
+            [
+                2835,
+                1
+            ],
+            [
+                2589,
+                1
+            ]
+        ],
+        "product": 3239,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coarse Weightstone",
+        "learned": 65,
+        "yellow": 65,
+        "gray": 80,
+        "reagents": [
+            [
+                2836,
+                1
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 3240,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Weightstone",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 140,
+        "reagents": [
+            [
+                2838,
+                1
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 3241,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Copper Broadsword",
+        "learned": 95,
+        "yellow": 135,
+        "gray": 175,
+        "reagents": [
+            [
+                2840,
+                14
+            ],
+            [
+                2880,
+                2
+            ],
+            [
+                818,
+                2
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 3487,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Battle Axe",
+        "learned": 35,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                2840,
+                12
+            ],
+            [
+                2880,
+                2
+            ],
+            [
+                774,
+                2
+            ],
+            [
+                3470,
+                2
+            ],
+            [
+                2318,
+                2
+            ]
+        ],
+        "product": 3488,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick War Axe",
+        "learned": 70,
+        "yellow": 110,
+        "gray": 150,
+        "reagents": [
+            [
+                2840,
+                10
+            ],
+            [
+                2880,
+                2
+            ],
+            [
+                2842,
+                2
+            ],
+            [
+                3470,
+                2
+            ],
+            [
+                2318,
+                2
+            ]
+        ],
+        "product": 3489,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Deadly Bronze Poniard",
+        "learned": 125,
+        "yellow": 155,
+        "gray": 185,
+        "reagents": [
+            [
+                2841,
+                4
+            ],
+            [
+                3466,
+                1
+            ],
+            [
+                2459,
+                1
+            ],
+            [
+                1210,
+                2
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 3490,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Bronze Mace",
+        "learned": 130,
+        "yellow": 160,
+        "gray": 190,
+        "reagents": [
+            [
+                2841,
+                8
+            ],
+            [
+                3466,
+                1
+            ],
+            [
+                1206,
+                1
+            ],
+            [
+                1210,
+                1
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 3491,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mighty Iron Hammer",
+        "learned": 145,
+        "yellow": 175,
+        "gray": 205,
+        "reagents": [
+            [
+                3575,
+                6
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3391,
+                1
+            ],
+            [
+                1705,
+                2
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 3492,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Chain Boots",
+        "learned": 20,
+        "yellow": 60,
+        "gray": 100,
+        "reagents": [
+            [
+                2840,
+                8
+            ]
+        ],
+        "product": 3469,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Grinding Stone",
+        "learned": 25,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                2835,
+                2
+            ]
+        ],
+        "product": 3470,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Chain Vest",
+        "learned": 35,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                2840,
+                8
+            ],
+            [
+                3470,
+                2
+            ]
+        ],
+        "product": 3471,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Copper Gauntlets",
+        "learned": 40,
+        "yellow": 80,
+        "gray": 120,
+        "reagents": [
+            [
+                2840,
+                8
+            ],
+            [
+                3470,
+                2
+            ]
+        ],
+        "product": 3472,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Copper Pants",
+        "learned": 45,
+        "yellow": 85,
+        "gray": 125,
+        "reagents": [
+            [
+                2840,
+                8
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                3470,
+                3
+            ]
+        ],
+        "product": 3473,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gemmed Copper Gauntlets",
+        "learned": 60,
+        "yellow": 100,
+        "gray": 140,
+        "reagents": [
+            [
+                2840,
+                8
+            ],
+            [
+                818,
+                1
+            ],
+            [
+                774,
+                1
+            ]
+        ],
+        "product": 3474,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coarse Grinding Stone",
+        "learned": 75,
+        "yellow": 75,
+        "gray": 100,
+        "reagents": [
+            [
+                2836,
+                2
+            ]
+        ],
+        "product": 3478,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Bronze Shoulders",
+        "learned": 110,
+        "yellow": 140,
+        "gray": 170,
+        "reagents": [
+            [
+                2841,
+                5
+            ],
+            [
+                3478,
+                1
+            ]
+        ],
+        "product": 3480,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silvered Bronze Shoulders",
+        "learned": 125,
+        "yellow": 155,
+        "gray": 185,
+        "reagents": [
+            [
+                2841,
+                8
+            ],
+            [
+                2842,
+                2
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 3481,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silvered Bronze Boots",
+        "learned": 130,
+        "yellow": 160,
+        "gray": 190,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                2842,
+                1
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 3482,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silvered Bronze Gauntlets",
+        "learned": 135,
+        "yellow": 165,
+        "gray": 195,
+        "reagents": [
+            [
+                2841,
+                8
+            ],
+            [
+                2842,
+                1
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 3483,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Boots",
+        "learned": 145,
+        "yellow": 175,
+        "gray": 205,
+        "reagents": [
+            [
+                3575,
+                6
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 3484,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Gauntlets",
+        "learned": 150,
+        "yellow": 180,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                4
+            ],
+            [
+                5498,
+                2
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 3485,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Grinding Stone",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 150,
+        "reagents": [
+            [
+                2838,
+                3
+            ]
+        ],
+        "product": 3486,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Big Bronze Knife",
+        "learned": 105,
+        "yellow": 135,
+        "gray": 165,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                2880,
+                4
+            ],
+            [
+                3470,
+                2
+            ],
+            [
+                818,
+                1
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 3848,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hardened Iron Shortsword",
+        "learned": 160,
+        "yellow": 185,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                6
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                1
+            ],
+            [
+                1705,
+                2
+            ],
+            [
+                4234,
+                3
+            ]
+        ],
+        "product": 3849,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jade Serpentblade",
+        "learned": 175,
+        "yellow": 200,
+        "gray": 225,
+        "reagents": [
+            [
+                3575,
+                8
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                2
+            ],
+            [
+                1529,
+                2
+            ],
+            [
+                4234,
+                3
+            ]
+        ],
+        "product": 3850,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Iron Maul",
+        "learned": 155,
+        "yellow": 180,
+        "gray": 205,
+        "reagents": [
+            [
+                3575,
+                8
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                1
+            ],
+            [
+                2842,
+                4
+            ],
+            [
+                4234,
+                2
+            ]
+        ],
+        "product": 3851,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Iron Destroyer",
+        "learned": 170,
+        "yellow": 195,
+        "gray": 220,
+        "reagents": [
+            [
+                3575,
+                10
+            ],
+            [
+                3577,
+                4
+            ],
+            [
+                1705,
+                2
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                4234,
+                2
+            ],
+            [
+                3486,
+                2
+            ]
+        ],
+        "product": 3852,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Moonsteel Broadsword",
+        "learned": 180,
+        "yellow": 205,
+        "gray": 230,
+        "reagents": [
+            [
+                3859,
+                8
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                2
+            ],
+            [
+                1705,
+                3
+            ],
+            [
+                4234,
+                3
+            ]
+        ],
+        "product": 3853,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frost Tiger Blade",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                3859,
+                8
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                2
+            ],
+            [
+                1529,
+                2
+            ],
+            [
+                3829,
+                1
+            ],
+            [
+                4234,
+                4
+            ]
+        ],
+        "product": 3854,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Massive Iron Axe",
+        "learned": 185,
+        "yellow": 210,
+        "gray": 235,
+        "reagents": [
+            [
+                3575,
+                14
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                2
+            ],
+            [
+                3577,
+                4
+            ],
+            [
+                4234,
+                2
+            ]
+        ],
+        "product": 3855,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadow Crescent Axe",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                3859,
+                10
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                3486,
+                3
+            ],
+            [
+                3864,
+                2
+            ],
+            [
+                3824,
+                1
+            ],
+            [
+                4234,
+                3
+            ]
+        ],
+        "product": 3856,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Bracers",
+        "learned": 165,
+        "yellow": 190,
+        "gray": 215,
+        "reagents": [
+            [
+                3575,
+                6
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 3835,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Helm",
+        "learned": 170,
+        "yellow": 195,
+        "gray": 220,
+        "reagents": [
+            [
+                3575,
+                12
+            ],
+            [
+                3864,
+                1
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 3836,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Coif",
+        "learned": 190,
+        "yellow": 215,
+        "gray": 240,
+        "reagents": [
+            [
+                3859,
+                8
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                3486,
+                2
+            ]
+        ],
+        "product": 3837,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Shoulders",
+        "learned": 160,
+        "yellow": 185,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                7
+            ],
+            [
+                3486,
+                1
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 3840,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Shoulders",
+        "learned": 175,
+        "yellow": 200,
+        "gray": 225,
+        "reagents": [
+            [
+                3859,
+                6
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                3486,
+                1
+            ]
+        ],
+        "product": 3841,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Leggings",
+        "learned": 155,
+        "yellow": 180,
+        "gray": 205,
+        "reagents": [
+            [
+                3575,
+                8
+            ],
+            [
+                3486,
+                1
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 3842,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Leggings",
+        "learned": 170,
+        "yellow": 195,
+        "gray": 220,
+        "reagents": [
+            [
+                3575,
+                10
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                3486,
+                1
+            ]
+        ],
+        "product": 3843,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Iron Hauberk",
+        "learned": 180,
+        "yellow": 205,
+        "gray": 230,
+        "reagents": [
+            [
+                3575,
+                20
+            ],
+            [
+                3486,
+                4
+            ],
+            [
+                1529,
+                2
+            ],
+            [
+                1206,
+                2
+            ],
+            [
+                4255,
+                1
+            ]
+        ],
+        "product": 3844,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Cuirass",
+        "learned": 195,
+        "yellow": 220,
+        "gray": 245,
+        "reagents": [
+            [
+                3859,
+                12
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                3486,
+                4
+            ]
+        ],
+        "product": 3845,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Polished Steel Boots",
+        "learned": 185,
+        "yellow": 210,
+        "gray": 235,
+        "reagents": [
+            [
+                3859,
+                8
+            ],
+            [
+                3864,
+                1
+            ],
+            [
+                1705,
+                1
+            ],
+            [
+                3486,
+                2
+            ]
+        ],
+        "product": 3846,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Boots",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                3859,
+                10
+            ],
+            [
+                3577,
+                4
+            ],
+            [
+                3486,
+                4
+            ]
+        ],
+        "product": 3847,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pearl-handled Dagger",
+        "learned": 110,
+        "yellow": 140,
+        "gray": 170,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                3466,
+                1
+            ],
+            [
+                5498,
+                2
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 5540,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iridescent Hammer",
+        "learned": 140,
+        "yellow": 170,
+        "gray": 200,
+        "reagents": [
+            [
+                2841,
+                10
+            ],
+            [
+                3466,
+                1
+            ],
+            [
+                5500,
+                1
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 5541,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iron Shield Spike",
+        "learned": 150,
+        "yellow": 180,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                6
+            ],
+            [
+                3478,
+                4
+            ]
+        ],
+        "product": 6042,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iron Counterweight",
+        "learned": 165,
+        "yellow": 190,
+        "gray": 215,
+        "reagents": [
+            [
+                3575,
+                4
+            ],
+            [
+                3478,
+                2
+            ],
+            [
+                1705,
+                1
+            ]
+        ],
+        "product": 6043,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Bracers",
+        "learned": 185,
+        "yellow": 210,
+        "gray": 235,
+        "reagents": [
+            [
+                3859,
+                5
+            ],
+            [
+                3486,
+                2
+            ]
+        ],
+        "product": 6040,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steel Weapon Chain",
+        "learned": 190,
+        "yellow": 215,
+        "gray": 240,
+        "reagents": [
+            [
+                3859,
+                8
+            ],
+            [
+                3486,
+                2
+            ],
+            [
+                4234,
+                4
+            ]
+        ],
+        "product": 6041,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Copper Maul",
+        "learned": 65,
+        "yellow": 105,
+        "gray": 145,
+        "reagents": [
+            [
+                2840,
+                12
+            ],
+            [
+                2880,
+                2
+            ],
+            [
+                2318,
+                2
+            ]
+        ],
+        "product": 6214,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Bronze Boots",
+        "learned": 95,
+        "yellow": 125,
+        "gray": 155,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                3470,
+                6
+            ]
+        ],
+        "product": 6350,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silver Rod",
+        "learned": 100,
+        "yellow": 105,
+        "gray": 110,
+        "reagents": [
+            [
+                2842,
+                1
+            ],
+            [
+                3470,
+                2
+            ]
+        ],
+        "product": 6338,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ironforge Breastplate",
+        "learned": 100,
+        "yellow": 140,
+        "gray": 180,
+        "reagents": [
+            [
+                2840,
+                16
+            ],
+            [
+                818,
+                2
+            ],
+            [
+                3470,
+                3
+            ]
+        ],
+        "product": 6731,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iron Buckle",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 155,
+        "reagents": [
+            [
+                3575,
+                1
+            ]
+        ],
+        "product": 7071,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Dagger",
+        "learned": 30,
+        "yellow": 70,
+        "gray": 110,
+        "reagents": [
+            [
+                2840,
+                6
+            ],
+            [
+                2880,
+                1
+            ],
+            [
+                3470,
+                1
+            ],
+            [
+                2318,
+                1
+            ]
+        ],
+        "product": 7166,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Iron Shoulders",
+        "learned": 160,
+        "yellow": 185,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                8
+            ],
+            [
+                5635,
+                4
+            ],
+            [
+                3486,
+                2
+            ]
+        ],
+        "product": 7913,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Iron Breastplate",
+        "learned": 160,
+        "yellow": 185,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                20
+            ],
+            [
+                3486,
+                4
+            ]
+        ],
+        "product": 7914,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Iron Helm",
+        "learned": 175,
+        "yellow": 200,
+        "gray": 225,
+        "reagents": [
+            [
+                3575,
+                10
+            ],
+            [
+                5637,
+                2
+            ],
+            [
+                5635,
+                2
+            ]
+        ],
+        "product": 7915,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Iron Boots",
+        "learned": 180,
+        "yellow": 205,
+        "gray": 230,
+        "reagents": [
+            [
+                3575,
+                12
+            ],
+            [
+                5637,
+                4
+            ],
+            [
+                3486,
+                2
+            ]
+        ],
+        "product": 7916,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Iron Gloves",
+        "learned": 185,
+        "yellow": 210,
+        "gray": 235,
+        "reagents": [
+            [
+                3575,
+                14
+            ],
+            [
+                3486,
+                3
+            ],
+            [
+                5637,
+                2
+            ]
+        ],
+        "product": 7917,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steel Breastplate",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                3859,
+                16
+            ],
+            [
+                3486,
+                3
+            ]
+        ],
+        "product": 7963,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Sharpening Stone",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 210,
+        "reagents": [
+            [
+                7912,
+                1
+            ]
+        ],
+        "product": 7964,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Grinding Stone",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 210,
+        "reagents": [
+            [
+                7912,
+                4
+            ]
+        ],
+        "product": 7966,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Weightstone",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 210,
+        "reagents": [
+            [
+                7912,
+                1
+            ],
+            [
+                4306,
+                1
+            ]
+        ],
+        "product": 7965,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Shoulder",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                3860,
+                8
+            ],
+            [
+                4234,
+                6
+            ]
+        ],
+        "product": 7918,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Gauntlet",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                3860,
+                6
+            ],
+            [
+                4338,
+                4
+            ]
+        ],
+        "product": 7919,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Scale Pants",
+        "learned": 210,
+        "yellow": 230,
+        "gray": 250,
+        "reagents": [
+            [
+                3860,
+                12
+            ]
+        ],
+        "product": 7920,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Pants",
+        "learned": 210,
+        "yellow": 230,
+        "gray": 250,
+        "reagents": [
+            [
+                3860,
+                10
+            ]
+        ],
+        "product": 7921,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steel Plate Helm",
+        "learned": 215,
+        "yellow": 235,
+        "gray": 255,
+        "reagents": [
+            [
+                3859,
+                14
+            ],
+            [
+                7966,
+                1
+            ]
+        ],
+        "product": 7922,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Scale Bracers",
+        "learned": 215,
+        "yellow": 235,
+        "gray": 255,
+        "reagents": [
+            [
+                3860,
+                8
+            ]
+        ],
+        "product": 7924,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Shield Spike",
+        "learned": 215,
+        "yellow": 235,
+        "gray": 255,
+        "reagents": [
+            [
+                3860,
+                4
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                7966,
+                4
+            ]
+        ],
+        "product": 7967,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Mithril Pants",
+        "learned": 220,
+        "yellow": 240,
+        "gray": 260,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                6037,
+                1
+            ],
+            [
+                7966,
+                1
+            ]
+        ],
+        "product": 7926,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Mithril Gloves",
+        "learned": 220,
+        "yellow": 240,
+        "gray": 260,
+        "reagents": [
+            [
+                3860,
+                10
+            ],
+            [
+                4338,
+                6
+            ],
+            [
+                6037,
+                1
+            ],
+            [
+                7966,
+                1
+            ]
+        ],
+        "product": 7927,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Mithril Shoulder",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                6037,
+                1
+            ],
+            [
+                4304,
+                6
+            ]
+        ],
+        "product": 7928,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Gauntlets",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                3860,
+                10
+            ],
+            [
+                6037,
+                8
+            ],
+            [
+                7909,
+                3
+            ],
+            [
+                3864,
+                3
+            ],
+            [
+                5966,
+                1
+            ],
+            [
+                7966,
+                2
+            ]
+        ],
+        "product": 7938,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Orcish War Leggings",
+        "learned": 230,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                7067,
+                1
+            ]
+        ],
+        "product": 7929,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Breastplate",
+        "learned": 230,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                3860,
+                16
+            ]
+        ],
+        "product": 7930,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Coif",
+        "learned": 230,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                3860,
+                10
+            ],
+            [
+                4338,
+                6
+            ]
+        ],
+        "product": 7931,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Spurs",
+        "learned": 235,
+        "yellow": 255,
+        "gray": 275,
+        "reagents": [
+            [
+                3860,
+                4
+            ],
+            [
+                7966,
+                3
+            ]
+        ],
+        "product": 7969,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Scale Shoulders",
+        "learned": 235,
+        "yellow": 255,
+        "gray": 275,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                4304,
+                4
+            ]
+        ],
+        "product": 7932,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Boots",
+        "learned": 235,
+        "yellow": 255,
+        "gray": 275,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                4304,
+                4
+            ]
+        ],
+        "product": 7933,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Helm",
+        "learned": 245,
+        "yellow": 255,
+        "gray": 275,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                7909,
+                1
+            ]
+        ],
+        "product": 7934,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Mithril Breastplate",
+        "learned": 240,
+        "yellow": 260,
+        "gray": 280,
+        "reagents": [
+            [
+                3860,
+                16
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                7077,
+                1
+            ],
+            [
+                7966,
+                1
+            ]
+        ],
+        "product": 7935,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Breastplate",
+        "learned": 245,
+        "yellow": 265,
+        "gray": 285,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                6037,
+                12
+            ],
+            [
+                7910,
+                2
+            ],
+            [
+                7971,
+                2
+            ],
+            [
+                7966,
+                2
+            ]
+        ],
+        "product": 7939,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Ornate Mithril Boots",
+        "learned": 245,
+        "yellow": 265,
+        "gray": 285,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                4304,
+                4
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                7909,
+                1
+            ]
+        ],
+        "product": 7936,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Mithril Helm",
+        "learned": 245,
+        "yellow": 265,
+        "gray": 285,
+        "reagents": [
+            [
+                3860,
+                16
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                7966,
+                1
+            ]
+        ],
+        "product": 7937,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Claymore",
+        "learned": 30,
+        "yellow": 70,
+        "gray": 110,
+        "reagents": [
+            [
+                2840,
+                10
+            ],
+            [
+                2880,
+                2
+            ],
+            [
+                3470,
+                1
+            ],
+            [
+                2318,
+                1
+            ]
+        ],
+        "product": 7955,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Warhammer",
+        "learned": 125,
+        "yellow": 155,
+        "gray": 185,
+        "reagents": [
+            [
+                2841,
+                8
+            ],
+            [
+                3466,
+                1
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 7956,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Greatsword",
+        "learned": 130,
+        "yellow": 160,
+        "gray": 190,
+        "reagents": [
+            [
+                2841,
+                12
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 7957,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Battle Axe",
+        "learned": 135,
+        "yellow": 165,
+        "gray": 195,
+        "reagents": [
+            [
+                2841,
+                14
+            ],
+            [
+                3466,
+                1
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 7958,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Mithril Axe",
+        "learned": 210,
+        "yellow": 235,
+        "gray": 260,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                3864,
+                2
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4234,
+                4
+            ]
+        ],
+        "product": 7941,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Glittering Axe",
+        "learned": 220,
+        "yellow": 245,
+        "gray": 270,
+        "reagents": [
+            [
+                3860,
+                16
+            ],
+            [
+                7909,
+                2
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4304,
+                4
+            ]
+        ],
+        "product": 7942,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wicked Mithril Blade",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 7943,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Big Black Mace",
+        "learned": 230,
+        "yellow": 255,
+        "gray": 280,
+        "reagents": [
+            [
+                3860,
+                16
+            ],
+            [
+                7971,
+                1
+            ],
+            [
+                1210,
+                4
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 7945,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Shatterer",
+        "learned": 235,
+        "yellow": 260,
+        "gray": 285,
+        "reagents": [
+            [
+                3860,
+                24
+            ],
+            [
+                7075,
+                4
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                3864,
+                5
+            ],
+            [
+                1529,
+                5
+            ],
+            [
+                7966,
+                4
+            ],
+            [
+                4304,
+                4
+            ]
+        ],
+        "product": 7954,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Dazzling Mithril Rapier",
+        "learned": 240,
+        "yellow": 265,
+        "gray": 290,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                7909,
+                1
+            ],
+            [
+                1705,
+                2
+            ],
+            [
+                1206,
+                2
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4338,
+                2
+            ]
+        ],
+        "product": 7944,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Phantom Blade",
+        "learned": 245,
+        "yellow": 270,
+        "gray": 295,
+        "reagents": [
+            [
+                3860,
+                28
+            ],
+            [
+                7081,
+                6
+            ],
+            [
+                6037,
+                8
+            ],
+            [
+                3823,
+                2
+            ],
+            [
+                7909,
+                6
+            ],
+            [
+                7966,
+                4
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 7961,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Runed Mithril Hammer",
+        "learned": 245,
+        "yellow": 270,
+        "gray": 295,
+        "reagents": [
+            [
+                3860,
+                18
+            ],
+            [
+                7075,
+                2
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4304,
+                4
+            ]
+        ],
+        "product": 7946,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blight",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 300,
+        "reagents": [
+            [
+                3860,
+                28
+            ],
+            [
+                7972,
+                10
+            ],
+            [
+                6037,
+                10
+            ],
+            [
+                7966,
+                6
+            ],
+            [
+                4304,
+                6
+            ]
+        ],
+        "product": 7959,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Ebon Shiv",
+        "learned": 255,
+        "yellow": 280,
+        "gray": 305,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                7910,
+                2
+            ],
+            [
+                7966,
+                1
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 7947,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Champion",
+        "learned": 260,
+        "yellow": 285,
+        "gray": 310,
+        "reagents": [
+            [
+                3860,
+                30
+            ],
+            [
+                6037,
+                16
+            ],
+            [
+                7910,
+                6
+            ],
+            [
+                7081,
+                4
+            ],
+            [
+                7966,
+                8
+            ],
+            [
+                4304,
+                6
+            ]
+        ],
+        "product": 7960,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Inlaid Mithril Cylinder",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                3860,
+                5
+            ],
+            [
+                3577,
+                1
+            ],
+            [
+                6037,
+                1
+            ]
+        ],
+        "product": 9060,
+        "produces": 1.0,
+        "sources": [
+            1
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Scale Gauntlets",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                3859,
+                10
+            ],
+            [
+                3577,
+                4
+            ],
+            [
+                3486,
+                4
+            ]
+        ],
+        "product": 9366,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silvered Bronze Leggings",
+        "learned": 155,
+        "yellow": 180,
+        "gray": 205,
+        "reagents": [
+            [
+                2841,
+                12
+            ],
+            [
+                2842,
+                4
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 10423,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Copper Vest",
+        "learned": 1,
+        "yellow": 15,
+        "gray": 55,
+        "reagents": [
+            [
+                2840,
+                4
+            ]
+        ],
+        "product": 10421,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Rod",
+        "learned": 150,
+        "yellow": 155,
+        "gray": 160,
+        "reagents": [
+            [
+                3577,
+                1
+            ],
+            [
+                3478,
+                2
+            ]
+        ],
+        "product": 11128,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Rod",
+        "learned": 200,
+        "yellow": 205,
+        "gray": 210,
+        "reagents": [
+            [
+                6037,
+                1
+            ],
+            [
+                3486,
+                1
+            ]
+        ],
+        "product": 11144,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Pulverizer",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                11371,
+                18
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 11608,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Mail",
+        "learned": 270,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                11371,
+                10
+            ],
+            [
+                7077,
+                2
+            ]
+        ],
+        "product": 11606,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Sunderer",
+        "learned": 275,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                11371,
+                26
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 11607,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Shoulders",
+        "learned": 280,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                11371,
+                6
+            ],
+            [
+                7077,
+                1
+            ]
+        ],
+        "product": 11605,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Plate",
+        "learned": 285,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                11371,
+                20
+            ],
+            [
+                7077,
+                8
+            ]
+        ],
+        "product": 11604,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glinting Steel Dagger",
+        "learned": 180,
+        "yellow": 205,
+        "gray": 230,
+        "reagents": [
+            [
+                3859,
+                10
+            ],
+            [
+                3466,
+                2
+            ],
+            [
+                1206,
+                1
+            ],
+            [
+                7067,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 12259,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Searing Golden Blade",
+        "learned": 190,
+        "yellow": 215,
+        "gray": 240,
+        "reagents": [
+            [
+                3859,
+                10
+            ],
+            [
+                3577,
+                4
+            ],
+            [
+                7068,
+                2
+            ],
+            [
+                4234,
+                2
+            ]
+        ],
+        "product": 12260,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dense Grinding Stone",
+        "learned": 250,
+        "yellow": 255,
+        "gray": 260,
+        "reagents": [
+            [
+                12365,
+                4
+            ]
+        ],
+        "product": 12644,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dense Weightstone",
+        "learned": 250,
+        "yellow": 255,
+        "gray": 260,
+        "reagents": [
+            [
+                12365,
+                1
+            ],
+            [
+                14047,
+                1
+            ]
+        ],
+        "product": 12643,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dense Sharpening Stone",
+        "learned": 250,
+        "yellow": 255,
+        "gray": 260,
+        "reagents": [
+            [
+                12365,
+                1
+            ]
+        ],
+        "product": 12404,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Armor",
+        "learned": 250,
+        "yellow": 270,
+        "gray": 290,
+        "reagents": [
+            [
+                12359,
+                16
+            ],
+            [
+                12361,
+                1
+            ],
+            [
+                11188,
+                4
+            ]
+        ],
+        "product": 12405,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Belt",
+        "learned": 250,
+        "yellow": 270,
+        "gray": 290,
+        "reagents": [
+            [
+                12359,
+                12
+            ],
+            [
+                11186,
+                4
+            ]
+        ],
+        "product": 12406,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Bracers",
+        "learned": 255,
+        "yellow": 275,
+        "gray": 295,
+        "reagents": [
+            [
+                12359,
+                12
+            ],
+            [
+                11184,
+                4
+            ]
+        ],
+        "product": 12408,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Belt",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                12359,
+                10
+            ],
+            [
+                7077,
+                2
+            ]
+        ],
+        "product": 12416,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Shoulders",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                12359,
+                12
+            ],
+            [
+                8170,
+                6
+            ]
+        ],
+        "product": 12428,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Belt",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                12359,
+                10
+            ],
+            [
+                8170,
+                6
+            ]
+        ],
+        "product": 12424,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Breastplate",
+        "learned": 270,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                12359,
+                18
+            ],
+            [
+                7077,
+                2
+            ],
+            [
+                7910,
+                1
+            ]
+        ],
+        "product": 12415,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Bracers",
+        "learned": 270,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                12359,
+                12
+            ]
+        ],
+        "product": 12425,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wildthorn Mail",
+        "learned": 270,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12655,
+                2
+            ],
+            [
+                12803,
+                4
+            ],
+            [
+                8153,
+                4
+            ],
+            [
+                12364,
+                1
+            ]
+        ],
+        "product": 12624,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Shield Spike",
+        "learned": 275,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                12359,
+                4
+            ],
+            [
+                12644,
+                4
+            ],
+            [
+                7076,
+                2
+            ]
+        ],
+        "product": 12645,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Boots",
+        "learned": 280,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                8170,
+                8
+            ],
+            [
+                11185,
+                4
+            ]
+        ],
+        "product": 12409,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Helm",
+        "learned": 280,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                12359,
+                24
+            ],
+            [
+                7910,
+                1
+            ],
+            [
+                11188,
+                4
+            ]
+        ],
+        "product": 12410,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Gloves",
+        "learned": 285,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                12359,
+                18
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 12418,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fiery Plate Gauntlets",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12655,
+                6
+            ],
+            [
+                7078,
+                2
+            ],
+            [
+                7910,
+                4
+            ]
+        ],
+        "product": 12631,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Boots",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                14
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 12419,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Boots",
+        "learned": 295,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                12359,
+                18
+            ]
+        ],
+        "product": 12426,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Helm",
+        "learned": 295,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                12359,
+                18
+            ],
+            [
+                7910,
+                1
+            ]
+        ],
+        "product": 12427,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Circlet",
+        "learned": 295,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                12359,
+                18
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 12417,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dawnbringer Shoulders",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12360,
+                4
+            ],
+            [
+                12364,
+                2
+            ],
+            [
+                7080,
+                2
+            ]
+        ],
+        "product": 12625,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Storm Gauntlets",
+        "learned": 295,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12655,
+                4
+            ],
+            [
+                7080,
+                4
+            ],
+            [
+                12361,
+                4
+            ]
+        ],
+        "product": 12632,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                26
+            ],
+            [
+                11186,
+                4
+            ]
+        ],
+        "product": 12414,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Chest",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ]
+        ],
+        "product": 12422,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Plate Shoulders",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                3577,
+                6
+            ]
+        ],
+        "product": 12610,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Plate Boots",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                2842,
+                10
+            ]
+        ],
+        "product": 12611,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Demon Forged Breastplate",
+        "learned": 285,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12662,
+                10
+            ],
+            [
+                12361,
+                4
+            ],
+            [
+                7910,
+                4
+            ]
+        ],
+        "product": 12628,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Whitesoul Helm",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12655,
+                4
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                3577,
+                6
+            ],
+            [
+                12800,
+                2
+            ]
+        ],
+        "product": 12633,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 12420,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Plate Helm",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                30
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                12364,
+                1
+            ]
+        ],
+        "product": 12612,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Helm of the Great Chief",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12655,
+                4
+            ],
+            [
+                8168,
+                60
+            ],
+            [
+                12799,
+                6
+            ],
+            [
+                12364,
+                2
+            ]
+        ],
+        "product": 12636,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lionheart Helm",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                80
+            ],
+            [
+                12360,
+                12
+            ],
+            [
+                8146,
+                40
+            ],
+            [
+                12361,
+                10
+            ],
+            [
+                12800,
+                4
+            ]
+        ],
+        "product": 12640,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imperial Plate Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                24
+            ]
+        ],
+        "product": 12429,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                7910,
+                1
+            ]
+        ],
+        "product": 12613,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Plate Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                7910,
+                1
+            ]
+        ],
+        "product": 12614,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stronghold Gauntlets",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                15
+            ],
+            [
+                12655,
+                20
+            ],
+            [
+                7076,
+                10
+            ],
+            [
+                12361,
+                4
+            ],
+            [
+                12799,
+                4
+            ]
+        ],
+        "product": 12639,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Thorium Helm",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                6
+            ],
+            [
+                12655,
+                16
+            ],
+            [
+                7076,
+                6
+            ],
+            [
+                12799,
+                2
+            ],
+            [
+                12800,
+                1
+            ]
+        ],
+        "product": 12620,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Thorium Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                10
+            ],
+            [
+                12655,
+                20
+            ],
+            [
+                7080,
+                6
+            ],
+            [
+                12361,
+                2
+            ],
+            [
+                12364,
+                1
+            ]
+        ],
+        "product": 12619,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Thorium Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                8
+            ],
+            [
+                12655,
+                24
+            ],
+            [
+                7076,
+                4
+            ],
+            [
+                7080,
+                4
+            ],
+            [
+                12364,
+                2
+            ],
+            [
+                12800,
+                2
+            ]
+        ],
+        "product": 12618,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Invulnerable Mail",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                30
+            ],
+            [
+                12655,
+                30
+            ],
+            [
+                12364,
+                6
+            ],
+            [
+                12800,
+                6
+            ]
+        ],
+        "product": 12641,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Thorium Handaxe",
+        "learned": 275,
+        "yellow": 300,
+        "gray": 325,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12799,
+                2
+            ],
+            [
+                12644,
+                2
+            ],
+            [
+                8170,
+                4
+            ]
+        ],
+        "product": 12773,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dawn's Edge",
+        "learned": 275,
+        "yellow": 300,
+        "gray": 325,
+        "reagents": [
+            [
+                12359,
+                30
+            ],
+            [
+                12655,
+                4
+            ],
+            [
+                7910,
+                4
+            ],
+            [
+                12361,
+                4
+            ],
+            [
+                12644,
+                2
+            ],
+            [
+                8170,
+                4
+            ]
+        ],
+        "product": 12774,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Huge Thorium Battleaxe",
+        "learned": 280,
+        "yellow": 305,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12644,
+                6
+            ],
+            [
+                8170,
+                6
+            ]
+        ],
+        "product": 12775,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Battlehammer",
+        "learned": 280,
+        "yellow": 305,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                12655,
+                6
+            ],
+            [
+                12364,
+                2
+            ],
+            [
+                12804,
+                4
+            ],
+            [
+                8170,
+                4
+            ]
+        ],
+        "product": 12776,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blazing Rapier",
+        "learned": 280,
+        "yellow": 305,
+        "gray": 330,
+        "reagents": [
+            [
+                12655,
+                10
+            ],
+            [
+                7078,
+                4
+            ],
+            [
+                7077,
+                4
+            ],
+            [
+                12800,
+                2
+            ],
+            [
+                12644,
+                2
+            ]
+        ],
+        "product": 12777,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Serenity",
+        "learned": 285,
+        "yellow": 310,
+        "gray": 335,
+        "reagents": [
+            [
+                12655,
+                6
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                12804,
+                4
+            ],
+            [
+                12799,
+                2
+            ],
+            [
+                12361,
+                2
+            ],
+            [
+                12364,
+                1
+            ]
+        ],
+        "product": 12781,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Volcanic Hammer",
+        "learned": 290,
+        "yellow": 315,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                30
+            ],
+            [
+                7077,
+                4
+            ],
+            [
+                7910,
+                4
+            ],
+            [
+                8170,
+                4
+            ]
+        ],
+        "product": 12792,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Corruption",
+        "learned": 290,
+        "yellow": 315,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                12662,
+                16
+            ],
+            [
+                12808,
+                8
+            ],
+            [
+                12361,
+                2
+            ],
+            [
+                12644,
+                2
+            ],
+            [
+                8170,
+                4
+            ]
+        ],
+        "product": 12782,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hammer of the Titans",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                50
+            ],
+            [
+                12360,
+                15
+            ],
+            [
+                12809,
+                4
+            ],
+            [
+                12810,
+                6
+            ],
+            [
+                7076,
+                10
+            ]
+        ],
+        "product": 12796,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanite Champion",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                15
+            ],
+            [
+                12800,
+                8
+            ],
+            [
+                12811,
+                1
+            ],
+            [
+                12799,
+                4
+            ],
+            [
+                12810,
+                8
+            ],
+            [
+                12644,
+                2
+            ]
+        ],
+        "product": 12790,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Annihilator",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                40
+            ],
+            [
+                12360,
+                12
+            ],
+            [
+                12808,
+                10
+            ],
+            [
+                12364,
+                8
+            ],
+            [
+                12644,
+                2
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 12798,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frostguard",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                18
+            ],
+            [
+                12361,
+                8
+            ],
+            [
+                12800,
+                8
+            ],
+            [
+                7080,
+                4
+            ],
+            [
+                12644,
+                2
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 12797,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Masterwork Stormhammer",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12655,
+                20
+            ],
+            [
+                12364,
+                8
+            ],
+            [
+                12799,
+                8
+            ],
+            [
+                7076,
+                6
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 12794,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanite Reaper",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                20
+            ],
+            [
+                12810,
+                6
+            ],
+            [
+                12644,
+                2
+            ]
+        ],
+        "product": 12784,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heartseeker",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                10
+            ],
+            [
+                12655,
+                10
+            ],
+            [
+                12810,
+                2
+            ],
+            [
+                7910,
+                6
+            ],
+            [
+                12800,
+                6
+            ],
+            [
+                12799,
+                6
+            ],
+            [
+                12644,
+                4
+            ]
+        ],
+        "product": 12783,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silver Skeleton Key",
+        "learned": 100,
+        "yellow": 100,
+        "gray": 120,
+        "reagents": [
+            [
+                2842,
+                1
+            ],
+            [
+                3470,
+                1
+            ]
+        ],
+        "product": 15869,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Skeleton Key",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 170,
+        "reagents": [
+            [
+                3577,
+                1
+            ],
+            [
+                3486,
+                1
+            ]
+        ],
+        "product": 15870,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Skeleton Key",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 220,
+        "reagents": [
+            [
+                6037,
+                1
+            ],
+            [
+                7966,
+                1
+            ]
+        ],
+        "product": 15871,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanite Skeleton Key",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                12360,
+                1
+            ],
+            [
+                12644,
+                1
+            ]
+        ],
+        "product": 15872,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanite Rod",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                12360,
+                3
+            ],
+            [
+                12644,
+                1
+            ]
+        ],
+        "product": 16206,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fiery Chain Girdle",
+        "learned": 295,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                11371,
+                6
+            ],
+            [
+                17010,
+                3
+            ],
+            [
+                17011,
+                3
+            ]
+        ],
+        "product": 16989,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fiery Chain Shoulders",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                11371,
+                16
+            ],
+            [
+                17010,
+                4
+            ],
+            [
+                17011,
+                5
+            ]
+        ],
+        "product": 16988,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Bracers",
+        "learned": 295,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                11371,
+                4
+            ],
+            [
+                17010,
+                2
+            ],
+            [
+                17011,
+                2
+            ]
+        ],
+        "product": 17014,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                11371,
+                16
+            ],
+            [
+                17010,
+                4
+            ],
+            [
+                17011,
+                6
+            ]
+        ],
+        "product": 17013,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Reaver",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                11371,
+                16
+            ],
+            [
+                17010,
+                12
+            ],
+            [
+                11382,
+                2
+            ],
+            [
+                12810,
+                2
+            ]
+        ],
+        "product": 17015,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Destroyer",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                11371,
+                18
+            ],
+            [
+                17011,
+                12
+            ],
+            [
+                11382,
+                2
+            ],
+            [
+                12810,
+                2
+            ]
+        ],
+        "product": 17016,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sulfuron Hammer",
+        "learned": 300,
+        "yellow": 325,
+        "gray": 350,
+        "reagents": [
+            [
+                17203,
+                8
+            ],
+            [
+                11371,
+                20
+            ],
+            [
+                12360,
+                50
+            ],
+            [
+                7078,
+                25
+            ],
+            [
+                11382,
+                10
+            ],
+            [
+                17011,
+                10
+            ],
+            [
+                17010,
+                10
+            ]
+        ],
+        "product": 17193,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Edge of Winter",
+        "learned": 190,
+        "yellow": 215,
+        "gray": 240,
+        "reagents": [
+            [
+                3859,
+                10
+            ],
+            [
+                3829,
+                1
+            ],
+            [
+                7070,
+                2
+            ],
+            [
+                7069,
+                2
+            ],
+            [
+                4234,
+                2
+            ]
+        ],
+        "product": 17704,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elemental Sharpening Stone",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                7067,
+                2
+            ],
+            [
+                12365,
+                3
+            ]
+        ],
+        "product": 18262,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Timbermaw Belt",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                12
+            ],
+            [
+                7076,
+                3
+            ],
+            [
+                12803,
+                3
+            ]
+        ],
+        "product": 19043,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Timbermaw Boots",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                4
+            ],
+            [
+                7076,
+                6
+            ],
+            [
+                12803,
+                6
+            ]
+        ],
+        "product": 19048,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Girdle of the Dawn",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                12359,
+                8
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                12811,
+                1
+            ]
+        ],
+        "product": 19051,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gloves of the Dawn",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                2
+            ],
+            [
+                6037,
+                10
+            ],
+            [
+                12811,
+                1
+            ]
+        ],
+        "product": 19057,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Helm",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                4
+            ],
+            [
+                17010,
+                2
+            ],
+            [
+                11371,
+                4
+            ]
+        ],
+        "product": 19148,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Gauntlets",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                3
+            ],
+            [
+                17010,
+                5
+            ],
+            [
+                17012,
+                4
+            ],
+            [
+                11371,
+                4
+            ],
+            [
+                11382,
+                2
+            ]
+        ],
+        "product": 19164,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Amnesty",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                3
+            ],
+            [
+                17010,
+                6
+            ],
+            [
+                12360,
+                12
+            ],
+            [
+                11382,
+                1
+            ],
+            [
+                11371,
+                4
+            ]
+        ],
+        "product": 19166,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackfury",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                5
+            ],
+            [
+                17010,
+                2
+            ],
+            [
+                12360,
+                16
+            ],
+            [
+                11371,
+                6
+            ]
+        ],
+        "product": 19167,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ebon Hand",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                4
+            ],
+            [
+                17010,
+                7
+            ],
+            [
+                12360,
+                12
+            ],
+            [
+                11371,
+                8
+            ],
+            [
+                12800,
+                4
+            ]
+        ],
+        "product": 19170,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackguard",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                6
+            ],
+            [
+                17010,
+                6
+            ],
+            [
+                12360,
+                10
+            ],
+            [
+                11371,
+                6
+            ],
+            [
+                12809,
+                12
+            ]
+        ],
+        "product": 19168,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Nightfall",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                8
+            ],
+            [
+                17010,
+                5
+            ],
+            [
+                12360,
+                10
+            ],
+            [
+                11371,
+                12
+            ],
+            [
+                12364,
+                4
+            ]
+        ],
+        "product": 19169,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodsoul Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                19774,
+                10
+            ],
+            [
+                19726,
+                2
+            ],
+            [
+                7910,
+                2
+            ]
+        ],
+        "product": 19690,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodsoul Shoulders",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                16
+            ],
+            [
+                19774,
+                8
+            ],
+            [
+                19726,
+                2
+            ],
+            [
+                7910,
+                1
+            ]
+        ],
+        "product": 19691,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodsoul Gauntlets",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                12
+            ],
+            [
+                19774,
+                6
+            ],
+            [
+                19726,
+                2
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 19692,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Darksoul Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                19774,
+                14
+            ],
+            [
+                12799,
+                2
+            ]
+        ],
+        "product": 19693,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Darksoul Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                18
+            ],
+            [
+                19774,
+                12
+            ],
+            [
+                12799,
+                2
+            ]
+        ],
+        "product": 19694,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Darksoul Shoulders",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                16
+            ],
+            [
+                19774,
+                10
+            ],
+            [
+                12799,
+                1
+            ]
+        ],
+        "product": 19695,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Boots",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                3
+            ],
+            [
+                17010,
+                3
+            ],
+            [
+                17012,
+                4
+            ],
+            [
+                11371,
+                6
+            ]
+        ],
+        "product": 20039,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Darkrune Gauntlets",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                12
+            ],
+            [
+                20520,
+                6
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                12810,
+                2
+            ]
+        ],
+        "product": 20549,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Darkrune Helm",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                16
+            ],
+            [
+                20520,
+                8
+            ],
+            [
+                6037,
+                8
+            ],
+            [
+                11754,
+                1
+            ]
+        ],
+        "product": 20551,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Darkrune Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                20
+            ],
+            [
+                20520,
+                10
+            ],
+            [
+                6037,
+                10
+            ]
+        ],
+        "product": 20550,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Obsidian Belt",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22202,
+                14
+            ],
+            [
+                12655,
+                4
+            ],
+            [
+                7076,
+                2
+            ]
+        ],
+        "product": 22197,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jagged Obsidian Shield",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22203,
+                8
+            ],
+            [
+                22202,
+                24
+            ],
+            [
+                12655,
+                8
+            ],
+            [
+                7076,
+                4
+            ]
+        ],
+        "product": 22198,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Obsidian Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22203,
+                18
+            ],
+            [
+                22202,
+                40
+            ],
+            [
+                12655,
+                12
+            ],
+            [
+                7076,
+                10
+            ],
+            [
+                12364,
+                4
+            ]
+        ],
+        "product": 22196,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Light Obsidian Belt",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22202,
+                14
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 22195,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Grasp of the Destroyer",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22203,
+                8
+            ],
+            [
+                22202,
+                24
+            ],
+            [
+                12810,
+                8
+            ],
+            [
+                13512,
+                1
+            ]
+        ],
+        "product": 22194,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Obsidian Mail Tunic",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22203,
+                15
+            ],
+            [
+                22202,
+                36
+            ],
+            [
+                12810,
+                12
+            ],
+            [
+                12809,
+                10
+            ],
+            [
+                12800,
+                4
+            ]
+        ],
+        "product": 22191,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Titanic Leggings",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                12
+            ],
+            [
+                12655,
+                20
+            ],
+            [
+                7076,
+                10
+            ],
+            [
+                13510,
+                2
+            ]
+        ],
+        "product": 22385,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Persuader",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                15
+            ],
+            [
+                11371,
+                10
+            ],
+            [
+                12808,
+                20
+            ],
+            [
+                20520,
+                20
+            ],
+            [
+                15417,
+                10
+            ],
+            [
+                12753,
+                2
+            ]
+        ],
+        "product": 22384,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sageblade",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                12
+            ],
+            [
+                20725,
+                2
+            ],
+            [
+                13512,
+                2
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 22383,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Icebane Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22682,
+                7
+            ],
+            [
+                12359,
+                16
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                7080,
+                4
+            ]
+        ],
+        "product": 22669,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Icebane Gauntlets",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22682,
+                5
+            ],
+            [
+                12359,
+                12
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                7080,
+                2
+            ]
+        ],
+        "product": 22670,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Icebane Bracers",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                22682,
+                4
+            ],
+            [
+                12359,
+                12
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                7080,
+                2
+            ]
+        ],
+        "product": 22671,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ironvine Breastplate",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12655,
+                12
+            ],
+            [
+                19726,
+                2
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                12803,
+                2
+            ]
+        ],
+        "product": 22762,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ironvine Gloves",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12655,
+                8
+            ],
+            [
+                19726,
+                1
+            ],
+            [
+                12803,
+                2
+            ]
+        ],
+        "product": 22763,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ironvine Belt",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12655,
+                6
+            ],
+            [
+                12803,
+                2
+            ]
+        ],
+        "product": 22764,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Plate Gloves",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                23445,
+                4
+            ]
+        ],
+        "product": 23482,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Plate Belt",
+        "learned": 305,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                23445,
+                4
+            ]
+        ],
+        "product": 23484,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Plate Boots",
+        "learned": 315,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                23445,
+                6
+            ]
+        ],
+        "product": 23487,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Plate Pants",
+        "learned": 315,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                23445,
+                8
+            ]
+        ],
+        "product": 23488,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Breastplate",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23445,
+                10
+            ]
+        ],
+        "product": 23489,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Chain Coif",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                23445,
+                4
+            ]
+        ],
+        "product": 23493,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Chain Gloves",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                23445,
+                5
+            ]
+        ],
+        "product": 23491,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Chain Bracers",
+        "learned": 315,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                23445,
+                6
+            ]
+        ],
+        "product": 23494,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Chain Tunic",
+        "learned": 320,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                23445,
+                9
+            ]
+        ],
+        "product": 23490,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Hatchet",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                23445,
+                9
+            ]
+        ],
+        "product": 23497,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Hammer",
+        "learned": 315,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                23445,
+                10
+            ]
+        ],
+        "product": 23498,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Greatsword",
+        "learned": 320,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                23445,
+                12
+            ]
+        ],
+        "product": 23499,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Maul",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23446,
+                8
+            ]
+        ],
+        "product": 23502,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Cleaver",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                8
+            ]
+        ],
+        "product": 23503,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Dagger",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                7
+            ],
+            [
+                21887,
+                2
+            ]
+        ],
+        "product": 23504,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Rapier",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23446,
+                12
+            ]
+        ],
+        "product": 23505,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Plate Bracers",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23446,
+                6
+            ],
+            [
+                22452,
+                2
+            ],
+            [
+                21884,
+                2
+            ]
+        ],
+        "product": 23506,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Plate Gloves",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                21887,
+                2
+            ],
+            [
+                22452,
+                3
+            ],
+            [
+                21884,
+                2
+            ]
+        ],
+        "product": 23508,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Breastplate",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23446,
+                12
+            ],
+            [
+                22452,
+                4
+            ],
+            [
+                21884,
+                2
+            ]
+        ],
+        "product": 23507,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Adamantite Belt",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23573,
+                2
+            ],
+            [
+                22445,
+                8
+            ],
+            [
+                22449,
+                2
+            ]
+        ],
+        "product": 23510,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Adamantite Breastplate",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23573,
+                4
+            ],
+            [
+                22445,
+                20
+            ],
+            [
+                22449,
+                4
+            ]
+        ],
+        "product": 23509,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Adamantite Boots",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23573,
+                3
+            ],
+            [
+                22445,
+                12
+            ],
+            [
+                22449,
+                2
+            ]
+        ],
+        "product": 23511,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Adamantite Leggings",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                4
+            ],
+            [
+                22445,
+                24
+            ],
+            [
+                22449,
+                4
+            ]
+        ],
+        "product": 23512,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flamebane Bracers",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23445,
+                6
+            ],
+            [
+                21885,
+                3
+            ],
+            [
+                21884,
+                2
+            ]
+        ],
+        "product": 23515,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flamebane Helm",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23445,
+                12
+            ],
+            [
+                21885,
+                5
+            ],
+            [
+                21884,
+                3
+            ]
+        ],
+        "product": 23516,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flamebane Gloves",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23445,
+                8
+            ],
+            [
+                21885,
+                4
+            ],
+            [
+                21884,
+                4
+            ]
+        ],
+        "product": 23514,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flamebane Breastplate",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23445,
+                16
+            ],
+            [
+                21885,
+                6
+            ],
+            [
+                21884,
+                4
+            ]
+        ],
+        "product": 23513,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Gloves",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                6
+            ]
+        ],
+        "product": 23517,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Leggings",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                8
+            ]
+        ],
+        "product": 23518,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Helm",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23448,
+                8
+            ]
+        ],
+        "product": 23519,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gauntlets of the Iron Tower",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                10
+            ],
+            [
+                23571,
+                2
+            ],
+            [
+                22452,
+                15
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23532,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Belt",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23449,
+                3
+            ],
+            [
+                21885,
+                2
+            ],
+            [
+                22457,
+                2
+            ]
+        ],
+        "product": 23524,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Pants",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23449,
+                6
+            ],
+            [
+                21885,
+                4
+            ],
+            [
+                22457,
+                4
+            ]
+        ],
+        "product": 23523,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Boots",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                4
+            ],
+            [
+                21885,
+                3
+            ],
+            [
+                22457,
+                3
+            ]
+        ],
+        "product": 23525,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ragesteel Gloves",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23445,
+                8
+            ],
+            [
+                21884,
+                6
+            ],
+            [
+                23449,
+                3
+            ],
+            [
+                22824,
+                2
+            ]
+        ],
+        "product": 23520,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ragesteel Helm",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23445,
+                10
+            ],
+            [
+                21884,
+                10
+            ],
+            [
+                23449,
+                4
+            ],
+            [
+                22824,
+                4
+            ]
+        ],
+        "product": 23521,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ragesteel Breastplate",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23445,
+                12
+            ],
+            [
+                21884,
+                10
+            ],
+            [
+                23449,
+                6
+            ],
+            [
+                22824,
+                4
+            ]
+        ],
+        "product": 23522,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swiftsteel Gloves",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23448,
+                6
+            ],
+            [
+                22449,
+                2
+            ],
+            [
+                22831,
+                4
+            ],
+            [
+                22451,
+                4
+            ]
+        ],
+        "product": 23526,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Earthpeace Breastplate",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23573,
+                4
+            ],
+            [
+                21886,
+                6
+            ],
+            [
+                22452,
+                4
+            ]
+        ],
+        "product": 23527,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Sharpening Stone",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 310,
+        "reagents": [
+            [
+                23445,
+                1
+            ],
+            [
+                22573,
+                1
+            ]
+        ],
+        "product": 23528,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Sharpening Stone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                1
+            ],
+            [
+                22573,
+                2
+            ]
+        ],
+        "product": 23529,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Shield Spike",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                4
+            ],
+            [
+                21884,
+                4
+            ],
+            [
+                22452,
+                4
+            ]
+        ],
+        "product": 23530,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felfury Gauntlets",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                3
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23531,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steelgrip Gauntlets",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                5
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23533,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Storm Helm",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                8
+            ],
+            [
+                22451,
+                16
+            ],
+            [
+                21885,
+                16
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23534,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Helm of the Stalwart Defender",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                8
+            ],
+            [
+                22452,
+                22
+            ],
+            [
+                22457,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23535,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Oathkeeper's Helm",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                8
+            ],
+            [
+                23571,
+                3
+            ],
+            [
+                21886,
+                18
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23536,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Felsteel Bracers",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23448,
+                6
+            ],
+            [
+                22456,
+                15
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23537,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bracers of the Green Fortress",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                6
+            ],
+            [
+                21886,
+                20
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23538,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blessed Bracers",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                6
+            ],
+            [
+                23571,
+                2
+            ],
+            [
+                21885,
+                15
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 23539,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Longblade",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                6
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23540,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Champion",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                20
+            ],
+            [
+                23573,
+                2
+            ],
+            [
+                23571,
+                6
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23541,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Edged Battleaxe",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23542,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Reaper",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23543,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Hammer",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23544,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Hardened Maul",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23546,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Eternium Runed Blade",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23573,
+                4
+            ],
+            [
+                23447,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23554,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dirge",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23448,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 23555,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hand of Eternity",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                10
+            ],
+            [
+                23573,
+                4
+            ],
+            [
+                23447,
+                10
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 23556,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Ward of Shielding",
+        "learned": 340,
+        "yellow": 340,
+        "gray": 350,
+        "reagents": [
+            [
+                23446,
+                1
+            ]
+        ],
+        "product": 23575,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Ward of Shielding",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 375,
+        "reagents": [
+            [
+                23447,
+                1
+            ]
+        ],
+        "product": 23576,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Rune of Warding",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 335,
+        "reagents": [
+            [
+                23446,
+                1
+            ]
+        ],
+        "product": 23559,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Rune of Warding",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                23449,
+                1
+            ]
+        ],
+        "product": 25521,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Rod",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 310,
+        "reagents": [
+            [
+                23445,
+                6
+            ]
+        ],
+        "product": 25843,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Rod",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                10
+            ]
+        ],
+        "product": 25844,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Eternium Rod",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                23447,
+                4
+            ]
+        ],
+        "product": 25845,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Nether Chain Shirt",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                22456,
+                20
+            ],
+            [
+                22451,
+                20
+            ],
+            [
+                23573,
+                6
+            ],
+            [
+                23448,
+                4
+            ],
+            [
+                23449,
+                8
+            ]
+        ],
+        "product": 23563,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Twisting Nether Chain Shirt",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23563,
+                1
+            ],
+            [
+                23572,
+                10
+            ],
+            [
+                22457,
+                10
+            ]
+        ],
+        "product": 23564,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Breastplate of Kings",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23571,
+                8
+            ],
+            [
+                23573,
+                6
+            ],
+            [
+                23447,
+                6
+            ],
+            [
+                23449,
+                8
+            ]
+        ],
+        "product": 28483,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Bulwark of Kings",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28483,
+                1
+            ],
+            [
+                23572,
+                10
+            ],
+            [
+                22457,
+                10
+            ]
+        ],
+        "product": 28484,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Fireguard",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                22456,
+                20
+            ],
+            [
+                22457,
+                20
+            ],
+            [
+                23448,
+                14
+            ]
+        ],
+        "product": 28425,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Blazeguard",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28425,
+                1
+            ],
+            [
+                23572,
+                8
+            ],
+            [
+                22451,
+                10
+            ]
+        ],
+        "product": 28426,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Lionheart Blade",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23571,
+                10
+            ],
+            [
+                23449,
+                14
+            ],
+            [
+                23573,
+                6
+            ]
+        ],
+        "product": 28428,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Lionheart Champion",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28428,
+                1
+            ],
+            [
+                23572,
+                8
+            ],
+            [
+                23571,
+                2
+            ]
+        ],
+        "product": 28429,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "The Planar Edge",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23571,
+                5
+            ],
+            [
+                22456,
+                20
+            ],
+            [
+                23573,
+                2
+            ],
+            [
+                23448,
+                12
+            ]
+        ],
+        "product": 28431,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Black Planar Edge",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28431,
+                1
+            ],
+            [
+                23572,
+                8
+            ],
+            [
+                23448,
+                6
+            ]
+        ],
+        "product": 28432,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Lunar Crescent",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                22451,
+                12
+            ],
+            [
+                22452,
+                12
+            ],
+            [
+                23571,
+                4
+            ],
+            [
+                23447,
+                22
+            ]
+        ],
+        "product": 28434,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Mooncleaver",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28434,
+                1
+            ],
+            [
+                23572,
+                8
+            ],
+            [
+                22457,
+                10
+            ]
+        ],
+        "product": 28435,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Drakefist Hammer",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                21884,
+                20
+            ],
+            [
+                22452,
+                20
+            ],
+            [
+                23447,
+                12
+            ],
+            [
+                23449,
+                8
+            ]
+        ],
+        "product": 28437,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Dragonmaw",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28437,
+                1
+            ],
+            [
+                23572,
+                8
+            ],
+            [
+                23571,
+                2
+            ]
+        ],
+        "product": 28438,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Thunder",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                22451,
+                20
+            ],
+            [
+                21885,
+                20
+            ],
+            [
+                23573,
+                6
+            ],
+            [
+                23449,
+                12
+            ]
+        ],
+        "product": 28440,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Deep Thunder",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28440,
+                1
+            ],
+            [
+                23572,
+                8
+            ],
+            [
+                22457,
+                10
+            ]
+        ],
+        "product": 28441,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Fel Weightstone",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 310,
+        "reagents": [
+            [
+                23445,
+                1
+            ],
+            [
+                21877,
+                1
+            ]
+        ],
+        "product": 28420,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Weightstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                1
+            ],
+            [
+                21877,
+                2
+            ]
+        ],
+        "product": 28421,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Bronze Darts",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 160,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                3470,
+                2
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 29201,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Whirling Steel Axes",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 240,
+        "reagents": [
+            [
+                3859,
+                5
+            ],
+            [
+                7069,
+                2
+            ],
+            [
+                3486,
+                2
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 29202,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Thorium Blades",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12655,
+                2
+            ],
+            [
+                12359,
+                6
+            ],
+            [
+                8170,
+                1
+            ]
+        ],
+        "product": 29203,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Whisper Knives",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23448,
+                6
+            ],
+            [
+                22451,
+                2
+            ],
+            [
+                21884,
+                2
+            ],
+            [
+                23793,
+                1
+            ]
+        ],
+        "product": 29204,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Earthforged Leggings",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                3860,
+                16
+            ],
+            [
+                7075,
+                2
+            ]
+        ],
+        "product": 30069,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Windforged Leggings",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                3860,
+                16
+            ],
+            [
+                7081,
+                2
+            ]
+        ],
+        "product": 30070,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Light Earthforged Blade",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                7075,
+                4
+            ]
+        ],
+        "product": 30071,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Light Skyforged Axe",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                7081,
+                4
+            ]
+        ],
+        "product": 30072,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Light Emberforged Hammer",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                7077,
+                4
+            ]
+        ],
+        "product": 30073,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9787
+    },
+    {
+        "name": "Heavy Earthforged Breastplate",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                22452,
+                4
+            ]
+        ],
+        "product": 30074,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Stormforged Hauberk",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                21885,
+                2
+            ],
+            [
+                22451,
+                2
+            ]
+        ],
+        "product": 30076,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Windforged Rapier",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                6
+            ],
+            [
+                22451,
+                6
+            ]
+        ],
+        "product": 30077,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Stoneforged Claymore",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                10
+            ],
+            [
+                22452,
+                6
+            ]
+        ],
+        "product": 30086,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Stormforged Axe",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                21885,
+                3
+            ],
+            [
+                22451,
+                3
+            ]
+        ],
+        "product": 30087,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Skyforged Great Axe",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                10
+            ],
+            [
+                22451,
+                6
+            ]
+        ],
+        "product": 30088,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Lavaforged Warhammer",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                21884,
+                6
+            ]
+        ],
+        "product": 30089,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Great Earthforged Hammer",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                23446,
+                12
+            ],
+            [
+                22452,
+                6
+            ]
+        ],
+        "product": 30093,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Embrace of the Twisting Nether",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23564,
+                1
+            ],
+            [
+                30183,
+                2
+            ]
+        ],
+        "product": 23565,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Bulwark of the Ancient Kings",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28484,
+                1
+            ],
+            [
+                30183,
+                2
+            ]
+        ],
+        "product": 28485,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 9788
+    },
+    {
+        "name": "Blazefury",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28426,
+                1
+            ],
+            [
+                30183,
+                5
+            ]
+        ],
+        "product": 28427,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Lionheart Executioner",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28429,
+                1
+            ],
+            [
+                30183,
+                5
+            ]
+        ],
+        "product": 28430,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17039
+    },
+    {
+        "name": "Wicked Edge of the Planes",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28432,
+                1
+            ],
+            [
+                30183,
+                5
+            ]
+        ],
+        "product": 28433,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Bloodmoon",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28435,
+                1
+            ],
+            [
+                30183,
+                5
+            ]
+        ],
+        "product": 28436,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17041
+    },
+    {
+        "name": "Dragonstrike",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28438,
+                1
+            ],
+            [
+                30183,
+                5
+            ]
+        ],
+        "product": 28439,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Stormherald",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                28441,
+                1
+            ],
+            [
+                30183,
+                5
+            ]
+        ],
+        "product": 28442,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 17040
+    },
+    {
+        "name": "Belt of the Guardian",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                30183,
+                2
+            ],
+            [
+                23573,
+                5
+            ],
+            [
+                21885,
+                10
+            ],
+            [
+                22452,
+                5
+            ]
+        ],
+        "product": 30034,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Belt of Battle",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                30183,
+                2
+            ],
+            [
+                23573,
+                5
+            ],
+            [
+                21884,
+                10
+            ]
+        ],
+        "product": 30032,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Boots of the Protector",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23572,
+                2
+            ],
+            [
+                23573,
+                4
+            ],
+            [
+                21885,
+                12
+            ]
+        ],
+        "product": 30033,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Havoc Boots",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23572,
+                2
+            ],
+            [
+                23573,
+                4
+            ],
+            [
+                21884,
+                12
+            ]
+        ],
+        "product": 30031,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wildguard Breastplate",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23448,
+                8
+            ],
+            [
+                21886,
+                12
+            ],
+            [
+                22456,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 31364,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wildguard Leggings",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23448,
+                8
+            ],
+            [
+                21886,
+                12
+            ],
+            [
+                22456,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 31367,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wildguard Helm",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23448,
+                8
+            ],
+            [
+                21886,
+                12
+            ],
+            [
+                22456,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 31368,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iceguard Breastplate",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23449,
+                8
+            ],
+            [
+                21885,
+                12
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 31369,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iceguard Leggings",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23449,
+                8
+            ],
+            [
+                21885,
+                12
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 31370,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iceguard Helm",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23449,
+                8
+            ],
+            [
+                21885,
+                12
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 31371,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadesteel Sabots",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                32428,
+                2
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                2
+            ],
+            [
+                22456,
+                4
+            ],
+            [
+                23446,
+                4
+            ]
+        ],
+        "product": 32402,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadesteel Bracers",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                32428,
+                1
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                2
+            ],
+            [
+                22456,
+                2
+            ],
+            [
+                23446,
+                4
+            ]
+        ],
+        "product": 32403,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadesteel Greaves",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                32428,
+                3
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                4
+            ],
+            [
+                22456,
+                6
+            ],
+            [
+                23446,
+                12
+            ]
+        ],
+        "product": 32404,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadesteel Girdle",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                32428,
+                2
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                3
+            ],
+            [
+                22456,
+                4
+            ],
+            [
+                23446,
+                8
+            ]
+        ],
+        "product": 32401,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swiftsteel Bracers",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23448,
+                14
+            ],
+            [
+                23573,
+                2
+            ],
+            [
+                22451,
+                6
+            ],
+            [
+                32428,
+                4
+            ]
+        ],
+        "product": 32568,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swiftsteel Shoulders",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23448,
+                18
+            ],
+            [
+                23573,
+                2
+            ],
+            [
+                22451,
+                8
+            ],
+            [
+                32428,
+                2
+            ]
+        ],
+        "product": 32570,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dawnsteel Bracers",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23449,
+                14
+            ],
+            [
+                23573,
+                2
+            ],
+            [
+                21884,
+                6
+            ],
+            [
+                32428,
+                4
+            ]
+        ],
+        "product": 32571,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dawnsteel Shoulders",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23449,
+                18
+            ],
+            [
+                23573,
+                2
+            ],
+            [
+                21884,
+                8
+            ],
+            [
+                32428,
+                2
+            ]
+        ],
+        "product": 32573,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ragesteel Shoulders",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23445,
+                12
+            ],
+            [
+                21884,
+                2
+            ],
+            [
+                23449,
+                8
+            ],
+            [
+                27503,
+                2
+            ]
+        ],
+        "product": 33173,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Weapon Chain",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 355,
+        "reagents": [
+            [
+                23573,
+                2
+            ],
+            [
+                23449,
+                1
+            ]
+        ],
+        "product": 33185,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Copper Longsword",
+        "learned": 35,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                2840,
+                10
+            ],
+            [
+                818,
+                1
+            ],
+            [
+                3470,
+                2
+            ]
+        ],
+        "product": 33791,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hammer of Righteous Might",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                16
+            ],
+            [
+                23448,
+                12
+            ],
+            [
+                23571,
+                6
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 32854,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sunblessed Gauntlets",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                35128,
+                8
+            ],
+            [
+                21886,
+                20
+            ],
+            [
+                23571,
+                6
+            ],
+            [
+                34664,
+                6
+            ]
+        ],
+        "product": 34380,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hard Khorium Battlefists",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                35128,
+                10
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                22456,
+                12
+            ],
+            [
+                22451,
+                12
+            ],
+            [
+                34664,
+                6
+            ]
+        ],
+        "product": 34378,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sunblessed Breastplate",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                23449,
+                20
+            ],
+            [
+                23573,
+                4
+            ],
+            [
+                21886,
+                15
+            ],
+            [
+                21885,
+                15
+            ],
+            [
+                23572,
+                6
+            ]
+        ],
+        "product": 34379,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hard Khorium Battleplate",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                23449,
+                20
+            ],
+            [
+                23573,
+                4
+            ],
+            [
+                21884,
+                10
+            ],
+            [
+                22456,
+                10
+            ],
+            [
+                23572,
+                6
+            ]
+        ],
+        "product": 34377,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    }
+]

@@ -25,7 +25,7 @@ def _pred_positive_float(x: Any) -> bool:
     return isinstance(x, float) and x > 0
 
 
-@dataclass
+@dataclass(frozen=True)
 class RecipeJson:
     name: str
     learned: int
