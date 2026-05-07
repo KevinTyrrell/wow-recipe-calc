@@ -37,11 +37,10 @@ class PriceManager(Saveable):
         :param tsm_client: TSM request instance for market value pricing
         :param item_db: Item DB instance for item name requesting
         """
-        policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, tsm_client.scan_ah_market_value)
-        self.__mv_cache: TTLCache = TTLCache(self._RESOURCE_MARKET_STEM, policy)  # continuously tosses stale data
+        self.__tsm_client = tsm_client
+        self.__mv_cache: TTLCache[int, int] = self._make_ttl_cache()
         self.__vendor: Resource[int, int] = _VendorPriceDB()  # [item_id, copper cost from vendor]
         self.__unpriceable: _UnpriceableHandler = _UnpriceableHandler(item_db)
-        self.__tsm_client = tsm_client
         self.__vendor.load()
 
     def get_price(self, item_id: int) -> int:
@@ -71,6 +70,17 @@ class PriceManager(Saveable):
         except Exception as e:
             logger.error(f"TSM pricing cache could not be saved to {self.__mv_cache.file_path}: {e}")
 
+    def _make_ttl_cache(self) -> TTLCache[int, int]:
+        """Initializes the market value pricing cache, loading if possible"""
+        policy: CachePolicy = CachePolicy(self._MARKET_STALE_THRESH, self.__tsm_client.scan_ah_market_value)
+        ttl_cache: TTLCache[int, int] = TTLCache(self._RESOURCE_MARKET_STEM, policy)
+        try:
+            ttl_cache.load()
+        except FileNotFoundError: pass  # cache not existing is expected
+        except Exception as e:
+            logger.warning(f"market pricing cache failed to load: {e}")
+        return ttl_cache
+
 
 class _VendorPriceDB(Resource[int, int]):
     _RESOURCE: Path = Path("data/items/vendor_prices")
@@ -93,10 +103,10 @@ class _UnpriceableHandler:
 
     def fallback_price(self, item_id: int) -> int:
         """Retrieve prices for items in which the item_db cannot handle"""
-        entry: Optional[ItemEntry] = self.__item_db.get(item_id)
+        entry: Optional[ItemEntry] = self.__item_db.by_id.get(item_id)
         if entry is None:
             raise ValueError(f"item ID is unknown and has no pricing data: {item_id}")
         if not item_id in self.__unpriceable:
-            logger.warning(f"item '{entry.item_name}' has no pricing data, ID: {item_id}")
+            logger.info(f"item '{entry.item_name}' has no pricing data, ID: {item_id}")
             self.__unpriceable.add(item_id)
         return 0  # fallback pricing
