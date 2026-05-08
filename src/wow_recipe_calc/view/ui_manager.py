@@ -103,5 +103,6 @@ class UIManager:
 
     def _on_unhandled_exception(self, exc_type, exc_value, exc_tb) -> None:
         """Close the GUI in case of an unhandled exception"""
-        self.__view_app.quit()
         logger.critical("uncaught exception", exc_info = (exc_type, exc_value, exc_tb))
+        traceback.print_exception(exc_type, exc_value, exc_tb)
+        self.__view_app.quit()

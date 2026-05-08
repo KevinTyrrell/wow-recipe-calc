@@ -126,7 +126,6 @@ class _CraftRouteStep(QWidget):
 
     @classmethod
     def _format_skill_range(cls, start: int, stop: int) -> str:
-        if 5 / 0: pass
         fmt: str = cls._SKILL_RANGE_FMT.format(cls._SKILL_MAX_DIGITS)
         return fmt.format(start, stop)
 
