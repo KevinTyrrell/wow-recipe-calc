@@ -20,15 +20,16 @@ from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QPlainTextEdit
 
 import wow_recipe_calc.view.constants as C
-from wow_recipe_calc.crafts.craft_planner import CraftPlan
 
-from wow_recipe_calc.util.log_manager import LogManager
-from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
 from wow_recipe_calc.crafting_app import CraftingApp
+from wow_recipe_calc.crafts.craft_planner import CraftPlan
+from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
 from wow_recipe_calc.view.frame.window_banner import WindowBanner
 from wow_recipe_calc.view.frame.tabs.edit_tab import EditTab
-from wow_recipe_calc.view.frame.tabs.bom_tab import BomTab
 from wow_recipe_calc.view.frame.tabs.plan_tab import PlanTab
+from wow_recipe_calc.view.frame.tabs.bom_tab import BomTab
+from wow_recipe_calc.view.frame.tabs.route_tab import RouteTab
+from wow_recipe_calc.util.log_manager import LogManager
 
 logger: logging.Logger = logging.getLogger(__name__)
 
@@ -82,16 +83,18 @@ class MainWindow(QWidget):
         tab_names: tuple[str, ...] = (
             C.EditTab.NAME, C.BomTab.NAME, C.RouteTab.NAME, C.CostTab.NAME)
         plan_tabs: tuple[PlanTab, ...] = (
-            BomTab(),
+            BomTab(), RouteTab(self.__craft_app.item_db)
         )
         tab_frames: tuple[QWidget, ...] = (EditTab(self.__craft_app, self.__state),) + plan_tabs
         for i in range(len(tab_frames)):
             tab_container.addTab(tab_frames[i], tab_names[i])
         def tab_change_cb(index: int) -> None:
-            if self.__current_tab == 0 and index != 0:
-                plan: CraftPlan = self.__craft_app.run_planner(self.__state)
-                for plan_tab in plan_tabs: plan_tab.invalidate(plan)
-                plan_tabs[index - 1].refresh()
+            if index != 0:  # User went from edit tab -> plan tab, changes may have occurred
+                if self.__current_tab == 0:
+                    plan: CraftPlan = self.__craft_app.run_planner(self.__state)
+                    # Notify each tab that their displayed data is out-of-date
+                    for plan_tab in plan_tabs: plan_tab.invalidate(plan)
+                plan_tabs[index - 1].refresh()  # inform the tab it was selected
             self.__current_tab = index
         tab_container.currentChanged.connect(tab_change_cb)
         return tab_container

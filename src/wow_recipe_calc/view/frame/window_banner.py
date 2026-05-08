@@ -73,8 +73,7 @@ class BannerPushButton(QPushButton):
         self.setFixedWidth(width)
         self.clicked.connect(self.button_clicked)
 
-    def button_clicked(self) -> None:
-        raise NotImplementedError
+    def button_clicked(self) -> None: raise NotImplementedError
 
 
 class CloseButton(BannerPushButton):

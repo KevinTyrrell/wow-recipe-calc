@@ -74,6 +74,20 @@ class BomTab:
 
 class RouteTab:
     NAME: str = "Crafting Route"
+    class List:
+        HANDLE: str = "route-list"
+        BOX_HANDLE: str = "route-list-container"
+        MARGINS: tuple[int, int, int, int] = (5, 5, 5, 5)
+        DIVIDER_HANDLE: str = "route-divider"
+        DIVIDER_HEIGHT: int = 1
+        class Step:
+            HANDLE: str = "route-step"
+            RANGE_HANDLE: str = "route-step-range"
+            RECIPE_HANDLE: str = "route-step-recipe"
+            MAT_HANDLE: str = "route-step-mat"
+            MARGINS: tuple[int, int, int, int] = (8, 8, 8, 6)
+            INNER_SPACING: int = 2
+            HEADER_SPACING: int = 8
 
 
 class CostTab:

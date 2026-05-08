@@ -1,0 +1,104 @@
+/* =============================================================================
+   CRAFTING ROUTE LIST
+============================================================================= */
+
+QScrollArea#route-list {
+    background-color: #252525;
+    border: 2px solid #3a3a3a;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QScrollArea#route-list QScrollBar:vertical {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 15px;
+}
+
+QScrollArea#route-list QScrollBar::handle:vertical {
+    background-color: #4a4a4a;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollArea#route-list QScrollBar::handle:vertical:hover {
+    background-color: #5a5a5a;
+}
+
+QScrollArea#route-list QScrollBar::add-line:vertical,
+QScrollArea#route-list QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* =============================================================================
+   CONTAINER
+============================================================================= */
+
+QWidget#route-list-container {
+    background-color: #252525;
+}
+
+/* =============================================================================
+   DIVIDER
+============================================================================= */
+
+QFrame#route-divider {
+    background-color: #313131;
+    border: none;
+    max-height: 1px;
+    min-height: 1px;
+}
+
+/* =============================================================================
+   STEP CARD
+============================================================================= */
+
+QWidget#route-step {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+QWidget#route-step:hover {
+    background-color: #2e2e2e;
+}
+
+/* Skill range badge: [10, 35] */
+QLabel#route-step-range {
+    background: transparent;
+    color: #6a9fb5;
+    font-family: Consolas;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0px 4px 0px 0px;
+}
+
+QWidget#route-step:hover QLabel#route-step-range {
+    color: #82bcd1;
+}
+
+/* Recipe headline: 15 x Tall Chocolate Cake */
+QLabel#route-step-recipe {
+    background: transparent;
+    color: #e8e0c8;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0px;
+}
+
+QWidget#route-step:hover QLabel#route-step-recipe {
+    color: #ffffff;
+}
+
+/* Material lines (indented):  15 x Cake Tray */
+QLabel#route-step-mat {
+    background: transparent;
+    color: #888888;
+    font-size: 12.5px;
+    font-family: Bahnschrift;
+    padding-left: 88px;   /* visually aligns under recipe name */
+}
+
+QWidget#route-step:hover QLabel#route-step-mat {
+    color: #aaaaaa;
+}
