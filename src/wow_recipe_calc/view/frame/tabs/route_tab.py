@@ -61,27 +61,18 @@ class RouteTab(PlanTab):
             child = self.__list_layout.takeAt(0)
             if child.widget():
                 child.widget().deleteLater()
-
-        steps = plan.craft_order  # tuple of (from, to, recipe, count)
-        for i, (start, skill_to, recipe, count) in enumerate(steps):
+        for i, (start, skill_to, recipe, count) in enumerate(plan.craft_order):
             self.__list_layout.addWidget(_Divider())  # top divider
-
             # Resolve material names and quantities
-            materials: list[tuple[str, int]] = []
+            materials: list[tuple[str, int]] = list()
             for item_id, quantity in recipe.reagents.items():
                 item_name: str = self.__item_db.by_id[item_id].item_name
                 total_qty: int = quantity * count
                 materials.append((item_name, total_qty))
-
-            step = CraftRouteStep(
-                start = start,
-                stop = skill_to,
-                name = recipe.name,
-                casts = count,
-                materials = materials,
-            )
+            materials.sort(key = lambda m: (-m[1], m[0]))  # sort by descending quantity, or name
+            step: _CraftRouteStep = _CraftRouteStep(start, skill_to, recipe.name, count, materials)
             self.__list_layout.addWidget(step)
-        if steps: self.__list_layout.addWidget(_Divider())  # bottom divider
+        if plan.craft_order: self.__list_layout.addWidget(_Divider())  # bottom divider
 
 
 class _Divider(QFrame):
@@ -93,7 +84,12 @@ class _Divider(QFrame):
         self.setFixedHeight(C.RouteTab.List.DIVIDER_HEIGHT)
 
 
-class CraftRouteStep(QWidget):
+class _CraftRouteStep(QWidget):
+    _CRAFT_COUNT_FMT: str = "{{:>{}}} × {{}}"
+    _SKILL_RANGE_FMT: str = "[{{:<{0}}} → {{:>{0}}})"
+    _SKILL_MAX_DIGITS: int = 3
+    _CRAFT_MAX_DIGITS: int = 4
+
     def __init__(self, start: int, stop: int, name: str, casts: int, materials: list[tuple[str, int]]) -> None:
         super().__init__()
         self.setObjectName(C.RouteTab.List.Step.HANDLE)
@@ -108,11 +104,11 @@ class CraftRouteStep(QWidget):
         header_layout.setContentsMargins(0, 0, 0, 0)
         header_layout.setSpacing(C.RouteTab.List.Step.HEADER_SPACING)
 
-        skill_range_label: QLabel = QLabel(f"[{start}, {stop}]")
+        skill_range_label: QLabel = QLabel(self._format_skill_range(start, stop))
         skill_range_label.setObjectName(C.RouteTab.List.Step.RANGE_HANDLE)
         skill_range_label.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
 
-        recipe_label: QLabel = QLabel(f"{casts} x {name}")
+        recipe_label: QLabel = QLabel(self._format_craft_entry(f"[{name}]", casts))
         recipe_label.setObjectName(C.RouteTab.List.Step.RECIPE_HANDLE)
         recipe_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
@@ -122,6 +118,16 @@ class CraftRouteStep(QWidget):
 
         # ── Material rows ─────────────────────────────────────────────────
         for mat_name, mat_qty in materials:
-            mat_label: QLabel = QLabel(f"{mat_qty} x {mat_name}")
+            mat_label: QLabel = QLabel(self._format_craft_entry(mat_name, mat_qty))
             mat_label.setObjectName(C.RouteTab.List.Step.MAT_HANDLE)
             layout.addWidget(mat_label)
+
+    @classmethod
+    def _format_skill_range(cls, start: int, stop: int) -> str:
+        fmt: str = cls._SKILL_RANGE_FMT.format(cls._SKILL_MAX_DIGITS)
+        return fmt.format(start, stop)
+
+    @classmethod
+    def _format_craft_entry(cls, name: str, count: int) -> str:
+        fmt: str = cls._CRAFT_COUNT_FMT.format(cls._CRAFT_MAX_DIGITS)
+        return fmt.format(count, name)

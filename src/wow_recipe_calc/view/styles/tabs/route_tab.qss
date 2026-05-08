@@ -77,7 +77,7 @@ QWidget#route-step:hover QLabel#route-step-range {
     color: #82bcd1;
 }
 
-/* Recipe headline: 15 x Tall Chocolate Cake */
+/* Recipe headline */
 QLabel#route-step-recipe {
     background: transparent;
     color: #e8e0c8;
@@ -95,8 +95,8 @@ QLabel#route-step-mat {
     background: transparent;
     color: #888888;
     font-size: 12.5px;
-    font-family: Bahnschrift;
-    padding-left: 88px;   /* visually aligns under recipe name */
+    font-family: "Cascadia Code";
+    padding-left: 80px;   /* visually aligns under recipe name */
 }
 
 QWidget#route-step:hover QLabel#route-step-mat {

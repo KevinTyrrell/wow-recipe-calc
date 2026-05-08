@@ -86,7 +86,7 @@ class TSMClient(Saveable):
         :param api_key: TSM API key, provided from the user's TSM account page
         """
         self.__auth = _TSMAuth(api_key, self.__throttle)
-        logger.info(f"TSM API key loaded: {self._mask_api_key(api_key)}")
+        logger.debug(f"TSM API key loaded: {self._mask_api_key(api_key)}")
         self._authorize()
 
     def scan_ah_market_value(self) -> dict[int, int]:
