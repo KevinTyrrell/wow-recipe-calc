@@ -85,6 +85,7 @@ class _Divider(QFrame):
 
 
 class _CraftRouteStep(QWidget):
+    _RECIPE_NAME_FMT: str = "[ {} ]"
     _CRAFT_COUNT_FMT: str = "{{:>{}}} × {{}}"
     _SKILL_RANGE_FMT: str = "[{{:<{0}}} → {{:>{0}}})"
     _SKILL_MAX_DIGITS: int = 3
@@ -108,7 +109,8 @@ class _CraftRouteStep(QWidget):
         skill_range_label.setObjectName(C.RouteTab.List.Step.RANGE_HANDLE)
         skill_range_label.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
 
-        recipe_label: QLabel = QLabel(self._format_craft_entry(f"[{name}]", casts))
+        recipe_name: str = self._RECIPE_NAME_FMT.format(name)
+        recipe_label: QLabel = QLabel(self._format_craft_entry(recipe_name, casts))
         recipe_label.setObjectName(C.RouteTab.List.Step.RECIPE_HANDLE)
         recipe_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
@@ -124,6 +126,7 @@ class _CraftRouteStep(QWidget):
 
     @classmethod
     def _format_skill_range(cls, start: int, stop: int) -> str:
+        if 5 / 0: pass
         fmt: str = cls._SKILL_RANGE_FMT.format(cls._SKILL_MAX_DIGITS)
         return fmt.format(start, stop)
 

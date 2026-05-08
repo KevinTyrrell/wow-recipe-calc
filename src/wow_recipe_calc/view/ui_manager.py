@@ -14,6 +14,9 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
+import sys
+import traceback
+
 from typing import Optional
 from pathlib import Path
 from logging import Logger, getLogger
@@ -50,6 +53,7 @@ class UIManager:
         self.__window: MainWindow = MainWindow(app, self._make_recipe_state(), logs)
         self.setup_stylesheets()
         self.setup_icon()
+        sys.excepthook = self._on_unhandled_exception
 
     def show(self) -> None:
         self.__window.show()
@@ -96,3 +100,8 @@ class UIManager:
         """Assigns the icon of the program from the loaded icon resource"""
         icon: Path = Project.resource(self._ICON.stem, self._ICON.parent, self._ICON.suffix)
         self.__view_app.setWindowIcon(QIcon(str(icon)))
+
+    def _on_unhandled_exception(self, exc_type, exc_value, exc_tb) -> None:
+        """Close the GUI in case of an unhandled exception"""
+        self.__view_app.quit()
+        logger.critical("uncaught exception", exc_info = (exc_type, exc_value, exc_tb))

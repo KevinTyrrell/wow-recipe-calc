@@ -16,8 +16,8 @@
 
 from __future__ import annotations
 from logging import getLogger, Logger, LogRecord, Formatter, Handler
-from logging.handlers import MemoryHandler
 from typing import Optional, Callable, TextIO, TypeAlias
+from collections import deque
 
 import logging
 
@@ -25,31 +25,25 @@ Destination: TypeAlias = Optional[TextIO | Callable[[str], None]]
 
 
 class LogManager:
-    _DEFAULT_CAPACITY: int = 1000  # limit of log records stored in RAM buffer
+    _DEFAULT_CAPACITY: int = 1000
     _DEFAULT_LOG_LEVEL: int = logging.INFO
     _DEFAULT_FMT: str = "[%(asctime)s] (%(levelname)s) [%(name)s] %(message)s"
     _DEFAULT_TIME_FMT: str = "%I:%M:%S %p"
-    _DISABLE_AUTO_FLUSH: int = 1000  # ensures all log records are cleared from buffer
 
     def __init__(self, log_level: Optional[int] = None,
                  msg_fmt: Optional[str] = None, time_fmt: Optional[str] = None) -> None:
-        """
-        :param log_level: (Optional) Minimum logging level in-which to broadcast
-        :param msg_fmt: (Optional) Logging-style message format for record messages
-        :param time_fmt: (Optional) Logging-style time format for record timestamps
-        """
         self.__level: int = log_level or self._DEFAULT_LOG_LEVEL
         self.__formatter: Formatter = Formatter(
             msg_fmt or self._DEFAULT_FMT, datefmt = time_fmt or self._DEFAULT_TIME_FMT)
         self.__root: Logger = getLogger()
-        self.__mem_handler: MemoryHandler = MemoryHandler(
-            capacity = self._DEFAULT_CAPACITY, flushLevel = self._DISABLE_AUTO_FLUSH)
-        self.__console_handler: Handler = self._ConsoleEmitter(self.__formatter)
-        self.__handler: Handler = self.__mem_handler
-        self.__hook_emitter: Callable[[Handler], None] = self.__shutdown_log_buffer
+        self.__buffer: deque[LogRecord] = deque(maxlen = self._DEFAULT_CAPACITY)
+        self.__listeners: list[Handler] = list()
         self.__root.setLevel(self.__level)
-        self.__root.addHandler(self.__mem_handler)
-        self.__root.addHandler(self.__console_handler)  # allow console to always be listening
+
+        # Console is always live — no buffering needed
+        console = self._ConsoleEmitter(self.__formatter)
+        self.__root.addHandler(console)
+        self.__listeners.append(console)
 
     @property
     def level(self) -> int: return self.__level
@@ -59,41 +53,33 @@ class LogManager:
         self.__level = value
         self.__root.setLevel(value)
 
-    def broadcast(self, destination: Destination = None) -> None:
+    def broadcast(self, destination: Destination) -> None:
         """
-        Broadcasts past and future logging records to a specified destination
+        Registers a new listener and immediately replays all buffered records to it.
 
-        Future log records will be channeled to the destination.
-        If the manager was previously buffering log records,
-        all buffered log records are expelled to the destination
-
-        The destination determines where the log records are sent:
-        * no-arg: stdout console message
-        * TextIO: file is written to continuously
-        * Callable: external callback to consume log records
-
-        :param destination: Destination where to broadcast log records
+        * TextIO        : live file writer, replays buffer then writes future records immediately
+        * Callable      : replays buffer into callback, then forwards future records live
         """
-        handler: Handler = self._map_to_handler(destination)
-        self.__hook_emitter(handler)
-
-    def _map_to_handler(self, destination: Destination) -> Handler:
-        if destination is None: return self.__console_handler  # default to console emitter
-        if callable(destination): return LogManager._CallbackEmitter(self.__formatter, destination)
-        return LogManager._IOEmitter(self.__formatter, destination)
-
-    def __switch_handler(self, handler: Handler) -> None:
-        self.__root.removeHandler(self.__handler)
-        self.__root.addHandler(handler)
-        self.__handler = handler
-
-    def __shutdown_log_buffer(self, handler: Handler) -> None:
-        self.__switch_handler(handler)
-        for record in self.__mem_handler.buffer:
+        if callable(destination):
+            handler: Handler = LogManager._CallbackEmitter(self.__formatter, destination)
+        else: handler: Handler = LogManager._IOEmitter(self.__formatter, destination)
+        for record in self.__buffer:  # Replay buffered logs into the new handler
             if record.levelno >= self.__level:
                 handler.emit(record)
-        self.__mem_handler.close()
-        self.__hook_emitter = self.__switch_handler  # strategy pattern
+        self.__root.addHandler(handler)
+        self.__listeners.append(handler)
+
+    def _buffer_record(self, record: LogRecord) -> None:
+        """Called by the internal buffering handler to store records"""
+        self.__buffer.append(record)
+
+    class _BufferingTap(Handler):
+        """Silent handler whose only job is to feed records into LogManager's buffer"""
+        def __init__(self, manager: LogManager) -> None:
+            super().__init__()
+            self.__manager = manager
+        def emit(self, record: LogRecord) -> None:
+            self.__manager._buffer_record(record)
 
     class _ConsoleEmitter(Handler):
         def __init__(self, formatter: Formatter) -> None:
@@ -109,7 +95,7 @@ class LogManager:
             self.__file: TextIO = file
         def emit(self, record: LogRecord) -> None:
             self.__file.write(f"{self.format(record)}\n")
-            self.__file.flush()  # clear RAM and immediately write to file in case of crash
+            self.__file.flush()
 
     class _CallbackEmitter(Handler):
         def __init__(self, formatter: Formatter, cb: Callable[[str], None]) -> None:
@@ -117,4 +103,4 @@ class LogManager:
             self.setFormatter(formatter)
             self.__cb: Callable[[str], None] = cb
         def emit(self, record: LogRecord) -> None:
-            self.__cb(self.format(record))  # defer to callback
+            self.__cb(self.format(record))

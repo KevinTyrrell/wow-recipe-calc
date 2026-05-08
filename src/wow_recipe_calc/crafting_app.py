@@ -96,7 +96,7 @@ class CraftingApp:
         except FileNotFoundError:
             logger.info("no config environment found, running setup")
         except (OSError, ValueError) as e:
-            logger.error(f"config cannot be loaded, running setup: {str(e)}")
+            logger.error(f"config cannot be loaded, running setup: {e}")
         config: SetupConfig = SetupConfig(self.__tsm_client)  # run first-time setup
         env.update(config.full_setup())  # run user through questionnaire
         return env
