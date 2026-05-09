@@ -25,7 +25,7 @@ from wow_recipe_calc.crafting_app import CraftingApp
 from wow_recipe_calc.crafts.craft_planner import CraftPlan
 from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
 from wow_recipe_calc.view.frame.window_banner import WindowBanner
-from wow_recipe_calc.view.frame.tabs.edit_tab import EditTab
+from view.frame.tabs.edit.edit_tab import EditTab
 from wow_recipe_calc.view.frame.tabs.plan_tab import PlanTab
 from wow_recipe_calc.view.frame.tabs.bom_tab import BomTab
 from wow_recipe_calc.view.frame.tabs.route_tab import RouteTab

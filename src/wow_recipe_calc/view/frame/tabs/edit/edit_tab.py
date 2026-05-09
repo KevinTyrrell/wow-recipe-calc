@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QSt
 from PySide6.QtCore import Qt, QModelIndex
 from PySide6.QtGui import QIntValidator
 
-from wow_recipe_calc.view.filter_model import RecipeFilterModel
+from view.frame.tabs.edit.filter_model import RecipeFilterModel
 from wow_recipe_calc.crafting_app import CraftingApp
 from wow_recipe_calc.crafts.item_db import ItemDB
 from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
