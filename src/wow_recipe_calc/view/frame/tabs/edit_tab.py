@@ -16,11 +16,12 @@
 
 from typing import Optional
 
-from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLineEdit,
+from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QStyle,
                                QListView, QLabel, QScrollArea, QFrame, QSizePolicy)
-from PySide6.QtCore import Qt, QAbstractListModel, QModelIndex
+from PySide6.QtCore import Qt, QModelIndex
 from PySide6.QtGui import QIntValidator
 
+from wow_recipe_calc.view.filter_model import RecipeFilterModel
 from wow_recipe_calc.crafting_app import CraftingApp
 from wow_recipe_calc.crafts.item_db import ItemDB
 from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
@@ -48,12 +49,15 @@ class EditTab(QWidget):
         self.__search_bar.setPlaceholderText(C.EditTab.SearchBar.PROMPT)
         self.__search_bar.setObjectName(C.EditTab.SearchBar.HANDLE)
 
-        # 2. Recipe List (Model/View)
+        # Inline clear button
+        self.__search_clear_action = self.__search_bar.addAction(
+            self.style().standardIcon(QStyle.SP_LineEditClearButton), QLineEdit.TrailingPosition)
+        self.__search_clear_action.setVisible(False)
+
         self.__filter_model = RecipeFilterModel(self.__app.item_db, self.__state)
         self.__filter_view: QListView = QListView()
         self.__filter_view.setModel(self.__filter_model)
 
-        # 3. Selected Items Scroll Area
         self.__scroll_frame: QScrollArea = QScrollArea()
         self.__scroll_frame.setObjectName(C.EditTab.SelectList.HANDLE)
         self.__scroll_frame.setWidgetResizable(True)
@@ -75,6 +79,10 @@ class EditTab(QWidget):
 
     def _setup_connections(self) -> None:
         self.__search_bar.textChanged.connect(self.__filter_model.filter_text)
+        self.__search_bar.textChanged.connect(  # show clear button only when content exists
+            lambda text: self.__search_clear_action.setVisible(bool(text)))
+        self.__search_clear_action.triggered.connect(self.__search_bar.clear)
+
         self.__filter_view.clicked.connect(self._on_recipe_selected)
         # Listen for state changes to sync UI rows
         self.__state.listen(self._update_rows)
@@ -158,45 +166,3 @@ class RecipeRow(QWidget):
     def _remove(self) -> None:
         if self.__recipe in self.__state:  # removing from state will eject this row
             del self.__state[self.__recipe]
-
-
-class RecipeFilterModel(QAbstractListModel):
-    def __init__(self, item_db: ItemDB, state: RecipeStateCore) -> None:
-        super().__init__()
-        self.__item_db: ItemDB = item_db
-        self.__state: RecipeStateCore = state
-        self.__filter_text: str = str()
-        self.__visible: list[Recipe] = list()
-        self.__state.listen(self._on_state_change)
-        self._recompute()
-
-    def rowCount(self, parent: QModelIndex = QModelIndex()) -> int:
-        return len(self.__visible)
-
-    def data(self, index: QModelIndex, role: int = Qt.DisplayRole) -> Optional[str]:
-        if not index.isValid(): return None
-        if role != Qt.DisplayRole: return None
-        recipe: Recipe = self.__visible[index.row()]
-        name: str = self.__item_db.by_recipe[recipe].item_name
-        return name
-
-    def filter_text(self, text: str) -> None:
-        self.__filter_text = text.lower()
-        self._recompute()
-
-    def recipe_at(self, row: int) -> Recipe:
-        return self.__visible[row]
-
-    def _recompute(self) -> None:
-        self.beginResetModel()
-        self.__visible = [recipe for recipe in self.__item_db.by_recipe.keys()
-                          if recipe not in self.__state and self._search_match(recipe)]
-        self.endResetModel()
-
-    def _search_match(self, recipe: Recipe) -> bool:
-        name: str = self.__item_db.by_recipe[recipe].item_name
-        return self.__filter_text in name.lower()
-
-    def _on_state_change(self, __: Recipe, _: Optional[int]) -> None:
-        if len(self.__visible) != len(self.__state):
-            self._recompute()

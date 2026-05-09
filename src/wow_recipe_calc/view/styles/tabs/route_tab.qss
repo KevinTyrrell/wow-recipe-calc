@@ -81,7 +81,7 @@ QWidget#route-step:hover QLabel#route-step-range {
 QLabel#route-step-recipe {
     background: transparent;
     color: #e8e0c8;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     padding: 0px;
 }
@@ -90,13 +90,13 @@ QWidget#route-step:hover QLabel#route-step-recipe {
     color: #ffffff;
 }
 
-/* Material lines (indented):  15 x Cake Tray */
+/* Material lines (indented) */
 QLabel#route-step-mat {
     background: transparent;
     color: #888888;
     font-size: 12.5px;
     font-family: "Cascadia Code";
-    padding-left: 80px;   /* visually aligns under recipe name */
+    padding-left: 79px;   /* visually aligns under recipe name */
 }
 
 QWidget#route-step:hover QLabel#route-step-mat {
