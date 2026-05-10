@@ -100,6 +100,7 @@ class CostTab:
         HANDLE: str = "cost-header"
         LABEL_HANDLE: str = "cost-header-label"
         TOTAL_HANDLE: str = "cost-header-total"
+        HEIGHT: int = 16
         LABEL: str = "TOTAL COST"
         MARGINS: tuple[int, int, int, int] = (12, 8, 12, 8)
     class List:
@@ -111,8 +112,10 @@ class CostTab:
             NAME_HANDLE: str = "cost-row-name"
             PER_CAST_HANDLE: str = "cost-row-per-cast"
             TOTAL_HANDLE: str = "cost-row-total"
-            PER_CAST_WIDTH: int = 80
-            TOTAL_WIDTH: int = 80
+            TOTAL_HEIGHT: int = 12
+            CAST_HEIGHT: int = 9
+            CAST_WIDTH: int = 95
+            TOTAL_WIDTH: int = 120
             MARGINS: tuple[int, int, int, int] = (0, 2, 4, 2)
 
 

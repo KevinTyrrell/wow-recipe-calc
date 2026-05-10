@@ -74,6 +74,7 @@ class CostTab(PlanTab):
         self.__scroll_frame.setWidgetResizable(True)
         self.__scroll_frame.setFrameShape(QFrame.StyledPanel)
         self.__scroll_frame.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.__scroll_frame.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
         self.__list_frame: QWidget = QWidget()
         self.__list_frame.setObjectName(C.CostTab.List.BOX_HANDLE)
@@ -86,27 +87,24 @@ class CostTab(PlanTab):
         layout.addWidget(self.__scroll_frame)
 
     def _rebuild(self, plan: CraftPlan) -> None:
-        self.__total_label.setText(Currency.format_coins(plan.cost, 16))
-
+        self.__total_label.setText(Currency.format_coins(plan.cost, C.CostTab.Header.HEIGHT))
         while self.__list_layout.count():
             child = self.__list_layout.takeAt(0)
             if child.widget():
                 child.widget().deleteLater()
-
         # Sort by total recipe cost descending, ties broken by name
         rows: list[tuple[str, int, int, int]] = []  # name, count, per-cast, total
         for recipe, cost_per_cast in plan.craft_costs.items():
             count: int = plan.craft_counts[recipe]
             rows.append((recipe.name, count, cost_per_cast, cost_per_cast * count))
         rows.sort(key=lambda r: (-r[3], r[0]))
-
         for name, count, cost_per_cast, total_cost in rows:
             row: CostRow = CostRow(name, count, cost_per_cast, total_cost)
             self.__list_layout.addWidget(row)
 
 
 class CostRow(QWidget):
-    def __init__(self, name: str, count: int, cost_per_cast: int, total_cost: int) -> None:
+    def __init__(self, name: str, count: int, cast: int, total: int) -> None:
         super().__init__()
         self.setObjectName(C.CostTab.List.Row.HANDLE)
         self.setAttribute(Qt.WA_StyledBackground, True)
@@ -118,12 +116,12 @@ class CostRow(QWidget):
         name_label.setObjectName(C.CostTab.List.Row.NAME_HANDLE)
         name_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
-        per_cast_label: QLabel = QLabel(_copper_to_str(cost_per_cast))
+        per_cast_label: QLabel = QLabel(Currency.format_coins(cast, C.CostTab.List.Row.CAST_HEIGHT))
         per_cast_label.setObjectName(C.CostTab.List.Row.PER_CAST_HANDLE)
-        per_cast_label.setFixedWidth(C.CostTab.List.Row.PER_CAST_WIDTH)
+        per_cast_label.setFixedWidth(C.CostTab.List.Row.CAST_WIDTH)
         per_cast_label.setAlignment(Qt.AlignCenter)
 
-        total_label: QLabel = QLabel(_copper_to_str(total_cost))
+        total_label: QLabel = QLabel(Currency.format_coins(total, C.CostTab.List.Row.TOTAL_HEIGHT))
         total_label.setObjectName(C.CostTab.List.Row.TOTAL_HANDLE)
         total_label.setFixedWidth(C.CostTab.List.Row.TOTAL_WIDTH)
         total_label.setAlignment(Qt.AlignCenter)
@@ -154,7 +152,7 @@ class Currency:
         if silver > 0:
             sections.append(cls._get_coin_fmt(cls._SILVER).format(silver, size))
         sections.append(cls._get_coin_fmt(cls._COPPER).format(copper, size))
-        return str().join(sections)
+        return " ".join(sections)
 
     @classmethod
     @lru_cache(maxsize = 3)
