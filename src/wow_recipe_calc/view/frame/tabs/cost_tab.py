@@ -112,7 +112,10 @@ class CostRow(QWidget):
         layout: QHBoxLayout = QHBoxLayout(self)
         layout.setContentsMargins(*C.CostTab.List.Row.MARGINS)
 
-        name_label: QLabel = QLabel(f"{count}x  {name}")
+        len_lim: int = C.CostTab.List.Row.MAX_NAME_LEN
+        name_display: str = name if len(name) <= len_lim else name[:len_lim].rstrip() + "…"
+        name_label: QLabel = QLabel(f"{count}x  {name_display}")
+        name_label.setToolTip(name)  # allow reading of names even if truncated
         name_label.setObjectName(C.CostTab.List.Row.NAME_HANDLE)
         name_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
 
@@ -132,13 +135,12 @@ class CostRow(QWidget):
 
 
 class Currency:
-    _RESOURCE: Path = Path("res/coins")
+    _RESOURCE: Path = Path("res/coins")  # local image resources
+    _RES_COPPER, _RES_SILVER, _RES_GOLD = "copper", "silver", "gold"
     _EXTENSION: str = "png"
-    #  f'COINS<img src="{coin_path.as_posix()}" width="SIZE" height="SIZE">'
-    _COIN_SRC_FMT: str = 'img src="{}"'
+    _COIN_SRC_FMT: str = 'img src="{}"'  # Rich HTML two-part formatting
     _COIN_ICON_FMT: str = '{{0}}<{0} width="{{1}}" height="{{1}}">'
-    _COPPER, _SILVER, _GOLD = "copper", "silver", "gold"
-    _COPPER_PER_GOLD, _COPPER_PER_SILVER = 100 * 100, 100
+    _COPPER_PER_GOLD, _COPPER_PER_SILVER = 100 * 100, 100  # denominations
 
     @classmethod
     def format_coins(cls, coins: int, size: int) -> str:
@@ -148,10 +150,11 @@ class Currency:
         silver: int = change // cls._COPPER_PER_SILVER
         copper: int = change % cls._COPPER_PER_SILVER
         if gold > 0:
-            sections.append(cls._get_coin_fmt(cls._GOLD).format(gold, size))
+            sections.append(cls._get_coin_fmt(cls._RES_GOLD).format(gold, size))
         if silver > 0:
-            sections.append(cls._get_coin_fmt(cls._SILVER).format(silver, size))
-        sections.append(cls._get_coin_fmt(cls._COPPER).format(copper, size))
+            sections.append(cls._get_coin_fmt(cls._RES_SILVER).format(silver, size))
+        if copper > 0 or coins <= 0:
+            sections.append(cls._get_coin_fmt(cls._RES_COPPER).format(copper, size))
         return " ".join(sections)
 
     @classmethod

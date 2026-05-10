@@ -96,7 +96,7 @@ QLabel#route-step-mat {
     color: #888888;
     font-size: 12.5px;
     font-family: "Cascadia Code";
-    padding-left: 79px;   /* visually aligns under recipe name */
+    padding-left: 110px;   /* visually aligns under recipe name */
 }
 
 QWidget#route-step:hover QLabel#route-step-mat {

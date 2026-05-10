@@ -112,6 +112,7 @@ class CostTab:
             NAME_HANDLE: str = "cost-row-name"
             PER_CAST_HANDLE: str = "cost-row-per-cast"
             TOTAL_HANDLE: str = "cost-row-total"
+            MAX_NAME_LEN: int = 23
             TOTAL_HEIGHT: int = 12
             CAST_HEIGHT: int = 9
             CAST_WIDTH: int = 95
