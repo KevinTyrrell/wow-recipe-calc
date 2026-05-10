@@ -152,7 +152,3 @@ class RecipeRow(QWidget):
         for obj in (self, self.__label):
             obj.style().unpolish(obj)
             obj.style().polish(obj)
-
-    def _remove(self) -> None:
-        if self.__recipe in self.__state:  # removing from state will eject this row
-            del self.__state[self.__recipe]

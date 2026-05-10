@@ -1,7 +1,6 @@
-
-/* =========================
-   Base Theme
-========================= */
+/* =============================================================================
+   BASE THEME
+============================================================================= */
 
 QWidget {
     background-color: #1e1e1e;
@@ -15,56 +14,47 @@ QWidget#panel {
     border-radius: 8px;
 }
 
-/* =========================
-   Tabs
-========================= */
+/* =============================================================================
+   TAB WIDGET
+============================================================================= */
 
 QTabWidget::pane {
-    background-color: #2a2a2a;
-    border: 1px solid #3a3a3a;
-    border-radius: 6px;
-}
-
-/* =========================
-   Panels (shared surface style)
-========================= */
-
-QTabWidget::pane,
-QPlainTextEdit,
-QTextEdit {
     background-color: #2f2f2f;
-    border: 1px solid #3a3a3a;
-    border-radius: 8px;
+    border: 2px solid #3a3a3a;
+    border-radius: 3px;
 }
-
-/* =========================
-   Tab Bar (important missing piece)
-========================= */
 
 QTabBar::tab {
-    background-color: #333333;
-    color: #cccccc;
+    background-color: #2a2a2a;
+    color: #888888;
     padding: 6px 12px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border: 1px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     margin-right: 2px;
 }
 
 QTabBar::tab:selected {
     background-color: #2f2f2f;
-    border: 1px solid #3a3a3a;
-    border-bottom: none;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-top: none;
 }
 
-QTabBar::tab:hover {
+QTabBar::tab:hover:!selected {
     background-color: #3a3a3a;
+    color: #cccccc;
 }
 
-/* =========================
-   Console (log window)
-========================= */
+/* =============================================================================
+   TEXT PANELS
+============================================================================= */
 
-QPlainTextEdit {
+QPlainTextEdit,
+QTextEdit {
+    background-color: #2f2f2f;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
     font-family: Consolas;
     font-size: 11px;
     color: #dddddd;
