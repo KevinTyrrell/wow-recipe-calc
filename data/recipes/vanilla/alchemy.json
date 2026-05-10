@@ -1,0 +1,4561 @@
+[
+    {
+        "name": "Elixir of Lion's Strength",
+        "learned": 1,
+        "yellow": 55,
+        "gray": 95,
+        "reagents": [
+            [
+                2449,
+                1
+            ],
+            [
+                765,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 2454,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Healing Potion",
+        "learned": 1,
+        "yellow": 55,
+        "gray": 95,
+        "reagents": [
+            [
+                2447,
+                1
+            ],
+            [
+                765,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 118,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Mana Potion",
+        "learned": 25,
+        "yellow": 65,
+        "gray": 105,
+        "reagents": [
+            [
+                785,
+                1
+            ],
+            [
+                765,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 2455,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Rejuvenation Potion",
+        "learned": 40,
+        "yellow": 70,
+        "gray": 110,
+        "reagents": [
+            [
+                785,
+                2
+            ],
+            [
+                2447,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 2456,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Lesser Agility",
+        "learned": 140,
+        "yellow": 165,
+        "gray": 205,
+        "reagents": [
+            [
+                3355,
+                1
+            ],
+            [
+                2452,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3390,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Minor Fortitude",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 120,
+        "reagents": [
+            [
+                2449,
+                2
+            ],
+            [
+                2447,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 2458,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swiftness Potion",
+        "learned": 60,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                2452,
+                1
+            ],
+            [
+                2450,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 2459,
+        "produces": 1.0,
+        "sources": [
+            2,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Healing Potion",
+        "learned": 55,
+        "yellow": 85,
+        "gray": 125,
+        "reagents": [
+            [
+                118,
+                1
+            ],
+            [
+                2450,
+                1
+            ]
+        ],
+        "product": 858,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Weak Troll's Blood Potion",
+        "learned": 15,
+        "yellow": 60,
+        "gray": 100,
+        "reagents": [
+            [
+                2447,
+                1
+            ],
+            [
+                2449,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 3382,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Wisdom",
+        "learned": 90,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                785,
+                1
+            ],
+            [
+                2450,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 3383,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Magic Resistance Potion",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 175,
+        "reagents": [
+            [
+                785,
+                3
+            ],
+            [
+                3355,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 3384,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Mana Potion",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 185,
+        "reagents": [
+            [
+                785,
+                1
+            ],
+            [
+                3820,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 3385,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Potion of Curing",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 185,
+        "reagents": [
+            [
+                1288,
+                1
+            ],
+            [
+                2453,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3386,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Limited Invulnerability Potion",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 315,
+        "reagents": [
+            [
+                8839,
+                2
+            ],
+            [
+                8845,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 3387,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Strong Troll's Blood Potion",
+        "learned": 125,
+        "yellow": 150,
+        "gray": 190,
+        "reagents": [
+            [
+                2453,
+                2
+            ],
+            [
+                2450,
+                2
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3388,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Defense",
+        "learned": 130,
+        "yellow": 155,
+        "gray": 195,
+        "reagents": [
+            [
+                3355,
+                1
+            ],
+            [
+                3820,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3389,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Ogre's Strength",
+        "learned": 150,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                2449,
+                1
+            ],
+            [
+                3356,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3391,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Minor Agility",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 120,
+        "reagents": [
+            [
+                2452,
+                1
+            ],
+            [
+                765,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 2457,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Healing Potion",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 175,
+        "reagents": [
+            [
+                2453,
+                1
+            ],
+            [
+                2450,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 929,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Invisibility Potion",
+        "learned": 165,
+        "yellow": 185,
+        "gray": 225,
+        "reagents": [
+            [
+                3818,
+                1
+            ],
+            [
+                3355,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3823,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadow Oil",
+        "learned": 165,
+        "yellow": 190,
+        "gray": 230,
+        "reagents": [
+            [
+                3818,
+                4
+            ],
+            [
+                3369,
+                4
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3824,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Fortitude",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 235,
+        "reagents": [
+            [
+                3355,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3825,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mighty Troll's Blood Potion",
+        "learned": 180,
+        "yellow": 200,
+        "gray": 240,
+        "reagents": [
+            [
+                3357,
+                1
+            ],
+            [
+                2453,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3826,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mana Potion",
+        "learned": 160,
+        "yellow": 180,
+        "gray": 220,
+        "reagents": [
+            [
+                3820,
+                1
+            ],
+            [
+                3356,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3827,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Detect Lesser Invisibility",
+        "learned": 195,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                3358,
+                1
+            ],
+            [
+                3818,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3828,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frost Oil",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 260,
+        "reagents": [
+            [
+                3358,
+                4
+            ],
+            [
+                3819,
+                2
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 3829,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Discolored Healing Potion",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 120,
+        "reagents": [
+            [
+                3164,
+                1
+            ],
+            [
+                2447,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 4596,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Stoneshield Potion",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 270,
+        "reagents": [
+            [
+                3858,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 4623,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rage Potion",
+        "learned": 60,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                5635,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 5631,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Great Rage Potion",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 235,
+        "reagents": [
+            [
+                5637,
+                1
+            ],
+            [
+                3356,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 5633,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Free Action Potion",
+        "learned": 150,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                6370,
+                2
+            ],
+            [
+                3820,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 5634,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Water Breathing",
+        "learned": 90,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                3820,
+                1
+            ],
+            [
+                6370,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 5996,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Healing Potion",
+        "learned": 155,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                3357,
+                1
+            ],
+            [
+                3356,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 1710,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Minor Defense",
+        "learned": 1,
+        "yellow": 55,
+        "gray": 95,
+        "reagents": [
+            [
+                765,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 5997,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Holy Protection Potion",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                2453,
+                1
+            ],
+            [
+                2452,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 6051,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadow Protection Potion",
+        "learned": 135,
+        "yellow": 160,
+        "gray": 200,
+        "reagents": [
+            [
+                3369,
+                1
+            ],
+            [
+                3356,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 6048,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fire Protection Potion",
+        "learned": 165,
+        "yellow": 210,
+        "gray": 250,
+        "reagents": [
+            [
+                4402,
+                1
+            ],
+            [
+                6371,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 6049,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frost Protection Potion",
+        "learned": 190,
+        "yellow": 205,
+        "gray": 245,
+        "reagents": [
+            [
+                3819,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 6050,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Nature Protection Potion",
+        "learned": 190,
+        "yellow": 210,
+        "gray": 250,
+        "reagents": [
+            [
+                3357,
+                1
+            ],
+            [
+                3820,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 6052,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackmouth Oil",
+        "learned": 80,
+        "yellow": 80,
+        "gray": 100,
+        "reagents": [
+            [
+                6358,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 6370,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fire Oil",
+        "learned": 130,
+        "yellow": 150,
+        "gray": 170,
+        "reagents": [
+            [
+                6359,
+                2
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 6371,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swim Speed Potion",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                2452,
+                1
+            ],
+            [
+                6370,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 6372,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Firepower",
+        "learned": 140,
+        "yellow": 165,
+        "gray": 205,
+        "reagents": [
+            [
+                6371,
+                2
+            ],
+            [
+                3356,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 6373,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Giant Growth",
+        "learned": 90,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                6522,
+                1
+            ],
+            [
+                2449,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 6662,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Mana Potion",
+        "learned": 205,
+        "yellow": 220,
+        "gray": 260,
+        "reagents": [
+            [
+                3358,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 6149,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Agility",
+        "learned": 185,
+        "yellow": 205,
+        "gray": 245,
+        "reagents": [
+            [
+                3820,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 8949,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Greater Defense",
+        "learned": 195,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                3355,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 8951,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Oil of Immolation",
+        "learned": 205,
+        "yellow": 220,
+        "gray": 260,
+        "reagents": [
+            [
+                4625,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 8956,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Restorative Potion",
+        "learned": 215,
+        "yellow": 225,
+        "gray": 265,
+        "reagents": [
+            [
+                7067,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9030,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Magic Resistance Potion",
+        "learned": 210,
+        "yellow": 225,
+        "gray": 265,
+        "reagents": [
+            [
+                3358,
+                1
+            ],
+            [
+                8831,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9036,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Rocket Fuel",
+        "learned": 210,
+        "yellow": 225,
+        "gray": 265,
+        "reagents": [
+            [
+                4625,
+                1
+            ],
+            [
+                9260,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 9061,
+        "produces": 1.0,
+        "sources": [
+            1
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Superior Healing Potion",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 270,
+        "reagents": [
+            [
+                8838,
+                1
+            ],
+            [
+                3358,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 3928,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wildvine Potion",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 280,
+        "reagents": [
+            [
+                8153,
+                1
+            ],
+            [
+                8831,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9144,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Philosopher's Stone",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 280,
+        "reagents": [
+            [
+                3575,
+                4
+            ],
+            [
+                9262,
+                1
+            ],
+            [
+                8831,
+                4
+            ],
+            [
+                4625,
+                4
+            ]
+        ],
+        "product": 9149,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Detect Undead",
+        "learned": 230,
+        "yellow": 245,
+        "gray": 285,
+        "reagents": [
+            [
+                8836,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9154,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcane Elixir",
+        "learned": 235,
+        "yellow": 250,
+        "gray": 290,
+        "reagents": [
+            [
+                8839,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9155,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Invisibility Potion",
+        "learned": 235,
+        "yellow": 250,
+        "gray": 290,
+        "reagents": [
+            [
+                8845,
+                1
+            ],
+            [
+                8838,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9172,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Greater Intellect",
+        "learned": 235,
+        "yellow": 250,
+        "gray": 290,
+        "reagents": [
+            [
+                8839,
+                1
+            ],
+            [
+                3358,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9179,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gift of Arthas",
+        "learned": 240,
+        "yellow": 255,
+        "gray": 295,
+        "reagents": [
+            [
+                8836,
+                1
+            ],
+            [
+                8839,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9088,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Greater Agility",
+        "learned": 240,
+        "yellow": 255,
+        "gray": 295,
+        "reagents": [
+            [
+                8838,
+                1
+            ],
+            [
+                3821,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9187,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Dream Vision",
+        "learned": 240,
+        "yellow": 255,
+        "gray": 295,
+        "reagents": [
+            [
+                8831,
+                3
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9197,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Giants",
+        "learned": 245,
+        "yellow": 260,
+        "gray": 300,
+        "reagents": [
+            [
+                8838,
+                1
+            ],
+            [
+                8846,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9206,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ghost Dye",
+        "learned": 245,
+        "yellow": 260,
+        "gray": 300,
+        "reagents": [
+            [
+                8845,
+                2
+            ],
+            [
+                4342,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9210,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Shadow Power",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 305,
+        "reagents": [
+            [
+                8845,
+                3
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9264,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Demonslaying",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 305,
+        "reagents": [
+            [
+                8846,
+                1
+            ],
+            [
+                8845,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9224,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Detect Demon",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 305,
+        "reagents": [
+            [
+                8846,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 9233,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Iron to Gold",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 280,
+        "reagents": [
+            [
+                3575,
+                1
+            ]
+        ],
+        "product": 3577,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Mithril to Truesilver",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 280,
+        "reagents": [
+            [
+                3860,
+                1
+            ]
+        ],
+        "product": 6037,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Catseye Elixir",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 260,
+        "reagents": [
+            [
+                3821,
+                1
+            ],
+            [
+                3818,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 10592,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dreamless Sleep Potion",
+        "learned": 230,
+        "yellow": 245,
+        "gray": 285,
+        "reagents": [
+            [
+                8831,
+                3
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 12190,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Arcanite",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                12359,
+                1
+            ],
+            [
+                12363,
+                1
+            ]
+        ],
+        "product": 12360,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stonescale Oil",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 260,
+        "reagents": [
+            [
+                13422,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 13423,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mighty Rage Potion",
+        "learned": 255,
+        "yellow": 270,
+        "gray": 310,
+        "reagents": [
+            [
+                8846,
+                3
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13442,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Superior Mana Potion",
+        "learned": 260,
+        "yellow": 275,
+        "gray": 315,
+        "reagents": [
+            [
+                8838,
+                2
+            ],
+            [
+                8839,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13443,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Superior Defense",
+        "learned": 265,
+        "yellow": 280,
+        "gray": 320,
+        "reagents": [
+            [
+                13423,
+                2
+            ],
+            [
+                8838,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13445,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of the Sages",
+        "learned": 270,
+        "yellow": 285,
+        "gray": 325,
+        "reagents": [
+            [
+                13463,
+                1
+            ],
+            [
+                13466,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13447,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Healing Potion",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 330,
+        "reagents": [
+            [
+                13464,
+                2
+            ],
+            [
+                13465,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13446,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Brute Force",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 330,
+        "reagents": [
+            [
+                8846,
+                2
+            ],
+            [
+                13466,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13453,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Air to Fire",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                7082,
+                1
+            ]
+        ],
+        "product": 7078,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Fire to Earth",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                7078,
+                1
+            ]
+        ],
+        "product": 7076,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Earth to Water",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                7076,
+                1
+            ]
+        ],
+        "product": 7080,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Water to Air",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                7080,
+                1
+            ]
+        ],
+        "product": 7082,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Undeath to Water",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                12808,
+                1
+            ]
+        ],
+        "product": 7080,
+        "produces": 0.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Water to Undeath",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                7080,
+                1
+            ]
+        ],
+        "product": 12808,
+        "produces": 0.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Life to Earth",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                12803,
+                1
+            ]
+        ],
+        "product": 7076,
+        "produces": 0.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Earth to Life",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 290,
+        "reagents": [
+            [
+                7076,
+                1
+            ]
+        ],
+        "product": 12803,
+        "produces": 0.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Stoneshield Potion",
+        "learned": 280,
+        "yellow": 295,
+        "gray": 335,
+        "reagents": [
+            [
+                13423,
+                2
+            ],
+            [
+                10620,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13455,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of the Mongoose",
+        "learned": 280,
+        "yellow": 295,
+        "gray": 335,
+        "reagents": [
+            [
+                13465,
+                2
+            ],
+            [
+                13466,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13452,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Purification Potion",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                13467,
+                2
+            ],
+            [
+                13466,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13462,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Arcane Elixir",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                13463,
+                3
+            ],
+            [
+                13465,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13454,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Fire Protection Potion",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                7068,
+                1
+            ],
+            [
+                13463,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13457,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Frost Protection Potion",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                7070,
+                1
+            ],
+            [
+                13463,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13456,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Nature Protection Potion",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                7067,
+                1
+            ],
+            [
+                13463,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13458,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Arcane Protection Potion",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                11176,
+                1
+            ],
+            [
+                13463,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13461,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Shadow Protection Potion",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                3824,
+                1
+            ],
+            [
+                13463,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13459,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Mana Potion",
+        "learned": 295,
+        "yellow": 310,
+        "gray": 350,
+        "reagents": [
+            [
+                13463,
+                3
+            ],
+            [
+                13467,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13444,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Alchemist's Stone",
+        "learned": 300,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                9149,
+                1
+            ],
+            [
+                25867,
+                1
+            ],
+            [
+                25868,
+                1
+            ],
+            [
+                22794,
+                2
+            ],
+            [
+                23571,
+                5
+            ]
+        ],
+        "product": 13503,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Petrification",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13423,
+                7
+            ],
+            [
+                13465,
+                3
+            ],
+            [
+                13468,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13506,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of the Titans",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                8846,
+                7
+            ],
+            [
+                13423,
+                3
+            ],
+            [
+                13468,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13510,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Distilled Wisdom",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13463,
+                7
+            ],
+            [
+                13467,
+                3
+            ],
+            [
+                13468,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13511,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Supreme Power",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13463,
+                7
+            ],
+            [
+                13465,
+                3
+            ],
+            [
+                13468,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13512,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Chromatic Resistance",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13467,
+                7
+            ],
+            [
+                13465,
+                3
+            ],
+            [
+                13468,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 13513,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Frost Power",
+        "learned": 190,
+        "yellow": 210,
+        "gray": 250,
+        "reagents": [
+            [
+                3819,
+                2
+            ],
+            [
+                3358,
+                1
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 17708,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Rejuvenation Potion",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                10286,
+                1
+            ],
+            [
+                13464,
+                4
+            ],
+            [
+                13463,
+                4
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 18253,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Greater Water Breathing",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 270,
+        "reagents": [
+            [
+                7972,
+                1
+            ],
+            [
+                8831,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 18294,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gurubashi Mojo Madness",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                12938,
+                1
+            ],
+            [
+                19943,
+                1
+            ],
+            [
+                12804,
+                6
+            ],
+            [
+                13468,
+                1
+            ]
+        ],
+        "product": 19931,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mageblood Potion",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 330,
+        "reagents": [
+            [
+                13463,
+                1
+            ],
+            [
+                13466,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 20007,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Dreamless Sleep Potion",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 330,
+        "reagents": [
+            [
+                13463,
+                2
+            ],
+            [
+                13464,
+                1
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 20002,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Living Action Potion",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                13467,
+                2
+            ],
+            [
+                13465,
+                2
+            ],
+            [
+                10286,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 20008,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Troll's Blood Potion",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                8846,
+                1
+            ],
+            [
+                13466,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 20004,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Elemental Fire",
+        "learned": 300,
+        "yellow": 301,
+        "gray": 310,
+        "reagents": [
+            [
+                7077,
+                1
+            ]
+        ],
+        "product": 7068,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Greater Firepower",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 305,
+        "reagents": [
+            [
+                6371,
+                3
+            ],
+            [
+                4625,
+                3
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 21546,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Camouflage",
+        "learned": 305,
+        "yellow": 320,
+        "gray": 335,
+        "reagents": [
+            [
+                22787,
+                1
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22823,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Strength",
+        "learned": 305,
+        "yellow": 320,
+        "gray": 335,
+        "reagents": [
+            [
+                13465,
+                1
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22824,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Healing Power",
+        "learned": 310,
+        "yellow": 325,
+        "gray": 340,
+        "reagents": [
+            [
+                13464,
+                1
+            ],
+            [
+                22786,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22825,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sneaking Potion",
+        "learned": 315,
+        "yellow": 330,
+        "gray": 345,
+        "reagents": [
+            [
+                22787,
+                2
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22826,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Frost Power",
+        "learned": 320,
+        "yellow": 335,
+        "gray": 350,
+        "reagents": [
+            [
+                22578,
+                2
+            ],
+            [
+                22790,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22827,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Insane Strength Potion",
+        "learned": 320,
+        "yellow": 335,
+        "gray": 350,
+        "reagents": [
+            [
+                22789,
+                3
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22828,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Super Healing Potion",
+        "learned": 325,
+        "yellow": 340,
+        "gray": 355,
+        "reagents": [
+            [
+                22791,
+                2
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22829,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of the Searching Eye",
+        "learned": 325,
+        "yellow": 340,
+        "gray": 355,
+        "reagents": [
+            [
+                22787,
+                2
+            ],
+            [
+                22789,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22830,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Agility",
+        "learned": 330,
+        "yellow": 345,
+        "gray": 360,
+        "reagents": [
+            [
+                22789,
+                1
+            ],
+            [
+                22785,
+                2
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22831,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shrouding Potion",
+        "learned": 335,
+        "yellow": 350,
+        "gray": 365,
+        "reagents": [
+            [
+                22787,
+                3
+            ],
+            [
+                22791,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22871,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Super Mana Potion",
+        "learned": 340,
+        "yellow": 355,
+        "gray": 370,
+        "reagents": [
+            [
+                22786,
+                2
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22832,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Firepower",
+        "learned": 345,
+        "yellow": 360,
+        "gray": 375,
+        "reagents": [
+            [
+                22574,
+                2
+            ],
+            [
+                22790,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22833,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Defense",
+        "learned": 345,
+        "yellow": 360,
+        "gray": 375,
+        "reagents": [
+            [
+                22790,
+                3
+            ],
+            [
+                22789,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22834,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Shadow Power",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22790,
+                1
+            ],
+            [
+                22792,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22835,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Dreamless Sleep Potion",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22786,
+                1
+            ],
+            [
+                22792,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22836,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heroic Potion",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22789,
+                2
+            ],
+            [
+                22790,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22837,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Haste Potion",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22789,
+                2
+            ],
+            [
+                22791,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22838,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Destruction Potion",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22792,
+                2
+            ],
+            [
+                22791,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22839,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Air to Fire",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22451,
+                1
+            ]
+        ],
+        "product": 21884,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Mageblood",
+        "learned": 355,
+        "yellow": 370,
+        "gray": 385,
+        "reagents": [
+            [
+                22790,
+                1
+            ],
+            [
+                22791,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22840,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Fire Protection Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                21884,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                18256,
+                5
+            ]
+        ],
+        "product": 22841,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Frost Protection Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                21885,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                18256,
+                5
+            ]
+        ],
+        "product": 22842,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Nature Protection Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                21886,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                18256,
+                5
+            ]
+        ],
+        "product": 22844,
+        "produces": 5.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Arcane Protection Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                22457,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                18256,
+                5
+            ]
+        ],
+        "product": 22845,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Shadow Protection Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                22456,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                18256,
+                5
+            ]
+        ],
+        "product": 22846,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Major Holy Protection Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                21886,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                18256,
+                5
+            ]
+        ],
+        "product": 22847,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Empowerment",
+        "learned": 365,
+        "yellow": 380,
+        "gray": 395,
+        "reagents": [
+            [
+                22791,
+                1
+            ],
+            [
+                22793,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22848,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ironshield Potion",
+        "learned": 365,
+        "yellow": 380,
+        "gray": 395,
+        "reagents": [
+            [
+                22790,
+                2
+            ],
+            [
+                22573,
+                3
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22849,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Shadow to Water",
+        "learned": 385,
+        "yellow": 385,
+        "gray": 400,
+        "reagents": [
+            [
+                22456,
+                1
+            ]
+        ],
+        "product": 21885,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Water to Shadow",
+        "learned": 385,
+        "yellow": 385,
+        "gray": 400,
+        "reagents": [
+            [
+                21885,
+                1
+            ]
+        ],
+        "product": 22456,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Mana to Fire",
+        "learned": 385,
+        "yellow": 385,
+        "gray": 400,
+        "reagents": [
+            [
+                22457,
+                1
+            ]
+        ],
+        "product": 21884,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Fire to Mana",
+        "learned": 385,
+        "yellow": 385,
+        "gray": 400,
+        "reagents": [
+            [
+                21884,
+                1
+            ]
+        ],
+        "product": 22457,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Life to Earth",
+        "learned": 385,
+        "yellow": 385,
+        "gray": 400,
+        "reagents": [
+            [
+                21886,
+                1
+            ]
+        ],
+        "product": 22452,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Earth to Life",
+        "learned": 385,
+        "yellow": 385,
+        "gray": 400,
+        "reagents": [
+            [
+                22452,
+                1
+            ]
+        ],
+        "product": 21886,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Super Rejuvenation Potion",
+        "learned": 390,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22793,
+                2
+            ],
+            [
+                22786,
+                1
+            ],
+            [
+                22791,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22850,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Fortification",
+        "learned": 390,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22794,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                22790,
+                7
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22851,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Mighty Restoration",
+        "learned": 390,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22794,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                22786,
+                7
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22853,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Relentless Assault",
+        "learned": 390,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22794,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                22789,
+                7
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22854,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Blinding Light",
+        "learned": 390,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22794,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                22791,
+                7
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22861,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Pure Death",
+        "learned": 390,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22794,
+                1
+            ],
+            [
+                22793,
+                3
+            ],
+            [
+                22792,
+                7
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22866,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Primal Might",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                22452,
+                1
+            ],
+            [
+                21885,
+                1
+            ],
+            [
+                22451,
+                1
+            ],
+            [
+                21884,
+                1
+            ],
+            [
+                22457,
+                1
+            ]
+        ],
+        "product": 23571,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Earthstorm Diamond",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                23079,
+                3
+            ],
+            [
+                23107,
+                3
+            ],
+            [
+                23112,
+                3
+            ],
+            [
+                22452,
+                2
+            ],
+            [
+                21885,
+                2
+            ]
+        ],
+        "product": 25867,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Transmute: Skyfire Diamond",
+        "learned": 350,
+        "yellow": 365,
+        "gray": 380,
+        "reagents": [
+            [
+                23077,
+                3
+            ],
+            [
+                21929,
+                3
+            ],
+            [
+                23117,
+                3
+            ],
+            [
+                21884,
+                2
+            ],
+            [
+                22451,
+                2
+            ]
+        ],
+        "product": 25868,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Volatile Healing Potion",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13464,
+                1
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 28100,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Unstable Mana Potion",
+        "learned": 310,
+        "yellow": 325,
+        "gray": 340,
+        "reagents": [
+            [
+                22787,
+                2
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 28101,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Onslaught Elixir",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13465,
+                1
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 28102,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adept's Elixir",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 330,
+        "reagents": [
+            [
+                13463,
+                1
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 28103,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Mastery",
+        "learned": 315,
+        "yellow": 330,
+        "gray": 345,
+        "reagents": [
+            [
+                22789,
+                3
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 28104,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mercurial Stone",
+        "learned": 325,
+        "yellow": 340,
+        "gray": 355,
+        "reagents": [
+            [
+                22452,
+                1
+            ],
+            [
+                21886,
+                1
+            ],
+            [
+                22457,
+                1
+            ]
+        ],
+        "product": 31080,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Strength Elixir",
+        "learned": 335,
+        "yellow": 350,
+        "gray": 365,
+        "reagents": [
+            [
+                22789,
+                1
+            ],
+            [
+                22792,
+                2
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 31679,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Mana Potion",
+        "learned": 360,
+        "yellow": 375,
+        "gray": 390,
+        "reagents": [
+            [
+                22793,
+                1
+            ],
+            [
+                22792,
+                2
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 31677,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Regeneration Potion",
+        "learned": 345,
+        "yellow": 360,
+        "gray": 375,
+        "reagents": [
+            [
+                22785,
+                2
+            ],
+            [
+                22792,
+                3
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 31676,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Major Fortitude",
+        "learned": 310,
+        "yellow": 325,
+        "gray": 340,
+        "reagents": [
+            [
+                22787,
+                2
+            ],
+            [
+                22785,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 32062,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Earthen Elixir",
+        "learned": 320,
+        "yellow": 335,
+        "gray": 350,
+        "reagents": [
+            [
+                22786,
+                1
+            ],
+            [
+                22787,
+                2
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 32063,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Draenic Wisdom",
+        "learned": 320,
+        "yellow": 335,
+        "gray": 350,
+        "reagents": [
+            [
+                22785,
+                1
+            ],
+            [
+                22789,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 32067,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elixir of Ironskin",
+        "learned": 330,
+        "yellow": 345,
+        "gray": 360,
+        "reagents": [
+            [
+                22790,
+                1
+            ],
+            [
+                22787,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 32068,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cauldron of Major Arcane Protection",
+        "learned": 360,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                22457,
+                2
+            ],
+            [
+                22793,
+                7
+            ],
+            [
+                23782,
+                1
+            ]
+        ],
+        "product": 32839,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cauldron of Major Fire Protection",
+        "learned": 360,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                21884,
+                2
+            ],
+            [
+                22793,
+                7
+            ],
+            [
+                23782,
+                1
+            ]
+        ],
+        "product": 32849,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cauldron of Major Frost Protection",
+        "learned": 360,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                21885,
+                2
+            ],
+            [
+                22793,
+                7
+            ],
+            [
+                23782,
+                1
+            ]
+        ],
+        "product": 32850,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cauldron of Major Nature Protection",
+        "learned": 360,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                21886,
+                2
+            ],
+            [
+                22793,
+                7
+            ],
+            [
+                23782,
+                1
+            ]
+        ],
+        "product": 32851,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cauldron of Major Shadow Protection",
+        "learned": 360,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                22456,
+                2
+            ],
+            [
+                22793,
+                7
+            ],
+            [
+                23782,
+                1
+            ]
+        ],
+        "product": 32852,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flask of Chromatic Wonder",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                22786,
+                7
+            ],
+            [
+                22791,
+                3
+            ],
+            [
+                22794,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 33208,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mad Alchemist's Potion",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 350,
+        "reagents": [
+            [
+                8925,
+                1
+            ],
+            [
+                22787,
+                2
+            ]
+        ],
+        "product": 34440,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Guardian's Alchemist Stone",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                13503,
+                1
+            ],
+            [
+                22451,
+                6
+            ],
+            [
+                30183,
+                2
+            ]
+        ],
+        "product": 35748,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sorcerer's Alchemist Stone",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                13503,
+                1
+            ],
+            [
+                21884,
+                6
+            ],
+            [
+                30183,
+                2
+            ]
+        ],
+        "product": 35749,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Redeemer's Alchemist Stone",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                13503,
+                1
+            ],
+            [
+                21886,
+                6
+            ],
+            [
+                30183,
+                2
+            ]
+        ],
+        "product": 35750,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Assassin's Alchemist Stone",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 405,
+        "reagents": [
+            [
+                13503,
+                1
+            ],
+            [
+                22456,
+                6
+            ],
+            [
+                30183,
+                2
+            ]
+        ],
+        "product": 35751,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    }
+]

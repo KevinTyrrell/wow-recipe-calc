@@ -100,6 +100,6 @@ QWidget#cost-row:hover QLabel#cost-row-per-cast {
 QLabel#cost-row-total {
     color: #f0ad4e;
     font-family: Consolas;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: bold;
 }

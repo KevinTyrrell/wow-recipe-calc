@@ -24,9 +24,7 @@ from urllib.parse import urljoin
 from logging import getLogger, Logger
 from functools import reduce
 from requests import Response, get as query
-from dataclasses import dataclass, asdict
-
-from tomlkit import value
+from dataclasses import asdict
 
 from wow_recipe_calc.crafts.recipe.recipe import RecipeJson
 from wow_recipe_calc.util.json_wrapper import JsonList, JSW, wrap_json

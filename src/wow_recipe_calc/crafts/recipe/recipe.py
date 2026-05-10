@@ -18,6 +18,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Mapping, Optional
 from types import MappingProxyType as ReadOnlyMap
+from logging import getLogger, Logger
+
+logger: Logger = getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -60,8 +63,8 @@ class Recipe:
 
     @classmethod
     def from_json(cls, r: RecipeJson) -> Recipe:
+        logger.debug(f"parsing json recipe {r}")
         if not r.name: raise ValueError("name must not be empty")
-
         if not (r.learned > 0 and r.yellow > 0 and r.gray > 0):
             raise ValueError(f"learned, yellow, gray must all be positive, received: {r.learned}, {r.yellow}, {r.gray}")
         if not (r.learned <= r.yellow <= r.gray):
@@ -73,8 +76,8 @@ class Recipe:
             if pair[0] <= 0 or pair[1] <= 0:
                 raise ValueError(f"reagent item ID and quantity must be positive, received: {pair}")
         if r.product <= 0: raise ValueError(f"product must be positive, received: {r.product}")
-        if r.produces < 1: raise ValueError(f"produces must be >= 1, received: {r.produces}")
-
+        if r.produces < 1:
+            raise ValueError(f"produces must be >= 1, received: {r.produces}")
         if not r.sources: raise ValueError("sources must not be empty")
         if any(s < 0 for s in r.sources): raise ValueError("source IDs must be positive")
         if r.specialization is not None and not r.specialization:

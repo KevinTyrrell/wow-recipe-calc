@@ -18,6 +18,7 @@ from __future__ import annotations
 from enum import Enum
 from typing import Self, NamedTuple, Optional
 from collections.abc import Iterator
+from functools import total_ordering
 
 
 class ExpansionData(NamedTuple):
@@ -31,7 +32,7 @@ _expac_reverse: dict[int, Expansion] = dict()
 
 
 class Expansion(Enum):
-    CLASSIC = ExpansionData(1, "World of Warcraft", "classic", "classic")
+    CLASSIC = ExpansionData(1, "World of Warcraft", "vanilla", "classic")
     BURNING_CRUSADE = ExpansionData(2, "The Burning Crusade", "tbc", "tbc")
     WRATH = ExpansionData(3, "Wrath of the Lich King", "wotlk", "wotlk")
     CATACLYSM = ExpansionData(4, "Cataclysm", "cata", "cata")
@@ -63,6 +64,15 @@ class Expansion(Enum):
     def navigation(self) -> str: return self.value.navigation
     @property
     def portal(self) -> str: return self.value.portal
+    # Comparable methods
+    def __lt__(self, other: Self) -> bool:
+        if not isinstance(other, Expansion): return NotImplemented
+        return self.ordinal < other.ordinal
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Expansion): return NotImplemented
+        return self.ordinal == other.ordinal
+    def __hash__(self) -> int:
+        return hash(self.ordinal)
 
 
 class ProfessionData(NamedTuple):
@@ -115,3 +125,12 @@ class Profession(Enum):
     def portal(self) -> str: return self.value.portal
     @property
     def expansion(self) -> int: return self.value.expansion
+    # Comparable methods
+    def __lt__(self, other: Self) -> bool:
+        if not isinstance(other, Profession): return NotImplemented
+        return self.ordinal < other.ordinal
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Profession): return NotImplemented
+        return self.ordinal == other.ordinal
+    def __hash__(self) -> int:
+        return hash(self.ordinal)
