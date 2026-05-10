@@ -39,6 +39,7 @@ class LogManager:
         self.__buffer: deque[LogRecord] = deque(maxlen = self._DEFAULT_CAPACITY)
         self.__listeners: list[Handler] = list()
         self.__root.setLevel(self.__level)
+        self.__root.addHandler(self._BufferingTap(self))
 
         # Console is always live — no buffering needed
         console = self._ConsoleEmitter(self.__formatter)
@@ -77,7 +78,7 @@ class LogManager:
         """Silent handler whose only job is to feed records into LogManager's buffer"""
         def __init__(self, manager: LogManager) -> None:
             super().__init__()
-            self.__manager = manager
+            self.__manager: LogManager = manager
         def emit(self, record: LogRecord) -> None:
             self.__manager._buffer_record(record)
 

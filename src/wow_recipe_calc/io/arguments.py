@@ -44,9 +44,9 @@ def parse_args() -> argparse.Namespace:
         "--log-level",
         dest = "log_level",
         type = _parse_log_level,
-        default = logging.INFO,
+        default = logging.WARNING,
         metavar = "LEVEL",
-        help = "Sets the logging level — choices: debug, info, warning, error, critical (default: info)"
+        help = "Sets the logging level — choices: debug, info, warning, error, critical (default: warning)"
     )
 
     return parser.parse_args()
