@@ -21,11 +21,12 @@ from PySide6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, QSt
 from PySide6.QtCore import Qt, QModelIndex
 from PySide6.QtGui import QIntValidator
 
-from view.frame.tabs.edit.filter_model import RecipeFilterModel
 from wow_recipe_calc.crafting_app import CraftingApp
 from wow_recipe_calc.crafts.item_db import ItemDB
 from wow_recipe_calc.crafts.recipe.recipe_state import RecipeStateCore
 from wow_recipe_calc.crafts.recipe.recipe import Recipe
+from wow_recipe_calc.view.frame.tabs.edit.filter_model import RecipeFilterModel
+from wow_recipe_calc.view.frame.tabs.edit.search_bar import RecipeSearchBar
 
 import wow_recipe_calc.view.constants as C
 
@@ -45,14 +46,7 @@ class EditTab(QWidget):
         self.setObjectName(C.EditTab.HANDLE)
         layout: QVBoxLayout = QVBoxLayout(self)
 
-        self.__search_bar: QLineEdit = QLineEdit()
-        self.__search_bar.setPlaceholderText(C.EditTab.SearchBar.PROMPT)
-        self.__search_bar.setObjectName(C.EditTab.SearchBar.HANDLE)
-
-        # Inline clear button
-        self.__search_clear_action = self.__search_bar.addAction(
-            self.style().standardIcon(QStyle.SP_LineEditClearButton), QLineEdit.TrailingPosition)
-        self.__search_clear_action.setVisible(False)
+        self.__search_bar: RecipeSearchBar = RecipeSearchBar()
 
         self.__filter_model = RecipeFilterModel(self.__app.item_db, self.__state)
         self.__filter_view: QListView = QListView()
@@ -78,12 +72,8 @@ class EditTab(QWidget):
         layout.addWidget(self.__scroll_frame)
 
     def _setup_connections(self) -> None:
-        self.__search_bar.textChanged.connect(self.__filter_model.filter_text)
-        self.__search_bar.textChanged.connect(  # show clear button only when content exists
-            lambda text: self.__search_clear_action.setVisible(bool(text)))
-        self.__search_clear_action.triggered.connect(self.__search_bar.clear)
-
         self.__filter_view.clicked.connect(self._on_recipe_selected)
+        self.__search_bar.textChanged.connect(self.__filter_model.filter_text)
         # Listen for state changes to sync UI rows
         self.__state.listen(self._update_rows)
         for recipe in self.__state: self._add_row(recipe)
@@ -135,7 +125,7 @@ class RecipeRow(QWidget):
 
         self.__edit: QLineEdit = QLineEdit(str(self.__state[self.__recipe]))
         self.__edit.setObjectName(C.EditTab.SelectList.Row.QTY_HANDLE)
-        self.__edit.setValidator(QIntValidator(1, self._MAX_QTY))
+        self.__edit.setValidator(QIntValidator(1, self._MAX_QTY))  # positive ints only
         self.__edit.setAlignment(Qt.AlignCenter)
         self.__edit.setFixedWidth(C.EditTab.SelectList.Row.QTY_WIDTH)
 

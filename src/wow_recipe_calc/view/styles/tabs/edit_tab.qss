@@ -114,12 +114,32 @@ QLineEdit#edit-search-bar {
     font-family: Bahnschrift;
     font-size: 17px;
     font-weight: bold;
-    padding: 6px 28px 6px 6px;  /* right padding reserves space for the X */
+    padding: 6px 6px 6px 6px; /* clear btn sits on top, no padding needed */
 }
 
 QLineEdit#edit-search-bar:focus {
     background-color: #222222;
     border: 2px solid #555555;
+}
+
+/* Clear Button */
+QToolButton#edit-search-clear {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    color: #777777;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+QToolButton#edit-search-clear:hover {
+    background-color: #3a3a3a;
+    color: #eeeeee;
+}
+
+QToolButton#edit-search-clear:pressed {
+    background-color: #555555;
+    color: #ffffff;
 }
 
 /* =============================================================================

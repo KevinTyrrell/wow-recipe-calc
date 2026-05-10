@@ -44,6 +44,10 @@ class EditTab:
     class SearchBar:
         HANDLE: str = "edit-search-bar"
         PROMPT: str = "Search Recipes..."
+        class ClearButton:
+            HANDLE: str = "edit-search-clear"
+            TEXT: str = "✕"
+            MARGIN: int = 5
     class SelectList:
         HANDLE: str = "selected-list"
         BOX_HANDLE: str = "selected-list-container"
