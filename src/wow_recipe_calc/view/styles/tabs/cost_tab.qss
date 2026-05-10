@@ -1,0 +1,105 @@
+/* =============================================================================
+   COST BREAKDOWN — SUMMARY HEADER
+============================================================================= */
+
+QWidget#cost-header {
+    background-color: #1e1e1e;
+    border-bottom: 2px solid #3a3a3a;
+}
+
+QLabel#cost-header-label {
+    color: #888888;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+QLabel#cost-header-total {
+    color: #f0ad4e;
+    font-family: Consolas;
+    font-size: 20px;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* =============================================================================
+   COST BREAKDOWN — SCROLLABLE LIST
+============================================================================= */
+
+QScrollArea#cost-list {
+    background-color: #252525;
+    border: 2px solid #3a3a3a;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QScrollArea#cost-list QScrollBar:vertical {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 15px;
+}
+
+QScrollArea#cost-list QScrollBar::handle:vertical {
+    background-color: #4a4a4a;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollArea#cost-list QScrollBar::handle:vertical:hover {
+    background-color: #5a5a5a;
+}
+
+QScrollArea#cost-list QScrollBar::add-line:vertical,
+QScrollArea#cost-list QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QWidget#cost-list-container {
+    background-color: #252525;
+}
+
+/* =============================================================================
+   COST ROW
+============================================================================= */
+
+QWidget#cost-row {
+    background-color: transparent;
+    border-bottom: 1px solid #2d2d2d;
+    border-radius: 4px;
+}
+
+QWidget#cost-row:hover {
+    background-color: #353535;
+}
+
+QLabel#cost-row-name {
+    color: #bbbbbb;
+    font-size: 14px;
+    padding: 6px;
+    background: transparent;
+}
+
+QWidget#cost-row:hover QLabel#cost-row-name {
+    color: #ffffff;
+}
+
+/* Per-cast cost: dimmer, smaller — secondary info */
+QLabel#cost-row-per-cast {
+    color: #777777;
+    font-family: Consolas;
+    font-size: 13px;
+}
+
+QWidget#cost-row:hover QLabel#cost-row-per-cast {
+    color: #aaaaaa;
+}
+
+/* Total cost: prominent gold — primary info */
+QLabel#cost-row-total {
+    color: #f0ad4e;
+    font-family: Consolas;
+    font-size: 16.5px;
+    font-weight: bold;
+}

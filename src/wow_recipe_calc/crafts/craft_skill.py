@@ -80,21 +80,21 @@ class CraftSkiller:
         """
         if not self.__history: return tuple()
         runs: list[tuple[int, int, Recipe, int]] = list()
-
-        skill_before, skill_after, current = self.__history[0]
-        domain_start: int = skill_before
-        domain_end: int = skill_after
+        # Skill levels before & after a particular craft, along with said recipe
+        before, after, current = self.__history[0]
+        start: int = before
+        end: int = after
         count: int = 1
 
         for i in range(1, len(self.__history)):
-            skill_before, skill_after, recipe = self.__history[i]
-            if recipe != current or skill_before > domain_end + 1:
-                runs.append((domain_start, domain_end, current, count))
-                domain_start, domain_end, current, count = skill_before, skill_after, recipe, 1
+            before, after, recipe = self.__history[i]
+            if recipe != current or before > end + 1:  # new run if recipe swapped
+                runs.append((start, end, current, count))
+                start, end, current, count = before, after, recipe, 1
             else:
-                domain_end = max(domain_end, skill_after)
-                count += 1
-        runs.append((domain_start, domain_end, current, count))
+                end = max(end, after)  # level up on final craft or not?
+                count += 1  # number of times recipe is crafted in a row
+        runs.append((start, end, current, count))  # end final run
         return tuple(runs)
 
     @property

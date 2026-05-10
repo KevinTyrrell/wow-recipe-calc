@@ -96,6 +96,24 @@ class RouteTab:
 
 class CostTab:
     NAME: str = "Cost Breakdown"
+    class Header:
+        HANDLE: str = "cost-header"
+        LABEL_HANDLE: str = "cost-header-label"
+        TOTAL_HANDLE: str = "cost-header-total"
+        LABEL: str = "TOTAL COST"
+        MARGINS: tuple[int, int, int, int] = (12, 8, 12, 8)
+    class List:
+        HANDLE: str = "cost-list"
+        BOX_HANDLE: str = "cost-list-container"
+        MARGINS: tuple[int, int, int, int] = (5, 5, 5, 5)
+        class Row:
+            HANDLE: str = "cost-row"
+            NAME_HANDLE: str = "cost-row-name"
+            PER_CAST_HANDLE: str = "cost-row-per-cast"
+            TOTAL_HANDLE: str = "cost-row-total"
+            PER_CAST_WIDTH: int = 80
+            TOTAL_WIDTH: int = 80
+            MARGINS: tuple[int, int, int, int] = (0, 2, 4, 2)
 
 
 class Console:

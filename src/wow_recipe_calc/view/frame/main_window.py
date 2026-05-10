@@ -29,6 +29,7 @@ from view.frame.tabs.edit.edit_tab import EditTab
 from wow_recipe_calc.view.frame.tabs.plan_tab import PlanTab
 from wow_recipe_calc.view.frame.tabs.bom_tab import BomTab
 from wow_recipe_calc.view.frame.tabs.route_tab import RouteTab
+from wow_recipe_calc.view.frame.tabs.cost_tab import CostTab
 from wow_recipe_calc.util.log_manager import LogManager
 
 logger: logging.Logger = logging.getLogger(__name__)
@@ -83,7 +84,7 @@ class MainWindow(QWidget):
         tab_names: tuple[str, ...] = (
             C.EditTab.NAME, C.BomTab.NAME, C.RouteTab.NAME, C.CostTab.NAME)
         plan_tabs: tuple[PlanTab, ...] = (
-            BomTab(), RouteTab(self.__craft_app.item_db)
+            BomTab(), RouteTab(self.__craft_app.item_db), CostTab()
         )
         tab_frames: tuple[QWidget, ...] = (EditTab(self.__craft_app, self.__state),) + plan_tabs
         for i in range(len(tab_frames)):
