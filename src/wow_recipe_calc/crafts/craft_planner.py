@@ -87,17 +87,15 @@ class CraftPlanner:
     def plan(self) -> CraftPlan:
         """
         Constructs a crafting plan from currently-added crafts
-        
-        craft_counts: Number of crafts required for each resulting recipe
-        craft_order: Order in which the aforementioned recipies should be crafted
-            craft_costs: Total cost to craft each recipe
-            craft_costs: Mapping[Recipe, int]
-            craft_mats: tuple[int, int]
+
+        Refer to CraftPlan's definition for information about each field
+
+        :return: CraftPlan, containing a variety of information & optimizations about the recipes
         """
         craft_counts: Mapping[Recipe, int] = self._plan_crafts()
         craft_order: tuple[tuple[int, int, Recipe, int], ...] = self._plan_order(craft_counts)
-        craft_mats: Mapping[int, int] = self._plan_mats(craft_counts)
         craft_costs: Mapping[Recipe, int] = self._plan_costs(craft_counts)
+        craft_mats: Mapping[int, int] = self._plan_mats(craft_counts)
         recipes: tuple[Recipe, ...] = self._get_recipes(craft_counts)
         materials: tuple[tuple[int, str], ...] = self._get_materials(craft_mats)
         cost: int = sum(craft_counts[k] * v for k, v in craft_costs.items())

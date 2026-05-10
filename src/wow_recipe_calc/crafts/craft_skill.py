@@ -29,7 +29,7 @@ class CraftSkiller:
         :param skill_lvl: (Optional) Initial skill level, defaults to 1
         :param bound: (Optional) Level cap for the skill, defaults to INF
         """
-        self.__history: list[tuple[int, Recipe]] = list()
+        self.__history: list[tuple[int, int, Recipe]] = list()
         if bound is not None:
             if bound < 1: raise ValueError(f"skiller bound must be positive: {bound}")
             self.__bound: int = bound
@@ -62,16 +62,17 @@ class CraftSkiller:
         if self.__skill < recipe.learned:
             raise ValueError(f"recipe level requirement is not met: "
                              f"{floor(self.__skill)} -> [{recipe.learned}] {recipe.name}")
-        self.__history.append((floor(self.__skill), recipe))  # save to history
-        if recipe.yellow != recipe.gray:  # div/0 protection
+        skill_before: int = floor(self.__skill)
+        if recipe.yellow != recipe.gray:
             chance: float = (recipe.gray - self.__skill) / (recipe.gray - recipe.yellow)
             self.__skill += max(0.0, min(1.0, chance))
+        self.__history.append((skill_before, floor(self.__skill), recipe))
 
     def history(self) -> tuple[tuple[int, int, Recipe, int], ...]:
         """
         Formats the crafting history into the following:
         (A, B, Recipe, Count)
-        - Where [A, B) (exclusive bound) is the level range of the crafts
+        - Where [A, B] is the level range of the crafts
         - Where Recipe is the Recipe instance of what was crafted
         - Where Count is the amount of crafts of the Recipe in this section
 
@@ -80,24 +81,20 @@ class CraftSkiller:
         if not self.__history: return tuple()
         runs: list[tuple[int, int, Recipe, int]] = list()
 
-        entry: tuple[int, Recipe] = self.__history[0]
-        current: Recipe = entry[1]
-        domain_start: int = entry[0]
-        domain_end: int = domain_start
-        count: int = 1  # Number of times to craft in this run
+        skill_before, skill_after, current = self.__history[0]
+        domain_start: int = skill_before
+        domain_end: int = skill_after
+        count: int = 1
 
         for i in range(1, len(self.__history)):
-            entry = self.__history[i]
-            domain: int = entry[0]
-            recipe: Recipe = entry[1]
-            # Recipe changed or we skipped levels
-            if recipe != current or domain > domain_end + 1:
+            skill_before, skill_after, recipe = self.__history[i]
+            if recipe != current or skill_before > domain_end + 1:
                 runs.append((domain_start, domain_end, current, count))
-                domain_start, current, count = domain, recipe, 1  # new run
-                current = recipe
-            else: count += 1
-            domain_end = domain
-        runs.append((domain_start, domain_end, current, count))  # End final run
+                domain_start, domain_end, current, count = skill_before, skill_after, recipe, 1
+            else:
+                domain_end = max(domain_end, skill_after)
+                count += 1
+        runs.append((domain_start, domain_end, current, count))
         return tuple(runs)
 
     @property

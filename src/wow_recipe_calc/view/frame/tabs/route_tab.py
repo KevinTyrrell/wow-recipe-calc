@@ -87,7 +87,7 @@ class _Divider(QFrame):
 class _CraftRouteStep(QWidget):
     _RECIPE_NAME_FMT: str = "[ {} ]"
     _CRAFT_COUNT_FMT: str = "{{:>{}}} × {{}}"
-    _SKILL_RANGE_FMT: str = "[{{:<{0}}} → {{:>{0}}})"
+    _SKILL_RANGE_FMT: str = "[{{:<{0}}} → {{:>{0}}}]"
     _SKILL_MAX_DIGITS: int = 3
     _CRAFT_MAX_DIGITS: int = 4
 
