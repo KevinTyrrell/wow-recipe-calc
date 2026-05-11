@@ -1,0 +1,5593 @@
+[
+    {
+        "name": "Delicate Copper Wire",
+        "learned": 20,
+        "yellow": 20,
+        "gray": 50,
+        "reagents": [
+            [
+                2840,
+                2
+            ]
+        ],
+        "product": 20816,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Setting",
+        "learned": 50,
+        "yellow": 70,
+        "gray": 90,
+        "reagents": [
+            [
+                2841,
+                2
+            ]
+        ],
+        "product": 20817,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elegant Silver Ring",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 110,
+        "reagents": [
+            [
+                2842,
+                1
+            ]
+        ],
+        "product": 20818,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Inlaid Malachite Ring",
+        "learned": 30,
+        "yellow": 60,
+        "gray": 90,
+        "reagents": [
+            [
+                774,
+                2
+            ],
+            [
+                2840,
+                2
+            ]
+        ],
+        "product": 20821,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Pearl Ring",
+        "learned": 60,
+        "yellow": 90,
+        "gray": 120,
+        "reagents": [
+            [
+                5498,
+                1
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                2840,
+                2
+            ]
+        ],
+        "product": 20820,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gloom Band",
+        "learned": 70,
+        "yellow": 100,
+        "gray": 130,
+        "reagents": [
+            [
+                1210,
+                2
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                20816,
+                2
+            ]
+        ],
+        "product": 20823,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Silver Ring",
+        "learned": 90,
+        "yellow": 120,
+        "gray": 150,
+        "reagents": [
+            [
+                2842,
+                2
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                1206,
+                1
+            ],
+            [
+                1705,
+                1
+            ]
+        ],
+        "product": 20826,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ring of Silver Might",
+        "learned": 80,
+        "yellow": 110,
+        "gray": 140,
+        "reagents": [
+            [
+                2842,
+                2
+            ]
+        ],
+        "product": 20827,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ring of Twilight Shadows",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 160,
+        "reagents": [
+            [
+                1210,
+                2
+            ],
+            [
+                2841,
+                2
+            ]
+        ],
+        "product": 20828,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Golden Necklace of Battle",
+        "learned": 150,
+        "yellow": 180,
+        "gray": 210,
+        "reagents": [
+            [
+                3577,
+                1
+            ],
+            [
+                1206,
+                2
+            ],
+            [
+                3391,
+                1
+            ]
+        ],
+        "product": 20831,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Moonsoul Crown",
+        "learned": 120,
+        "yellow": 150,
+        "gray": 180,
+        "reagents": [
+            [
+                1705,
+                3
+            ],
+            [
+                5498,
+                3
+            ],
+            [
+                11083,
+                4
+            ],
+            [
+                2842,
+                4
+            ],
+            [
+                3827,
+                2
+            ]
+        ],
+        "product": 20832,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wicked Moonstone Ring",
+        "learned": 125,
+        "yellow": 155,
+        "gray": 185,
+        "reagents": [
+            [
+                1705,
+                1
+            ],
+            [
+                3824,
+                1
+            ],
+            [
+                3575,
+                4
+            ]
+        ],
+        "product": 20833,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Amulet of the Moon",
+        "learned": 110,
+        "yellow": 140,
+        "gray": 170,
+        "reagents": [
+            [
+                1705,
+                2
+            ],
+            [
+                20817,
+                1
+            ]
+        ],
+        "product": 20830,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Bronze Ring",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 110,
+        "reagents": [
+            [
+                2841,
+                4
+            ]
+        ],
+        "product": 20907,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Braided Copper Ring",
+        "learned": 30,
+        "yellow": 30,
+        "gray": 60,
+        "reagents": [
+            [
+                20816,
+                2
+            ]
+        ],
+        "product": 20906,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Iron Collar",
+        "learned": 110,
+        "yellow": 140,
+        "gray": 170,
+        "reagents": [
+            [
+                3575,
+                8
+            ],
+            [
+                5637,
+                2
+            ],
+            [
+                20817,
+                2
+            ]
+        ],
+        "product": 20909,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of the Agate Shield",
+        "learned": 120,
+        "yellow": 150,
+        "gray": 180,
+        "reagents": [
+            [
+                1206,
+                1
+            ],
+            [
+                20817,
+                1
+            ]
+        ],
+        "product": 20950,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Iron Knuckles",
+        "learned": 125,
+        "yellow": 155,
+        "gray": 185,
+        "reagents": [
+            [
+                3575,
+                8
+            ],
+            [
+                3391,
+                2
+            ]
+        ],
+        "product": 20954,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Dragon Ring",
+        "learned": 135,
+        "yellow": 165,
+        "gray": 195,
+        "reagents": [
+            [
+                1529,
+                1
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                20816,
+                2
+            ]
+        ],
+        "product": 20955,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Filigree",
+        "learned": 150,
+        "yellow": 170,
+        "gray": 190,
+        "reagents": [
+            [
+                3860,
+                2
+            ]
+        ],
+        "product": 20963,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blazing Citrine Ring",
+        "learned": 150,
+        "yellow": 180,
+        "gray": 210,
+        "reagents": [
+            [
+                3864,
+                1
+            ],
+            [
+                20963,
+                1
+            ]
+        ],
+        "product": 20958,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jade Pendant of Blasting",
+        "learned": 160,
+        "yellow": 190,
+        "gray": 220,
+        "reagents": [
+            [
+                1529,
+                1
+            ],
+            [
+                20963,
+                2
+            ]
+        ],
+        "product": 20966,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Jade Eye",
+        "learned": 170,
+        "yellow": 200,
+        "gray": 230,
+        "reagents": [
+            [
+                1529,
+                1
+            ],
+            [
+                7067,
+                2
+            ]
+        ],
+        "product": 20959,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Engraved Truesilver Ring",
+        "learned": 170,
+        "yellow": 200,
+        "gray": 230,
+        "reagents": [
+            [
+                6037,
+                1
+            ],
+            [
+                20963,
+                2
+            ]
+        ],
+        "product": 20960,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Citrine Ring of Rapid Healing",
+        "learned": 180,
+        "yellow": 210,
+        "gray": 240,
+        "reagents": [
+            [
+                3864,
+                1
+            ],
+            [
+                7070,
+                2
+            ],
+            [
+                3860,
+                2
+            ]
+        ],
+        "product": 20961,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Citrine Pendant of Golden Healing",
+        "learned": 190,
+        "yellow": 220,
+        "gray": 250,
+        "reagents": [
+            [
+                3864,
+                1
+            ],
+            [
+                7070,
+                2
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                20817,
+                1
+            ]
+        ],
+        "product": 20967,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Jade Owl",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 255,
+        "reagents": [
+            [
+                1529,
+                4
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                11137,
+                4
+            ],
+            [
+                20963,
+                4
+            ]
+        ],
+        "product": 21748,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Golden Hare",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 255,
+        "reagents": [
+            [
+                3577,
+                6
+            ],
+            [
+                3864,
+                2
+            ]
+        ],
+        "product": 21756,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Aquamarine Signet",
+        "learned": 210,
+        "yellow": 235,
+        "gray": 265,
+        "reagents": [
+            [
+                7909,
+                3
+            ],
+            [
+                8151,
+                4
+            ]
+        ],
+        "product": 20964,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Black Pearl Panther",
+        "learned": 215,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                7971,
+                4
+            ],
+            [
+                8151,
+                4
+            ]
+        ],
+        "product": 21758,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Aquamarine Pendant of the Warrior",
+        "learned": 220,
+        "yellow": 245,
+        "gray": 275,
+        "reagents": [
+            [
+                7909,
+                1
+            ],
+            [
+                20963,
+                3
+            ]
+        ],
+        "product": 21755,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ruby Crown of Restoration",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 280,
+        "reagents": [
+            [
+                7910,
+                2
+            ],
+            [
+                7971,
+                2
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                21752,
+                4
+            ],
+            [
+                6149,
+                4
+            ]
+        ],
+        "product": 20969,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Setting",
+        "learned": 225,
+        "yellow": 235,
+        "gray": 255,
+        "reagents": [
+            [
+                12359,
+                1
+            ]
+        ],
+        "product": 21752,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Truesilver Crab",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 280,
+        "reagents": [
+            [
+                7909,
+                2
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                7075,
+                2
+            ],
+            [
+                7079,
+                2
+            ],
+            [
+                8151,
+                4
+            ]
+        ],
+        "product": 21760,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Truesilver Boar",
+        "learned": 235,
+        "yellow": 260,
+        "gray": 290,
+        "reagents": [
+            [
+                7910,
+                2
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                7077,
+                2
+            ],
+            [
+                7081,
+                2
+            ],
+            [
+                8151,
+                4
+            ]
+        ],
+        "product": 21763,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ruby Pendant of Fire",
+        "learned": 235,
+        "yellow": 260,
+        "gray": 290,
+        "reagents": [
+            [
+                7910,
+                1
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 21764,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Healing Ring",
+        "learned": 240,
+        "yellow": 265,
+        "gray": 295,
+        "reagents": [
+            [
+                6037,
+                2
+            ],
+            [
+                10286,
+                2
+            ]
+        ],
+        "product": 21765,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Aquamarine Ward",
+        "learned": 245,
+        "yellow": 270,
+        "gray": 300,
+        "reagents": [
+            [
+                7909,
+                1
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 21754,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gem Studded Band",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                7909,
+                2
+            ],
+            [
+                3864,
+                2
+            ],
+            [
+                21752,
+                4
+            ],
+            [
+                6037,
+                2
+            ]
+        ],
+        "product": 21753,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Opal Necklace of Impact",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                12799,
+                2
+            ],
+            [
+                21752,
+                2
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                11178,
+                2
+            ],
+            [
+                20963,
+                2
+            ]
+        ],
+        "product": 21766,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Ruby Serpent",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                7910,
+                2
+            ],
+            [
+                7078,
+                2
+            ],
+            [
+                8152,
+                4
+            ],
+            [
+                6037,
+                2
+            ]
+        ],
+        "product": 21769,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Opal Ring",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                12799,
+                1
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 21767,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sapphire Signet",
+        "learned": 275,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                12361,
+                4
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 21768,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Emerald Crown of Destruction",
+        "learned": 275,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                12364,
+                2
+            ],
+            [
+                12799,
+                2
+            ],
+            [
+                12361,
+                2
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                12359,
+                2
+            ]
+        ],
+        "product": 21774,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Onslaught Ring",
+        "learned": 280,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                21752,
+                1
+            ],
+            [
+                12804,
+                1
+            ],
+            [
+                7076,
+                1
+            ]
+        ],
+        "product": 21775,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sapphire Pendant of Winter Night",
+        "learned": 280,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                12361,
+                1
+            ],
+            [
+                12808,
+                1
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 21790,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Emerald Owl",
+        "learned": 285,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                12364,
+                2
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                12359,
+                2
+            ],
+            [
+                12804,
+                4
+            ]
+        ],
+        "product": 21777,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ring of Bitter Shadows",
+        "learned": 285,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                12363,
+                1
+            ],
+            [
+                12808,
+                2
+            ],
+            [
+                12662,
+                1
+            ]
+        ],
+        "product": 21778,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Living Emerald Pendant",
+        "learned": 290,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                12364,
+                2
+            ],
+            [
+                12803,
+                4
+            ],
+            [
+                12804,
+                4
+            ]
+        ],
+        "product": 21791,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Black Diamond Crab",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                18335,
+                4
+            ],
+            [
+                11754,
+                4
+            ],
+            [
+                12800,
+                2
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                12359,
+                4
+            ]
+        ],
+        "product": 21784,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Dark Iron Scorpid",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                11371,
+                4
+            ],
+            [
+                12360,
+                2
+            ],
+            [
+                7910,
+                2
+            ]
+        ],
+        "product": 21789,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Necklace of the Diamond Tower",
+        "learned": 305,
+        "yellow": 315,
+        "gray": 335,
+        "reagents": [
+            [
+                12800,
+                2
+            ],
+            [
+                21752,
+                2
+            ],
+            [
+                12360,
+                2
+            ]
+        ],
+        "product": 21792,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Band of Natural Fire",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                21929,
+                1
+            ],
+            [
+                7078,
+                4
+            ],
+            [
+                12803,
+                4
+            ]
+        ],
+        "product": 21779,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanite Sword Pendant",
+        "learned": 315,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                12360,
+                4
+            ],
+            [
+                7076,
+                4
+            ],
+            [
+                7082,
+                4
+            ]
+        ],
+        "product": 21793,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blood Crown",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                12359,
+                8
+            ],
+            [
+                11382,
+                2
+            ],
+            [
+                7910,
+                4
+            ],
+            [
+                12938,
+                2
+            ]
+        ],
+        "product": 21780,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Woven Copper Ring",
+        "learned": 30,
+        "yellow": 30,
+        "gray": 60,
+        "reagents": [
+            [
+                20816,
+                2
+            ],
+            [
+                2840,
+                1
+            ]
+        ],
+        "product": 21931,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Copper Ring",
+        "learned": 5,
+        "yellow": 35,
+        "gray": 65,
+        "reagents": [
+            [
+                2840,
+                4
+            ],
+            [
+                20816,
+                2
+            ]
+        ],
+        "product": 21932,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Bronze Necklace",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 110,
+        "reagents": [
+            [
+                2841,
+                2
+            ],
+            [
+                1210,
+                1
+            ],
+            [
+                20816,
+                1
+            ]
+        ],
+        "product": 21933,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Tigerseye Necklace",
+        "learned": 30,
+        "yellow": 60,
+        "gray": 90,
+        "reagents": [
+            [
+                818,
+                2
+            ],
+            [
+                2840,
+                2
+            ],
+            [
+                20816,
+                1
+            ]
+        ],
+        "product": 21934,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Teardrop Blood Garnet",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                23077,
+                1
+            ]
+        ],
+        "product": 23094,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bold Blood Garnet",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                23077,
+                1
+            ]
+        ],
+        "product": 23095,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Blood Garnet",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 355,
+        "reagents": [
+            [
+                23077,
+                1
+            ]
+        ],
+        "product": 23096,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Delicate Blood Garnet",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23077,
+                1
+            ]
+        ],
+        "product": 23097,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Inscribed Flame Spessarite",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                21929,
+                1
+            ]
+        ],
+        "product": 23098,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Luminous Flame Spessarite",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                21929,
+                1
+            ]
+        ],
+        "product": 23099,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glinting Flame Spessarite",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 355,
+        "reagents": [
+            [
+                21929,
+                1
+            ]
+        ],
+        "product": 23100,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Potent Flame Spessarite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                21929,
+                1
+            ]
+        ],
+        "product": 23101,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Deep Peridot",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                23079,
+                1
+            ]
+        ],
+        "product": 23103,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jagged Deep Peridot",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                23079,
+                1
+            ]
+        ],
+        "product": 23104,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enduring Deep Peridot",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 355,
+        "reagents": [
+            [
+                23079,
+                1
+            ]
+        ],
+        "product": 23105,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dazzling Deep Peridot",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23079,
+                1
+            ]
+        ],
+        "product": 23106,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glowing Shadow Draenite",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                23107,
+                1
+            ]
+        ],
+        "product": 23108,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Royal Shadow Draenite",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                23107,
+                1
+            ]
+        ],
+        "product": 23109,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shifting Shadow Draenite",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 355,
+        "reagents": [
+            [
+                23107,
+                1
+            ]
+        ],
+        "product": 23110,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sovereign Shadow Draenite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23107,
+                1
+            ]
+        ],
+        "product": 23111,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Golden Draenite",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                23112,
+                1
+            ]
+        ],
+        "product": 23113,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gleaming Golden Draenite",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                23112,
+                1
+            ]
+        ],
+        "product": 23114,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Golden Draenite",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 355,
+        "reagents": [
+            [
+                23112,
+                1
+            ]
+        ],
+        "product": 23115,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rigid Golden Draenite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23112,
+                1
+            ]
+        ],
+        "product": 23116,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Azure Moonstone",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 340,
+        "reagents": [
+            [
+                23117,
+                1
+            ]
+        ],
+        "product": 23118,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sparkling Azure Moonstone",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                23117,
+                1
+            ]
+        ],
+        "product": 23119,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stormy Azure Moonstone",
+        "learned": 315,
+        "yellow": 315,
+        "gray": 355,
+        "reagents": [
+            [
+                23117,
+                1
+            ]
+        ],
+        "product": 23120,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lustrous Azure Moonstone",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23117,
+                1
+            ]
+        ],
+        "product": 23121,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Blood Ring",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                23445,
+                1
+            ],
+            [
+                23077,
+                2
+            ]
+        ],
+        "product": 24074,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Draenite Ring",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 350,
+        "reagents": [
+            [
+                23445,
+                1
+            ],
+            [
+                23112,
+                2
+            ]
+        ],
+        "product": 24075,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Moonstone Ring",
+        "learned": 320,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                23445,
+                1
+            ],
+            [
+                23117,
+                2
+            ],
+            [
+                23079,
+                1
+            ]
+        ],
+        "product": 24076,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Adamantite Necklace",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23446,
+                2
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24077,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Adamantite Ring",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23446,
+                1
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24078,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Band of Shadows",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23449,
+                2
+            ],
+            [
+                31079,
+                3
+            ],
+            [
+                22456,
+                3
+            ]
+        ],
+        "product": 24079,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Band of Frost",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23449,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                21885,
+                3
+            ]
+        ],
+        "product": 24080,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Inferno Band",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23449,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                21884,
+                3
+            ]
+        ],
+        "product": 24082,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Band of Leaves",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23449,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                21886,
+                3
+            ]
+        ],
+        "product": 24085,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcane Khorium Band",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                22457,
+                3
+            ]
+        ],
+        "product": 24086,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Felsteel Ring",
+        "learned": 345,
+        "yellow": 355,
+        "gray": 375,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                31079,
+                4
+            ]
+        ],
+        "product": 24087,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Delicate Eternium Ring",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23447,
+                1
+            ],
+            [
+                31079,
+                5
+            ]
+        ],
+        "product": 24088,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blazing Eternium Band",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23447,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                21884,
+                4
+            ]
+        ],
+        "product": 24089,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of Frozen Flame",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                21885,
+                6
+            ],
+            [
+                21884,
+                4
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24092,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of Thawing",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                21884,
+                6
+            ],
+            [
+                21885,
+                4
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24093,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of Withering",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                22456,
+                6
+            ],
+            [
+                21886,
+                4
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24095,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of Shadow's End",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                21886,
+                6
+            ],
+            [
+                22456,
+                4
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24097,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of the Null Rune",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                22457,
+                8
+            ],
+            [
+                31079,
+                1
+            ]
+        ],
+        "product": 24098,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Felsteel Necklace",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                31079,
+                3
+            ]
+        ],
+        "product": 24106,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Living Ruby Pendant",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23449,
+                4
+            ],
+            [
+                31079,
+                1
+            ],
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24110,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Braided Eternium Chain",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23447,
+                2
+            ],
+            [
+                31079,
+                3
+            ]
+        ],
+        "product": 24114,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Eye of the Night",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23573,
+                2
+            ],
+            [
+                31079,
+                2
+            ],
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 24116,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Embrace of the Dawn",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23447,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                23112,
+                2
+            ]
+        ],
+        "product": 24117,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Chain of the Twilight Owl",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                2
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                23117,
+                2
+            ]
+        ],
+        "product": 24121,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coronet of the Verdant Flame",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23449,
+                20
+            ],
+            [
+                21886,
+                20
+            ],
+            [
+                23437,
+                2
+            ],
+            [
+                31079,
+                5
+            ]
+        ],
+        "product": 24122,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Circlet of Arcane Might",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23448,
+                20
+            ],
+            [
+                22457,
+                20
+            ],
+            [
+                23438,
+                2
+            ],
+            [
+                31079,
+                5
+            ]
+        ],
+        "product": 24123,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Felsteel Boar",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23448,
+                8
+            ],
+            [
+                23077,
+                2
+            ],
+            [
+                22452,
+                4
+            ]
+        ],
+        "product": 24124,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Dawnstone Crab",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23449,
+                4
+            ],
+            [
+                23440,
+                2
+            ],
+            [
+                23112,
+                4
+            ]
+        ],
+        "product": 24125,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Living Ruby Serpent",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23448,
+                2
+            ],
+            [
+                23436,
+                2
+            ],
+            [
+                21884,
+                4
+            ]
+        ],
+        "product": 24126,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Talasite Owl",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23447,
+                2
+            ],
+            [
+                23437,
+                2
+            ],
+            [
+                22457,
+                4
+            ]
+        ],
+        "product": 24127,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Nightseye Panther",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                23573,
+                6
+            ],
+            [
+                23441,
+                2
+            ],
+            [
+                22456,
+                2
+            ]
+        ],
+        "product": 24128,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bold Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24027,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Delicate Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24028,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Teardrop Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24029,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24030,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bright Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24031,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Subtle Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24032,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flashing Living Ruby",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 24036,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Star of Elune",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23438,
+                1
+            ]
+        ],
+        "product": 24033,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lustrous Star of Elune",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23438,
+                1
+            ]
+        ],
+        "product": 24037,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stormy Star of Elune",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23438,
+                1
+            ]
+        ],
+        "product": 24039,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 24047,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smooth Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 24048,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rigid Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 24051,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gleaming Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 24050,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 24052,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mystic Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 24053,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sovereign Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 24054,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shifting Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 24055,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glowing Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 24056,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Royal Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 24057,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Inscribed Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 24058,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Potent Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 24059,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Luminous Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 24060,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glinting Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 24061,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enduring Talasite",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23437,
+                1
+            ]
+        ],
+        "product": 24062,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Talasite",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23437,
+                1
+            ]
+        ],
+        "product": 24066,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dazzling Talasite",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23437,
+                1
+            ]
+        ],
+        "product": 24065,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jagged Talasite",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23437,
+                1
+            ]
+        ],
+        "product": 24067,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sparkling Star of Elune",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23438,
+                1
+            ]
+        ],
+        "product": 24035,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Malachite Pendant",
+        "learned": 20,
+        "yellow": 50,
+        "gray": 80,
+        "reagents": [
+            [
+                774,
+                1
+            ],
+            [
+                20816,
+                1
+            ]
+        ],
+        "product": 25438,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tigerseye Band",
+        "learned": 20,
+        "yellow": 50,
+        "gray": 80,
+        "reagents": [
+            [
+                818,
+                1
+            ],
+            [
+                20816,
+                1
+            ]
+        ],
+        "product": 25439,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Stone Statue",
+        "learned": 30,
+        "yellow": 30,
+        "gray": 50,
+        "reagents": [
+            [
+                2835,
+                8
+            ]
+        ],
+        "product": 25498,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coarse Stone Statue",
+        "learned": 50,
+        "yellow": 70,
+        "gray": 90,
+        "reagents": [
+            [
+                2836,
+                8
+            ]
+        ],
+        "product": 25880,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Stone Statue",
+        "learned": 110,
+        "yellow": 120,
+        "gray": 140,
+        "reagents": [
+            [
+                2838,
+                8
+            ]
+        ],
+        "product": 25881,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Stone Statue",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 195,
+        "reagents": [
+            [
+                7912,
+                10
+            ]
+        ],
+        "product": 25882,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dense Stone Statue",
+        "learned": 225,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                12365,
+                10
+            ]
+        ],
+        "product": 25883,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Powerful Earthstorm Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 25896,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bracing Earthstorm Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 25897,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tenacious Earthstorm Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 25898,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brutal Earthstorm Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 25899,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Insightful Earthstorm Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 25901,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Destructive Skyfire Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 25890,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mystical Skyfire Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 25893,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swift Skyfire Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 25894,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enigmatic Skyfire Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 25895,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smooth Golden Draenite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23112,
+                1
+            ]
+        ],
+        "product": 28290,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bright Blood Garnet",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 345,
+        "reagents": [
+            [
+                23077,
+                1
+            ]
+        ],
+        "product": 28595,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Ring of Power",
+        "learned": 180,
+        "yellow": 190,
+        "gray": 210,
+        "reagents": [
+            [
+                3577,
+                4
+            ],
+            [
+                1705,
+                1
+            ],
+            [
+                1529,
+                1
+            ],
+            [
+                3864,
+                1
+            ]
+        ],
+        "product": 29157,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Commander's Ring",
+        "learned": 200,
+        "yellow": 210,
+        "gray": 230,
+        "reagents": [
+            [
+                6037,
+                3
+            ],
+            [
+                7910,
+                2
+            ],
+            [
+                3864,
+                2
+            ]
+        ],
+        "product": 29158,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glowing Thorium Band",
+        "learned": 280,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                12800,
+                2
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 29159,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Emerald Lion Ring",
+        "learned": 290,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                12364,
+                2
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 29160,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Necklace",
+        "learned": 75,
+        "yellow": 105,
+        "gray": 135,
+        "reagents": [
+            [
+                2841,
+                4
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                1206,
+                1
+            ]
+        ],
+        "product": 30419,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Jade Ring",
+        "learned": 105,
+        "yellow": 135,
+        "gray": 165,
+        "reagents": [
+            [
+                1529,
+                1
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                3575,
+                2
+            ]
+        ],
+        "product": 30420,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Ring of Destruction",
+        "learned": 230,
+        "yellow": 255,
+        "gray": 285,
+        "reagents": [
+            [
+                7910,
+                1
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 30421,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Diamond Focus Ring",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                12800,
+                1
+            ],
+            [
+                21752,
+                1
+            ]
+        ],
+        "product": 30422,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Band of Force",
+        "learned": 65,
+        "yellow": 95,
+        "gray": 125,
+        "reagents": [
+            [
+                2841,
+                2
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                774,
+                3
+            ],
+            [
+                818,
+                3
+            ],
+            [
+                1210,
+                2
+            ]
+        ],
+        "product": 30804,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ring of Arcane Shielding",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23447,
+                2
+            ],
+            [
+                22457,
+                8
+            ]
+        ],
+        "product": 30825,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mercurial Adamantite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                24243,
+                4
+            ],
+            [
+                22452,
+                1
+            ]
+        ],
+        "product": 31079,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Torc",
+        "learned": 80,
+        "yellow": 110,
+        "gray": 140,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                20817,
+                1
+            ],
+            [
+                1705,
+                1
+            ]
+        ],
+        "product": 31154,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Frozen Eye",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                31079,
+                4
+            ],
+            [
+                23449,
+                2
+            ],
+            [
+                21885,
+                6
+            ],
+            [
+                21884,
+                6
+            ]
+        ],
+        "product": 31398,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Natural Ward",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                31079,
+                4
+            ],
+            [
+                23448,
+                2
+            ],
+            [
+                21886,
+                6
+            ],
+            [
+                22456,
+                6
+            ]
+        ],
+        "product": 31399,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Great Golden Draenite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23112,
+                1
+            ]
+        ],
+        "product": 31860,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Great Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 31861,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Balanced Shadow Draenite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23107,
+                1
+            ]
+        ],
+        "product": 31862,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Infused Shadow Draenite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                23107,
+                1
+            ]
+        ],
+        "product": 31864,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Infused Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 31865,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Balanced Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 31863,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Veiled Flame Spessarite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                21929,
+                1
+            ]
+        ],
+        "product": 31866,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wicked Flame Spessarite",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 355,
+        "reagents": [
+            [
+                21929,
+                1
+            ]
+        ],
+        "product": 31869,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Veiled Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 31867,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wicked Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 31868,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bold Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32193,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Delicate Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32194,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Teardrop Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32195,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32196,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bright Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32197,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Subtle Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32198,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flashing Crimson Spinel",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32227,
+                1
+            ]
+        ],
+        "product": 32199,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Empyrean Sapphire",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32228,
+                1
+            ]
+        ],
+        "product": 32200,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sparkling Empyrean Sapphire",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32228,
+                1
+            ]
+        ],
+        "product": 32201,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lustrous Empyrean Sapphire",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32228,
+                1
+            ]
+        ],
+        "product": 32202,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stormy Empyrean Sapphire",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32228,
+                1
+            ]
+        ],
+        "product": 32203,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32204,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smooth Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32205,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rigid Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32206,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gleaming Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32207,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thick Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32208,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mystic Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32209,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Great Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 32210,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sovereign Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 32211,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shifting Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 32212,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Balanced Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 32213,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Infused Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 32214,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glowing Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 32215,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Royal Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 32216,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Inscribed Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 32217,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Potent Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 32218,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Luminous Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 32219,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glinting Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 32220,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Veiled Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 32221,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wicked Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 32222,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enduring Seaspray Emerald",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32249,
+                1
+            ]
+        ],
+        "product": 32223,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Radiant Seaspray Emerald",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32249,
+                1
+            ]
+        ],
+        "product": 32224,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dazzling Seaspray Emerald",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32249,
+                1
+            ]
+        ],
+        "product": 32225,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jagged Seaspray Emerald",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32249,
+                1
+            ]
+        ],
+        "product": 32226,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Relentless Earthstorm Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 32409,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thundering Skyfire Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 32410,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Necklace of the Deep",
+        "learned": 340,
+        "yellow": 340,
+        "gray": 370,
+        "reagents": [
+            [
+                22578,
+                3
+            ],
+            [
+                24478,
+                10
+            ],
+            [
+                24479,
+                1
+            ]
+        ],
+        "product": 32508,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Pearl Band",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                24478,
+                8
+            ],
+            [
+                23447,
+                2
+            ]
+        ],
+        "product": 32772,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Black Pearl",
+        "learned": 330,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                24479,
+                1
+            ],
+            [
+                31079,
+                4
+            ]
+        ],
+        "product": 32774,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crown of the Sea Witch",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23449,
+                12
+            ],
+            [
+                31079,
+                4
+            ],
+            [
+                24478,
+                20
+            ],
+            [
+                24479,
+                3
+            ]
+        ],
+        "product": 32776,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Purified Jaggal Pearl",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 340,
+        "reagents": [
+            [
+                24478,
+                1
+            ],
+            [
+                27860,
+                1
+            ]
+        ],
+        "product": 32833,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Purified Shadow Pearl",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                24479,
+                1
+            ],
+            [
+                27860,
+                1
+            ]
+        ],
+        "product": 32836,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Don Julio's Heart",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 33133,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Kailee's Rose",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 33134,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Sun",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23436,
+                1
+            ]
+        ],
+        "product": 33131,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Falling Star",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23438,
+                1
+            ]
+        ],
+        "product": 33135,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stone of Blades",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 33143,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blood of Amber",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 33140,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Facet of Eternity",
+        "learned": 360,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 33144,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steady Talasite",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23437,
+                1
+            ]
+        ],
+        "product": 33782,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Chaotic Skyfire Diamond",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 34220,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Loop of Forged Power",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                35128,
+                4
+            ],
+            [
+                23571,
+                4
+            ],
+            [
+                31079,
+                12
+            ],
+            [
+                34664,
+                5
+            ]
+        ],
+        "product": 34362,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ring of Flowing Life",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                35128,
+                4
+            ],
+            [
+                21886,
+                20
+            ],
+            [
+                31079,
+                12
+            ],
+            [
+                34664,
+                5
+            ]
+        ],
+        "product": 34363,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hard Khorium Band",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                35128,
+                4
+            ],
+            [
+                22451,
+                20
+            ],
+            [
+                31079,
+                12
+            ],
+            [
+                34664,
+                5
+            ]
+        ],
+        "product": 34361,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pendant of Sunfire",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                31079,
+                12
+            ],
+            [
+                32227,
+                3
+            ],
+            [
+                32228,
+                3
+            ]
+        ],
+        "product": 34359,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Amulet of Flowing Life",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                31079,
+                6
+            ],
+            [
+                32249,
+                6
+            ]
+        ],
+        "product": 34360,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hard Khorium Choker",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                35128,
+                6
+            ],
+            [
+                23572,
+                9
+            ]
+        ],
+        "product": 34358,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Quick Dawnstone",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23440,
+                1
+            ]
+        ],
+        "product": 35315,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Reckless Noble Topaz",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23439,
+                1
+            ]
+        ],
+        "product": 35316,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Forceful Talasite",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23437,
+                1
+            ]
+        ],
+        "product": 35318,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Eternal Earthstorm Diamond",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                25867,
+                1
+            ]
+        ],
+        "product": 35501,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ember Skyfire Diamond",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 400,
+        "reagents": [
+            [
+                25868,
+                1
+            ]
+        ],
+        "product": 35503,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Empyrean Tortoise",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                23449,
+                8
+            ],
+            [
+                32228,
+                2
+            ],
+            [
+                23440,
+                6
+            ]
+        ],
+        "product": 35693,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Khorium Boar",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                23449,
+                8
+            ],
+            [
+                32231,
+                2
+            ],
+            [
+                22452,
+                8
+            ]
+        ],
+        "product": 35694,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Crimson Serpent",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                23447,
+                8
+            ],
+            [
+                32227,
+                2
+            ],
+            [
+                21884,
+                8
+            ]
+        ],
+        "product": 35700,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Shadowsong Panther",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                23573,
+                4
+            ],
+            [
+                32230,
+                2
+            ],
+            [
+                22456,
+                8
+            ]
+        ],
+        "product": 35702,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Figurine - Seaspray Albatross",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                23447,
+                8
+            ],
+            [
+                32249,
+                2
+            ],
+            [
+                22457,
+                8
+            ]
+        ],
+        "product": 35703,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Regal Nightseye",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23441,
+                1
+            ]
+        ],
+        "product": 35707,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Forceful Seaspray Emerald",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32249,
+                1
+            ]
+        ],
+        "product": 35759,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steady Seaspray Emerald",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32249,
+                1
+            ]
+        ],
+        "product": 35758,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Reckless Pyrestone",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32231,
+                1
+            ]
+        ],
+        "product": 35760,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Quick Lionseye",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32229,
+                1
+            ]
+        ],
+        "product": 35761,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Glass",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 380,
+        "reagents": [
+            [
+                23117,
+                3
+            ],
+            [
+                23077,
+                3
+            ],
+            [
+                23079,
+                3
+            ],
+            [
+                21929,
+                3
+            ],
+            [
+                23112,
+                3
+            ],
+            [
+                23107,
+                3
+            ]
+        ],
+        "product": 35945,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Purified Shadowsong Amethyst",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                32230,
+                1
+            ]
+        ],
+        "product": 37503,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    }
+]

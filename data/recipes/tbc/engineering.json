@@ -1,0 +1,6667 @@
+[
+    {
+        "name": "Rough Blasting Powder",
+        "learned": 1,
+        "yellow": 20,
+        "gray": 40,
+        "reagents": [
+            [
+                2835,
+                1
+            ]
+        ],
+        "product": 4357,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Dynamite",
+        "learned": 1,
+        "yellow": 30,
+        "gray": 60,
+        "reagents": [
+            [
+                4357,
+                2
+            ],
+            [
+                2589,
+                1
+            ]
+        ],
+        "product": 4358,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crafted Light Shot",
+        "learned": 30,
+        "yellow": 30,
+        "gray": 60,
+        "reagents": [
+            [
+                4357,
+                1
+            ],
+            [
+                2840,
+                1
+            ]
+        ],
+        "product": 8067,
+        "produces": 200.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Handful of Copper Bolts",
+        "learned": 30,
+        "yellow": 45,
+        "gray": 60,
+        "reagents": [
+            [
+                2840,
+                1
+            ]
+        ],
+        "product": 4359,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Copper Bomb",
+        "learned": 30,
+        "yellow": 60,
+        "gray": 90,
+        "reagents": [
+            [
+                2840,
+                1
+            ],
+            [
+                4359,
+                1
+            ],
+            [
+                4357,
+                2
+            ],
+            [
+                2589,
+                1
+            ]
+        ],
+        "product": 4360,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Tube",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 110,
+        "reagents": [
+            [
+                2840,
+                2
+            ],
+            [
+                2880,
+                1
+            ]
+        ],
+        "product": 4361,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rough Boomstick",
+        "learned": 50,
+        "yellow": 80,
+        "gray": 110,
+        "reagents": [
+            [
+                4361,
+                1
+            ],
+            [
+                4359,
+                1
+            ],
+            [
+                4399,
+                1
+            ]
+        ],
+        "product": 4362,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Copper Modulator",
+        "learned": 65,
+        "yellow": 95,
+        "gray": 125,
+        "reagents": [
+            [
+                4359,
+                2
+            ],
+            [
+                2840,
+                1
+            ],
+            [
+                2589,
+                2
+            ]
+        ],
+        "product": 4363,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mechanical Squirrel",
+        "learned": 75,
+        "yellow": 105,
+        "gray": 135,
+        "reagents": [
+            [
+                4363,
+                1
+            ],
+            [
+                4359,
+                1
+            ],
+            [
+                2840,
+                1
+            ],
+            [
+                774,
+                2
+            ]
+        ],
+        "product": 4401,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coarse Blasting Powder",
+        "learned": 75,
+        "yellow": 85,
+        "gray": 95,
+        "reagents": [
+            [
+                2836,
+                1
+            ]
+        ],
+        "product": 4364,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crafted Heavy Shot",
+        "learned": 75,
+        "yellow": 85,
+        "gray": 95,
+        "reagents": [
+            [
+                4364,
+                1
+            ],
+            [
+                2840,
+                1
+            ]
+        ],
+        "product": 8068,
+        "produces": 200.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coarse Dynamite",
+        "learned": 75,
+        "yellow": 90,
+        "gray": 105,
+        "reagents": [
+            [
+                4364,
+                3
+            ],
+            [
+                2589,
+                1
+            ]
+        ],
+        "product": 4365,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Target Dummy",
+        "learned": 85,
+        "yellow": 115,
+        "gray": 145,
+        "reagents": [
+            [
+                4363,
+                1
+            ],
+            [
+                4359,
+                2
+            ],
+            [
+                2841,
+                1
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 4366,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Seaforium Charge",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 160,
+        "reagents": [
+            [
+                4364,
+                2
+            ],
+            [
+                4363,
+                1
+            ],
+            [
+                2318,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 4367,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flying Tiger Goggles",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 160,
+        "reagents": [
+            [
+                2318,
+                6
+            ],
+            [
+                818,
+                2
+            ]
+        ],
+        "product": 4368,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Deadly Blunderbuss",
+        "learned": 105,
+        "yellow": 130,
+        "gray": 155,
+        "reagents": [
+            [
+                4361,
+                2
+            ],
+            [
+                4359,
+                4
+            ],
+            [
+                4399,
+                1
+            ],
+            [
+                2319,
+                2
+            ]
+        ],
+        "product": 4369,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Copper Bomb",
+        "learned": 105,
+        "yellow": 105,
+        "gray": 155,
+        "reagents": [
+            [
+                2840,
+                3
+            ],
+            [
+                4364,
+                4
+            ],
+            [
+                4404,
+                1
+            ]
+        ],
+        "product": 4370,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Tube",
+        "learned": 105,
+        "yellow": 105,
+        "gray": 155,
+        "reagents": [
+            [
+                2841,
+                2
+            ],
+            [
+                2880,
+                1
+            ]
+        ],
+        "product": 4371,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lovingly Crafted Boomstick",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 170,
+        "reagents": [
+            [
+                4371,
+                2
+            ],
+            [
+                4359,
+                2
+            ],
+            [
+                4400,
+                1
+            ],
+            [
+                1206,
+                3
+            ]
+        ],
+        "product": 4372,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadow Goggles",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 170,
+        "reagents": [
+            [
+                2319,
+                4
+            ],
+            [
+                1210,
+                2
+            ]
+        ],
+        "product": 4373,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Bronze Bomb",
+        "learned": 120,
+        "yellow": 120,
+        "gray": 170,
+        "reagents": [
+            [
+                4364,
+                4
+            ],
+            [
+                2841,
+                2
+            ],
+            [
+                4404,
+                1
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 4374,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Whirring Bronze Gizmo",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 175,
+        "reagents": [
+            [
+                2841,
+                2
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 4375,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flame Deflector",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 175,
+        "reagents": [
+            [
+                4375,
+                1
+            ],
+            [
+                4402,
+                1
+            ]
+        ],
+        "product": 4376,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Blasting Powder",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 145,
+        "reagents": [
+            [
+                2838,
+                1
+            ]
+        ],
+        "product": 4377,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Dynamite",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 145,
+        "reagents": [
+            [
+                4377,
+                2
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 4378,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crafted Solid Shot",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 145,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                2841,
+                1
+            ]
+        ],
+        "product": 8069,
+        "produces": 200.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silver-plated Shotgun",
+        "learned": 130,
+        "yellow": 155,
+        "gray": 180,
+        "reagents": [
+            [
+                4371,
+                2
+            ],
+            [
+                4375,
+                2
+            ],
+            [
+                4400,
+                1
+            ],
+            [
+                2842,
+                3
+            ]
+        ],
+        "product": 4379,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Big Bronze Bomb",
+        "learned": 140,
+        "yellow": 140,
+        "gray": 190,
+        "reagents": [
+            [
+                4377,
+                2
+            ],
+            [
+                2841,
+                3
+            ],
+            [
+                4404,
+                1
+            ]
+        ],
+        "product": 4380,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Recombobulator",
+        "learned": 140,
+        "yellow": 165,
+        "gray": 190,
+        "reagents": [
+            [
+                4371,
+                1
+            ],
+            [
+                4375,
+                2
+            ],
+            [
+                2319,
+                2
+            ],
+            [
+                1206,
+                1
+            ]
+        ],
+        "product": 4381,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bronze Framework",
+        "learned": 145,
+        "yellow": 145,
+        "gray": 195,
+        "reagents": [
+            [
+                2841,
+                2
+            ],
+            [
+                2319,
+                1
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 4382,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Moonsight Rifle",
+        "learned": 145,
+        "yellow": 170,
+        "gray": 195,
+        "reagents": [
+            [
+                4371,
+                3
+            ],
+            [
+                4375,
+                3
+            ],
+            [
+                4400,
+                1
+            ],
+            [
+                1705,
+                2
+            ]
+        ],
+        "product": 4383,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Explosive Sheep",
+        "learned": 150,
+        "yellow": 175,
+        "gray": 200,
+        "reagents": [
+            [
+                4382,
+                1
+            ],
+            [
+                4375,
+                1
+            ],
+            [
+                4377,
+                2
+            ],
+            [
+                2592,
+                2
+            ]
+        ],
+        "product": 4384,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Tinted Goggles",
+        "learned": 150,
+        "yellow": 175,
+        "gray": 200,
+        "reagents": [
+            [
+                2319,
+                4
+            ],
+            [
+                1206,
+                2
+            ],
+            [
+                4368,
+                1
+            ]
+        ],
+        "product": 4385,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ice Deflector",
+        "learned": 155,
+        "yellow": 175,
+        "gray": 195,
+        "reagents": [
+            [
+                4375,
+                1
+            ],
+            [
+                3829,
+                1
+            ]
+        ],
+        "product": 4386,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iron Strut",
+        "learned": 160,
+        "yellow": 160,
+        "gray": 180,
+        "reagents": [
+            [
+                3575,
+                2
+            ]
+        ],
+        "product": 4387,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Discombobulator Ray",
+        "learned": 160,
+        "yellow": 180,
+        "gray": 200,
+        "reagents": [
+            [
+                4375,
+                3
+            ],
+            [
+                4306,
+                2
+            ],
+            [
+                1529,
+                1
+            ],
+            [
+                4371,
+                1
+            ]
+        ],
+        "product": 4388,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Portable Bronze Mortar",
+        "learned": 165,
+        "yellow": 185,
+        "gray": 205,
+        "reagents": [
+            [
+                4371,
+                4
+            ],
+            [
+                4387,
+                1
+            ],
+            [
+                4377,
+                4
+            ],
+            [
+                2319,
+                4
+            ]
+        ],
+        "product": 4403,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gyrochronatom",
+        "learned": 170,
+        "yellow": 170,
+        "gray": 210,
+        "reagents": [
+            [
+                3575,
+                1
+            ],
+            [
+                10558,
+                1
+            ]
+        ],
+        "product": 4389,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Iron Grenade",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                3575,
+                1
+            ],
+            [
+                4377,
+                1
+            ],
+            [
+                4306,
+                1
+            ]
+        ],
+        "product": 4390,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Compact Harvest Reaper Kit",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                4387,
+                2
+            ],
+            [
+                4382,
+                1
+            ],
+            [
+                4389,
+                2
+            ],
+            [
+                4234,
+                4
+            ]
+        ],
+        "product": 4391,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Advanced Target Dummy",
+        "learned": 185,
+        "yellow": 185,
+        "gray": 225,
+        "reagents": [
+            [
+                4387,
+                1
+            ],
+            [
+                4382,
+                1
+            ],
+            [
+                4389,
+                1
+            ],
+            [
+                4234,
+                4
+            ]
+        ],
+        "product": 4392,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Craftsman's Monocle",
+        "learned": 185,
+        "yellow": 205,
+        "gray": 225,
+        "reagents": [
+            [
+                4234,
+                6
+            ],
+            [
+                3864,
+                2
+            ]
+        ],
+        "product": 4393,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Big Iron Bomb",
+        "learned": 190,
+        "yellow": 190,
+        "gray": 230,
+        "reagents": [
+            [
+                3575,
+                3
+            ],
+            [
+                4377,
+                3
+            ],
+            [
+                4404,
+                1
+            ]
+        ],
+        "product": 4394,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Land Mine",
+        "learned": 195,
+        "yellow": 215,
+        "gray": 235,
+        "reagents": [
+            [
+                4377,
+                3
+            ],
+            [
+                3575,
+                2
+            ],
+            [
+                4389,
+                1
+            ]
+        ],
+        "product": 4395,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mechanical Dragonling",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 240,
+        "reagents": [
+            [
+                4382,
+                1
+            ],
+            [
+                4387,
+                4
+            ],
+            [
+                4389,
+                4
+            ],
+            [
+                3864,
+                2
+            ],
+            [
+                7191,
+                1
+            ]
+        ],
+        "product": 4396,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gnomish Cloaking Device",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 240,
+        "reagents": [
+            [
+                4389,
+                4
+            ],
+            [
+                1529,
+                2
+            ],
+            [
+                1705,
+                2
+            ],
+            [
+                3864,
+                2
+            ],
+            [
+                7191,
+                1
+            ]
+        ],
+        "product": 4397,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Seaforium Charge",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 240,
+        "reagents": [
+            [
+                10505,
+                2
+            ],
+            [
+                4234,
+                2
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 4398,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silver Contact",
+        "learned": 90,
+        "yellow": 110,
+        "gray": 140,
+        "reagents": [
+            [
+                2842,
+                1
+            ]
+        ],
+        "product": 4404,
+        "produces": 5.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crude Scope",
+        "learned": 60,
+        "yellow": 90,
+        "gray": 120,
+        "reagents": [
+            [
+                4361,
+                1
+            ],
+            [
+                774,
+                1
+            ],
+            [
+                4359,
+                1
+            ]
+        ],
+        "product": 4405,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Standard Scope",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 160,
+        "reagents": [
+            [
+                4371,
+                1
+            ],
+            [
+                1206,
+                1
+            ]
+        ],
+        "product": 4406,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Accurate Scope",
+        "learned": 180,
+        "yellow": 200,
+        "gray": 220,
+        "reagents": [
+            [
+                4371,
+                1
+            ],
+            [
+                1529,
+                1
+            ],
+            [
+                3864,
+                1
+            ]
+        ],
+        "product": 4407,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Spyglass",
+        "learned": 135,
+        "yellow": 160,
+        "gray": 185,
+        "reagents": [
+            [
+                4371,
+                2
+            ],
+            [
+                4375,
+                2
+            ],
+            [
+                4363,
+                1
+            ],
+            [
+                1206,
+                1
+            ]
+        ],
+        "product": 5507,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arclight Spanner",
+        "learned": 50,
+        "yellow": 70,
+        "gray": 90,
+        "reagents": [
+            [
+                2840,
+                6
+            ]
+        ],
+        "product": 6219,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flash Bomb",
+        "learned": 185,
+        "yellow": 185,
+        "gray": 225,
+        "reagents": [
+            [
+                4611,
+                1
+            ],
+            [
+                4377,
+                1
+            ],
+            [
+                4306,
+                1
+            ]
+        ],
+        "product": 4852,
+        "produces": 1.0,
+        "sources": [
+            2,
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Practice Lock",
+        "learned": 100,
+        "yellow": 115,
+        "gray": 130,
+        "reagents": [
+            [
+                2841,
+                1
+            ],
+            [
+                4359,
+                2
+            ],
+            [
+                2880,
+                1
+            ]
+        ],
+        "product": 6712,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "EZ-Thro Dynamite",
+        "learned": 100,
+        "yellow": 115,
+        "gray": 130,
+        "reagents": [
+            [
+                4364,
+                4
+            ],
+            [
+                2592,
+                1
+            ]
+        ],
+        "product": 6714,
+        "produces": 2.0,
+        "sources": [
+            2,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Rocket Boots",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                10026,
+                1
+            ],
+            [
+                10559,
+                2
+            ],
+            [
+                4234,
+                4
+            ],
+            [
+                9061,
+                2
+            ],
+            [
+                10560,
+                1
+            ]
+        ],
+        "product": 7189,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Gnomish Universal Remote",
+        "learned": 125,
+        "yellow": 150,
+        "gray": 175,
+        "reagents": [
+            [
+                2841,
+                6
+            ],
+            [
+                4375,
+                1
+            ],
+            [
+                814,
+                2
+            ],
+            [
+                818,
+                1
+            ],
+            [
+                774,
+                1
+            ]
+        ],
+        "product": 7506,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Aquadynamic Fish Attractor",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 170,
+        "reagents": [
+            [
+                2841,
+                2
+            ],
+            [
+                6530,
+                1
+            ],
+            [
+                4364,
+                1
+            ]
+        ],
+        "product": 6533,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Jumper Cables",
+        "learned": 165,
+        "yellow": 165,
+        "gray": 200,
+        "reagents": [
+            [
+                3575,
+                6
+            ],
+            [
+                4375,
+                2
+            ],
+            [
+                814,
+                2
+            ],
+            [
+                4306,
+                2
+            ],
+            [
+                1210,
+                2
+            ],
+            [
+                7191,
+                1
+            ]
+        ],
+        "product": 7148,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gold Power Core",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 190,
+        "reagents": [
+            [
+                3577,
+                1
+            ]
+        ],
+        "product": 10558,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Blasting Powder",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 195,
+        "reagents": [
+            [
+                7912,
+                2
+            ]
+        ],
+        "product": 10505,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Solid Dynamite",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 195,
+        "reagents": [
+            [
+                10505,
+                1
+            ],
+            [
+                4306,
+                1
+            ]
+        ],
+        "product": 10507,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bright-Eye Goggles",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 215,
+        "reagents": [
+            [
+                4234,
+                6
+            ],
+            [
+                3864,
+                2
+            ]
+        ],
+        "product": 10499,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Tube",
+        "learned": 195,
+        "yellow": 195,
+        "gray": 235,
+        "reagents": [
+            [
+                3860,
+                3
+            ]
+        ],
+        "product": 10559,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gyromatic Micro-Adjustor",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                3859,
+                4
+            ]
+        ],
+        "product": 10498,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Unstable Trigger",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 240,
+        "reagents": [
+            [
+                3860,
+                1
+            ],
+            [
+                4338,
+                1
+            ],
+            [
+                10505,
+                1
+            ]
+        ],
+        "product": 10560,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fire Goggles",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                4385,
+                1
+            ],
+            [
+                3864,
+                2
+            ],
+            [
+                7068,
+                2
+            ],
+            [
+                4234,
+                4
+            ]
+        ],
+        "product": 10500,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Blunderbuss",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                10559,
+                1
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                4400,
+                1
+            ],
+            [
+                3860,
+                4
+            ],
+            [
+                7068,
+                2
+            ]
+        ],
+        "product": 10508,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hi-Impact Mithril Slugs",
+        "learned": 210,
+        "yellow": 210,
+        "gray": 250,
+        "reagents": [
+            [
+                3860,
+                1
+            ],
+            [
+                10505,
+                1
+            ]
+        ],
+        "product": 10512,
+        "produces": 200.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Deadly Scope",
+        "learned": 210,
+        "yellow": 230,
+        "gray": 250,
+        "reagents": [
+            [
+                10559,
+                1
+            ],
+            [
+                7909,
+                2
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 10546,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Casing",
+        "learned": 215,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                3860,
+                3
+            ]
+        ],
+        "product": 10561,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Frag Bomb",
+        "learned": 215,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                10561,
+                1
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                10505,
+                1
+            ]
+        ],
+        "product": 10514,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Catseye Ultra Goggles",
+        "learned": 220,
+        "yellow": 240,
+        "gray": 260,
+        "reagents": [
+            [
+                4304,
+                4
+            ],
+            [
+                7909,
+                2
+            ],
+            [
+                10592,
+                1
+            ]
+        ],
+        "product": 10501,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Heavy-bore Rifle",
+        "learned": 220,
+        "yellow": 240,
+        "gray": 260,
+        "reagents": [
+            [
+                10559,
+                2
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                4400,
+                1
+            ],
+            [
+                3860,
+                6
+            ],
+            [
+                3864,
+                2
+            ]
+        ],
+        "product": 10510,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spellpower Goggles Xtreme",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                4304,
+                4
+            ],
+            [
+                7910,
+                2
+            ]
+        ],
+        "product": 10502,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Parachute Cloak",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                10285,
+                2
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                10505,
+                4
+            ]
+        ],
+        "product": 10518,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Deepdive Helmet",
+        "learned": 230,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                3860,
+                8
+            ],
+            [
+                10561,
+                1
+            ],
+            [
+                6037,
+                1
+            ],
+            [
+                818,
+                4
+            ],
+            [
+                774,
+                4
+            ]
+        ],
+        "product": 10506,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rose Colored Goggles",
+        "learned": 230,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                4304,
+                6
+            ],
+            [
+                7910,
+                2
+            ]
+        ],
+        "product": 10503,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hi-Explosive Bomb",
+        "learned": 235,
+        "yellow": 235,
+        "gray": 275,
+        "reagents": [
+            [
+                10561,
+                2
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                10505,
+                2
+            ]
+        ],
+        "product": 10562,
+        "produces": 4.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sniper Scope",
+        "learned": 240,
+        "yellow": 260,
+        "gray": 280,
+        "reagents": [
+            [
+                10559,
+                1
+            ],
+            [
+                7910,
+                1
+            ],
+            [
+                6037,
+                2
+            ]
+        ],
+        "product": 10548,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Gyro-Shot",
+        "learned": 245,
+        "yellow": 245,
+        "gray": 285,
+        "reagents": [
+            [
+                3860,
+                2
+            ],
+            [
+                10505,
+                2
+            ]
+        ],
+        "product": 10513,
+        "produces": 200.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Lens",
+        "learned": 245,
+        "yellow": 265,
+        "gray": 285,
+        "reagents": [
+            [
+                4304,
+                8
+            ],
+            [
+                1529,
+                3
+            ],
+            [
+                7909,
+                3
+            ],
+            [
+                10286,
+                2
+            ],
+            [
+                8153,
+                2
+            ]
+        ],
+        "product": 10504,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Mechanical Dragonling",
+        "learned": 250,
+        "yellow": 270,
+        "gray": 290,
+        "reagents": [
+            [
+                3860,
+                14
+            ],
+            [
+                7077,
+                4
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                9060,
+                2
+            ],
+            [
+                9061,
+                2
+            ],
+            [
+                7910,
+                2
+            ]
+        ],
+        "product": 10576,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Rocket Fuel Recipe",
+        "learned": 205,
+        "yellow": 205,
+        "gray": 205,
+        "reagents": [
+            [
+                10648,
+                1
+            ],
+            [
+                10647,
+                1
+            ]
+        ],
+        "product": 10644,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Goblin Mortar",
+        "learned": 225,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                10559,
+                2
+            ],
+            [
+                3860,
+                4
+            ],
+            [
+                10505,
+                5
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                7068,
+                1
+            ]
+        ],
+        "product": 10577,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Goblin Mining Helmet",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                3860,
+                8
+            ],
+            [
+                3864,
+                1
+            ],
+            [
+                7067,
+                4
+            ]
+        ],
+        "product": 10542,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Goblin Construction Helmet",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                3860,
+                8
+            ],
+            [
+                3864,
+                1
+            ],
+            [
+                7068,
+                4
+            ]
+        ],
+        "product": 10543,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "The Big One",
+        "learned": 235,
+        "yellow": 235,
+        "gray": 275,
+        "reagents": [
+            [
+                10561,
+                1
+            ],
+            [
+                9061,
+                1
+            ],
+            [
+                10507,
+                6
+            ],
+            [
+                10560,
+                1
+            ]
+        ],
+        "product": 10586,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Goblin Bomb Dispenser",
+        "learned": 230,
+        "yellow": 230,
+        "gray": 270,
+        "reagents": [
+            [
+                10561,
+                2
+            ],
+            [
+                10505,
+                4
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                4407,
+                2
+            ]
+        ],
+        "product": 10587,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Goblin Rocket Helmet",
+        "learned": 245,
+        "yellow": 265,
+        "gray": 285,
+        "reagents": [
+            [
+                10543,
+                1
+            ],
+            [
+                9061,
+                4
+            ],
+            [
+                3860,
+                4
+            ],
+            [
+                10560,
+                1
+            ]
+        ],
+        "product": 10588,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Gnomish Death Ray",
+        "learned": 240,
+        "yellow": 260,
+        "gray": 280,
+        "reagents": [
+            [
+                10559,
+                2
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                12808,
+                1
+            ],
+            [
+                7972,
+                4
+            ],
+            [
+                9060,
+                1
+            ]
+        ],
+        "product": 10645,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Goblin Sapper Charge",
+        "learned": 205,
+        "yellow": 205,
+        "gray": 245,
+        "reagents": [
+            [
+                4338,
+                1
+            ],
+            [
+                10505,
+                3
+            ],
+            [
+                10560,
+                1
+            ]
+        ],
+        "product": 10646,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Inlaid Mithril Cylinder Plans",
+        "learned": 205,
+        "yellow": 205,
+        "gray": 205,
+        "reagents": [
+            [
+                10648,
+                1
+            ],
+            [
+                10647,
+                1
+            ]
+        ],
+        "product": 10713,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Goggles",
+        "learned": 210,
+        "yellow": 230,
+        "gray": 250,
+        "reagents": [
+            [
+                10500,
+                1
+            ],
+            [
+                10559,
+                1
+            ],
+            [
+                10558,
+                2
+            ],
+            [
+                8151,
+                2
+            ],
+            [
+                4234,
+                2
+            ]
+        ],
+        "product": 10545,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Shrink Ray",
+        "learned": 205,
+        "yellow": 225,
+        "gray": 245,
+        "reagents": [
+            [
+                10559,
+                1
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                3860,
+                4
+            ],
+            [
+                8151,
+                4
+            ],
+            [
+                1529,
+                2
+            ]
+        ],
+        "product": 10716,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Net-o-Matic Projector",
+        "learned": 210,
+        "yellow": 230,
+        "gray": 250,
+        "reagents": [
+            [
+                10559,
+                1
+            ],
+            [
+                10285,
+                2
+            ],
+            [
+                4337,
+                4
+            ],
+            [
+                10505,
+                2
+            ],
+            [
+                3860,
+                4
+            ]
+        ],
+        "product": 10720,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Harm Prevention Belt",
+        "learned": 215,
+        "yellow": 235,
+        "gray": 255,
+        "reagents": [
+            [
+                7387,
+                1
+            ],
+            [
+                3860,
+                4
+            ],
+            [
+                6037,
+                2
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                7909,
+                2
+            ]
+        ],
+        "product": 10721,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Rocket Boots",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                10026,
+                1
+            ],
+            [
+                10559,
+                2
+            ],
+            [
+                4234,
+                4
+            ],
+            [
+                10505,
+                8
+            ],
+            [
+                4389,
+                4
+            ]
+        ],
+        "product": 10724,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Battle Chicken",
+        "learned": 230,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                10561,
+                1
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                3860,
+                6
+            ],
+            [
+                9060,
+                2
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                1529,
+                2
+            ]
+        ],
+        "product": 10725,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Mind Control Cap",
+        "learned": 235,
+        "yellow": 255,
+        "gray": 275,
+        "reagents": [
+            [
+                3860,
+                10
+            ],
+            [
+                6037,
+                4
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                7910,
+                2
+            ],
+            [
+                4338,
+                4
+            ]
+        ],
+        "product": 10726,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Goblin Dragon Gun",
+        "learned": 240,
+        "yellow": 260,
+        "gray": 280,
+        "reagents": [
+            [
+                10559,
+                2
+            ],
+            [
+                9061,
+                4
+            ],
+            [
+                3860,
+                6
+            ],
+            [
+                6037,
+                6
+            ],
+            [
+                10560,
+                1
+            ]
+        ],
+        "product": 10727,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Mechanical Repair Kit",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 240,
+        "reagents": [
+            [
+                3860,
+                1
+            ],
+            [
+                4338,
+                1
+            ],
+            [
+                10505,
+                1
+            ]
+        ],
+        "product": 11590,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pet Bombling",
+        "learned": 205,
+        "yellow": 205,
+        "gray": 205,
+        "reagents": [
+            [
+                4394,
+                1
+            ],
+            [
+                7077,
+                1
+            ],
+            [
+                7191,
+                1
+            ],
+            [
+                3860,
+                6
+            ]
+        ],
+        "product": 11825,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Lil' Smoky",
+        "learned": 205,
+        "yellow": 205,
+        "gray": 205,
+        "reagents": [
+            [
+                7075,
+                1
+            ],
+            [
+                4389,
+                2
+            ],
+            [
+                7191,
+                1
+            ],
+            [
+                3860,
+                2
+            ],
+            [
+                6037,
+                1
+            ]
+        ],
+        "product": 11826,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Salt Shaker",
+        "learned": 250,
+        "yellow": 270,
+        "gray": 290,
+        "reagents": [
+            [
+                10561,
+                1
+            ],
+            [
+                12359,
+                6
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                10560,
+                4
+            ]
+        ],
+        "product": 15846,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dense Blasting Powder",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 260,
+        "reagents": [
+            [
+                12365,
+                2
+            ]
+        ],
+        "product": 15992,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Grenade",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                15994,
+                1
+            ],
+            [
+                12359,
+                3
+            ],
+            [
+                15992,
+                3
+            ],
+            [
+                14047,
+                3
+            ]
+        ],
+        "product": 15993,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Widget",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                12359,
+                3
+            ],
+            [
+                14047,
+                1
+            ]
+        ],
+        "product": 15994,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Rifle",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                10559,
+                2
+            ],
+            [
+                10561,
+                2
+            ],
+            [
+                15994,
+                2
+            ],
+            [
+                12359,
+                4
+            ],
+            [
+                10546,
+                1
+            ]
+        ],
+        "product": 15995,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lifelike Mechanical Toad",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                12803,
+                1
+            ],
+            [
+                15994,
+                4
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                8170,
+                1
+            ]
+        ],
+        "product": 15996,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spellpower Goggles Xtreme Plus",
+        "learned": 270,
+        "yellow": 290,
+        "gray": 310,
+        "reagents": [
+            [
+                10502,
+                1
+            ],
+            [
+                7910,
+                4
+            ],
+            [
+                12810,
+                2
+            ],
+            [
+                14047,
+                8
+            ]
+        ],
+        "product": 15999,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Tube",
+        "learned": 275,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                12359,
+                6
+            ]
+        ],
+        "product": 16000,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Rifle",
+        "learned": 275,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                16000,
+                2
+            ],
+            [
+                11371,
+                6
+            ],
+            [
+                10546,
+                2
+            ],
+            [
+                12361,
+                2
+            ],
+            [
+                12799,
+                2
+            ],
+            [
+                8170,
+                4
+            ]
+        ],
+        "product": 16004,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Iron Bomb",
+        "learned": 285,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                15994,
+                2
+            ],
+            [
+                11371,
+                1
+            ],
+            [
+                15992,
+                3
+            ],
+            [
+                14047,
+                3
+            ]
+        ],
+        "product": 16005,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thorium Shells",
+        "learned": 285,
+        "yellow": 295,
+        "gray": 305,
+        "reagents": [
+            [
+                12359,
+                2
+            ],
+            [
+                15992,
+                1
+            ]
+        ],
+        "product": 15997,
+        "produces": 200.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Masterwork Target Dummy",
+        "learned": 275,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                10561,
+                1
+            ],
+            [
+                16000,
+                1
+            ],
+            [
+                15994,
+                2
+            ],
+            [
+                6037,
+                1
+            ],
+            [
+                8170,
+                2
+            ],
+            [
+                14047,
+                4
+            ]
+        ],
+        "product": 16023,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Delicate Arcanite Converter",
+        "learned": 285,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                12360,
+                1
+            ],
+            [
+                14227,
+                1
+            ]
+        ],
+        "product": 16006,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Voice Amplification Modulator",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                16006,
+                2
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                15994,
+                1
+            ],
+            [
+                12799,
+                1
+            ]
+        ],
+        "product": 16009,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Master Engineer's Goggles",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                10500,
+                1
+            ],
+            [
+                12364,
+                2
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 16008,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanite Dragonling",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                10576,
+                1
+            ],
+            [
+                16006,
+                8
+            ],
+            [
+                12655,
+                10
+            ],
+            [
+                15994,
+                6
+            ],
+            [
+                10558,
+                4
+            ],
+            [
+                12810,
+                6
+            ]
+        ],
+        "product": 16022,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcane Bomb",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                16006,
+                1
+            ],
+            [
+                12359,
+                3
+            ],
+            [
+                14047,
+                1
+            ]
+        ],
+        "product": 16040,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flawless Arcanite Rifle",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                10
+            ],
+            [
+                16000,
+                2
+            ],
+            [
+                7078,
+                2
+            ],
+            [
+                7076,
+                2
+            ],
+            [
+                12800,
+                2
+            ],
+            [
+                12810,
+                2
+            ]
+        ],
+        "product": 16007,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Snowmaster 9000",
+        "learned": 190,
+        "yellow": 190,
+        "gray": 230,
+        "reagents": [
+            [
+                3860,
+                8
+            ],
+            [
+                4389,
+                4
+            ],
+            [
+                17202,
+                4
+            ],
+            [
+                3829,
+                1
+            ]
+        ],
+        "product": 17716,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Field Repair Bot 74A",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12359,
+                16
+            ],
+            [
+                7191,
+                2
+            ]
+        ],
+        "product": 18232,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Biznicks 247x128 Accurascope",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17011,
+                2
+            ],
+            [
+                7076,
+                2
+            ],
+            [
+                16006,
+                4
+            ],
+            [
+                11371,
+                6
+            ],
+            [
+                16000,
+                1
+            ]
+        ],
+        "product": 18283,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Core Marksman Rifle",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                17010,
+                4
+            ],
+            [
+                17011,
+                2
+            ],
+            [
+                12360,
+                6
+            ],
+            [
+                16006,
+                2
+            ],
+            [
+                16000,
+                2
+            ]
+        ],
+        "product": 18282,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Force Reactive Disk",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                12360,
+                6
+            ],
+            [
+                16006,
+                2
+            ],
+            [
+                7082,
+                8
+            ],
+            [
+                12803,
+                12
+            ],
+            [
+                7076,
+                8
+            ]
+        ],
+        "product": 18168,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Firework",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 175,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 9318,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Firework",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 175,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 9312,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Firework",
+        "learned": 150,
+        "yellow": 150,
+        "gray": 175,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 9313,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "EZ-Thro Dynamite II",
+        "learned": 200,
+        "yellow": 200,
+        "gray": 220,
+        "reagents": [
+            [
+                10505,
+                1
+            ],
+            [
+                4338,
+                2
+            ]
+        ],
+        "product": 18588,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dense Dynamite",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                15992,
+                2
+            ],
+            [
+                14047,
+                3
+            ]
+        ],
+        "product": 18641,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truesilver Transformer",
+        "learned": 260,
+        "yellow": 270,
+        "gray": 280,
+        "reagents": [
+            [
+                6037,
+                2
+            ],
+            [
+                7067,
+                2
+            ],
+            [
+                7069,
+                1
+            ]
+        ],
+        "product": 18631,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gyrofreeze Ice Reflector",
+        "learned": 260,
+        "yellow": 280,
+        "gray": 300,
+        "reagents": [
+            [
+                15994,
+                6
+            ],
+            [
+                18631,
+                2
+            ],
+            [
+                12361,
+                2
+            ],
+            [
+                7078,
+                4
+            ],
+            [
+                3829,
+                2
+            ],
+            [
+                13467,
+                4
+            ]
+        ],
+        "product": 18634,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Jumper Cables XL",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                15994,
+                2
+            ],
+            [
+                18631,
+                2
+            ],
+            [
+                7191,
+                2
+            ],
+            [
+                14227,
+                2
+            ],
+            [
+                7910,
+                2
+            ]
+        ],
+        "product": 18587,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Major Recombobulator",
+        "learned": 275,
+        "yellow": 285,
+        "gray": 295,
+        "reagents": [
+            [
+                16000,
+                2
+            ],
+            [
+                18631,
+                1
+            ],
+            [
+                14047,
+                2
+            ]
+        ],
+        "product": 18637,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Powerful Seaforium Charge",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 295,
+        "reagents": [
+            [
+                15994,
+                2
+            ],
+            [
+                15992,
+                3
+            ],
+            [
+                8170,
+                2
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 18594,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hyper-Radiant Flame Reflector",
+        "learned": 290,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                11371,
+                4
+            ],
+            [
+                18631,
+                3
+            ],
+            [
+                7080,
+                6
+            ],
+            [
+                7910,
+                4
+            ],
+            [
+                12800,
+                2
+            ]
+        ],
+        "product": 18638,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ultra-Flash Shadow Reflector",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                11371,
+                8
+            ],
+            [
+                18631,
+                4
+            ],
+            [
+                12803,
+                6
+            ],
+            [
+                12808,
+                4
+            ],
+            [
+                12800,
+                2
+            ],
+            [
+                12799,
+                2
+            ]
+        ],
+        "product": 18639,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Alarm-O-Bot",
+        "learned": 265,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                12359,
+                4
+            ],
+            [
+                15994,
+                2
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                7910,
+                1
+            ],
+            [
+                7191,
+                1
+            ]
+        ],
+        "product": 18645,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "World Enlarger",
+        "learned": 260,
+        "yellow": 260,
+        "gray": 270,
+        "reagents": [
+            [
+                10561,
+                1
+            ],
+            [
+                15994,
+                2
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                3864,
+                1
+            ]
+        ],
+        "product": 18660,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Dimensional Ripper - Everlook",
+        "learned": 285,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                3860,
+                10
+            ],
+            [
+                18631,
+                1
+            ],
+            [
+                7077,
+                4
+            ],
+            [
+                7910,
+                2
+            ],
+            [
+                10586,
+                1
+            ]
+        ],
+        "product": 18984,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Ultrasafe Transporter - Gadgetzan",
+        "learned": 285,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                3860,
+                12
+            ],
+            [
+                18631,
+                2
+            ],
+            [
+                7075,
+                4
+            ],
+            [
+                7079,
+                2
+            ],
+            [
+                7909,
+                4
+            ],
+            [
+                9060,
+                1
+            ]
+        ],
+        "product": 18986,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Snake Burst Firework",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 270,
+        "reagents": [
+            [
+                15992,
+                2
+            ],
+            [
+                14047,
+                2
+            ],
+            [
+                8150,
+                1
+            ]
+        ],
+        "product": 19026,
+        "produces": 4.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodvine Goggles",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                19726,
+                4
+            ],
+            [
+                19774,
+                5
+            ],
+            [
+                16006,
+                2
+            ],
+            [
+                12804,
+                8
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 19999,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodvine Lens",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                19726,
+                5
+            ],
+            [
+                19774,
+                5
+            ],
+            [
+                16006,
+                1
+            ],
+            [
+                12804,
+                8
+            ],
+            [
+                12810,
+                4
+            ]
+        ],
+        "product": 19998,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tranquil Mechanical Yeti",
+        "learned": 250,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                15407,
+                1
+            ],
+            [
+                15994,
+                4
+            ],
+            [
+                7079,
+                2
+            ],
+            [
+                18631,
+                2
+            ],
+            [
+                10558,
+                1
+            ]
+        ],
+        "product": 21277,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Blue Rocket",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 150,
+        "reagents": [
+            [
+                4364,
+                1
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 21558,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Green Rocket",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 150,
+        "reagents": [
+            [
+                4364,
+                1
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 21559,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Red Rocket",
+        "learned": 125,
+        "yellow": 125,
+        "gray": 150,
+        "reagents": [
+            [
+                4364,
+                1
+            ],
+            [
+                2319,
+                1
+            ]
+        ],
+        "product": 21557,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Blue Rocket",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 200,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 21589,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Green Rocket",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 200,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 21590,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Red Rocket",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 200,
+        "reagents": [
+            [
+                4377,
+                1
+            ],
+            [
+                4234,
+                1
+            ]
+        ],
+        "product": 21592,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Rocket Cluster",
+        "learned": 225,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                10505,
+                1
+            ],
+            [
+                4304,
+                1
+            ]
+        ],
+        "product": 21571,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Rocket Cluster",
+        "learned": 225,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                10505,
+                1
+            ],
+            [
+                4304,
+                1
+            ]
+        ],
+        "product": 21574,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Rocket Cluster",
+        "learned": 225,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                10505,
+                1
+            ],
+            [
+                4304,
+                1
+            ]
+        ],
+        "product": 21576,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Blue Rocket Cluster",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                15992,
+                1
+            ],
+            [
+                8170,
+                1
+            ]
+        ],
+        "product": 21714,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Green Rocket Cluster",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                15992,
+                1
+            ],
+            [
+                8170,
+                1
+            ]
+        ],
+        "product": 21716,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Red Rocket Cluster",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                15992,
+                1
+            ],
+            [
+                8170,
+                1
+            ]
+        ],
+        "product": 21718,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Firework Launcher",
+        "learned": 225,
+        "yellow": 245,
+        "gray": 265,
+        "reagents": [
+            [
+                9060,
+                1
+            ],
+            [
+                9061,
+                1
+            ],
+            [
+                10560,
+                1
+            ],
+            [
+                10561,
+                1
+            ]
+        ],
+        "product": 21569,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Firework Cluster Launcher",
+        "learned": 275,
+        "yellow": 295,
+        "gray": 315,
+        "reagents": [
+            [
+                9060,
+                4
+            ],
+            [
+                9061,
+                4
+            ],
+            [
+                18631,
+                2
+            ],
+            [
+                10561,
+                1
+            ]
+        ],
+        "product": 21570,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Steam Tonk Controller",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                3860,
+                3
+            ],
+            [
+                10558,
+                1
+            ]
+        ],
+        "product": 22728,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elemental Blasting Powder",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                22574,
+                1
+            ],
+            [
+                22573,
+                2
+            ]
+        ],
+        "product": 23781,
+        "produces": 4.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Casing",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                23445,
+                3
+            ]
+        ],
+        "product": 23782,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Handful of Fel Iron Bolts",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 310,
+        "reagents": [
+            [
+                23445,
+                1
+            ]
+        ],
+        "product": 23783,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Frame",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 335,
+        "reagents": [
+            [
+                23446,
+                4
+            ],
+            [
+                22452,
+                1
+            ]
+        ],
+        "product": 23784,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hardened Adamantite Tube",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23573,
+                3
+            ]
+        ],
+        "product": 23785,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Power Core",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23449,
+                3
+            ],
+            [
+                21884,
+                1
+            ]
+        ],
+        "product": 23786,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Stabilizer",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23448,
+                2
+            ]
+        ],
+        "product": 23787,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Bomb",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                23782,
+                1
+            ],
+            [
+                23783,
+                2
+            ],
+            [
+                23781,
+                1
+            ]
+        ],
+        "product": 23736,
+        "produces": 4.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Grenade",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23446,
+                4
+            ],
+            [
+                23783,
+                2
+            ],
+            [
+                23781,
+                1
+            ]
+        ],
+        "product": 23737,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Musket",
+        "learned": 320,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                4400,
+                1
+            ],
+            [
+                23782,
+                3
+            ],
+            [
+                23783,
+                6
+            ]
+        ],
+        "product": 23742,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Rifle",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23782,
+                3
+            ],
+            [
+                23784,
+                2
+            ],
+            [
+                23783,
+                4
+            ]
+        ],
+        "product": 23746,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felsteel Boomstick",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23785,
+                1
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23783,
+                4
+            ]
+        ],
+        "product": 23747,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ornate Khorium Rifle",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23785,
+                2
+            ],
+            [
+                23449,
+                12
+            ],
+            [
+                23783,
+                4
+            ],
+            [
+                23439,
+                2
+            ]
+        ],
+        "product": 23748,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cogspinner Goggles",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23793,
+                4
+            ],
+            [
+                23077,
+                2
+            ],
+            [
+                22445,
+                8
+            ]
+        ],
+        "product": 23758,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Power Amplification Goggles",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23793,
+                4
+            ],
+            [
+                21929,
+                2
+            ],
+            [
+                22445,
+                8
+            ]
+        ],
+        "product": 23761,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ultra-Spectropic Detection Goggles",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23793,
+                4
+            ],
+            [
+                23449,
+                2
+            ],
+            [
+                23079,
+                2
+            ],
+            [
+                22448,
+                2
+            ]
+        ],
+        "product": 23762,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hyper-Vision Goggles",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                4
+            ],
+            [
+                23449,
+                2
+            ],
+            [
+                23441,
+                2
+            ],
+            [
+                22449,
+                2
+            ]
+        ],
+        "product": 23763,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Scope",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                23112,
+                2
+            ]
+        ],
+        "product": 23764,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Scope",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23785,
+                1
+            ],
+            [
+                23449,
+                4
+            ],
+            [
+                23440,
+                2
+            ]
+        ],
+        "product": 23765,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stabilized Eternium Scope",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 405,
+        "reagents": [
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                6
+            ],
+            [
+                23438,
+                2
+            ]
+        ],
+        "product": 23766,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crashin' Thrashin' Robot",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23784,
+                1
+            ],
+            [
+                23782,
+                2
+            ],
+            [
+                10558,
+                1
+            ],
+            [
+                23783,
+                2
+            ]
+        ],
+        "product": 23767,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Smoke Flare",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23781,
+                1
+            ],
+            [
+                21877,
+                1
+            ]
+        ],
+        "product": 23768,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Smoke Flare",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23781,
+                1
+            ],
+            [
+                21877,
+                1
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 23771,
+        "produces": 3.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Shells",
+        "learned": 310,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                23445,
+                2
+            ],
+            [
+                23781,
+                1
+            ]
+        ],
+        "product": 23772,
+        "produces": 200.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Shell Machine",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23446,
+                1
+            ],
+            [
+                23781,
+                2
+            ],
+            [
+                4470,
+                4
+            ]
+        ],
+        "product": 34504,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fel Iron Toolbox",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                23782,
+                1
+            ],
+            [
+                23445,
+                5
+            ],
+            [
+                23783,
+                2
+            ]
+        ],
+        "product": 23774,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Khorium Toolbox",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23782,
+                1
+            ],
+            [
+                23449,
+                5
+            ],
+            [
+                23783,
+                2
+            ]
+        ],
+        "product": 23775,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Elemental Seaforium Charge",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                23781,
+                2
+            ],
+            [
+                23782,
+                1
+            ],
+            [
+                23783,
+                1
+            ]
+        ],
+        "product": 23819,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Zapthrottle Mote Extractor",
+        "learned": 305,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                23782,
+                2
+            ],
+            [
+                23783,
+                2
+            ],
+            [
+                21886,
+                4
+            ],
+            [
+                16006,
+                1
+            ]
+        ],
+        "product": 23821,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Healing Potion Injector",
+        "learned": 330,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                23782,
+                1
+            ],
+            [
+                23783,
+                1
+            ],
+            [
+                21887,
+                2
+            ],
+            [
+                22829,
+                20
+            ]
+        ],
+        "product": 33092,
+        "produces": 20.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mana Potion Injector",
+        "learned": 345,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                23782,
+                1
+            ],
+            [
+                23783,
+                1
+            ],
+            [
+                21887,
+                2
+            ],
+            [
+                22832,
+                20
+            ]
+        ],
+        "product": 33093,
+        "produces": 20.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rocket Boots Xtreme",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                23793,
+                8
+            ],
+            [
+                23786,
+                2
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ]
+        ],
+        "product": 23824,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "The Bigger One",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 345,
+        "reagents": [
+            [
+                23782,
+                3
+            ],
+            [
+                23781,
+                6
+            ],
+            [
+                17020,
+                3
+            ],
+            [
+                23783,
+                2
+            ]
+        ],
+        "product": 23826,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Super Sapper Charge",
+        "learned": 340,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                21877,
+                4
+            ],
+            [
+                23781,
+                4
+            ],
+            [
+                22457,
+                1
+            ]
+        ],
+        "product": 23827,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Goblin Rocket Launcher",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23785,
+                2
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23787,
+                2
+            ],
+            [
+                21884,
+                6
+            ],
+            [
+                22452,
+                6
+            ],
+            [
+                16006,
+                2
+            ]
+        ],
+        "product": 23836,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Foreman's Enchanted Helmet",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                24272,
+                4
+            ],
+            [
+                22457,
+                12
+            ],
+            [
+                22451,
+                12
+            ]
+        ],
+        "product": 23838,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Foreman's Reinforced Helmet",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23573,
+                8
+            ],
+            [
+                22452,
+                12
+            ],
+            [
+                21884,
+                12
+            ]
+        ],
+        "product": 23839,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Gnomish Flame Turret",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23784,
+                1
+            ],
+            [
+                23783,
+                2
+            ],
+            [
+                23781,
+                3
+            ],
+            [
+                23782,
+                1
+            ]
+        ],
+        "product": 23841,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Poultryizer",
+        "learned": 340,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23785,
+                2
+            ],
+            [
+                23786,
+                2
+            ],
+            [
+                22445,
+                10
+            ],
+            [
+                22449,
+                2
+            ]
+        ],
+        "product": 23835,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Nigh-Invulnerability Belt",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 380,
+        "reagents": [
+            [
+                23793,
+                8
+            ],
+            [
+                23786,
+                4
+            ],
+            [
+                21886,
+                10
+            ],
+            [
+                22456,
+                10
+            ],
+            [
+                16006,
+                2
+            ]
+        ],
+        "product": 23825,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Power Goggles",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                24271,
+                4
+            ],
+            [
+                21884,
+                8
+            ],
+            [
+                22451,
+                8
+            ],
+            [
+                22452,
+                8
+            ],
+            [
+                21885,
+                8
+            ],
+            [
+                23437,
+                2
+            ]
+        ],
+        "product": 23828,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Gnomish Battle Goggles",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 395,
+        "reagents": [
+            [
+                23793,
+                8
+            ],
+            [
+                22456,
+                12
+            ],
+            [
+                22452,
+                12
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                23436,
+                2
+            ]
+        ],
+        "product": 23829,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Purple Smoke Flare",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23781,
+                1
+            ],
+            [
+                21877,
+                1
+            ],
+            [
+                4342,
+                1
+            ]
+        ],
+        "product": 25886,
+        "produces": 3.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dimensional Ripper - Area 52",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23784,
+                1
+            ],
+            [
+                21884,
+                2
+            ],
+            [
+                23826,
+                2
+            ],
+            [
+                23783,
+                4
+            ],
+            [
+                23786,
+                1
+            ]
+        ],
+        "product": 30542,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20222
+    },
+    {
+        "name": "Ultrasafe Transporter - Toshley's Station",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 370,
+        "reagents": [
+            [
+                23784,
+                1
+            ],
+            [
+                22451,
+                2
+            ],
+            [
+                23787,
+                2
+            ],
+            [
+                23783,
+                4
+            ],
+            [
+                23786,
+                1
+            ]
+        ],
+        "product": 30544,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": 20219
+    },
+    {
+        "name": "Fused Wiring",
+        "learned": 275,
+        "yellow": 275,
+        "gray": 285,
+        "reagents": [
+            [
+                20816,
+                3
+            ],
+            [
+                7078,
+                2
+            ]
+        ],
+        "product": 7191,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Icy Blasting Primers",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 345,
+        "reagents": [
+            [
+                21885,
+                1
+            ],
+            [
+                23781,
+                2
+            ],
+            [
+                21877,
+                2
+            ]
+        ],
+        "product": 32423,
+        "produces": 10.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frost Grenades",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                32423,
+                1
+            ],
+            [
+                23782,
+                1
+            ],
+            [
+                23783,
+                1
+            ]
+        ],
+        "product": 32413,
+        "produces": 5.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Furious Gizmatic Goggles",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23436,
+                2
+            ]
+        ],
+        "product": 32461,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gyro-balanced Khorium Destroyer",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                23785,
+                1
+            ],
+            [
+                23449,
+                20
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                22451,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 32756,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Justicebringer 2000 Specs",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23440,
+                2
+            ]
+        ],
+        "product": 32472,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tankatronic Goggles",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23437,
+                2
+            ]
+        ],
+        "product": 32473,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Surestrike Goggles v2.0",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23441,
+                2
+            ]
+        ],
+        "product": 32474,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gadgetstorm Goggles",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23436,
+                2
+            ]
+        ],
+        "product": 32476,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Living Replicator Specs",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23439,
+                2
+            ]
+        ],
+        "product": 32475,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Deathblow X11 Goggles",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23436,
+                2
+            ]
+        ],
+        "product": 32478,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wonderheal XT40 Shades",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23440,
+                2
+            ]
+        ],
+        "product": 32479,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Magnified Moon Specs",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23437,
+                2
+            ]
+        ],
+        "product": 32480,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Destruction Holo-gogs",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23438,
+                2
+            ]
+        ],
+        "product": 32494,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Powerheal 4000 Lens",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23793,
+                6
+            ],
+            [
+                23786,
+                1
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ],
+            [
+                23572,
+                1
+            ],
+            [
+                23439,
+                2
+            ]
+        ],
+        "product": 32495,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Adamantite Arrow Maker",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                23446,
+                1
+            ],
+            [
+                4470,
+                4
+            ],
+            [
+                23783,
+                2
+            ]
+        ],
+        "product": 20475,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flying Machine",
+        "learned": 350,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                23784,
+                2
+            ],
+            [
+                23445,
+                30
+            ],
+            [
+                23783,
+                8
+            ],
+            [
+                11291,
+                8
+            ],
+            [
+                23446,
+                5
+            ],
+            [
+                23819,
+                4
+            ]
+        ],
+        "product": 34060,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Turbo-Charged Flying Machine",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                34060,
+                1
+            ],
+            [
+                23786,
+                8
+            ],
+            [
+                23787,
+                8
+            ],
+            [
+                34249,
+                1
+            ]
+        ],
+        "product": 34061,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Field Repair Bot 110G",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                23446,
+                8
+            ],
+            [
+                23783,
+                8
+            ],
+            [
+                23786,
+                1
+            ]
+        ],
+        "product": 34113,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wonderheal XT68 Shades",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32479,
+                1
+            ],
+            [
+                21885,
+                4
+            ],
+            [
+                22457,
+                8
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 35183,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Justicebringer 3000 Specs",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32472,
+                1
+            ],
+            [
+                21886,
+                8
+            ],
+            [
+                22457,
+                8
+            ],
+            [
+                22452,
+                8
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 35185,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Powerheal 9000 Lens",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32495,
+                1
+            ],
+            [
+                21886,
+                8
+            ],
+            [
+                22457,
+                8
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 35181,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hyper-Magnified Moon Specs",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32480,
+                1
+            ],
+            [
+                21885,
+                6
+            ],
+            [
+                21886,
+                12
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 35182,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Primal-Attuned Goggles",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32475,
+                1
+            ],
+            [
+                21886,
+                5
+            ],
+            [
+                22457,
+                5
+            ],
+            [
+                21885,
+                5
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 35184,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Annihilator Holo-Gogs",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32494,
+                1
+            ],
+            [
+                22456,
+                4
+            ],
+            [
+                21884,
+                4
+            ],
+            [
+                22457,
+                4
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 34847,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lightning Etched Specs",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32476,
+                1
+            ],
+            [
+                23571,
+                2
+            ],
+            [
+                22451,
+                2
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 34355,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Surestrike Goggles v3.0",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32474,
+                1
+            ],
+            [
+                22451,
+                12
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 34356,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mayhem Projection Goggles",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32461,
+                1
+            ],
+            [
+                21884,
+                10
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 34354,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hard Khorium Goggles",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32473,
+                1
+            ],
+            [
+                35128,
+                2
+            ],
+            [
+                23571,
+                1
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 34357,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Quad Deathblow X44 Goggles",
+        "learned": 375,
+        "yellow": 390,
+        "gray": 430,
+        "reagents": [
+            [
+                32478,
+                1
+            ],
+            [
+                22456,
+                12
+            ],
+            [
+                23572,
+                4
+            ]
+        ],
+        "product": 34353,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rocket Boots Xtreme Lite",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 385,
+        "reagents": [
+            [
+                21840,
+                8
+            ],
+            [
+                23786,
+                2
+            ],
+            [
+                23785,
+                2
+            ],
+            [
+                23787,
+                4
+            ]
+        ],
+        "product": 35581,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    }
+]

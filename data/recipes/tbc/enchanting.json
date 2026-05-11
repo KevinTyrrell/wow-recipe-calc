@@ -1,0 +1,770 @@
+[
+    {
+        "name": "Runed Copper Rod",
+        "learned": 1,
+        "yellow": 5,
+        "gray": 10,
+        "reagents": [
+            [
+                6217,
+                1
+            ],
+            [
+                10940,
+                1
+            ],
+            [
+                10938,
+                1
+            ]
+        ],
+        "product": 6218,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Silver Rod",
+        "learned": 100,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                6338,
+                1
+            ],
+            [
+                10940,
+                6
+            ],
+            [
+                10939,
+                3
+            ],
+            [
+                6218,
+                1
+            ]
+        ],
+        "product": 6339,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Golden Rod",
+        "learned": 150,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                11128,
+                1
+            ],
+            [
+                5500,
+                1
+            ],
+            [
+                11082,
+                2
+            ],
+            [
+                11083,
+                2
+            ],
+            [
+                6339,
+                1
+            ]
+        ],
+        "product": 11130,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Truesilver Rod",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 260,
+        "reagents": [
+            [
+                11144,
+                1
+            ],
+            [
+                7971,
+                1
+            ],
+            [
+                11135,
+                2
+            ],
+            [
+                11137,
+                2
+            ],
+            [
+                11130,
+                1
+            ]
+        ],
+        "product": 11145,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Magic Wand",
+        "learned": 10,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                4470,
+                1
+            ],
+            [
+                10938,
+                1
+            ]
+        ],
+        "product": 11287,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Magic Wand",
+        "learned": 70,
+        "yellow": 110,
+        "gray": 150,
+        "reagents": [
+            [
+                4470,
+                1
+            ],
+            [
+                10939,
+                1
+            ]
+        ],
+        "product": 11288,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Mystic Wand",
+        "learned": 155,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                11291,
+                1
+            ],
+            [
+                11134,
+                1
+            ],
+            [
+                11083,
+                1
+            ]
+        ],
+        "product": 11289,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Mystic Wand",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 235,
+        "reagents": [
+            [
+                11291,
+                1
+            ],
+            [
+                11135,
+                1
+            ],
+            [
+                11137,
+                1
+            ]
+        ],
+        "product": 11290,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smoking Heart of the Mountain",
+        "learned": 265,
+        "yellow": 285,
+        "gray": 325,
+        "reagents": [
+            [
+                11382,
+                1
+            ],
+            [
+                7078,
+                1
+            ],
+            [
+                14343,
+                3
+            ]
+        ],
+        "product": 11811,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Thorium",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 260,
+        "reagents": [
+            [
+                12359,
+                1
+            ],
+            [
+                11176,
+                3
+            ]
+        ],
+        "product": 12655,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Leather",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 260,
+        "reagents": [
+            [
+                8170,
+                1
+            ],
+            [
+                16202,
+                1
+            ]
+        ],
+        "product": 12810,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Arcanite Rod",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 340,
+        "reagents": [
+            [
+                16206,
+                1
+            ],
+            [
+                13926,
+                1
+            ],
+            [
+                16204,
+                10
+            ],
+            [
+                16203,
+                4
+            ],
+            [
+                11145,
+                1
+            ],
+            [
+                14344,
+                2
+            ]
+        ],
+        "product": 16207,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Wizard Oil",
+        "learned": 45,
+        "yellow": 55,
+        "gray": 75,
+        "reagents": [
+            [
+                10940,
+                2
+            ],
+            [
+                17034,
+                1
+            ],
+            [
+                3371,
+                1
+            ]
+        ],
+        "product": 20744,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Minor Mana Oil",
+        "learned": 150,
+        "yellow": 160,
+        "gray": 180,
+        "reagents": [
+            [
+                11083,
+                3
+            ],
+            [
+                17034,
+                2
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 20745,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Wizard Oil",
+        "learned": 200,
+        "yellow": 210,
+        "gray": 230,
+        "reagents": [
+            [
+                11137,
+                3
+            ],
+            [
+                17035,
+                2
+            ],
+            [
+                3372,
+                1
+            ]
+        ],
+        "product": 20746,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Mana Oil",
+        "learned": 250,
+        "yellow": 260,
+        "gray": 280,
+        "reagents": [
+            [
+                11176,
+                3
+            ],
+            [
+                8831,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 20747,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wizard Oil",
+        "learned": 275,
+        "yellow": 285,
+        "gray": 305,
+        "reagents": [
+            [
+                16204,
+                3
+            ],
+            [
+                4625,
+                2
+            ],
+            [
+                8925,
+                1
+            ]
+        ],
+        "product": 20750,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Wizard Oil",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                14344,
+                2
+            ],
+            [
+                4625,
+                3
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 20749,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Mana Oil",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                14344,
+                2
+            ],
+            [
+                8831,
+                3
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 20748,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Superior Mana Oil",
+        "learned": 310,
+        "yellow": 310,
+        "gray": 330,
+        "reagents": [
+            [
+                22445,
+                3
+            ],
+            [
+                22791,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22521,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Superior Wizard Oil",
+        "learned": 340,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                22445,
+                3
+            ],
+            [
+                22792,
+                1
+            ],
+            [
+                18256,
+                1
+            ]
+        ],
+        "product": 22522,
+        "produces": 0.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Large Prismatic Shard",
+        "learned": 335,
+        "yellow": 0,
+        "gray": 335,
+        "reagents": [
+            [
+                22448,
+                3
+            ]
+        ],
+        "product": 22449,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Prismatic Sphere",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 335,
+        "reagents": [
+            [
+                22449,
+                4
+            ]
+        ],
+        "product": 22460,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Void Sphere",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 390,
+        "reagents": [
+            [
+                22450,
+                2
+            ]
+        ],
+        "product": 22459,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Fel Iron Rod",
+        "learned": 300,
+        "yellow": 310,
+        "gray": 340,
+        "reagents": [
+            [
+                25843,
+                1
+            ],
+            [
+                16203,
+                4
+            ],
+            [
+                14344,
+                6
+            ],
+            [
+                16207,
+                1
+            ]
+        ],
+        "product": 22461,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Adamantite Rod",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 390,
+        "reagents": [
+            [
+                25844,
+                1
+            ],
+            [
+                22446,
+                8
+            ],
+            [
+                22449,
+                8
+            ],
+            [
+                23571,
+                1
+            ],
+            [
+                22461,
+                1
+            ]
+        ],
+        "product": 22462,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Eternium Rod",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 400,
+        "reagents": [
+            [
+                25845,
+                1
+            ],
+            [
+                22446,
+                12
+            ],
+            [
+                22450,
+                2
+            ],
+            [
+                23571,
+                4
+            ],
+            [
+                22462,
+                1
+            ]
+        ],
+        "product": 22463,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Nexus Transformation",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 305,
+        "reagents": [
+            [
+                20725,
+                1
+            ]
+        ],
+        "product": 22448,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Prismatic Shard",
+        "learned": 335,
+        "yellow": 0,
+        "gray": 335,
+        "reagents": [
+            [
+                22449,
+                1
+            ]
+        ],
+        "product": 22448,
+        "produces": 3.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Void Shatter",
+        "learned": 375,
+        "yellow": 0,
+        "gray": 375,
+        "reagents": [
+            [
+                22450,
+                1
+            ]
+        ],
+        "product": 22449,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    }
+]

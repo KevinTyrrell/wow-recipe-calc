@@ -1,0 +1,2479 @@
+[
+    {
+        "name": "Charred Wolf Meat",
+        "learned": 0,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                2672,
+                1
+            ]
+        ],
+        "product": 2679,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spiced Wolf Meat",
+        "learned": 10,
+        "yellow": 50,
+        "gray": 90,
+        "reagents": [
+            [
+                2672,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 2680,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Roasted Boar Meat",
+        "learned": 0,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                769,
+                1
+            ]
+        ],
+        "product": 2681,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Coyote Steak",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                2673,
+                1
+            ]
+        ],
+        "product": 2684,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goretusk Liver Pie",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                723,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 724,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Westfall Stew",
+        "learned": 75,
+        "yellow": 115,
+        "gray": 155,
+        "reagents": [
+            [
+                729,
+                1
+            ],
+            [
+                730,
+                1
+            ],
+            [
+                731,
+                1
+            ]
+        ],
+        "product": 733,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crab Cake",
+        "learned": 75,
+        "yellow": 115,
+        "gray": 155,
+        "reagents": [
+            [
+                2674,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 2683,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cooked Crab Claw",
+        "learned": 85,
+        "yellow": 125,
+        "gray": 165,
+        "reagents": [
+            [
+                2675,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 2682,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dry Pork Ribs",
+        "learned": 80,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                2677,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 2687,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Redridge Goulash",
+        "learned": 100,
+        "yellow": 135,
+        "gray": 175,
+        "reagents": [
+            [
+                1081,
+                1
+            ],
+            [
+                1080,
+                1
+            ]
+        ],
+        "product": 1082,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Succulent Pork Ribs",
+        "learned": 110,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                2677,
+                2
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 2685,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Seasoned Wolf Kabob",
+        "learned": 100,
+        "yellow": 140,
+        "gray": 180,
+        "reagents": [
+            [
+                1015,
+                2
+            ],
+            [
+                2665,
+                1
+            ]
+        ],
+        "product": 1017,
+        "produces": 3.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Beer Basted Boar Ribs",
+        "learned": 25,
+        "yellow": 60,
+        "gray": 100,
+        "reagents": [
+            [
+                2886,
+                1
+            ],
+            [
+                2894,
+                1
+            ]
+        ],
+        "product": 2888,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crocolisk Steak",
+        "learned": 80,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                2924,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 3662,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blood Sausage",
+        "learned": 60,
+        "yellow": 100,
+        "gray": 140,
+        "reagents": [
+            [
+                3173,
+                1
+            ],
+            [
+                3172,
+                1
+            ],
+            [
+                3174,
+                1
+            ]
+        ],
+        "product": 3220,
+        "produces": 2.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Murloc Fin Soup",
+        "learned": 90,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                1468,
+                2
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 3663,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crocolisk Gumbo",
+        "learned": 120,
+        "yellow": 160,
+        "gray": 200,
+        "reagents": [
+            [
+                3667,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 3664,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Curiously Tasty Omelet",
+        "learned": 130,
+        "yellow": 170,
+        "gray": 210,
+        "reagents": [
+            [
+                3685,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 3665,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gooey Spider Cake",
+        "learned": 110,
+        "yellow": 150,
+        "gray": 190,
+        "reagents": [
+            [
+                2251,
+                2
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 3666,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Big Bear Steak",
+        "learned": 110,
+        "yellow": 150,
+        "gray": 190,
+        "reagents": [
+            [
+                3730,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 3726,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hot Lion Chops",
+        "learned": 125,
+        "yellow": 175,
+        "gray": 215,
+        "reagents": [
+            [
+                3731,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 3727,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tasty Lion Steak",
+        "learned": 150,
+        "yellow": 190,
+        "gray": 230,
+        "reagents": [
+            [
+                3731,
+                2
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 3728,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soothing Turtle Bisque",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                3712,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 3729,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbecued Buzzard Wing",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                3404,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 4457,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Kaldorei Spider Kabob",
+        "learned": 10,
+        "yellow": 50,
+        "gray": 90,
+        "reagents": [
+            [
+                5465,
+                1
+            ]
+        ],
+        "product": 5472,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Scorpid Surprise",
+        "learned": 20,
+        "yellow": 60,
+        "gray": 100,
+        "reagents": [
+            [
+                5466,
+                1
+            ]
+        ],
+        "product": 5473,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Roasted Kodo Meat",
+        "learned": 35,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                5467,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 5474,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fillet of Frenzy",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                5468,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 5476,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Strider Stew",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                5469,
+                1
+            ],
+            [
+                4536,
+                1
+            ]
+        ],
+        "product": 5477,
+        "produces": 2.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dig Rat Stew",
+        "learned": 90,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                5051,
+                1
+            ]
+        ],
+        "product": 5478,
+        "produces": 2.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crispy Lizard Tail",
+        "learned": 100,
+        "yellow": 140,
+        "gray": 180,
+        "reagents": [
+            [
+                5470,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 5479,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lean Venison",
+        "learned": 110,
+        "yellow": 150,
+        "gray": 190,
+        "reagents": [
+            [
+                5471,
+                1
+            ],
+            [
+                2678,
+                4
+            ]
+        ],
+        "product": 5480,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Boiled Clams",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                5503,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 5525,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goblin Deviled Clams",
+        "learned": 125,
+        "yellow": 165,
+        "gray": 205,
+        "reagents": [
+            [
+                5504,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 5527,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Clam Chowder",
+        "learned": 90,
+        "yellow": 130,
+        "gray": 170,
+        "reagents": [
+            [
+                5503,
+                1
+            ],
+            [
+                1179,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 5526,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Giant Clam Scorcho",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                4655,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 6038,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brilliant Smallfish",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                6291,
+                1
+            ]
+        ],
+        "product": 6290,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Slitherskin Mackerel",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                6303,
+                1
+            ]
+        ],
+        "product": 787,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Longjaw Mud Snapper",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                6289,
+                1
+            ]
+        ],
+        "product": 4592,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Loch Frenzy Delight",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                6317,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 6316,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bristle Whisker Catfish",
+        "learned": 100,
+        "yellow": 140,
+        "gray": 180,
+        "reagents": [
+            [
+                6308,
+                1
+            ]
+        ],
+        "product": 4593,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rainbow Fin Albacore",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                6361,
+                1
+            ]
+        ],
+        "product": 5095,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rockscale Cod",
+        "learned": 175,
+        "yellow": 190,
+        "gray": 230,
+        "reagents": [
+            [
+                6362,
+                1
+            ]
+        ],
+        "product": 4594,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Savory Deviate Delight",
+        "learned": 85,
+        "yellow": 125,
+        "gray": 165,
+        "reagents": [
+            [
+                6522,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 6657,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Herb Baked Egg",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                6889,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 6888,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smoked Bear Meat",
+        "learned": 40,
+        "yellow": 80,
+        "gray": 120,
+        "reagents": [
+            [
+                3173,
+                1
+            ]
+        ],
+        "product": 6890,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Thistle Tea",
+        "learned": 60,
+        "yellow": 100,
+        "gray": 140,
+        "reagents": [
+            [
+                2452,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 7676,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Goldthorn Tea",
+        "learned": 175,
+        "yellow": 175,
+        "gray": 205,
+        "reagents": [
+            [
+                3821,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 10841,
+        "produces": 4.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lean Wolf Steak",
+        "learned": 125,
+        "yellow": 165,
+        "gray": 205,
+        "reagents": [
+            [
+                1015,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 12209,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Roast Raptor",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                12184,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 12210,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hot Wolf Ribs",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                12203,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 13851,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Jungle Stew",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                12202,
+                1
+            ],
+            [
+                159,
+                1
+            ],
+            [
+                4536,
+                2
+            ]
+        ],
+        "product": 12212,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Carrion Surprise",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                12037,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 12213,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mystery Stew",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                12037,
+                1
+            ],
+            [
+                2596,
+                1
+            ]
+        ],
+        "product": 12214,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dragonbreath Chili",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                12037,
+                1
+            ],
+            [
+                4402,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 12217,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Kodo Stew",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                12204,
+                2
+            ],
+            [
+                3713,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 12215,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spiced Chili Crab",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                12206,
+                1
+            ],
+            [
+                2692,
+                2
+            ]
+        ],
+        "product": 12216,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Monster Omelet",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                12207,
+                1
+            ],
+            [
+                3713,
+                2
+            ]
+        ],
+        "product": 12218,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crispy Bat Wing",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                12223,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 12224,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spotted Yellowtail",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                4603,
+                1
+            ]
+        ],
+        "product": 6887,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cooked Glossy Mightfish",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                13754,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 13927,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Grilled Squid",
+        "learned": 240,
+        "yellow": 265,
+        "gray": 290,
+        "reagents": [
+            [
+                13755,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 13928,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Filet of Redgill",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                13758,
+                1
+            ]
+        ],
+        "product": 13930,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hot Smoked Bass",
+        "learned": 240,
+        "yellow": 265,
+        "gray": 290,
+        "reagents": [
+            [
+                13756,
+                1
+            ],
+            [
+                2692,
+                2
+            ]
+        ],
+        "product": 13929,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Nightfin Soup",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 295,
+        "reagents": [
+            [
+                13759,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 13931,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Poached Sunscale Salmon",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 295,
+        "reagents": [
+            [
+                13760,
+                1
+            ]
+        ],
+        "product": 13932,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lobster Stew",
+        "learned": 275,
+        "yellow": 300,
+        "gray": 325,
+        "reagents": [
+            [
+                13888,
+                1
+            ],
+            [
+                159,
+                1
+            ]
+        ],
+        "product": 13933,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mightfish Steak",
+        "learned": 275,
+        "yellow": 300,
+        "gray": 325,
+        "reagents": [
+            [
+                13893,
+                1
+            ],
+            [
+                2692,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 13934,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Baked Salmon",
+        "learned": 275,
+        "yellow": 300,
+        "gray": 325,
+        "reagents": [
+            [
+                13889,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 13935,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Undermine Clam Chowder",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                7974,
+                2
+            ],
+            [
+                2692,
+                1
+            ],
+            [
+                1179,
+                1
+            ]
+        ],
+        "product": 16766,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mithril Headed Trout",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                8365,
+                1
+            ]
+        ],
+        "product": 8364,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gingerbread Cookie",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                6889,
+                1
+            ],
+            [
+                17194,
+                1
+            ]
+        ],
+        "product": 17197,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Egg Nog",
+        "learned": 35,
+        "yellow": 75,
+        "gray": 115,
+        "reagents": [
+            [
+                6889,
+                1
+            ],
+            [
+                1179,
+                1
+            ],
+            [
+                17196,
+                1
+            ],
+            [
+                17194,
+                1
+            ]
+        ],
+        "product": 17198,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spider Sausage",
+        "learned": 200,
+        "yellow": 225,
+        "gray": 250,
+        "reagents": [
+            [
+                12205,
+                2
+            ]
+        ],
+        "product": 17222,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tender Wolf Steak",
+        "learned": 225,
+        "yellow": 250,
+        "gray": 275,
+        "reagents": [
+            [
+                12208,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 18045,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runn Tum Tuber Surprise",
+        "learned": 275,
+        "yellow": 300,
+        "gray": 325,
+        "reagents": [
+            [
+                18255,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 18254,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Crocolisk Stew",
+        "learned": 150,
+        "yellow": 160,
+        "gray": 200,
+        "reagents": [
+            [
+                3667,
+                2
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 20074,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smoked Desert Dumplings",
+        "learned": 285,
+        "yellow": 310,
+        "gray": 335,
+        "reagents": [
+            [
+                20424,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 20452,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dirge's Kickin' Chimaerok Chops",
+        "learned": 300,
+        "yellow": 325,
+        "gray": 350,
+        "reagents": [
+            [
+                2692,
+                1
+            ],
+            [
+                9061,
+                1
+            ],
+            [
+                8150,
+                1
+            ],
+            [
+                21024,
+                1
+            ]
+        ],
+        "product": 21023,
+        "produces": 5.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Smoked Sagefish",
+        "learned": 80,
+        "yellow": 120,
+        "gray": 160,
+        "reagents": [
+            [
+                21071,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 21072,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sagefish Delight",
+        "learned": 175,
+        "yellow": 215,
+        "gray": 255,
+        "reagents": [
+            [
+                21153,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 21217,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crunchy Spider Surprise",
+        "learned": 60,
+        "yellow": 100,
+        "gray": 140,
+        "reagents": [
+            [
+                22644,
+                1
+            ]
+        ],
+        "product": 22645,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lynx Steak",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                27668,
+                1
+            ]
+        ],
+        "product": 27635,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Roasted Moongraze Tenderloin",
+        "learned": 1,
+        "yellow": 45,
+        "gray": 85,
+        "reagents": [
+            [
+                23676,
+                1
+            ]
+        ],
+        "product": 24105,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bat Bites",
+        "learned": 50,
+        "yellow": 90,
+        "gray": 130,
+        "reagents": [
+            [
+                27669,
+                1
+            ]
+        ],
+        "product": 27636,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Buzzard Bites",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                27671,
+                1
+            ]
+        ],
+        "product": 27651,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ravager Dog",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                27674,
+                1
+            ]
+        ],
+        "product": 27655,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sporeling Snack",
+        "learned": 310,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                27676,
+                1
+            ]
+        ],
+        "product": 27656,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackened Basilisk",
+        "learned": 315,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                27677,
+                1
+            ]
+        ],
+        "product": 27657,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Roasted Clefthoof",
+        "learned": 325,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                27678,
+                1
+            ]
+        ],
+        "product": 27658,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Warp Burger",
+        "learned": 325,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                27681,
+                1
+            ]
+        ],
+        "product": 27659,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Talbuk Steak",
+        "learned": 325,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                27682,
+                1
+            ]
+        ],
+        "product": 27660,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackened Trout",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                27422,
+                1
+            ]
+        ],
+        "product": 27661,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Feltail Delight",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                27425,
+                1
+            ]
+        ],
+        "product": 27662,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackened Sporefish",
+        "learned": 310,
+        "yellow": 330,
+        "gray": 350,
+        "reagents": [
+            [
+                27429,
+                1
+            ]
+        ],
+        "product": 27663,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Grilled Mudfish",
+        "learned": 320,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                27435,
+                1
+            ]
+        ],
+        "product": 27664,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Poached Bluefish",
+        "learned": 320,
+        "yellow": 340,
+        "gray": 360,
+        "reagents": [
+            [
+                27437,
+                1
+            ]
+        ],
+        "product": 27665,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Fish Sticks",
+        "learned": 325,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                27438,
+                1
+            ]
+        ],
+        "product": 27666,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spicy Crawdad",
+        "learned": 350,
+        "yellow": 370,
+        "gray": 390,
+        "reagents": [
+            [
+                27439,
+                1
+            ]
+        ],
+        "product": 27667,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Clam Bar",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                24477,
+                2
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 30155,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spice Bread",
+        "learned": 1,
+        "yellow": 30,
+        "gray": 40,
+        "reagents": [
+            [
+                30817,
+                1
+            ],
+            [
+                2678,
+                1
+            ]
+        ],
+        "product": 30816,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mok'Nathal Shortribs",
+        "learned": 335,
+        "yellow": 355,
+        "gray": 375,
+        "reagents": [
+            [
+                31670,
+                1
+            ]
+        ],
+        "product": 31672,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crunchy Serpent",
+        "learned": 335,
+        "yellow": 355,
+        "gray": 375,
+        "reagents": [
+            [
+                31671,
+                1
+            ]
+        ],
+        "product": 31673,
+        "produces": 1.0,
+        "sources": [
+            4,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stewed Trout",
+        "learned": 335,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                27422,
+                1
+            ],
+            [
+                2593,
+                1
+            ],
+            [
+                3713,
+                1
+            ]
+        ],
+        "product": 33048,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Fisherman's Feast",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                27515,
+                1
+            ],
+            [
+                4539,
+                5
+            ],
+            [
+                3713,
+                5
+            ]
+        ],
+        "product": 33052,
+        "produces": 6.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hot Buttered Trout",
+        "learned": 375,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                27516,
+                1
+            ],
+            [
+                3713,
+                2
+            ]
+        ],
+        "product": 33053,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Skullfish Soup",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                33824,
+                1
+            ]
+        ],
+        "product": 33825,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stormchops",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                27678,
+                1
+            ],
+            [
+                13757,
+                1
+            ]
+        ],
+        "product": 33866,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Broiled Bloodfin",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                33823,
+                1
+            ]
+        ],
+        "product": 33867,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spicy Hot Talbuk",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 355,
+        "reagents": [
+            [
+                27682,
+                1
+            ],
+            [
+                2692,
+                1
+            ]
+        ],
+        "product": 33872,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Kibler's Bits",
+        "learned": 300,
+        "yellow": 345,
+        "gray": 365,
+        "reagents": [
+            [
+                27671,
+                1
+            ]
+        ],
+        "product": 33874,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Delicious Chocolate Cake",
+        "learned": 1,
+        "yellow": 50,
+        "gray": 75,
+        "reagents": [
+            [
+                30817,
+                8
+            ],
+            [
+                1179,
+                4
+            ],
+            [
+                2678,
+                4
+            ],
+            [
+                6889,
+                8
+            ],
+            [
+                2593,
+                1
+            ],
+            [
+                785,
+                3
+            ]
+        ],
+        "product": 33924,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hot Apple Cider",
+        "learned": 325,
+        "yellow": 325,
+        "gray": 325,
+        "reagents": [
+            [
+                34412,
+                1
+            ],
+            [
+                17196,
+                1
+            ],
+            [
+                17194,
+                1
+            ]
+        ],
+        "product": 34411,
+        "produces": 2.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Captain Rumsey's Lager",
+        "learned": 100,
+        "yellow": 100,
+        "gray": 110,
+        "reagents": [
+            [
+                2596,
+                1
+            ],
+            [
+                2594,
+                1
+            ]
+        ],
+        "product": 34832,
+        "produces": 5.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Charred Bear Kabobs",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 295,
+        "reagents": [
+            [
+                35562,
+                1
+            ]
+        ],
+        "product": 35563,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Juicy Bear Burger",
+        "learned": 250,
+        "yellow": 275,
+        "gray": 295,
+        "reagents": [
+            [
+                35562,
+                1
+            ]
+        ],
+        "product": 35565,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    }
+]

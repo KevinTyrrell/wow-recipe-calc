@@ -1,0 +1,8500 @@
+[
+    {
+        "name": "Brown Linen Vest",
+        "learned": 10,
+        "yellow": 45,
+        "gray": 70,
+        "reagents": [
+            [
+                2996,
+                1
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 2568,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Linen Boots",
+        "learned": 65,
+        "yellow": 90,
+        "gray": 125,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                2318,
+                1
+            ]
+        ],
+        "product": 2569,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Linen Cloak",
+        "learned": 1,
+        "yellow": 35,
+        "gray": 60,
+        "reagents": [
+            [
+                2996,
+                1
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 2570,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Linen Robe",
+        "learned": 40,
+        "yellow": 65,
+        "gray": 100,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                2
+            ],
+            [
+                2604,
+                2
+            ]
+        ],
+        "product": 2572,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Linen Shirt",
+        "learned": 40,
+        "yellow": 65,
+        "gray": 100,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                2604,
+                1
+            ]
+        ],
+        "product": 2575,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Linen Shirt",
+        "learned": 1,
+        "yellow": 35,
+        "gray": 60,
+        "reagents": [
+            [
+                2996,
+                1
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                2324,
+                1
+            ]
+        ],
+        "product": 2576,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Linen Shirt",
+        "learned": 40,
+        "yellow": 65,
+        "gray": 100,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                6260,
+                1
+            ]
+        ],
+        "product": 2577,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Barbaric Linen Vest",
+        "learned": 70,
+        "yellow": 95,
+        "gray": 130,
+        "reagents": [
+            [
+                2996,
+                4
+            ],
+            [
+                2318,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 2578,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Linen Shirt",
+        "learned": 70,
+        "yellow": 95,
+        "gray": 130,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2321,
+                1
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 2579,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Reinforced Linen Cape",
+        "learned": 60,
+        "yellow": 85,
+        "gray": 120,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2320,
+                3
+            ]
+        ],
+        "product": 2580,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Woolen Vest",
+        "learned": 85,
+        "yellow": 110,
+        "gray": 145,
+        "reagents": [
+            [
+                2997,
+                2
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 2582,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Woolen Boots",
+        "learned": 95,
+        "yellow": 120,
+        "gray": 155,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                2318,
+                2
+            ]
+        ],
+        "product": 2583,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Woolen Cape",
+        "learned": 75,
+        "yellow": 100,
+        "gray": 135,
+        "reagents": [
+            [
+                2997,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 2584,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gray Woolen Robe",
+        "learned": 105,
+        "yellow": 130,
+        "gray": 165,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2321,
+                3
+            ],
+            [
+                4340,
+                1
+            ]
+        ],
+        "product": 2585,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gray Woolen Shirt",
+        "learned": 100,
+        "yellow": 110,
+        "gray": 130,
+        "reagents": [
+            [
+                2997,
+                2
+            ],
+            [
+                2321,
+                1
+            ],
+            [
+                4340,
+                1
+            ]
+        ],
+        "product": 2587,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Linen Cloth",
+        "learned": 1,
+        "yellow": 25,
+        "gray": 50,
+        "reagents": [
+            [
+                2589,
+                2
+            ]
+        ],
+        "product": 2996,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Woolen Cloth",
+        "learned": 75,
+        "yellow": 90,
+        "gray": 105,
+        "reagents": [
+            [
+                2592,
+                3
+            ]
+        ],
+        "product": 2997,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Linen Bag",
+        "learned": 45,
+        "yellow": 70,
+        "gray": 105,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                3
+            ]
+        ],
+        "product": 4238,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Woolen Bag",
+        "learned": 80,
+        "yellow": 105,
+        "gray": 140,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4240,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Woolen Bag",
+        "learned": 95,
+        "yellow": 120,
+        "gray": 155,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2605,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4241,
+        "produces": 1.0,
+        "sources": [
+            2,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Small Silk Pack",
+        "learned": 150,
+        "yellow": 170,
+        "gray": 200,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                4234,
+                2
+            ],
+            [
+                2321,
+                3
+            ]
+        ],
+        "product": 4245,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Silk Cloth",
+        "learned": 125,
+        "yellow": 135,
+        "gray": 145,
+        "reagents": [
+            [
+                4306,
+                4
+            ]
+        ],
+        "product": 4305,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Linen Gloves",
+        "learned": 35,
+        "yellow": 60,
+        "gray": 95,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 4307,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Linen Bracers",
+        "learned": 60,
+        "yellow": 85,
+        "gray": 120,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                2
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 4308,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Handstitched Linen Britches",
+        "learned": 70,
+        "yellow": 95,
+        "gray": 130,
+        "reagents": [
+            [
+                2996,
+                4
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 4309,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Woolen Gloves",
+        "learned": 85,
+        "yellow": 110,
+        "gray": 145,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4310,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Woolen Cloak",
+        "learned": 100,
+        "yellow": 125,
+        "gray": 160,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                5498,
+                2
+            ]
+        ],
+        "product": 4311,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soft-soled Linen Boots",
+        "learned": 80,
+        "yellow": 105,
+        "gray": 140,
+        "reagents": [
+            [
+                2996,
+                5
+            ],
+            [
+                2318,
+                2
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4312,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Woolen Boots",
+        "learned": 95,
+        "yellow": 120,
+        "gray": 155,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2318,
+                2
+            ],
+            [
+                2321,
+                1
+            ],
+            [
+                2604,
+                2
+            ]
+        ],
+        "product": 4313,
+        "produces": 1.0,
+        "sources": [
+            2,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Double-stitched Woolen Shoulders",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 170,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 4314,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Reinforced Woolen Shoulders",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 180,
+        "reagents": [
+            [
+                2997,
+                6
+            ],
+            [
+                2319,
+                2
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 4315,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Heavy Woolen Pants",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 170,
+        "reagents": [
+            [
+                2997,
+                5
+            ],
+            [
+                2321,
+                4
+            ]
+        ],
+        "product": 4316,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Phoenix Pants",
+        "learned": 125,
+        "yellow": 150,
+        "gray": 185,
+        "reagents": [
+            [
+                2997,
+                6
+            ],
+            [
+                5500,
+                1
+            ],
+            [
+                2321,
+                3
+            ]
+        ],
+        "product": 4317,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gloves of Meditation",
+        "learned": 130,
+        "yellow": 150,
+        "gray": 180,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2321,
+                3
+            ],
+            [
+                3383,
+                1
+            ]
+        ],
+        "product": 4318,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Silk Gloves",
+        "learned": 145,
+        "yellow": 165,
+        "gray": 195,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                4234,
+                2
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 4319,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spidersilk Boots",
+        "learned": 125,
+        "yellow": 150,
+        "gray": 185,
+        "reagents": [
+            [
+                4305,
+                2
+            ],
+            [
+                2319,
+                4
+            ],
+            [
+                3182,
+                4
+            ],
+            [
+                5500,
+                2
+            ]
+        ],
+        "product": 4320,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spider Silk Slippers",
+        "learned": 140,
+        "yellow": 160,
+        "gray": 190,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                3182,
+                1
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 4321,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanter's Cowl",
+        "learned": 165,
+        "yellow": 185,
+        "gray": 215,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                4337,
+                2
+            ]
+        ],
+        "product": 4322,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadow Hood",
+        "learned": 170,
+        "yellow": 190,
+        "gray": 220,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                4291,
+                1
+            ],
+            [
+                3824,
+                1
+            ]
+        ],
+        "product": 4323,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Silk Vest",
+        "learned": 150,
+        "yellow": 170,
+        "gray": 200,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                6260,
+                4
+            ]
+        ],
+        "product": 4324,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Boots of the Enchanter",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 225,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                4291,
+                1
+            ],
+            [
+                4337,
+                2
+            ]
+        ],
+        "product": 4325,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Long Silken Cloak",
+        "learned": 185,
+        "yellow": 205,
+        "gray": 235,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                3827,
+                1
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 4326,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Icy Cloak",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 250,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                4291,
+                2
+            ],
+            [
+                3829,
+                1
+            ],
+            [
+                4337,
+                2
+            ]
+        ],
+        "product": 4327,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spider Belt",
+        "learned": 180,
+        "yellow": 200,
+        "gray": 230,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                4337,
+                2
+            ],
+            [
+                7071,
+                1
+            ]
+        ],
+        "product": 4328,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Star Belt",
+        "learned": 200,
+        "yellow": 220,
+        "gray": 250,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                4234,
+                4
+            ],
+            [
+                3864,
+                1
+            ],
+            [
+                7071,
+                1
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 4329,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Mageweave",
+        "learned": 175,
+        "yellow": 180,
+        "gray": 185,
+        "reagents": [
+            [
+                4338,
+                5
+            ]
+        ],
+        "product": 4339,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stylish Red Shirt",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 170,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4330,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Phoenix Gloves",
+        "learned": 125,
+        "yellow": 150,
+        "gray": 185,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                5500,
+                1
+            ],
+            [
+                2321,
+                4
+            ],
+            [
+                2324,
+                2
+            ]
+        ],
+        "product": 4331,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bright Yellow Shirt",
+        "learned": 135,
+        "yellow": 145,
+        "gray": 155,
+        "reagents": [
+            [
+                4305,
+                1
+            ],
+            [
+                4341,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4332,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dark Silk Shirt",
+        "learned": 155,
+        "yellow": 165,
+        "gray": 175,
+        "reagents": [
+            [
+                4305,
+                2
+            ],
+            [
+                4340,
+                2
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4333,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Formal White Shirt",
+        "learned": 170,
+        "yellow": 180,
+        "gray": 190,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                2324,
+                2
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 4334,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Rich Purple Silk Shirt",
+        "learned": 185,
+        "yellow": 195,
+        "gray": 205,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                4342,
+                1
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 4335,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Swashbuckler's Shirt",
+        "learned": 200,
+        "yellow": 210,
+        "gray": 220,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                2325,
+                1
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 4336,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brown Linen Pants",
+        "learned": 30,
+        "yellow": 55,
+        "gray": 90,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 4343,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brown Linen Shirt",
+        "learned": 1,
+        "yellow": 35,
+        "gray": 60,
+        "reagents": [
+            [
+                2996,
+                1
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 4344,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pearl-clasped Cloak",
+        "learned": 90,
+        "yellow": 115,
+        "gray": 150,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                5498,
+                1
+            ]
+        ],
+        "product": 5542,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Linen Bag",
+        "learned": 70,
+        "yellow": 95,
+        "gray": 130,
+        "reagents": [
+            [
+                2996,
+                4
+            ],
+            [
+                2321,
+                1
+            ],
+            [
+                2604,
+                1
+            ]
+        ],
+        "product": 5762,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Woolen Bag",
+        "learned": 115,
+        "yellow": 140,
+        "gray": 175,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2604,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 5763,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lesser Wizard's Robe",
+        "learned": 135,
+        "yellow": 155,
+        "gray": 185,
+        "reagents": [
+            [
+                4305,
+                2
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                3182,
+                2
+            ]
+        ],
+        "product": 5766,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Robes of Arcana",
+        "learned": 150,
+        "yellow": 170,
+        "gray": 200,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                3182,
+                2
+            ]
+        ],
+        "product": 5770,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Silk Pack",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 225,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                4234,
+                3
+            ],
+            [
+                2321,
+                3
+            ],
+            [
+                2605,
+                1
+            ]
+        ],
+        "product": 5764,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Silk Pack",
+        "learned": 185,
+        "yellow": 205,
+        "gray": 235,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                2325,
+                1
+            ],
+            [
+                2321,
+                4
+            ]
+        ],
+        "product": 5765,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brown Linen Robe",
+        "learned": 30,
+        "yellow": 55,
+        "gray": 90,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 6238,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Linen Robe",
+        "learned": 30,
+        "yellow": 55,
+        "gray": 90,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                2324,
+                1
+            ]
+        ],
+        "product": 6241,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Linen Vest",
+        "learned": 55,
+        "yellow": 80,
+        "gray": 115,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                2604,
+                1
+            ]
+        ],
+        "product": 6239,
+        "produces": 1.0,
+        "sources": [
+            2,
+            21
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Linen Vest",
+        "learned": 55,
+        "yellow": 80,
+        "gray": 115,
+        "reagents": [
+            [
+                2996,
+                3
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                6260,
+                1
+            ]
+        ],
+        "product": 6240,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Linen Robe",
+        "learned": 70,
+        "yellow": 95,
+        "gray": 130,
+        "reagents": [
+            [
+                2996,
+                4
+            ],
+            [
+                2320,
+                2
+            ],
+            [
+                6260,
+                2
+            ]
+        ],
+        "product": 6242,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blue Overalls",
+        "learned": 100,
+        "yellow": 125,
+        "gray": 160,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                6260,
+                2
+            ]
+        ],
+        "product": 6263,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Greater Adept's Robe",
+        "learned": 115,
+        "yellow": 140,
+        "gray": 175,
+        "reagents": [
+            [
+                2997,
+                5
+            ],
+            [
+                2321,
+                3
+            ],
+            [
+                2604,
+                3
+            ]
+        ],
+        "product": 6264,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stylish Blue Shirt",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 180,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                4340,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 6384,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Stylish Green Shirt",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 180,
+        "reagents": [
+            [
+                2997,
+                4
+            ],
+            [
+                2605,
+                2
+            ],
+            [
+                4340,
+                1
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 6385,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Dress",
+        "learned": 40,
+        "yellow": 65,
+        "gray": 100,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2320,
+                1
+            ],
+            [
+                6260,
+                1
+            ],
+            [
+                2324,
+                1
+            ]
+        ],
+        "product": 6786,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Woolen Dress",
+        "learned": 110,
+        "yellow": 135,
+        "gray": 170,
+        "reagents": [
+            [
+                2997,
+                3
+            ],
+            [
+                2324,
+                4
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 6787,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Swashbuckler's Shirt",
+        "learned": 160,
+        "yellow": 170,
+        "gray": 180,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                2324,
+                2
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 6795,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Swashbuckler's Shirt",
+        "learned": 175,
+        "yellow": 185,
+        "gray": 195,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 6796,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Silk Pants",
+        "learned": 140,
+        "yellow": 160,
+        "gray": 190,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                2321,
+                3
+            ]
+        ],
+        "product": 7046,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Silk Hood",
+        "learned": 145,
+        "yellow": 155,
+        "gray": 165,
+        "reagents": [
+            [
+                4305,
+                2
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 7048,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silk Headband",
+        "learned": 160,
+        "yellow": 170,
+        "gray": 180,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 7050,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Earthen Vest",
+        "learned": 170,
+        "yellow": 190,
+        "gray": 220,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                7067,
+                1
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 7051,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Silk Belt",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 225,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                7070,
+                1
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                2321,
+                2
+            ],
+            [
+                7071,
+                1
+            ]
+        ],
+        "product": 7052,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Robe of Power",
+        "learned": 190,
+        "yellow": 210,
+        "gray": 240,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                7067,
+                2
+            ],
+            [
+                7070,
+                2
+            ],
+            [
+                7068,
+                2
+            ],
+            [
+                7069,
+                2
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7054,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Belt",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 225,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                7071,
+                1
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 7055,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Silken Shoulders",
+        "learned": 180,
+        "yellow": 200,
+        "gray": 230,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7057,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Linen Belt",
+        "learned": 15,
+        "yellow": 50,
+        "gray": 85,
+        "reagents": [
+            [
+                2996,
+                1
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 7026,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hands of Darkness",
+        "learned": 145,
+        "yellow": 165,
+        "gray": 195,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                4234,
+                2
+            ],
+            [
+                6048,
+                2
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 7047,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truefaith Gloves",
+        "learned": 150,
+        "yellow": 170,
+        "gray": 200,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                4234,
+                2
+            ],
+            [
+                929,
+                4
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 7049,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Silk Armor",
+        "learned": 165,
+        "yellow": 185,
+        "gray": 215,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                2605,
+                2
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 7065,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Silk Cloak",
+        "learned": 175,
+        "yellow": 195,
+        "gray": 225,
+        "reagents": [
+            [
+                4305,
+                3
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 7053,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Cloak",
+        "learned": 180,
+        "yellow": 200,
+        "gray": 230,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                6371,
+                2
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 7056,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Vest",
+        "learned": 185,
+        "yellow": 205,
+        "gray": 225,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                2321,
+                2
+            ]
+        ],
+        "product": 7058,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Shoulders",
+        "learned": 190,
+        "yellow": 210,
+        "gray": 240,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                6371,
+                2
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7059,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Azure Shoulders",
+        "learned": 190,
+        "yellow": 210,
+        "gray": 240,
+        "reagents": [
+            [
+                4305,
+                6
+            ],
+            [
+                7072,
+                2
+            ],
+            [
+                6260,
+                2
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7060,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Earthen Silk Belt",
+        "learned": 195,
+        "yellow": 215,
+        "gray": 245,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                7067,
+                4
+            ],
+            [
+                4234,
+                4
+            ],
+            [
+                7071,
+                1
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7061,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Pantaloons",
+        "learned": 195,
+        "yellow": 215,
+        "gray": 235,
+        "reagents": [
+            [
+                4305,
+                4
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7062,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Robe",
+        "learned": 205,
+        "yellow": 220,
+        "gray": 250,
+        "reagents": [
+            [
+                4305,
+                8
+            ],
+            [
+                7068,
+                4
+            ],
+            [
+                3827,
+                2
+            ],
+            [
+                2604,
+                4
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 7063,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Crimson Silk Gloves",
+        "learned": 210,
+        "yellow": 225,
+        "gray": 255,
+        "reagents": [
+            [
+                4305,
+                6
+            ],
+            [
+                7068,
+                2
+            ],
+            [
+                6371,
+                2
+            ],
+            [
+                4304,
+                2
+            ],
+            [
+                2604,
+                4
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 7064,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Linen Pants",
+        "learned": 1,
+        "yellow": 35,
+        "gray": 60,
+        "reagents": [
+            [
+                2996,
+                1
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 10045,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Linen Boots",
+        "learned": 20,
+        "yellow": 50,
+        "gray": 85,
+        "reagents": [
+            [
+                2996,
+                2
+            ],
+            [
+                2318,
+                1
+            ],
+            [
+                2320,
+                1
+            ]
+        ],
+        "product": 10046,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Kilt",
+        "learned": 75,
+        "yellow": 100,
+        "gray": 135,
+        "reagents": [
+            [
+                2996,
+                4
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 10047,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Colorful Kilt",
+        "learned": 120,
+        "yellow": 145,
+        "gray": 180,
+        "reagents": [
+            [
+                2997,
+                5
+            ],
+            [
+                2604,
+                3
+            ],
+            [
+                2321,
+                1
+            ]
+        ],
+        "product": 10048,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Vest",
+        "learned": 205,
+        "yellow": 220,
+        "gray": 250,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                4291,
+                3
+            ]
+        ],
+        "product": 9998,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Leggings",
+        "learned": 205,
+        "yellow": 220,
+        "gray": 250,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                4291,
+                3
+            ]
+        ],
+        "product": 9999,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Robe",
+        "learned": 210,
+        "yellow": 225,
+        "gray": 255,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10001,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadoweave Pants",
+        "learned": 210,
+        "yellow": 225,
+        "gray": 255,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                10285,
+                2
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10002,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Gloves",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 260,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10003,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadoweave Robe",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 260,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                10285,
+                2
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10004,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Mageweave Vest",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 260,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10007,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Bandit Mask",
+        "learned": 215,
+        "yellow": 220,
+        "gray": 230,
+        "reagents": [
+            [
+                4339,
+                1
+            ],
+            [
+                2324,
+                1
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10008,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Mageweave Pants",
+        "learned": 215,
+        "yellow": 230,
+        "gray": 260,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10009,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Orange Mageweave Shirt",
+        "learned": 215,
+        "yellow": 220,
+        "gray": 230,
+        "reagents": [
+            [
+                4339,
+                1
+            ],
+            [
+                6261,
+                1
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10056,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Orange Martial Shirt",
+        "learned": 220,
+        "yellow": 225,
+        "gray": 235,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                6261,
+                2
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10052,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mageweave Bag",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                4291,
+                2
+            ]
+        ],
+        "product": 10050,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Mageweave Gloves",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10018,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dreamweave Gloves",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                8153,
+                4
+            ],
+            [
+                10286,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10019,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cindercloth Robe",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                7077,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10042,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dreamweave Vest",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                6
+            ],
+            [
+                8153,
+                6
+            ],
+            [
+                10286,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10021,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadoweave Gloves",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                10285,
+                5
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10023,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Headband",
+        "learned": 230,
+        "yellow": 245,
+        "gray": 275,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10024,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Boots",
+        "learned": 230,
+        "yellow": 245,
+        "gray": 275,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                8343,
+                2
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 10026,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Mageweave Shoulders",
+        "learned": 230,
+        "yellow": 245,
+        "gray": 275,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10027,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Lavender Mageweave Shirt",
+        "learned": 230,
+        "yellow": 235,
+        "gray": 245,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                4342,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10054,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadoweave Shoulders",
+        "learned": 235,
+        "yellow": 250,
+        "gray": 280,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                10285,
+                4
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10028,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Simple Black Dress",
+        "learned": 235,
+        "yellow": 240,
+        "gray": 250,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                2325,
+                1
+            ],
+            [
+                8343,
+                1
+            ],
+            [
+                2324,
+                1
+            ]
+        ],
+        "product": 10053,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Mageweave Shoulders",
+        "learned": 235,
+        "yellow": 250,
+        "gray": 280,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                8343,
+                3
+            ]
+        ],
+        "product": 10029,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Mageweave Bag",
+        "learned": 235,
+        "yellow": 250,
+        "gray": 280,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10051,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Pink Mageweave Shirt",
+        "learned": 235,
+        "yellow": 240,
+        "gray": 250,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                10290,
+                1
+            ],
+            [
+                8343,
+                1
+            ]
+        ],
+        "product": 10055,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Admiral's Hat",
+        "learned": 240,
+        "yellow": 255,
+        "gray": 285,
+        "reagents": [
+            [
+                4339,
+                3
+            ],
+            [
+                4589,
+                6
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10030,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadoweave Boots",
+        "learned": 240,
+        "yellow": 255,
+        "gray": 285,
+        "reagents": [
+            [
+                4339,
+                6
+            ],
+            [
+                10285,
+                6
+            ],
+            [
+                8343,
+                3
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 10031,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Mageweave Headband",
+        "learned": 240,
+        "yellow": 255,
+        "gray": 285,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10033,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tuxedo Shirt",
+        "learned": 240,
+        "yellow": 245,
+        "gray": 255,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10034,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadoweave Mask",
+        "learned": 245,
+        "yellow": 260,
+        "gray": 290,
+        "reagents": [
+            [
+                4339,
+                2
+            ],
+            [
+                10285,
+                8
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 10025,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cindercloth Boots",
+        "learned": 245,
+        "yellow": 260,
+        "gray": 290,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                7077,
+                1
+            ],
+            [
+                8343,
+                3
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 10044,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tuxedo Pants",
+        "learned": 245,
+        "yellow": 250,
+        "gray": 260,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                8343,
+                3
+            ]
+        ],
+        "product": 10035,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Wedding Dress",
+        "learned": 250,
+        "yellow": 255,
+        "gray": 265,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                8343,
+                3
+            ],
+            [
+                2324,
+                1
+            ]
+        ],
+        "product": 10040,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dreamweave Circlet",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 295,
+        "reagents": [
+            [
+                4339,
+                8
+            ],
+            [
+                8153,
+                4
+            ],
+            [
+                10286,
+                2
+            ],
+            [
+                8343,
+                3
+            ],
+            [
+                6037,
+                1
+            ],
+            [
+                1529,
+                1
+            ]
+        ],
+        "product": 10041,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Tuxedo Jacket",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 295,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                8343,
+                3
+            ]
+        ],
+        "product": 10036,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Runecloth",
+        "learned": 250,
+        "yellow": 255,
+        "gray": 260,
+        "reagents": [
+            [
+                14047,
+                5
+            ]
+        ],
+        "product": 14048,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Belt",
+        "learned": 255,
+        "yellow": 270,
+        "gray": 300,
+        "reagents": [
+            [
+                14048,
+                3
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13856,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frostweave Tunic",
+        "learned": 255,
+        "yellow": 270,
+        "gray": 300,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                7079,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13869,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frostweave Robe",
+        "learned": 255,
+        "yellow": 270,
+        "gray": 300,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                7079,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13868,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Bag",
+        "learned": 260,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                8170,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14046,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Robe",
+        "learned": 260,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13858,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Tunic",
+        "learned": 260,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13857,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cindercloth Vest",
+        "learned": 260,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                7077,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14042,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Cloak",
+        "learned": 265,
+        "yellow": 280,
+        "gray": 310,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13860,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ghostweave Belt",
+        "learned": 265,
+        "yellow": 280,
+        "gray": 310,
+        "reagents": [
+            [
+                14048,
+                3
+            ],
+            [
+                9210,
+                2
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14143,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frostweave Gloves",
+        "learned": 265,
+        "yellow": 280,
+        "gray": 310,
+        "reagents": [
+            [
+                14048,
+                3
+            ],
+            [
+                7080,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13870,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cindercloth Gloves",
+        "learned": 270,
+        "yellow": 285,
+        "gray": 315,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                7077,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14043,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ghostweave Gloves",
+        "learned": 270,
+        "yellow": 285,
+        "gray": 315,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                9210,
+                2
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14142,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brightcloth Robe",
+        "learned": 270,
+        "yellow": 285,
+        "gray": 315,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14100,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brightcloth Gloves",
+        "learned": 270,
+        "yellow": 285,
+        "gray": 315,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14101,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ghostweave Vest",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                9210,
+                4
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14141,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Gloves",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13863,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cindercloth Cloak",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                7078,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14044,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Pants",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                14256,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14107,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brightcloth Cloak",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                3577,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14103,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wizardweave Leggings",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                11176,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14132,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cloak of Fire",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                7078,
+                4
+            ],
+            [
+                7077,
+                4
+            ],
+            [
+                7068,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14134,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Boots",
+        "learned": 280,
+        "yellow": 295,
+        "gray": 325,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                14227,
+                2
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13864,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frostweave Pants",
+        "learned": 280,
+        "yellow": 295,
+        "gray": 325,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                7080,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13871,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cindercloth Pants",
+        "learned": 280,
+        "yellow": 295,
+        "gray": 325,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                7078,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14045,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Robe of Winter Night",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 330,
+        "reagents": [
+            [
+                14048,
+                10
+            ],
+            [
+                14256,
+                12
+            ],
+            [
+                12808,
+                4
+            ],
+            [
+                7080,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14136,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Boots",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 330,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14256,
+                2
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14108,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Pants",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 330,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14227,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13865,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Brightcloth Pants",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 335,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                3577,
+                4
+            ],
+            [
+                14227,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14104,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Leggings",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 335,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14342,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14137,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Ghostweave Pants",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 335,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                9210,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14144,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Hood",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 335,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                14256,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14111,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Headband",
+        "learned": 295,
+        "yellow": 310,
+        "gray": 340,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                14227,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13866,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Bag",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                14342,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14155,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wizardweave Robe",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                8
+            ],
+            [
+                11176,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14128,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Vest",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14342,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14138,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Shoulders",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                14342,
+                5
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14139,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runecloth Shoulders",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                7
+            ],
+            [
+                14227,
+                2
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 13867,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wizardweave Turban",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                11176,
+                4
+            ],
+            [
+                7910,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 14130,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Robe",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                8
+            ],
+            [
+                14256,
+                3
+            ],
+            [
+                12662,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14106,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Circlet",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                14342,
+                6
+            ],
+            [
+                12800,
+                1
+            ],
+            [
+                12810,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14140,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Shoulders",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                7
+            ],
+            [
+                14256,
+                3
+            ],
+            [
+                12662,
+                2
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14112,
+        "produces": 1.0,
+        "sources": [
+            2,
+            16
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gloves of Spell Mastery",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                10
+            ],
+            [
+                14342,
+                10
+            ],
+            [
+                9210,
+                10
+            ],
+            [
+                13926,
+                6
+            ],
+            [
+                12364,
+                6
+            ],
+            [
+                12810,
+                8
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14146,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bottomless Bag",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                8
+            ],
+            [
+                14342,
+                12
+            ],
+            [
+                14344,
+                2
+            ],
+            [
+                17012,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14156,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Truefaith Vestments",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                14342,
+                10
+            ],
+            [
+                12811,
+                4
+            ],
+            [
+                13926,
+                4
+            ],
+            [
+                9210,
+                10
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14154,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Robe of the Archmage",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                7078,
+                10
+            ],
+            [
+                7082,
+                10
+            ],
+            [
+                7076,
+                10
+            ],
+            [
+                7080,
+                10
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14152,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Robe of the Void",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                12662,
+                20
+            ],
+            [
+                14256,
+                40
+            ],
+            [
+                7078,
+                12
+            ],
+            [
+                12808,
+                12
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 14153,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth",
+        "learned": 250,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14256,
+                2
+            ]
+        ],
+        "product": 14342,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Boots",
+        "learned": 290,
+        "yellow": 295,
+        "gray": 325,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14342,
+                4
+            ],
+            [
+                7971,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 15802,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flarecore Mantle",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                17010,
+                4
+            ],
+            [
+                17011,
+                4
+            ],
+            [
+                12810,
+                6
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 16980,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flarecore Gloves",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                8
+            ],
+            [
+                17010,
+                6
+            ],
+            [
+                7078,
+                4
+            ],
+            [
+                12810,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 16979,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Holiday Shirt",
+        "learned": 190,
+        "yellow": 200,
+        "gray": 210,
+        "reagents": [
+            [
+                4305,
+                5
+            ],
+            [
+                2605,
+                4
+            ],
+            [
+                4291,
+                1
+            ]
+        ],
+        "product": 17723,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flarecore Wraps",
+        "learned": 300,
+        "yellow": 320,
+        "gray": 350,
+        "reagents": [
+            [
+                14342,
+                6
+            ],
+            [
+                17010,
+                8
+            ],
+            [
+                7078,
+                2
+            ],
+            [
+                12810,
+                6
+            ],
+            [
+                14341,
+                4
+            ]
+        ],
+        "product": 18263,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gordok Ogre Suit",
+        "learned": 285,
+        "yellow": 285,
+        "gray": 295,
+        "reagents": [
+            [
+                14048,
+                2
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                18240,
+                1
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 18258,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Belt of the Archmage",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                16
+            ],
+            [
+                9210,
+                10
+            ],
+            [
+                14342,
+                10
+            ],
+            [
+                7080,
+                12
+            ],
+            [
+                7078,
+                12
+            ],
+            [
+                14344,
+                6
+            ],
+            [
+                14341,
+                6
+            ]
+        ],
+        "product": 18405,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Gloves",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                14256,
+                20
+            ],
+            [
+                12662,
+                6
+            ],
+            [
+                12808,
+                8
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 18407,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Inferno Gloves",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                7078,
+                10
+            ],
+            [
+                7910,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 18408,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Gloves",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                14342,
+                6
+            ],
+            [
+                13926,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 18409,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cloak of Warding",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                12
+            ],
+            [
+                12809,
+                4
+            ],
+            [
+                12360,
+                1
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 18413,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mooncloth Robe",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14342,
+                4
+            ],
+            [
+                13926,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 18486,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Wisdom of the Timbermaw",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 335,
+        "reagents": [
+            [
+                14048,
+                8
+            ],
+            [
+                7076,
+                3
+            ],
+            [
+                12803,
+                3
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 19047,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mantle of the Timbermaw",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                5
+            ],
+            [
+                7076,
+                5
+            ],
+            [
+                12803,
+                5
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 19050,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Argent Boots",
+        "learned": 290,
+        "yellow": 305,
+        "gray": 335,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                12810,
+                4
+            ],
+            [
+                13926,
+                2
+            ],
+            [
+                12809,
+                2
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 19056,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Argent Shoulders",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                5
+            ],
+            [
+                12809,
+                2
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 19059,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flarecore Robe",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                10
+            ],
+            [
+                17010,
+                2
+            ],
+            [
+                17011,
+                3
+            ],
+            [
+                7078,
+                6
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 19156,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flarecore Leggings",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                8
+            ],
+            [
+                17010,
+                5
+            ],
+            [
+                17011,
+                3
+            ],
+            [
+                7078,
+                10
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 19165,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodvine Vest",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                3
+            ],
+            [
+                19726,
+                5
+            ],
+            [
+                12804,
+                4
+            ],
+            [
+                14048,
+                4
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 19682,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodvine Leggings",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                4
+            ],
+            [
+                19726,
+                4
+            ],
+            [
+                12804,
+                4
+            ],
+            [
+                14048,
+                4
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 19683,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bloodvine Boots",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14342,
+                3
+            ],
+            [
+                19726,
+                3
+            ],
+            [
+                12810,
+                4
+            ],
+            [
+                14048,
+                4
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 19684,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Stygian Leggings",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                20520,
+                8
+            ],
+            [
+                14256,
+                6
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 20538,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Stygian Belt",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                2
+            ],
+            [
+                20520,
+                6
+            ],
+            [
+                14256,
+                2
+            ],
+            [
+                12810,
+                2
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 20539,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runed Stygian Boots",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                20520,
+                6
+            ],
+            [
+                14256,
+                4
+            ],
+            [
+                12810,
+                2
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 20537,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soul Pouch",
+        "learned": 260,
+        "yellow": 275,
+        "gray": 305,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                8170,
+                4
+            ],
+            [
+                7972,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21340,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Felcloth Bag",
+        "learned": 285,
+        "yellow": 300,
+        "gray": 330,
+        "reagents": [
+            [
+                14256,
+                12
+            ],
+            [
+                12810,
+                6
+            ],
+            [
+                20520,
+                2
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 21341,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Core Felcloth Bag",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14256,
+                20
+            ],
+            [
+                17012,
+                16
+            ],
+            [
+                19726,
+                8
+            ],
+            [
+                7078,
+                4
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 21342,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Festival Dress",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 295,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                4625,
+                2
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21154,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Festive Red Pant Suit",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 295,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                4625,
+                2
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21542,
+        "produces": 1.0,
+        "sources": [
+            4
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Netherweave",
+        "learned": 300,
+        "yellow": 305,
+        "gray": 325,
+        "reagents": [
+            [
+                21877,
+                6
+            ]
+        ],
+        "product": 21840,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Bag",
+        "learned": 315,
+        "yellow": 320,
+        "gray": 340,
+        "reagents": [
+            [
+                21840,
+                4
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21841,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Imbued Netherweave",
+        "learned": 325,
+        "yellow": 330,
+        "gray": 340,
+        "reagents": [
+            [
+                21840,
+                3
+            ],
+            [
+                22445,
+                2
+            ]
+        ],
+        "product": 21842,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imbued Netherweave Bag",
+        "learned": 340,
+        "yellow": 340,
+        "gray": 350,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                22446,
+                1
+            ]
+        ],
+        "product": 21843,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bolt of Soulcloth",
+        "learned": 345,
+        "yellow": 345,
+        "gray": 355,
+        "reagents": [
+            [
+                21840,
+                1
+            ],
+            [
+                21882,
+                8
+            ]
+        ],
+        "product": 21844,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Primal Mooncloth",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                21842,
+                1
+            ],
+            [
+                21886,
+                1
+            ],
+            [
+                21885,
+                1
+            ]
+        ],
+        "product": 21845,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spellfire Belt",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                24271,
+                4
+            ],
+            [
+                21884,
+                10
+            ],
+            [
+                21881,
+                2
+            ]
+        ],
+        "product": 21846,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26797
+    },
+    {
+        "name": "Spellfire Gloves",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                24271,
+                8
+            ],
+            [
+                21884,
+                12
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21847,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26797
+    },
+    {
+        "name": "Spellfire Robe",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                24271,
+                14
+            ],
+            [
+                21884,
+                16
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21848,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26797
+    },
+    {
+        "name": "Spellfire Bag",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                24271,
+                6
+            ],
+            [
+                22446,
+                4
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21858,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Frozen Shadoweave Shoulders",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                24272,
+                4
+            ],
+            [
+                21885,
+                10
+            ],
+            [
+                21881,
+                2
+            ]
+        ],
+        "product": 21869,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26801
+    },
+    {
+        "name": "Frozen Shadoweave Boots",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                24272,
+                8
+            ],
+            [
+                21885,
+                12
+            ],
+            [
+                21881,
+                2
+            ]
+        ],
+        "product": 21870,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26801
+    },
+    {
+        "name": "Frozen Shadoweave Robe",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                24272,
+                14
+            ],
+            [
+                21885,
+                16
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21871,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26801
+    },
+    {
+        "name": "Ebon Shadowbag",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                24272,
+                6
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21872,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Primal Mooncloth Belt",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                21845,
+                4
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                21886,
+                8
+            ]
+        ],
+        "product": 21873,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26798
+    },
+    {
+        "name": "Primal Mooncloth Shoulders",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                21845,
+                8
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                21886,
+                8
+            ]
+        ],
+        "product": 21874,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26798
+    },
+    {
+        "name": "Primal Mooncloth Robe",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21845,
+                14
+            ],
+            [
+                22457,
+                12
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21875,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": 26798
+    },
+    {
+        "name": "Primal Mooncloth Bag",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21845,
+                8
+            ],
+            [
+                21881,
+                4
+            ]
+        ],
+        "product": 21876,
+        "produces": 1.0,
+        "sources": [
+            2,
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Bracers",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 330,
+        "reagents": [
+            [
+                21840,
+                3
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21849,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Belt",
+        "learned": 310,
+        "yellow": 320,
+        "gray": 330,
+        "reagents": [
+            [
+                21840,
+                3
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21850,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Gloves",
+        "learned": 320,
+        "yellow": 330,
+        "gray": 340,
+        "reagents": [
+            [
+                21840,
+                4
+            ],
+            [
+                21887,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21851,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Pants",
+        "learned": 325,
+        "yellow": 335,
+        "gray": 345,
+        "reagents": [
+            [
+                21840,
+                6
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21852,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Boots",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 355,
+        "reagents": [
+            [
+                21840,
+                6
+            ],
+            [
+                21887,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21853,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Robe",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                21840,
+                8
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 21854,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Tunic",
+        "learned": 345,
+        "yellow": 355,
+        "gray": 365,
+        "reagents": [
+            [
+                21840,
+                8
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 21855,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imbued Netherweave Pants",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                21842,
+                5
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21859,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imbued Netherweave Boots",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                21887,
+                6
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21860,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imbued Netherweave Robe",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 380,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21861,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Imbued Netherweave Tunic",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 380,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                21881,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 21862,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulcloth Gloves",
+        "learned": 355,
+        "yellow": 365,
+        "gray": 375,
+        "reagents": [
+            [
+                21844,
+                5
+            ],
+            [
+                21887,
+                6
+            ],
+            [
+                14341,
+                4
+            ]
+        ],
+        "product": 21863,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulcloth Shoulders",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                21844,
+                6
+            ],
+            [
+                14341,
+                4
+            ]
+        ],
+        "product": 21864,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulcloth Vest",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21844,
+                8
+            ],
+            [
+                14341,
+                4
+            ]
+        ],
+        "product": 21865,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanoweave Bracers",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21840,
+                6
+            ],
+            [
+                22445,
+                12
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 21866,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanoweave Boots",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 380,
+        "reagents": [
+            [
+                21840,
+                8
+            ],
+            [
+                22445,
+                16
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 21867,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Arcanoweave Robe",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 390,
+        "reagents": [
+            [
+                21840,
+                12
+            ],
+            [
+                22445,
+                20
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 21868,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Mageweave Pouch",
+        "learned": 225,
+        "yellow": 240,
+        "gray": 270,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                11137,
+                4
+            ],
+            [
+                8343,
+                2
+            ]
+        ],
+        "product": 22246,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Enchanted Runecloth Bag",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                16203,
+                2
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 22248,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Big Bag of Enchantment",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14344,
+                4
+            ],
+            [
+                12810,
+                4
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 22249,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cenarion Herb Bag",
+        "learned": 275,
+        "yellow": 290,
+        "gray": 320,
+        "reagents": [
+            [
+                14048,
+                5
+            ],
+            [
+                8831,
+                10
+            ],
+            [
+                11040,
+                8
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 22251,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Satchel of Cenarius",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                6
+            ],
+            [
+                14342,
+                2
+            ],
+            [
+                13468,
+                1
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 22252,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glacial Gloves",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                22682,
+                5
+            ],
+            [
+                14048,
+                4
+            ],
+            [
+                7080,
+                4
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 22654,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glacial Vest",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                22682,
+                7
+            ],
+            [
+                14048,
+                8
+            ],
+            [
+                7080,
+                6
+            ],
+            [
+                14227,
+                8
+            ]
+        ],
+        "product": 22652,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glacial Cloak",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                22682,
+                5
+            ],
+            [
+                14048,
+                4
+            ],
+            [
+                7080,
+                2
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 22658,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Glacial Wrists",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                22682,
+                4
+            ],
+            [
+                14048,
+                2
+            ],
+            [
+                7080,
+                2
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 22655,
+        "produces": 1.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Gaea's Embrace",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                19726,
+                1
+            ],
+            [
+                14342,
+                2
+            ],
+            [
+                12803,
+                4
+            ],
+            [
+                14227,
+                4
+            ]
+        ],
+        "product": 22660,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sylvan Vest",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                19726,
+                2
+            ],
+            [
+                12803,
+                2
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 22756,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sylvan Crown",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                14342,
+                2
+            ],
+            [
+                12803,
+                2
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 22757,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sylvan Shoulders",
+        "learned": 300,
+        "yellow": 315,
+        "gray": 345,
+        "reagents": [
+            [
+                14048,
+                2
+            ],
+            [
+                12803,
+                4
+            ],
+            [
+                14227,
+                2
+            ]
+        ],
+        "product": 22758,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spellcloth",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                21842,
+                1
+            ],
+            [
+                22457,
+                1
+            ],
+            [
+                21884,
+                1
+            ]
+        ],
+        "product": 24271,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mystic Spellthread",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 355,
+        "reagents": [
+            [
+                14341,
+                1
+            ],
+            [
+                22457,
+                5
+            ]
+        ],
+        "product": 24273,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Silver Spellthread",
+        "learned": 335,
+        "yellow": 345,
+        "gray": 355,
+        "reagents": [
+            [
+                14341,
+                1
+            ],
+            [
+                21886,
+                5
+            ]
+        ],
+        "product": 24275,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Runic Spellthread",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                14341,
+                1
+            ],
+            [
+                22457,
+                10
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24274,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Golden Spellthread",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                14341,
+                1
+            ],
+            [
+                21886,
+                10
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24276,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Unyielding Bracers",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                22452,
+                8
+            ]
+        ],
+        "product": 24249,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bracers of Havok",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                22452,
+                4
+            ],
+            [
+                22456,
+                4
+            ]
+        ],
+        "product": 24250,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Blackstrike Bracers",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                21884,
+                8
+            ]
+        ],
+        "product": 24251,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cloak of the Black Void",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                22457,
+                3
+            ],
+            [
+                22456,
+                3
+            ]
+        ],
+        "product": 24252,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cloak of Eternity",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                22452,
+                6
+            ]
+        ],
+        "product": 24253,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "White Remedy Cape",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                21886,
+                6
+            ]
+        ],
+        "product": 24254,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Unyielding Girdle",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                21845,
+                8
+            ],
+            [
+                22452,
+                16
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24255,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Girdle of Ruination",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                24272,
+                10
+            ],
+            [
+                21884,
+                16
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24256,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Black Belt of Knowledge",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                22457,
+                14
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24257,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Resolute Cape",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                21845,
+                10
+            ],
+            [
+                22452,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24258,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Vengeance Wrap",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                24272,
+                10
+            ],
+            [
+                22451,
+                14
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24259,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Manaweave Cloak",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 385,
+        "reagents": [
+            [
+                24271,
+                10
+            ],
+            [
+                22457,
+                12
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24260,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Whitemend Pants",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21845,
+                10
+            ],
+            [
+                23571,
+                5
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24261,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spellstrike Pants",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                24271,
+                10
+            ],
+            [
+                23571,
+                5
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24262,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Battlecast Pants",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21842,
+                12
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24263,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Whitemend Hood",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21845,
+                10
+            ],
+            [
+                23571,
+                5
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24264,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Spellstrike Hood",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                24271,
+                10
+            ],
+            [
+                23571,
+                5
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24266,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Battlecast Hood",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21842,
+                12
+            ],
+            [
+                23571,
+                8
+            ],
+            [
+                23572,
+                1
+            ]
+        ],
+        "product": 24267,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bag of Jewels",
+        "learned": 340,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                21842,
+                6
+            ],
+            [
+                21887,
+                4
+            ]
+        ],
+        "product": 24270,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Netherweave Net",
+        "learned": 300,
+        "yellow": 300,
+        "gray": 320,
+        "reagents": [
+            [
+                21877,
+                3
+            ]
+        ],
+        "product": 24268,
+        "produces": 2.0,
+        "sources": [
+            6
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Belt of Blasting",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                30183,
+                2
+            ],
+            [
+                21842,
+                4
+            ],
+            [
+                21884,
+                15
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 30038,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Belt of the Long Road",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                30183,
+                2
+            ],
+            [
+                21842,
+                4
+            ],
+            [
+                21886,
+                10
+            ],
+            [
+                14341,
+                2
+            ],
+            [
+                21885,
+                10
+            ]
+        ],
+        "product": 30036,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Boots of Blasting",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                23572,
+                2
+            ],
+            [
+                24272,
+                4
+            ],
+            [
+                24271,
+                4
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 30037,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Boots of the Long Road",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                23572,
+                2
+            ],
+            [
+                21845,
+                4
+            ],
+            [
+                24271,
+                4
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 30035,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Shadowcloth",
+        "learned": 350,
+        "yellow": 350,
+        "gray": 360,
+        "reagents": [
+            [
+                21842,
+                1
+            ],
+            [
+                22456,
+                1
+            ],
+            [
+                21884,
+                1
+            ]
+        ],
+        "product": 24272,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Cloak of Arcane Evasion",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                22457,
+                3
+            ],
+            [
+                21886,
+                3
+            ],
+            [
+                21881,
+                2
+            ]
+        ],
+        "product": 30831,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flameheart Bracers",
+        "learned": 350,
+        "yellow": 360,
+        "gray": 370,
+        "reagents": [
+            [
+                21840,
+                5
+            ],
+            [
+                21884,
+                5
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 30837,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flameheart Gloves",
+        "learned": 360,
+        "yellow": 370,
+        "gray": 380,
+        "reagents": [
+            [
+                21840,
+                7
+            ],
+            [
+                21884,
+                7
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 30838,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Flameheart Vest",
+        "learned": 370,
+        "yellow": 380,
+        "gray": 390,
+        "reagents": [
+            [
+                21840,
+                9
+            ],
+            [
+                21884,
+                9
+            ],
+            [
+                14341,
+                2
+            ]
+        ],
+        "product": 30839,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulguard Slippers",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                32428,
+                2
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                2
+            ],
+            [
+                22456,
+                4
+            ],
+            [
+                21842,
+                1
+            ]
+        ],
+        "product": 32391,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulguard Bracers",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                32428,
+                1
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                2
+            ],
+            [
+                22456,
+                2
+            ],
+            [
+                21842,
+                1
+            ]
+        ],
+        "product": 32392,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulguard Leggings",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                32428,
+                3
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                4
+            ],
+            [
+                22456,
+                6
+            ],
+            [
+                21842,
+                2
+            ]
+        ],
+        "product": 32389,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Soulguard Girdle",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                32428,
+                2
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                3
+            ],
+            [
+                22456,
+                4
+            ],
+            [
+                21842,
+                1
+            ]
+        ],
+        "product": 32390,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Night's End",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                32428,
+                1
+            ],
+            [
+                22450,
+                1
+            ],
+            [
+                21886,
+                2
+            ],
+            [
+                22456,
+                2
+            ],
+            [
+                21842,
+                1
+            ]
+        ],
+        "product": 32420,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Bracers of Nimble Thought",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21842,
+                3
+            ],
+            [
+                24271,
+                4
+            ],
+            [
+                22457,
+                8
+            ],
+            [
+                32428,
+                4
+            ]
+        ],
+        "product": 32586,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mantle of Nimble Thought",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                24271,
+                2
+            ],
+            [
+                22457,
+                6
+            ],
+            [
+                32428,
+                2
+            ]
+        ],
+        "product": 32587,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swiftheal Wraps",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21842,
+                3
+            ],
+            [
+                21845,
+                4
+            ],
+            [
+                21886,
+                8
+            ],
+            [
+                32428,
+                4
+            ]
+        ],
+        "product": 32584,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Swiftheal Mantle",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21842,
+                4
+            ],
+            [
+                21845,
+                2
+            ],
+            [
+                21886,
+                6
+            ],
+            [
+                32428,
+                2
+            ]
+        ],
+        "product": 32585,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Green Winter Clothes",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 250,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                2997,
+                1
+            ],
+            [
+                2605,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 34087,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Red Winter Clothes",
+        "learned": 250,
+        "yellow": 250,
+        "gray": 250,
+        "reagents": [
+            [
+                14048,
+                4
+            ],
+            [
+                2997,
+                1
+            ],
+            [
+                2604,
+                2
+            ],
+            [
+                14341,
+                1
+            ]
+        ],
+        "product": 34085,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sunfire Handwraps",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                24271,
+                10
+            ],
+            [
+                24272,
+                10
+            ],
+            [
+                34664,
+                6
+            ]
+        ],
+        "product": 34366,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Hands of Eternal Light",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                21845,
+                18
+            ],
+            [
+                21886,
+                12
+            ],
+            [
+                21885,
+                12
+            ],
+            [
+                34664,
+                6
+            ]
+        ],
+        "product": 34367,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Sunfire Robe",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                24271,
+                12
+            ],
+            [
+                24272,
+                12
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 34364,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Robe of Eternal Light",
+        "learned": 365,
+        "yellow": 375,
+        "gray": 410,
+        "reagents": [
+            [
+                21845,
+                20
+            ],
+            [
+                23572,
+                2
+            ]
+        ],
+        "product": 34365,
+        "produces": 1.0,
+        "sources": [
+            2
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Dress Shoes",
+        "learned": 250,
+        "yellow": 255,
+        "gray": 285,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                4304,
+                2
+            ]
+        ],
+        "product": 6836,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Mycah's Botanical Bag",
+        "learned": 375,
+        "yellow": 385,
+        "gray": 395,
+        "reagents": [
+            [
+                21845,
+                4
+            ],
+            [
+                22794,
+                2
+            ]
+        ],
+        "product": 38225,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Haliscan Jacket",
+        "learned": 250,
+        "yellow": 265,
+        "gray": 295,
+        "reagents": [
+            [
+                4339,
+                5
+            ],
+            [
+                2325,
+                2
+            ],
+            [
+                2604,
+                1
+            ],
+            [
+                8343,
+                3
+            ]
+        ],
+        "product": 38277,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    },
+    {
+        "name": "Haliscan Pantaloons",
+        "learned": 245,
+        "yellow": 250,
+        "gray": 260,
+        "reagents": [
+            [
+                4339,
+                4
+            ],
+            [
+                8343,
+                3
+            ],
+            [
+                2325,
+                3
+            ]
+        ],
+        "product": 38278,
+        "produces": 1.0,
+        "sources": [
+            5
+        ],
+        "specialization": null
+    }
+]
