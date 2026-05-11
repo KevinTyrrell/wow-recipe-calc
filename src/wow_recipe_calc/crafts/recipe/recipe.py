@@ -65,10 +65,10 @@ class Recipe:
     def from_json(cls, r: RecipeJson) -> Recipe:
         logger.debug(f"parsing json recipe {r}")
         if not r.name: raise ValueError("name must not be empty")
-        if not (r.learned > 0 and r.yellow > 0 and r.gray > 0):
-            raise ValueError(f"learned, yellow, gray must all be positive, received: {r.learned}, {r.yellow}, {r.gray}")
-        if not (r.learned <= r.yellow <= r.gray):
-            raise ValueError(f"skill levels cannot be a non-monotonic sequence: {r.learned}, {r.yellow}, {r.gray}")
+        if not (r.learned >= 0 and r.yellow >= 0 and r.gray >= 0):
+            raise ValueError(f"learned, yellow, gray must all be non-zero, received: {r.learned}, {r.yellow}, {r.gray}")
+        if r.yellow > r.gray:
+            raise ValueError(f"skill range cannot be a non-monotonic sequence: yellow={r.yellow}, gray={r.gray}")
         if not r.reagents: raise ValueError("reagents must not be empty")
         for pair in r.reagents:
             if len(pair) < 2:
@@ -83,13 +83,13 @@ class Recipe:
         if r.specialization is not None and not r.specialization:
             raise ValueError("specialization must not be empty string")
         return cls(
-            name=r.name,
-            learned=r.learned,
-            yellow=r.yellow,
-            gray=r.gray,  # reagents: read only dict
-            reagents=ReadOnlyMap({pair[0]: pair[1] for pair in r.reagents}),
-            product=r.product,
-            produces=r.produces,
-            sources=tuple(r.sources),
-            specialization=r.specialization,
+            name = r.name,
+            learned = r.learned,
+            yellow = r.yellow,
+            gray = r.gray,  # reagents: read only dict
+            reagents = ReadOnlyMap({pair[0]: pair[1] for pair in r.reagents}),
+            product = r.product,
+            produces = r.produces,
+            sources = tuple(r.sources),
+            specialization = r.specialization,
         )

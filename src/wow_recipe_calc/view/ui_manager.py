@@ -74,7 +74,7 @@ class UIManager:
     def _parse_selected_recipes(self, raw_selection: str) -> Mapping[Recipe, int]:
         """Parses saved recipe selection ids;quantity into formal Recipe->quantity pairings"""
         def parse_failure(msg) -> Mapping[Recipe, int]:
-            logger.warning(msg); return dict()
+            logger.debug(msg); return dict()
         parts: list[str] = raw_selection.split(";") if raw_selection else []
         if not parts or len(parts) % 2:
             return parse_failure("environment's saved recipe selection is malformed")

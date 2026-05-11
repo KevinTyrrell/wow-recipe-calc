@@ -109,20 +109,24 @@ class _JsonTableParser:
 
     def parse(self, jso: JSW) -> Optional[RecipeJson]:
         """Parses a JSON-wrapped data table into a formal recipe JSON entry"""
-        try:  # Attempt to weed out 'fake' recipes
+        try:  # attempt to weed out 'fake' recipes
             _, _ = jso.colors, jso.reagents
-        except AttributeError: return None
-        return RecipeJson(
-            jso.name,  # name of the recipe
-            jso.learnedat,  # level learned at
-            jso.colors[1],  # yellow level
-            jso.colors[3],  # gray level
-            list(list(e) for e in jso.reagents),  # nested reagents
-            jso.creates[0],  # product item id
-            self._get_avg_net_produced(jso),  # avg yield
-            self._get_sources(jso),  # how to obtain the recipe
-            self._get_specialization(jso)  # required specialization (nullable)
-        )
+        except AttributeError: return None  # silent
+        try:  # failure here implies it is not a real recipe
+            return RecipeJson(
+                jso.name,  # name of the recipe
+                jso.learnedat,  # level learned at
+                jso.colors[1],  # yellow level
+                jso.colors[3],  # gray level
+                list(list(e) for e in jso.reagents),  # nested reagents
+                jso.creates[0],  # product item id
+                self._get_avg_net_produced(jso),  # avg yield
+                self._get_sources(jso),  # how to obtain the recipe
+                self._get_specialization(jso))  # required specialization (nullable)
+        except AttributeError as e:
+            logger.error(f"failed to parse wrapped recipe: {e}")
+            logger.debug(f"(cont.) failed to parse recipe payload: {jso}")
+        return None
 
     @staticmethod
     def _get_specialization(jso: JSW) -> Optional[str]:

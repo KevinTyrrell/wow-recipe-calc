@@ -41,7 +41,7 @@ class CraftingApp:
     _RESOURCE_ENV_NAME: str = "setup"
 
     _DEFAULT_THROTTLE: Throttle = (Throttle.Builder()
-       .add(1, 5).add(15, 60).build())
+       .add(1, 6).add(12, 60).build())
 
     def __init__(self, throttle: Optional[Throttle] = None) -> None:
         """
