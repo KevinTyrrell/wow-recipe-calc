@@ -132,6 +132,9 @@ class CraftPlanner:
         cleaner: _GrayRecipeCleaner = _GrayRecipeCleaner(graph, skiller, demands)
         for section in self._calc_skill_sections(graph):
             L, R, active = section
+            if R <= skiller.skill:  # entirely overshot — schedule grays and move on
+                cleaner.schedule(active)
+                continue  # current section is now inefficient, exit
             if skiller.skill < L: skiller.advance(L)  # jump over impassible sections
             while active:  # as long as craftable recipes exist
                 while True:  # craft a single item, repeat until one is crafted
