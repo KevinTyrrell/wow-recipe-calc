@@ -51,13 +51,15 @@ class CraftPlan:
 
 
 class CraftPlanner:
-    def __init__(self, item_db: ItemDB, prices: PriceManager) -> None:
+    def __init__(self, item_db: ItemDB, prices: PriceManager, skill_lvl: Optional[int] = 1) -> None:
         """
         :param item_db: Item DB to request recipe information
         :param prices: Price manager to request prices of items
+        :param skill_lvl: (Optional) Starting skill level when performing the order
         """
         self.__item_db: ItemDB = item_db
         self.__prices: PriceManager = prices
+        self.__skill_lvl: int = skill_lvl
         self.__demands: defaultdict[Recipe, int] = defaultdict(lambda: 0)
         
     def craft(self, item: int | str | Recipe, quantity: Optional[int] = 1) -> None:
@@ -126,7 +128,7 @@ class CraftPlanner:
     def _plan_order(self, crafts: Mapping[Recipe, int]) -> tuple[tuple[int, int, Recipe, int], ...]:
         graph: GrayPriortyRecipeGraph = GrayPriortyRecipeGraph(self.__item_db, crafts.keys())
         demands: dict[Recipe, int] = { k: v for k, v in crafts.items() if v > 0 }
-        skiller: CraftSkiller = CraftSkiller()
+        skiller: CraftSkiller = CraftSkiller(self.__skill_lvl)
         cleaner: _GrayRecipeCleaner = _GrayRecipeCleaner(graph, skiller, demands)
         for section in self._calc_skill_sections(graph):
             L, R, active = section

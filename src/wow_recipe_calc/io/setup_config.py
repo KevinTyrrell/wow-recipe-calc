@@ -14,7 +14,7 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
-from questionary import Style, Choice, select, password
+from questionary import Style, Choice, select, password, text
 
 from wow_recipe_calc.util.json_wrapper import JSW
 from wow_recipe_calc.client.tsm_client import TSMClient
@@ -49,6 +49,7 @@ class SetupConfig:
         auction_house: int = self.choose_ah_id(auction_houses)
         expansion: Expansion = self.choose_expansion()
         profession: Profession = self.choose_profession(expansion)
+        skill: int = self.enter_starting_skill()
         return {
             "api_key": api_key,
             "region": region,
@@ -56,6 +57,7 @@ class SetupConfig:
             "auction_house": auction_house,
             "expansion": expansion.ordinal,
             "profession": profession.ordinal,
+            "starting_skill": skill,
         }
 
     def enter_tsm_api_key(self) -> str:
@@ -133,3 +135,23 @@ class SetupConfig:
         choices: list[Choice] = [ Choice(p.label, value = p) for p in available ]
         return select("Select World of Warcraft profession",
             choices = choices, style = self._DEFAULT_SELECT_STYLE).ask()
+
+    def enter_starting_skill(self, default_skill: int = 1) -> int:
+        """
+        :param default_skill: (Optional) Starting skill, if user provides no input (defaults to 1)
+        :return: Positive integer representing the player's current profession skill level
+        """
+        raw_input: str = text(
+            f"Enter your current profession skill level",
+            default = str(default_skill),
+            validate = self._validate_skill_level,
+            style = self._DEFAULT_SELECT_STYLE,
+        ).ask()
+        return int(raw_input) if raw_input else default_skill
+
+    @staticmethod
+    def _validate_skill_level(skill_input: str) -> bool | str:
+        if not skill_input: return True  # accept empty input
+        if not skill_input.isdigit() or int(skill_input) < 1:
+            return "Your input must be a positive integer"
+        return True

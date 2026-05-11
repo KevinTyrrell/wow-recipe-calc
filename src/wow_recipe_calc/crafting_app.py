@@ -77,7 +77,8 @@ class CraftingApp:
         :return: craft plan detailing the optimal crafting routes/windows/materials
         """
         logger.debug("running craft planner")
-        planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices)
+        skill_lvl: int = self.environment.jso().starting_skill
+        planner: CraftPlanner = CraftPlanner(self.__item_db, self.__prices, skill_lvl)
         for name, quantity in desired_crafts.items():
             planner.craft(name, quantity)
         return planner.plan()
