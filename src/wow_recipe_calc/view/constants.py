@@ -27,8 +27,6 @@ class Control:
     HIDE_SYMBOL: str = "—"
     CLOSE_NAME: str = "close"
     HIDE_NAME: str = "minimize"
-    WIDTH: int = 32
-    HEIGHT: int = 24
 
 
 class Banner:
@@ -36,6 +34,21 @@ class Banner:
     HANDLE: str = "banner"
     MARGINS: tuple[int, int, int, int] = (12, 0, 12, 0)
     HEIGHT: int = 48
+    OFFSET: int = 30  # pixel space to nudge title
+    class Button:
+        WIDTH: int = 32
+        HEIGHT : int = 24
+        class Minimize:
+            HANDLE: str = "minimize"
+            SYMBOL: str = "—"
+        class Close:
+            HANDLE: str = "close"
+            SYMBOl: str = "✕"
+        class Pin:
+            HANDLE_OFF: str = "pin"
+            HANDLE_ON: str = "unpin"
+            SYMBOL: str = "⚲"
+            TOOLTIP: str = "Sets the windows to stay on-top of other windows"
 
 
 class EditTab:

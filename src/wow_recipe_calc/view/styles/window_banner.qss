@@ -53,3 +53,21 @@ QWidget#banner QPushButton#minimize:hover {
 QWidget#banner QPushButton#close:hover {
     background-color: #c94a4a;
 }
+
+QWidget#banner QPushButton#pin {
+    background-color: #444444;
+    color: #dddddd;
+}
+
+QWidget#banner QPushButton#unpin {
+    background-color: #e87500;
+    color: #ffffff;
+}
+
+QWidget#banner QPushButton#pin:hover {
+    background-color: #777777;
+}
+
+QWidget#banner QPushButton#unpin:hover {
+    background-color: #ff8c00;
+}
