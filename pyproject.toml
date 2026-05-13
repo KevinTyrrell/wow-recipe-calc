@@ -1,6 +1,6 @@
 [project]
 name = "wow-recipe-calc"
-version = "1.0.0"
+version = "1.0.1"
 description = "GUI-driven WoW profession analyzer for material aggregation, cost calculation, and optimized crafting sequences"
 authors = [
     {name = "Kevin Tyrrell", email = "kev070892@gmail.com"}
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-wow-recipe-calc = "wow_recipe_calc.__main__:main"
+wow-recipe-calc = "wow_recipe_calc.main:main"
 
 [tool.poetry]
 packages = [{include = "wow_recipe_calc", from = "src"}]

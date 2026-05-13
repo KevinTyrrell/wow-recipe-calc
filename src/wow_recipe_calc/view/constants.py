@@ -48,7 +48,7 @@ class Banner:
             HANDLE_OFF: str = "pin"
             HANDLE_ON: str = "unpin"
             SYMBOL: str = "⚲"
-            TOOLTIP: str = "Sets the windows to stay on-top of other windows"
+            TOOLTIP: str = "Sets the application to stay on-top of other windows"
 
 
 class EditTab:

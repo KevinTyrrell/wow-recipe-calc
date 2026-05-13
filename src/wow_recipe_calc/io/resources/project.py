@@ -21,6 +21,7 @@ from enum import Enum
 from functools import cache
 from pathlib import Path
 from typing import Generic, Optional, TypeVar, overload, runtime_checkable, Protocol
+import sys
 
 _KT: TypeVar = TypeVar("_KT")  # key of each pairing
 _VT: TypeVar = TypeVar("_VT")  # value of each pairing
@@ -32,8 +33,9 @@ _TOML_CONFIG_BASENAME: str = "pyproject.toml"
 _TOML_CONFIG_NAME: str = "name"
 _TOML_CONFIG_VERSION: str = "version"
 _TOML_CONFIG_KEY: str = "project"
+_RUN_AS_EXE_MARKER: str = "frozen"
 _ROOT_LANDMARKS: list[str] = [
-    "LICENSE", "src", "pyproject.toml", ".git", ".idea", "setup.py", "setup.cfg", ".vscode" ]
+    "LICENSE", "src", "pyproject.toml", ".git", ".idea", "setup.py", "setup.cfg", ".vscode", "res" ]
 
 
 class Project(Enum):
@@ -45,6 +47,8 @@ class Project(Enum):
         """
         :return: Path to the root folder of the project, detected by landmark files
         """
+        if getattr(sys, _RUN_AS_EXE_MARKER, False):  # project is ran by exe
+            return Path(sys.executable).resolve().parent
         for parent in Path(__file__).parents:
             if any((parent / lm).exists() for lm in _ROOT_LANDMARKS):
                 return parent

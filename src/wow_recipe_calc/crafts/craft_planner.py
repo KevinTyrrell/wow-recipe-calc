@@ -156,17 +156,19 @@ class CraftPlanner:
 
     # Calculates the cost to craft each specified recipe
     def _plan_costs(self, recipes: Iterable[Recipe]) -> Mapping[Recipe, int]:
-        costs: dict[Recipe, int] = dict()
+        cost_per_item: dict[Recipe, int] = dict()
+        cost_per_craft: dict[Recipe, int] = dict()
         graph: RecipeGraph = RecipeGraph(self.__item_db, recipes)
         for recipe in graph.topo:
             cost: int = 0
             for reagent, count in recipe.reagents.items():
                 entry: ItemEntry = self.__item_db.by_id[reagent]
                 if isinstance(entry, RecipeEntry):
-                    cost += costs[entry.recipe] * count
-                else: cost += self.__prices.get_price(reagent)
-            costs[recipe] = cost
-        return ReadOnlyMap(costs)
+                    cost += cost_per_item[entry.recipe] * count
+                else: cost += self.__prices.get_price(reagent) * count
+            cost_per_item[recipe] = cost // recipe.produces
+            cost_per_craft[recipe] = int(cost)
+        return ReadOnlyMap(cost_per_craft)
 
     # Retrieves all needed materials along with their required quantities
     def _plan_mats(self, crafts: Mapping[Recipe, int]) -> Mapping[int, int]:

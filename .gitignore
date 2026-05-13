@@ -3,7 +3,10 @@ __pycache__/
 cache/
 working/
 dist/
+build/
 TODO
+*.spec
+*.exe
 *.env
 *.pkl
 *.log
