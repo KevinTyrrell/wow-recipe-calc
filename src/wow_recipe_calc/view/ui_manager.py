@@ -38,7 +38,7 @@ logger: Logger = getLogger(__name__)
 
 
 class UIManager:
-    _STYLESHEET_RESOURCE: Path = Path("src/wow_recipe_calc/view/styles")
+    _STYLESHEET_RESOURCE: str = "wow_recipe_calc.view.styles"
     _ICON: Path = Path("res/icon-std-256.png")
     _RECIPE_SELECTION_KEY: str = "recipe_selection"
     _RECIPE_SELECTION_SEP: str = ";"

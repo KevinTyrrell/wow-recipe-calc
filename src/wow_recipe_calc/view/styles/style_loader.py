@@ -15,10 +15,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>
 
 from typing import Optional, Iterator
-from pathlib import Path
 from logging import Logger, getLogger
-
-from wow_recipe_calc.io.resources.project import Project
+from importlib.resources.abc import Traversable
+from importlib.resources import files
 
 logger: Logger = getLogger(__name__)
 
@@ -27,15 +26,14 @@ class StyleLoader:
     _DEFAULT_STYLE_EXT: str = "qss"
     _DEFAULT_FILE_ENCODING: str = "utf-8"
 
-    def __init__(self, branch: Optional[Path] = None, ext: Optional[str] = None) -> None:
+    def __init__(self, module: str, ext: Optional[str] = None) -> None:
         """
-        :param branch: (Optional) Relative path, from the root, to the stylesheet directory
+        :param module: Dotted module string pointing to the resource root (e.g. "wow_recipe_calc.resources")
+        :param branch: (Optional) Sub-path within the module to the stylesheet directory
         :param ext: (Optional) Target extension to match when loading stylesheets (default: qss)
         """
-        self.__parent: Path = Project.resource(branch = branch)
-        if ext is not None:
-            self.__ext: str = ext.strip().lstrip(".")
-        else: self.__ext: str = self._DEFAULT_STYLE_EXT
+        self.__parent: Traversable = files(module)
+        self.__ext: str = ext.strip().lstrip(".") if ext is not None else self._DEFAULT_STYLE_EXT
 
     def bundle_styles(self) -> str:
         """
@@ -48,18 +46,23 @@ class StyleLoader:
         """
         styles: list[str] = list(self.styles)
         if not styles:
-            logger.warning(f"no stylesheets found at path: {self.dir_path}")
+            logger.warning(f"no stylesheets found at path: {self.__parent}")
             return str()
         return "\n".join(styles)
 
-
     @property
     def styles(self) -> Iterator[str]:
-        for stylesheet in sorted(self.__parent.rglob(f"*.{self.__ext}")):
+        for stylesheet in sorted(self._walk(self.__parent), key = lambda p: p.name):
+            if not stylesheet.name.endswith(f".{self.__ext}"): continue  # ignore non-stylesheets
             try:
                 yield stylesheet.read_text(encoding = self._DEFAULT_FILE_ENCODING)
             except Exception as e:
-                logger.error(f"failed to load stylesheet '{stylesheet}': {e}")
+                logger.error(f"failed to load stylesheet '{stylesheet.name}': {e}")
+
+    def _walk(self, node: Traversable) -> Iterator[Traversable]:  # rglob doesn't work on traversable
+        for child in node.iterdir():
+            if child.is_dir(): yield from self._walk(child)
+            else: yield child
 
     @property
-    def dir_path(self) -> Path: return self.__parent
+    def dir_path(self) -> Traversable: return self.__parent
